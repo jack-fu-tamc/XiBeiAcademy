@@ -1,0 +1,308 @@
+/*商品评价*/
+
+.hche_cont {
+    min-height: 800px;
+    width: 100%;
+    display: block;
+}
+/*图片和评价部分*/
+
+.hche_commo {
+    width: 100%;
+    height: 394px;
+    display: block;
+    border: solid 1px #ddd;
+    background: #fff;
+    margin: 20px 0px 0px 0px;
+    float: left;
+}
+/*标题部分*/
+
+.hc_tit {
+    width: 94%;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    border-bottom: solid 1px #C02021;
+    background: url(/Images/images/hche_repairfin/repair_medal.png) no-repeat 0 0;
+}
+
+    .hc_tit span {
+        margin: 0;
+        height: 20px;
+        width: auto;
+        display: block;
+        font-family: "微软雅黑";
+        font-size: 20px;
+        color: #c20201;
+        padding: 30px 0px 0px 30px;
+    }
+
+.hc_leftimg {
+    width: 200px;
+    height: 248px;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 42px 44px 46px 30px;
+}
+
+    .hc_leftimg img {
+        width: 200px;
+        height: 200px;
+        display: block;
+    }
+
+    .hc_leftimg p {
+        font-size: 12px;
+        color: #000000;
+        text-align: left;
+        padding: 4px 6px 0px 6px;
+    }
+
+.hc_rightcont {
+    width: 824px;
+    height: 290px;
+    display: block;
+    float: right;
+    overflow: hidden;
+}
+
+.hc_topconm {
+    width: 100%;
+    height: 56px;
+    margin-top: 42px;
+}
+
+.hc_centconm {
+    width: 100%;
+    height: 144px;
+}
+
+    .hc_centconm textarea {
+        width: 800px;
+        height: 134px;
+        border: solid 1px #ddd;
+        resize: none;
+    }
+
+        .hc_centconm textarea:focus {
+            box-shadow: none;
+            border: 1px solid #ccc;
+        }
+
+.hc_ftconm {
+    width: 100%;
+    height: 20px;
+    display: block;
+    margin-top: 20px;
+}
+
+    .hc_ftconm span {
+        height: 20px;
+        width: 16%;
+        text-align: center;
+        display: block;
+        float: left;
+    }
+
+        .hc_ftconm span input {
+            margin: 0;
+            outline: none;
+        }
+
+.hc_font {
+    font-size: 16px;
+    color: #0253A4;
+    float: left;
+    padding-top: 5px;
+}
+
+.hc_selectt {
+    width: 300px;
+    height: 20px;
+    display: block;
+    float: left;
+}
+
+    .hc_selectt ul {
+        margin-left: 30px;
+        width: 300px;
+    }
+
+        .hc_selectt ul li {
+            list-style-type: none;
+            float: left;
+            width: 80px;
+            height: 20px;
+        }
+
+            .hc_selectt ul li i {
+                width: 78px;
+                height: 35px;
+                display: block;
+            }
+
+            * + html .hc_selectt ul li i {
+                width: auto;
+                height: 35px;
+                display: block;
+            }
+
+    .hc_selectt input {
+        float: left;
+        height: 24px;
+        display: block;
+        width: 20px;
+        outline: none !important;
+    }
+
+.hc_tj {
+    width: 160px;
+    height: 34px;
+    display: block;
+    border-radius: 2px;
+    background: #0253A4;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 490px;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+/*内容部分*/
+
+.hc_contf {
+    width: 94%;
+    height: 332px;
+    display: block;
+    margin: 0 auto;
+    float: left;
+}
+/*提交按钮*/
+
+.hche_modity {
+    width: 100%;
+    height: 160px;
+    display: block;
+}
+/*热门部分*/
+
+.hche_comty {
+    width: 100%;
+    height: 196px;
+    display: block;
+}
+
+.hc_hp {
+    background: url(/Images/images/hche_repairfin/repair_good.png) no-repeat 20px 0px;
+}
+
+    .hc_hp:hover {
+        background: url(/Images/images/hche_repairfin/repair_good_on.png) no-repeat 20px 0px;
+    }
+
+.hc_hpp {
+    background: url(/Images/images/hche_repairfin/repair_good_on.png) no-repeat 20px 0px;
+}
+
+.hc_zp {
+    background: url(/Images/images/hche_repairfin/repair_soso.png) no-repeat 20px 0px;
+}
+
+    .hc_zp:hover {
+        background: url(/Images/images/hche_repairfin/repair_soso_on.png) no-repeat 20px 0px;
+    }
+
+.hc_zpp {
+    background: url(/Images/images/hche_repairfin/repair_soso_on.png) no-repeat 20px 0px;
+}
+
+.hc_cp {
+    background: url(/Images/images/hche_repairfin/repair_bad.png) no-repeat 20px 0px;
+}
+
+    .hc_cp:hover {
+        background: url(/Images/images/hche_repairfin/repair_bad_on.png) no-repeat 20px 0px;
+    }
+
+.hc_cpp {
+    background: url(/Images/images/hche_repairfin/repair_bad_on.png) no-repeat 20px 0px;
+}
+/*推荐*/
+
+.shophot {
+    height: 190px;
+    width: auto;
+    display: block;
+    margin: 0px auto 20px;
+}
+
+.hc_boder {
+    border: 1px solid #CCC;
+    float: left;
+}
+
+.hc_shopback {
+    background: #EEE none repeat scroll 0% 0%;
+    height: 38px;
+}
+
+    .hc_shopback .hc_bgimg {
+        background: transparent url("/Images/submission/dp_Section_title2.jpg") repeat scroll 0% 0%;
+        height: 38px;
+        width: 100px;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+.hc_shoplisma {
+    margin: 0px 0px 0px 13px;
+}
+
+.hc_noewname a:hover {
+    color: #c20201;
+}
+
+.hc_shoplisma .hc_newShop {
+    width: 218px;
+    background: #EEE none repeat scroll 0% 0%;
+    height: 122px;
+    border: 1px solid #FFF;
+    float: left;
+    margin: 14px 10px 14px 0px;
+}
+
+.hc_shoplisma .hc_newlt {
+    width: 102px;
+    height: 102px;
+    float: left;
+    margin: 10px 8px 0px 7px;
+}
+
+.hc_shoplisma .hc_noewname {
+    width: 95px;
+    float: left;
+    font-size: 13px;
+    margin: 15px 0px;
+}
+
+    .hc_shoplisma .hc_noewname .hc_red {
+        color: #C20201;
+        font-size: 15px;
+    }
+
+.hc_shoplisma .hc_newShop:hover {
+    border: 1px solid #C20201;
+}
+
+.hc_shoplisma .hc_noewname a {
+    color: #000;
+    height: 82px;
+    overflow: hidden;
+    width: 100px;
+    display: block;
+}

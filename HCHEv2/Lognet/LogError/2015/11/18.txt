@@ -1,0 +1,24 @@
+﻿
+ 
+记录时间：2015-11-18 09:23:42,396 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_common_clientTest_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Common\clientTest.cshtml:行号 11
+
+ 
+
+ 
+记录时间：2015-11-18 15:55:54,000 
+线程ID:[57] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 Maticsoft.Model.Common.GetImageURL() 位置 e:\ProTwoN\Model\Public\Common.cs:行号 77
+在 HC.Manage.Controllers.ProductController.KindUploadImageOfProduct() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1790
+ 
+
+ 
+记录时间：2015-11-18 15:58:21,978 
+线程ID:[22] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 Maticsoft.Model.Common.GetImageURL() 位置 e:\ProTwoN\Model\Public\Common.cs:行号 77
+在 HC.Manage.Controllers.ProductController.KindUploadImageOfProduct() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1790
+ 

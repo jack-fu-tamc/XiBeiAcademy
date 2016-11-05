@@ -1,0 +1,252 @@
+body {
+}
+/*切换样式*/
+.cart-rtits {
+    color: #c20201;
+    margin: 42px 90px 0px 66px;
+}
+
+.alibg {
+    height: 20px;
+    background: #f0f0f0;
+    width: 600px;
+    z-index: 1;
+    margin-left: 96px;
+    margin-top: -14px;
+}
+
+* + html .alibg {
+    height: 20px;
+    background: none;
+    width: 600px;
+    z-index: 1;
+    margin-left: 96px;
+    margin-top: -14px;
+}
+
+.alipaytab {
+    width: 94%;
+    height: 140px;
+    display: block;
+    margin: auto;
+}
+
+    .alipaytab ul {
+        height: 46px;
+    }
+
+        .alipaytab ul li {
+            float: left;
+            width: 102px;
+            height: 102px;
+            display: block;
+            margin-right: 60px;
+            margin-left: 32px;
+        }
+
+            .alipaytab ul li span {
+                float: left;
+                margin: 105px 0px 0px 15px;
+                font-size: 18px;
+                font-weight: 600;
+                color: #333;
+            }
+
+.alione {
+    background-image: url('../../Images/HelpCenter/alipay/pay_step1.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.aliones {
+    background-image: url('../../Images/HelpCenter/alipay/pay_step1a.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.alitwo {
+    background-image: url('../../Images/HelpCenter/alipay/pay_step2.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.alitwos {
+    background-image: url('../../Images/HelpCenter/alipay/pay_step2a.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.alithree {
+    background-image: url('../../Images/HelpCenter/alipay/pay_step3.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.alithrees {
+    background-image: url('../../Images/HelpCenter/alipay/pay_step3a.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.alifour {
+    background-image: url('../../Images/HelpCenter/alipay/pay_step4.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.alifours {
+    background-image: url('../../Images/HelpCenter/alipay/pay_step4a.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/*各个页面样式*/
+.alipaycont {
+    width: 94%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+/*流程内容*/
+.play_time {
+    width: 100%;
+    height: auto;
+    border: 1px solid #c20201;
+    margin-top: 30px;
+    position: relative;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.alipayone .hc_reply_arrow {
+    position: absolute;
+    border-width: 30px 15px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #c20201;
+    border-image: none;
+    top: -61px;
+    *top: -80px;
+    left: 90px;
+}
+
+.alipayone .hc_reply_arrow2 {
+    position: absolute;
+    border-width: 30px 15px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #eeeeee;
+    border-image: none;
+    top: -59px;
+    *top: -78px;
+    left: 90px;
+}
+
+.alipaytwo .hc_reply_arrow {
+    position: absolute;
+    border-width: 30px 15px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #c20201;
+    border-image: none;
+    top: -61px;
+    *top: -80px;
+    left: 286px;
+}
+
+.alipaytwo .hc_reply_arrow2 {
+    position: absolute;
+    border-width: 30px 15px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #eeeeee;
+    border-image: none;
+    top: -59px;
+    *top: -78px;
+    left: 286px;
+}
+
+.alipaythree .hc_reply_arrow {
+    position: absolute;
+    border-width: 30px 15px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #c20201;
+    border-image: none;
+    top: -61px;
+    *top: -80px;
+    left: 485px;
+}
+
+.alipaythree .hc_reply_arrow2 {
+    position: absolute;
+    border-width: 30px 15px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #eeeeee;
+    border-image: none;
+    top: -59px;
+    *top: -78px;
+    left: 485px;
+}
+
+.alipayfour .hc_reply_arrow {
+    position: absolute;
+    border-width: 30px 15px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #c20201;
+    border-image: none;
+    top: -61px;
+    *top: -80px;
+    left: 680px;
+}
+
+.alipayfour .hc_reply_arrow2 {
+    position: absolute;
+    border-width: 30px 15px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #eeeeee;
+    border-image: none;
+    top: -59px;
+    *top: -78px;
+    left: 680px;
+}
+
+.play_Showstart {
+    width: 100%;
+    min-height: 162px;
+    background: #eeeeee;
+    float: left;
+}
+
+.play_Showlist {
+    margin: 35px;
+    height: auto;
+}
+
+    .play_Showlist p {
+        line-height: 30px;
+        margin: 0px;
+        padding: 0px;
+        font-size: 16px;
+        color: #c20201;
+        text-indent: 0em;
+    }
+
+        .play_Showlist p b {
+            font-size: 18px;
+            padding-right: 10px;
+        }
+
+        .play_Showlist p .pay_next {
+            height: 40px;
+            display: block;
+            width: 7px;
+            float: left;
+        }
+
+.img_play {
+    height: auto;
+    width: 100%;
+}

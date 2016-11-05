@@ -1,0 +1,187 @@
+/*左侧导航列表*/
+
+.hche_leftnav {
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+
+    .hche_leftnav ul {
+        margin: 0px !important;
+    }
+
+.hche_secondmenu {
+    height: 46px;
+    line-height: 46px;
+}
+
+.hche_leftnav ul li a:hover {
+    color: #C20201;
+    cursor: pointer;
+}
+
+/*右侧内容中心*/
+
+.hc_pjhd {
+    height: 35px;
+    display: block;
+    width: 98%;
+    border-bottom: 2px solid #C02021;
+    margin: 15px auto 0px;
+}
+
+.pjbx {
+    width: 98%;
+    margin: 0px 10px;
+}
+
+.sorts {
+    width: 98%;
+    margin: 0px 10px;
+}
+
+.hc_pjhd ul li {
+    list-style-type: none;
+    width: 100px;
+    height: 20px;
+    display: block;
+    float: left;
+    font-size: 15px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.pjlistit {
+    height: 38px;
+    width: 100%;
+    margin-top: 13px;
+    background: #eee;
+    display: block;
+    font-family: SimSun;
+}
+
+    .pjlistit ul li {
+        list-style-type: none;
+        float: left;
+        width: 24%;
+        padding-top: 8px;
+    }
+
+.pjlistcon {
+    width: 918px;
+    height: auto;
+    display: block;
+    font-family: SimSun;
+}
+
+.pjcont {
+    height: 130px;
+    width: 899px;
+    display: block;
+    border: solid 1px #ddd;
+    font-family: SimSun;
+}
+
+    .pjcont ul li {
+        list-style-type: none;
+        float: left;
+        height: 117px;
+        overflow: hidden;
+    }
+
+.list_img {
+    float: left;
+    padding-top: 14px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.hc_pjlf {
+    margin: 30px 5px 10px 5px;
+    width: 50px;
+    height: 60px;
+    float: left;
+}
+
+.hc_pj_next {
+    display: table;
+    height: 130px;
+}
+
+    .hc_pj_next p {
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+.hc_pjnr {
+    margin: 15px 5px 5px 5px;
+    width: 380px;
+    height: 80px;
+    overflow: hidden;
+    font-size: 12px;
+    font-family: SimSun;
+}
+
+.hcehouer {
+    color: #ccc;
+    font-size: 12px;
+    padding-left: 4px;
+}
+
+.pjdisc {
+    width: 222px;
+    height: 80px;
+    display: block;
+    overflow: hidden;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: SimSun;
+}
+
+.pjftit {
+    width: 222px;
+    height: 20px;
+    display: block;
+    overflow: hidden;
+    font-size: 12px;
+    padding-left: 10px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: SimSun;
+}
+
+.fjsc {
+    width: 55px;
+    height: 26px;
+    display: block;
+    border-radius: 2px;
+    border: #666 1px solid;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 3px;
+    margin-left: 15px;
+}
+
+.fjxg {
+    width: 55px;
+    height: 26px;
+    display: block;
+    border-radius: 2px;
+    border: #c20201 1px solid;
+    text-align: center;
+    color: #C20201;
+    margin-top: 20px;
+    padding-top: 3px;
+    margin-left: 15px;
+}
+
+.hc_over {
+    border: solid 1px #c20201;
+}
+
+.hc_bxpj {
+    color: #C20201;
+}

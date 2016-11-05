@@ -1,0 +1,58 @@
+﻿@charset "utf-8";
+/* 图片新闻 */
+.block_silbo {
+	/*background:#007639;*/
+}
+.silbo-slide {
+	margin: 0 auto;
+}
+.silbo-slide .Slides li{text-align:center; _font-size:0;}
+.silbo-slide .Slides img{border:0;}
+.silbo-slide .Slides li .SlideTitle{height:40px;position:absolute;left:0;bottom:0;z-index:10;line-height:40px;color:#FFFFFF; font-size:14px;}
+.silbo-slide .Slides li .SlideTitle b{
+    height:40px;position:absolute;left:0;bottom:0;
+	z-index:-1;
+}
+.silbo-slide #SlidePlayer{position:relative;margin:0 auto;}
+.silbo-slide .Slides{padding:0;margin:0;list-style:none;overflow:hidden;}
+.silbo-slide .SlideTriggers{list-style:none;position:absolute;bottom:20px;left:0;z-index:11; text-align: center; width: 100%;}
+/*.silbo-slide .SlideTriggers li{display:inline-block; *display:inline; zoom:1;color:#74a8ed;text-align:center;width:12px;height:12px;font-family:Arial;font-size:14px;cursor:pointer;overflow:hidden;margin:0 2px;border:1px solid #FFF;background:#FFF;color:#FFF; font-size:0; border-radius:10px;}
+.silbo-slide .SlideTriggers li.Current{font-weight:bold;background:#FF9900;color:#FF9900;border:1px solid #FFF;}*/
+.silbo-slide .SlideTriggers li{display:inline-block; *display:inline; zoom:1;color:#74a8ed;text-align:center;width:38px;height:6px;font-family:Arial;cursor:pointer;overflow:hidden;margin:0 4px;border:1px solid #FFF;background:#FFF;color:#FFF; font-size:0; box-shadow:0 0 3px #AAAAAA;}
+.silbo-slide .SlideTriggers li.Current{font-weight:bold;background:#FF6600;color:#FF6600;border:1px solid #FFF;}
+/* 尺寸 */
+.silbo-slide, .silbo-slide .Slides li, .silbo-slide .Slides img {
+    height:280px;
+	width:100%;
+}
+.silbo-slide .Slides li .SlideTitle, .silbo-slide .Slides li .SlideTitle b {
+	width:100%;
+}
+.silbo-slide .Slides {
+    height:280px;
+}
+
+/*焦点图2*/
+.silbo-slide_02 .Slides li{float:left;}
+.silbo-slide_02 .Slides img{border:0;display:block;}
+.silbo-slide_02 .Slides li .SlideTitle{height:30px;position:absolute;left:0;bottom:0;z-index:10;line-height:30px;color:#FFF; font-size:12px; text-indent:14px;/*text-align: center;*/}
+.silbo-slide_02 .Slides li .SlideTitle b{height:30px;position:absolute;left:0;bottom:0;background:#000;filter:alpha(opacity=40);opacity:0.4;z-index:-1;}
+.silbo-slide_02 #SlidePlayer_02{position:relative;margin:0 auto;}
+.silbo-slide_02 .Slides{padding:0;margin:0;list-style:none;overflow:hidden;}
+.silbo-slide_02 .SlideTriggers{list-style:none;position:absolute;bottom:8px;right:10px;z-index:11;}
+.silbo-slide_02 .SlideTriggers li{float:left;display:inline;color:#74a8ed;text-align:center;line-height:17px;width:17px;height:17px;font-family:Arial;font-size:12px;cursor:pointer;overflow:hidden;margin:0 0 0 3px;border:1px solid #CCCCCC;background:#CCCCCC;color:#FFF;opacity:0.90; filter:alpha(opacity=90);border-radius:10px;}
+.silbo-slide_02 .SlideTriggers li.Current{font-weight:bold;font-size:12px;background:#FFEA00;color:white;border:1px solid #FFEA00;opacity:1; filter:alpha(opacity=100);}
+/* 尺寸 */
+.silbo-slide_02, .silbo-slide_02 .Slides li, .silbo-slide_02 .Slides img {
+	width:100%;
+    height:200px;
+}
+.silbo-slide_02 .Slides li .SlideTitle, .silbo-slide_02 .Slides li .SlideTitle b {
+	width:100%;
+}
+.silbo-slide_02 .Slides img, .silbo-slide_02 .Slides {
+    height:200px;
+}
+.silbo-slide_02 .SlideTriggers li{font-size:0; line-height:10px;width:10px;height:10px;}
+.silbo-slide_02 .SlideTriggers li.Current{font-size:0;}
+

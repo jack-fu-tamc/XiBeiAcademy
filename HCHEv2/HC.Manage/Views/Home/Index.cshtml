@@ -1,0 +1,113 @@
+﻿@using HC.Core.Infrastructure
+@using HC.Service.Account
+@using Maticsoft.Model
+@{
+    ViewBag.Title = "管理中心";
+    //var phoneS = ViewData["phone"].ToString().Substring(0, 3);
+    //var phoneE = ViewData["phone"].ToString().Substring(9);
+    //var phoneF = phoneS + "******" + phoneE;
+
+    var modelU = (User_Info)ViewBag.curentUser;
+    //var expUserService = EngineContext.Current.Resolve<IUser_InfoService>();
+   
+
+   
+        Layout = "~/HC.Manage/Views/Shared/mLayoutForAbDefault.cshtml";
+   
+
+}
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/WelcomeCenter.css" />
+}
+@section headScript{
+    <script type="text/javascript" src="~/HC.Manage/Content/common/script/WelcomeCenter.js"></script>
+}
+
+<!--右侧内容-->
+<div class="buyerright">
+    <!--右侧导航-->
+    <div class="hc_maintop">
+        <div class="hc_titletop">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png"> 欢迎您！
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            @*<span class="hc_titleSpan">特权 ▪ 专享</span>*@
+        </div>
+    </div>
+    <!--右侧内容-->
+    <div class="hche_ctop">
+        <div class="hche_lf">
+            <div class="hc_tit">
+                @modelU.RealName ，您好！
+            </div>
+            @*<div class="hc_lfpic">
+                <img src="~/HC.Manage/images/publicimg/mc_right_img2.jpg" alt="" />
+            </div>*@
+            @*<div class="hc_rcon">
+                <ul>
+                    <li>
+                        <b>认证信息：</b>
+                        <span>
+                            <div class="hcc_zz"></div>
+                            <div class="hcc_zf"></div>
+                            <div class="hcc_aq"></div>
+                        </span>
+                        <span>
+                            认证完成
+                            <i>
+                                <img src="~/HC.Manage/images/publicimg/mc_yz.png" alt="" />
+                            </i>
+                        </span>
+                        
+                    </li>
+                    <li>
+                        <b>安全信息：</b>
+                        <span>
+                            <div class="hcc_sj"></div>
+                        </span>
+                        <span>
+                            [@phoneF 已验证]
+                        </span>
+                        <span>
+                            <a href="#" style="color: #0c4ea2;">修改手机</a>
+                        </span>
+                    </li>
+                    
+                </ul>
+            </div>*@
+
+
+            
+
+        </div>
+        
+    </div>
+
+    <!--店铺没有商品-->
+        <div class="hche_conter">
+            <div class="hc_toptit">
+                <span>
+                    <i><img src="~/HC.Manage/images/publicimg/mc_dt_icon.png" /></i>
+                    站点信息
+                </span>
+            </div>
+            @*<div class="hc_lfimg">
+                <img src="~/HC.Manage/images/publicimg/mc_store.png" alt="" />
+            </div>*@
+            <div class="hc_rtcet">
+                <p><span>    站点状态：</span> 正常</p>
+                <p><span>已发布新闻：</span> @ViewBag.newsTotalCount 条</p>
+                <p><span>本月发布新闻：</span>@ViewBag.newsMonthCount 条</p>
+                @if (ViewBag.checkPermission)
+                {
+                    <p><span>  未审核新闻：</span>@ViewBag.notCheckMessage 条 <a href="/Manage/News/verifyNews">去审核</a></p>
+                }             
+                <p><span>新闻浏览量：</span>@ViewBag.totalClick 次</p>
+                @*<p>Sorry!</p>*@
+                @*<p>您的店铺还没有发布商品，现在去 <a href="@Url.Action("releaseSelect", "product")">发布新商品</a></p>*@                
+            </div>
+            <p ><span>提示：</span>为了更好的使用本产品， 推荐您使用浏览器的极速模式</p>
+        </div>
+   
+</div>

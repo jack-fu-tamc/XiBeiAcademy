@@ -1,0 +1,102 @@
+﻿
+ 
+记录时间：2015-12-15 09:48:39,698 
+线程ID:[24] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 26
+在 BLL.Procurment.Procurment_InfoBll.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 19
+在 HC.Manage.Controllers.PurchaseController._ajaxAllPurchase(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 443
+ 
+
+ 
+记录时间：2015-12-15 09:48:41,050 
+线程ID:[32] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.PurchaseController._ajaxMySupply(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 533
+ 
+
+ 
+记录时间：2015-12-15 09:48:41,533 
+线程ID:[24] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 26
+在 BLL.Procurment.Procurment_InfoBll.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 19
+在 HC.Manage.Controllers.PurchaseController._ajaxMyPurchase(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 490
+ 
+
+ 
+记录时间：2015-12-15 09:55:00,979 
+线程ID:[28] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 26
+在 BLL.Procurment.Procurment_InfoBll.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 19
+在 HC.Manage.Controllers.PurchaseController._ajaxAllPurchase(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 443
+ 
+
+ 
+记录时间：2015-12-15 09:55:01,517 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.PurchaseController._ajaxMySupply(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 533
+ 
+
+ 
+记录时间：2015-12-15 09:55:02,019 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 26
+在 BLL.Procurment.Procurment_InfoBll.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 19
+在 HC.Manage.Controllers.PurchaseController._ajaxMyPurchase(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 490
+ 
+
+ 
+记录时间：2015-12-15 10:19:03,971 
+线程ID:[44] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 26
+在 BLL.Procurment.Procurment_InfoBll.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 19
+在 HC.Manage.Controllers.PurchaseController._ajaxMyPurchase(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 490
+ 
+
+ 
+记录时间：2015-12-15 10:19:04,466 
+线程ID:[31] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.PurchaseController._ajaxMySupply(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 533
+ 
+
+ 
+记录时间：2015-12-15 10:19:04,934 
+线程ID:[21] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 26
+在 BLL.Procurment.Procurment_InfoBll.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 19
+在 HC.Manage.Controllers.PurchaseController._ajaxAllPurchase(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 443
+ 
+
+ 
+记录时间：2015-12-15 15:49:41,699 
+线程ID:[56] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.ProductController._ajaxCarSelectPlus(Int32 id) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1542
+ 
+
+ 
+记录时间：2015-12-15 15:54:40,097 
+线程ID:[59] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.ProductController._ajaxCarSelectPlus(Int32 id) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1542
+ 
+
+ 
+记录时间：2015-12-15 15:54:51,485 
+线程ID:[18] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.ProductController._ajaxCarSelectPlus(Int32 id) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1542
+ 

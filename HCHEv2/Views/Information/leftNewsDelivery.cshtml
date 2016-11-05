@@ -1,0 +1,39 @@
+﻿@using HC.Core.Infrastructure
+@using HC.Service.Section
+@{
+    Layout = null;
+    var _isectionService = EngineContext.Current.Resolve<ISectionService>();
+}
+@model List<HC.Data.Models.News>
+
+
+
+<ul>
+    @foreach (var nes in Model)
+    {
+        var newsAction = "news";
+        var parentClass = new HC.Data.Models.NewsClass();
+        parentClass = nes.NewsClass;
+        while (parentClass.ParentID != 0)
+        {
+            parentClass = _isectionService.getNewsClassByID(parentClass.ParentID);
+        }
+
+        switch (parentClass.ClassID)
+        {
+            case 1://教育教学
+                newsAction = "newsEducation";
+                break;
+            case 2077://图书馆
+                newsAction = "newsLibrary";
+                break;
+        }
+        
+        
+
+        <li>
+            <p class="time">@nes.CreatTime.ToString("yyyy-MM-dd")</p>
+            <a href="@Url.Action(newsAction, "Information", new { id = nes.NewsID })">@Html.Raw(nes.NewsTitle)</a>
+        </li>
+    }
+</ul>

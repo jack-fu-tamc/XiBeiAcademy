@@ -1,0 +1,158 @@
+﻿
+ 
+记录时间：2015-10-27 10:51:30,653 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_Alipay_chargeDetail_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Alipay\chargeDetail.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-10-27 11:29:13,739 
+线程ID:[27] 
+日志级别：  ERROR 
+错误描述：Unknown column 'b.HcheRemark' in 'field list'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.User_Hche.GetList(User_Hche_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Manage\User_Hche.cs:行号 27
+在 BLL.Manage.User_HcheBll.GetList(User_Hche_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Manage\User_HcheBll.cs:行号 48
+在 HC.Manage.Controllers.AlipayController.incomeAjax(GridCommand command) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\AlipayController.cs:行号 864
+ 
+
+ 
+记录时间：2015-10-27 11:29:15,453 
+线程ID:[32] 
+日志级别：  ERROR 
+错误描述：Unknown column 'b.HcheRemark' in 'field list'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.User_Hche.GetList(User_Hche_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Manage\User_Hche.cs:行号 27
+在 BLL.Manage.User_HcheBll.GetList(User_Hche_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Manage\User_HcheBll.cs:行号 48
+在 HC.Manage.Controllers.AlipayController.allAjax(GridCommand command) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\AlipayController.cs:行号 841
+ 
+
+ 
+记录时间：2015-10-27 11:29:16,705 
+线程ID:[27] 
+日志级别：  ERROR 
+错误描述：Unknown column 'b.HcheRemark' in 'field list'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.User_Hche.GetList(User_Hche_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Manage\User_Hche.cs:行号 27
+在 BLL.Manage.User_HcheBll.GetList(User_Hche_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Manage\User_HcheBll.cs:行号 48
+在 HC.Manage.Controllers.AlipayController.spendingAjax(GridCommand command) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\AlipayController.cs:行号 886
+ 
+
+ 
+记录时间：2015-10-27 15:29:47,474 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: source   </br>在 HC.Manage.Controllers.ProductController.ManageoffSale() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 2415
+ 
+
+ 
+记录时间：2015-10-27 15:30:27,827 
+线程ID:[27] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: source   </br>在 HC.Manage.Controllers.ProductController.ManageoffSale() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 2415
+ 
+
+ 
+记录时间：2015-10-27 15:30:47,110 
+线程ID:[15] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: source   </br>在 HC.Manage.Controllers.ProductController.ManageoffSale() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 2415
+ 
+
+ 
+记录时间：2015-10-27 15:53:09,515 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxAllEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2404
+ 
+
+ 
+记录时间：2015-10-27 15:53:14,488 
+线程ID:[17] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxBeenEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2422
+ 
+
+ 
+记录时间：2015-10-27 16:27:19,862 
+线程ID:[15] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxBeenEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2422
+ 
+
+ 
+记录时间：2015-10-27 16:27:21,902 
+线程ID:[13] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxAllEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2404
+ 
+
+ 
+记录时间：2015-10-27 16:28:06,804 
+线程ID:[18] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxAllEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2404
+ 
+
+ 
+记录时间：2015-10-27 16:28:08,742 
+线程ID:[14] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxBeenEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2422
+ 
+
+ 
+记录时间：2015-10-27 16:28:15,394 
+线程ID:[15] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxBeenEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2422
+ 
+
+ 
+记录时间：2015-10-27 16:28:17,184 
+线程ID:[14] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxAllEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2404
+ 
+
+ 
+记录时间：2015-10-27 16:37:17,362 
+线程ID:[14] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxAllEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2404
+ 
+
+ 
+记录时间：2015-10-27 16:37:19,235 
+线程ID:[21] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxBeenEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2422
+ 
+
+ 
+记录时间：2015-10-27 16:54:09,270 
+线程ID:[43] 
+日志级别：  ERROR 
+错误描述：Unknown column 'a.SalerStatus' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 181在 Maticsoft.DAL.Repair_Evaluation.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Repair\Repair_Evaluation.cs:行号 26
+在 BLL.Repair.Repair_EvaluationBll.Get(ServiceEvaluation_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Repair\Repair_EvaluationBll.cs:行号 20
+在 HC.Manage.Controllers.OrderController._ajaxAllEva(serviceEvaluateListModel viewReturn, GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 2404
+ 

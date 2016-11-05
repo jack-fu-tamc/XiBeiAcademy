@@ -1,0 +1,207 @@
+﻿
+.header {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+.head_bar {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0px auto;
+}
+
+.head_right_bar {
+    width: 630px;
+    height: 30px;
+    float: right;
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-top: 56px;
+    font-size: 14px;
+}
+
+    .head_right_bar ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .head_right_bar ul li {
+            list-style-type: none;
+            width: auto;
+            height: 30px;
+            float: left;
+            min-width: 50px;
+            text-align: left;
+        }
+
+            .head_right_bar ul li a {
+                color: #333;
+            }
+
+                .head_right_bar ul li a:hover {
+                    color: #C20201;
+                }
+
+.footer {
+    width: 100%;
+    height: 140px;
+    display: block;
+    margin-top: 20px;
+}
+
+.footer_nav {
+    width: 1000px;
+    height: 60px;
+    display: block;
+    margin: 0px auto;
+}
+
+li {
+    list-style: outside none none;
+}
+
+.footer_bar ul li a {
+    color: #000;
+}
+
+.footer_dis {
+    width: 458px;
+    height: 40px;
+    display: block;
+    float: left;
+}
+
+    .footer_dis p {
+        font-family: "微软雅黑";
+        font-size: 12px;
+        color: #000;
+    }
+
+.footer_bar {
+    width: 380px;
+    height: 60px;
+    float: right;
+    display: block;
+}
+
+    .footer_bar ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+        .footer_bar ul li {
+            min-width: 80px;
+            float: left;
+            min-height: 20px;
+        }
+
+.Apply_brand {
+    height: 900px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.hc_maintop {
+    background-color: #F5F5F5;
+    height: 35px;
+    border-top: 2px solid #F0F0F0;
+    margin-top: 25px;
+}
+
+.hc_titletop {
+    color: #C20120;
+    padding: 6px 0px 0px 15px;
+}
+
+    .hc_titletop .hc_titleSpan {
+        float: right;
+        color: #CE9D63;
+        margin-right: 30px;
+    }
+
+.Apply_tit {
+    color: #c20201;
+    padding: 15px 0px 15px 30px;
+    font-size: 15px;
+}
+
+.Apply_radiodiv {
+    border: 1px solid #ccc;
+    margin: 2px 20px 0px 20px;
+}
+
+    .Apply_radiodiv .hc_roideli {
+        height: 100px;
+        border-bottom: 1px solid #ccc;
+        line-height: 100px;
+    }
+
+        .Apply_radiodiv .hc_roideli .hc_tit {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .Apply_radiodiv .hc_roideli .hc_radiodiv {
+            float: left;
+            margin: -2px 20px 0px 10px;
+        }
+
+        .Apply_radiodiv .hc_roideli .pay_list_c1.rabuit {
+            background-position: 1px 0px;
+        }
+
+        .Apply_radiodiv .hc_roideli .pay_list_c1 {
+            width: 24px;
+            height: 18px;
+            float: left;
+            padding-top: 3px;
+            cursor: pointer;
+            text-align: center;
+            background-image: url('../../../images/publicimg/repair_radio.png');
+            background-repeat: no-repeat;
+            background-position: -19px 0px;
+            line-height: 0px;
+            margin-top: 40px;
+        }
+
+        .Apply_radiodiv .hc_roideli .radioclass {
+            opacity: 0;
+            cursor: pointer;
+            margin-top: 0px;
+            *width: 0px;
+        }
+
+    .Apply_radiodiv .hc_inputdiv {
+        height: 100px;
+        padding-left: 20px;
+        line-height: 100px;
+        background: #eee;
+    }
+
+        .Apply_radiodiv .hc_inputdiv span {
+            color: #c20201;
+        }
+
+        .Apply_radiodiv .hc_inputdiv input {
+            border-radius: 0px;
+            width: 300px;
+            margin-bottom: 0px;
+        }
+
+.hc_raiodivbut {
+    height: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+    .hc_raiodivbut .hc_butradio {
+        border: 1px solid #c20201;
+        background: #c20201;
+        color: #fff;
+        height: 35px;
+        width: 130px;
+        font-size: 16px;
+        border-radius: 3px;
+    }

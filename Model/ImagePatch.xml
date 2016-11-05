@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ImagePatch>
+  <PatchURL >
+    <title>ImageHomePath</title>
+    <!--本机-->
+    <URL>http://pic.autobobo.com/</URL>
+    <!--测试服务器-->
+    <!--<URL>http://pic.autobobo.com/</URL>-->
+    <!--外网服务器-->
+    <!--<URL>http://img.hcn.com/</URL>-->
+  </PatchURL>
+  
+  <PatchURL >
+    <title>imageURL</title>
+    <!--本机-->
+    <URL>D:\PicServices\</URL>
+    <!--测试服务器-->
+    <!--<URL>D:\PicServices\</URL>-->
+    <!--外网服务器-->
+    <!--<URL>D:\PicServices\</URL>-->
+  </PatchURL>
+
+  
+  
+  
+  <PatchURL >
+    <title>ImageUserPhoto</title>
+    <URL>head,small</URL>
+  </PatchURL>
+  <PatchURL >
+    <title>ImageRepair</title>
+    <URL>repair</URL>
+  </PatchURL>
+  
+  
+</ImagePatch>

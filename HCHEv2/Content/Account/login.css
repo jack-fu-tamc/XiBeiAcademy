@@ -1,0 +1,1126 @@
+﻿body {
+    background: url('/Images/publicimg/bg.png')repeat;
+}
+
+.header {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+.head_bar {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.head_logo {
+    background: url('/Images/autoimg/publicimg/logo.png') no-repeat !important;
+    height: 60px;
+    width: 136px;
+    display: block;
+    float: left;
+    margin-top: 26px;
+    margin-bottom: 24px;
+}
+
+.head_right_bar {
+    width: 630px;
+    height: 30px;
+    float: right;
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-top: 56px;
+}
+
+    .head_right_bar ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .head_right_bar ul li {
+            list-style-type: none;
+            width: auto;
+            height: 30px;
+            float: left;
+            min-width: 50px;
+            text-align: left;
+        }
+
+        * + html .head_right_bar ul li {
+            line-height: 30px;
+        }
+
+            .head_right_bar ul li a {
+                color: #333;
+            }
+
+                .head_right_bar ul li a:hover {
+                    color: #C20201;
+                }
+/*会员注册部分*/
+.member_register {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+}
+
+.registers {
+    height: 600px;
+}
+
+.register_contain {
+    width: 944px;
+    margin: auto;
+    height: 715px;
+}
+
+.member_register .member_title {
+    width: 100%;
+    height: 17px;
+    margin-top: 20px;
+    border-bottom: 10px solid #f3f3f3;
+}
+
+.register_title_contain {
+    height: 30px;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    color: #C20201;
+}
+
+    .register_title_contain .register_title_text {
+        font-size: 20px;
+    }
+
+.member_register .middle_member {
+    width: 100%;
+    height: 203px;
+    margin-top: 10px;
+}
+
+    .member_register .middle_member .middle_left {
+        height: 203px;
+        width: 372px;
+        float: left;
+        display: inline-block;
+        background: #666666;
+    }
+
+.middle_left .owner_left {
+    width: 39px;
+    height: 203px;
+    float: left;
+    overflow: hidden;
+    background: url(/Images/images/reg1.png) no-repeat;
+}
+
+.middle_left .owner_right {
+    width: 333px;
+    height: 203px;
+    float: right;
+    overflow: hidden;
+    background: #f3ece2;
+}
+
+.owner_right table {
+    width: 333px;
+    height: 160px;
+    border: 1px none;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.owner_right .privilege table {
+    width: 290px;
+    height: 175px;
+    font-size: 14px;
+    margin-top: 15px;
+    border-right: 1px solid #fff;
+}
+
+.owner_right table .serial_number {
+    width: 12%;
+    text-align: right;
+}
+
+.owner_right table .entry {
+    width: 88%;
+    text-align: left;
+    padding: 0px 5px 0px 0px;
+    letter-spacing: 1px;
+}
+
+.owner_right table .entry1 {
+    padding-top: 0px;
+}
+
+.owner_right table .entry_privilege {
+    height: 26px;
+    text-align: left;
+    color: #C20201;
+}
+
+.owner_right table .privilege_tlt {
+    padding-left: 22px;
+    *padding-left: 22px;
+}
+
+.owner_right table .privilege_ser {
+    padding-left: 15px;
+    *padding-left: 28px;
+}
+
+.owner_right table .entry2 {
+    padding-bottom: 20px;
+}
+
+.owner_right table .entry3 {
+    padding-bottom: 38px;
+}
+
+.member_register .middle_member .middle_right {
+    height: 203px;
+    width: 560px;
+    float: right;
+    overflow: hidden;
+    background: #CC66FF;
+}
+
+.middle_right .owner_left {
+    width: 39px;
+    height: 203px;
+    float: left;
+    overflow: hidden;
+    background: url(/Images/images/reg2.png) no-repeat;
+}
+
+.middle_right .owner_right {
+    width: 521px;
+    height: 203px;
+    float: right;
+    overflow: hidden;
+    background: #f3ece2;
+}
+
+.owner_right .privilege {
+    width: 290px;
+    height: 100%;
+    float: left;
+}
+
+.owner_right .service {
+    width: 230px;
+    height: 100%;
+    float: right;
+}
+
+    .owner_right .service table {
+        width: 333px;
+        height: 97px;
+        font-size: 14px;
+        margin-top: 15px;
+        border-right: 1px solid #fff;
+    }
+
+.member_information {
+    width: 100%;
+    height: 432px;
+    margin-top: 10px;
+}
+
+    .member_information .info_title {
+        width: 98%;
+        height: 38px;
+        border-top: 1px solid #E3E3E3;
+        background: #F3F3F3 none repeat scroll 0% 0%;
+        color: #C20201;
+        line-height: 36px;
+        padding-left: 20px;
+    }
+
+    .member_information .info_content {
+        width: 100%;
+        height: 260px;
+    }
+
+.info_content .success_register {
+    width: 538px;
+    height: 185px;
+    margin: auto;
+    margin-top: 35px;
+}
+
+    .info_content .success_register .success_info {
+        width: 100%;
+        height: 35px;
+        font-size: 25px;
+        color: #c21210;
+        text-align: center;
+    }
+
+        .info_content .success_register .success_info span {
+            width: 50%;
+            height: 35px;
+            line-height: 35px;
+        }
+
+.info_content .shopping_info div {
+    display: block;
+    width: 258px !important;
+    margin: auto;
+    text-align: right;
+    line-height: 35px;
+}
+
+.info_content .shopping_info span {
+    width: 146px;
+    height: 35px;
+    float: left;
+    display: block;
+}
+
+.info_content .shopping_info .go_text {
+    width: 100px;
+    height: 35px;
+    float: right;
+    display: block;
+}
+
+.info_content .shopping_info div a {
+    display: block;
+    height: 35px;
+    width: 100px;
+    float: right;
+    background: #ffc853;
+    margin-left: 10px;
+    text-align: center;
+    color: #000000;
+}
+
+.info_content .Warm_prompt {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+    .info_content .Warm_prompt i {
+        font-style: normal;
+        color: #C20201;
+    }
+
+    .info_content .Warm_prompt a {
+        color: #C20201;
+        text-decoration: underline;
+        padding-left: 2px;
+    }
+/*会员信息*/
+.member_information .info_content div {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+}
+
+    .member_information .info_content div a {
+        color: #0688D3;
+        text-decoration: none;
+    }
+
+    .member_information .info_content div .info_item {
+        height: 45px;
+        margin: 10px 0px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+.info_content div .info_item input {
+    height: 36px;
+    line-height: 36px;
+    width: 269px;
+    padding: 0px !important;
+    outline: none;
+    text-indent: 10px;
+    *text-indent: 0px;
+    border-radius: 0px;
+}
+
+.info_content div .info_item .message_text {
+    height: 36px;
+    width: 157px;
+    text-align: left;
+    margin-left: 20px;
+    padding: 0px !important;
+    text-indent: 10px;
+    *text-indent: 0px;
+}
+
+.verification .obtain_code .valida_code {
+    height: 36px;
+    line-height: 36px;
+    height: 38px\9;
+    line-height: 38px\9;
+    width: 110px;
+    display: block;
+    background: #fe9c53;
+    margin-right: 12px;
+    outline: none;
+    color: #fff;
+}
+
+.verification .obtain_code .valida_disable {
+    height: 36px;
+    line-height: 36px;
+    width: 110px;
+    display: block;
+    background: #e3e3e3;
+    margin-right: 12px;
+    outline: none;
+    color: #000;
+}
+
+.info_content div .type_info {
+    width: 12%;
+    text-align: right;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+}
+
+.info_content div .text_info {
+    width: 41%;
+    text-align: center;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 0px;
+}
+
+    .info_content div .text_info .verification {
+        width: 310px;
+        height: 36px;
+        margin: 0px 0px 10px 0px;
+    }
+
+        .info_content div .text_info .verification span {
+            width: 172px;
+            height: 36px;
+            float: left;
+            display: block;
+        }
+
+        .info_content div .text_info .verification .obtain_code {
+            height: 36px;
+            width: 110px;
+            display: block;
+            float: right;
+            padding-right: 20px;
+            padding-right: 19px\9;
+        }
+
+.info_content div .prompt_info {
+    text-align: left;
+    width: 47%;
+    line-height: 36px;
+    height: 36px;
+    *margin-top: -36px;
+}
+
+    .info_content div .prompt_info label {
+        line-height: 36px;
+        height: 36px;
+    }
+
+.info_content div .select_info .select_text {
+    width: 10px;
+    height: 36px;
+    outline: medium none !important;
+    margin-bottom: 6px;
+    *margin-bottom: 0px;
+}
+
+.info_content div em {
+    padding-right: 5px;
+    color: #C20201;
+    font-style: normal;
+}
+
+.info_content div .text_info .select_info {
+    height: 36px;
+    width: 283px;
+    margin: auto;
+    float: left;
+}
+
+.text_info .select_info span {
+    width: 47%;
+    float: left;
+    text-align: right;
+    height: 36px;
+}
+
+.info_content .info_item .select_contain {
+    font-style: normal;
+    color: #000000;
+    width: 299px;
+    height: 36px;
+    line-height: 42px;
+    *line-height: 36px;
+    padding-left: 2px;
+}
+/**/
+.info_item .prompt_info .succeed {
+    width: 24px;
+    height: 26px;
+    background: transparent url("/Images/autoimg/otherimg/valid.png") no-repeat scroll center center;
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+.info_content div .prompt_info .error {
+    color: #C20201;
+    line-height: 36px;
+}
+/***/
+.info_content .info_item .optain {
+    width: 354px;
+    height: 36px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+    .info_content .info_item .optain .checkbox_select {
+        float: left;
+        width: 15px;
+    }
+
+        .info_content .info_item .optain .checkbox_select .select_text {
+            width: 10px;
+            outline: none;
+        }
+
+    .info_content .info_item .optain .other_select {
+        float: left;
+    }
+
+.info_content .info_item.prompt_info em a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.resigist_sub {
+    text-align: left;
+}
+
+.info_content div .info_item .resigist_sub input {
+    width: 168px;
+    height: 46px;
+    background: #91d7f8;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0px 0px 40px 10px;
+    outline: none;
+    padding: 0px 10px;
+    float: left;
+}
+/*登陆部分样式*/
+.pos-r {
+    position: relative;
+    display: block;
+}
+
+.banner {
+    min-width: 1000px;
+    position: relative;
+    height: 478px;
+    overflow: hidden;
+}
+
+    .banner .bd {
+        position: relative;
+        z-index: 0;
+    }
+
+        .banner .bd ul {
+            width: 100% !important;
+            margin: 0px 0px 0px 0px !important;
+        }
+
+        .banner .bd li {
+            width: 100% !important;
+            height: 478px;
+        }
+
+            .banner .bd li .siteWidth {
+                width: 1000px;
+                position: relative;
+                margin: 0 auto;
+                height: 299px;
+            }
+
+            .banner .bd li a {
+                height: 299px;
+                display: block;
+            }
+
+        .banner .bd .txt {
+            position: absolute;
+            width: 415px;
+            top: 100px;
+            left: 22px;
+            font: normal 18px/30px "Microsoft YaHei";
+        }
+
+.banner-shadow {
+    height: 50px;
+    line-height: 50px;
+    background: url(/Images/images/banner-shdow.png) repeat-x;
+}
+
+.login-aside {
+    position: absolute;
+    width: 340px;
+    height: 334px;
+    z-index: 9999999;
+    border-radius: 5px;
+    left: 58%;
+    top: 72px;
+}
+
+.error-box {
+    color: #C20201;
+    font-size: 12px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+
+label.form-label {
+    float: none;
+    line-height: 26px;
+    text-align: left;
+    width: auto;
+    font-size: 16px;
+    color: #E7A506;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #4E6877;
+    margin-top: 16px;
+    height: 26px;
+    letter-spacing: 3px;
+}
+
+#o-box-up, #o-box-down {
+    width: 340px;
+    height: 334px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+#o-box-up {
+    background-color: #000;
+    filter: alpha(opacity:40);
+    opacity: 0.4;
+}
+
+#o-box-down {
+    padding: 5px 0px 0px 32px;
+}
+
+    #o-box-down input {
+        border-radius: 0px;
+    }
+
+.i-text {
+    width: 277px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    border: 1px solid #FFF !important;
+    color: #FFF !important;
+    background: transparent !important;
+    margin-bottom: 18px !important;
+    text-indent: 12px !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+.yzm {
+    width: 177px !important;
+}
+
+.yzm-img {
+    position: absolute;
+    left: 190px;
+    top: 2px;
+    cursor: pointer;
+}
+
+.btn-login {
+    width: 277px !important;
+    height: 36px;
+    background: url(/Images/images/login_login.png) no-repeat;
+    border: none;
+}
+
+.h-light {
+    border: 1px solid #80acd9;
+    color: #9cb5cd;
+    font-size: 14px;
+    border-color: #0787be;
+    box-shadow: 0 1px 4px rgba(11, 122, 179, 0.65) inset, 0 0 14px rgba(11, 122, 179, 0.45);
+}
+
+.img-lable {
+    background: transparent url("/Images/images/login_ren.png") no-repeat scroll 0% 0%;
+    width: 32px;
+    height: 26px;
+    float: left;
+}
+
+.huiche_reghref {
+    width: 340px;
+    height: 40px;
+    display: inline-block;
+}
+
+    .huiche_reghref a {
+        width: 134px;
+        text-align: left;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        height: 40px;
+        display: inline-block;
+        line-height: 40px;
+    }
+
+.huiche_regnew {
+    width: 133px !important;
+    padding-left: 68px;
+}
+
+/*注册选择部分样式*/
+.hc_registerCentre {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    height: auto;
+    width: 1000px;
+    margin: auto;
+}
+
+.hc_maintop {
+    margin: 30px 30px 20px 30px;
+    background-color: #F5F5F5;
+    height: 35px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.hc_titletop {
+    color: #c20120;
+    padding: 6px 0px 0px 15px;
+}
+
+    .hc_titletop .hc_titleSpan {
+        float: right;
+        color: #CE9D63;
+        margin-right: 30px;
+        *margin-top: -20px;
+    }
+
+.hc_item {
+    margin: 5px 65px 0px 30px;
+}
+
+.hc_textlable {
+    font-size: 14px;
+    line-height: 30px;
+    text-align: right;
+    width: 130px;
+    float: left;
+    margin-right: 25px;
+}
+
+.hc_item .hc_red {
+    color: #F00;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.hc_item .hc_bakspan {
+    margin-right: 10px;
+}
+
+.hc_item .hc_fl {
+    padding: 0px 0px 0px 95px;
+    border-radius: 0px;
+}
+
+.hc_item .hc_chk {
+    padding: 0px 0px 0px 95px;
+    *padding: 0px;
+    border-radius: 0px;
+    max-width: 580px;
+    *max-width: 550px;
+}
+
+.hc_item .hc_fl select {
+    border-radius: 0px;
+}
+
+.hc_item .hc_fl .hc_nameinput {
+    border-radius: 0px;
+    width: 670px;
+    height: 30px;
+    margin-bottom: 0px;
+    *height: 20px;
+}
+
+.hc_item .hc_fl .hc_business {
+    border-radius: 0px;
+    width: 50%;
+    height: 30px;
+    *height: 20px;
+}
+
+.hc_item .hc_fl .hc_businessFile {
+    font-size: 14px;
+    color: #000;
+    background: #e3e3e3 none repeat scroll 0% 0%;
+    height: 30px;
+    padding: 0px 15px;
+    cursor: pointer;
+    border: 0px none;
+    position: relative;
+    margin: 0px 0px 10px 0px;
+}
+
+.hc_item .hc_fl .hc_telinput {
+    border-radius: 0px;
+    height: 30px;
+    margin-bottom: 0px;
+    width: 220px;
+    *height: 20px;
+}
+
+.hc_item .hc_fl .hc_textareaf {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    height: 58px;
+    width: 670px;
+    resize: none;
+}
+
+.hc_imgpreview {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #ccc;
+    margin: 0px 0px 0px 155px;
+    background-color: #fffbf4;
+    color: #ccc;
+    font-size: 25px;
+    text-align: center;
+    line-height: 140px;
+}
+
+.hc_item .hc_fl .hc_lelJu {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.hc_item .hc_fl .hc_radioinput {
+    margin-top: -3px;
+}
+
+.hc_item .hc_chk .hc_radiospan {
+    padding: 0px 20px 0px 10px;
+    line-height: 30px;
+}
+
+.hc_item .hc_fl .hc_select {
+    width: 159px;
+    height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    display: inline;
+    position: absolute;
+    *margin-top: 0px;
+    *background-color: none;
+}
+
+.hc_item .hc_fl .hc_selectqiye {
+    width: 220px;
+    height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    *margin-top: 0px;
+}
+
+.hc_item .hc_fl .hc_sleHid {
+    display: block;
+    width: 130px;
+    height: 30px;
+    overflow: hidden;
+    display: inline;
+    position: absolute;
+}
+
+.hc_item .hc_fl .hc_sleqyHid {
+    display: block;
+    width: 195px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.hc_item .hc_fl .hc_sleBG {
+    width: 220px;
+    height: 30px;
+    border: #ccc 1px solid;
+    border-right: none;
+    background: url(/Images/publicimg/xla.png) #fff no-repeat 184px 0px;
+    display: block;
+    margin-left: 60px;
+}
+
+.hc_item .hc_attestationBtn {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background: rgb(145, 215, 248) none repeat scroll 0% 0%;
+    height: 40px;
+    padding: 1px 35px;
+    cursor: pointer;
+    border: 0px none;
+    position: relative;
+    border-radius: 3px;
+    margin: 0px 0px 50px 155px;
+}
+
+.hc_slesesebg {
+    width: 159px;
+    height: 30px;
+    border: #ccc 1px solid;
+    border-right: none;
+    background: url(/Images/publicimg/xla.png) #fff no-repeat 123px 0px;
+    display: block;
+    float: left;
+}
+
+.hc_slemag {
+    margin-left: 10px;
+}
+
+.hc_item .hc_fl .hc_sescinput {
+    border-radius: 0px;
+    width: 50%;
+    height: 30px;
+    margin-bottom: 0px;
+    *height: 20px;
+}
+
+.hc_icocorrect {
+    width: 24px;
+    height: 26px;
+    background: transparent url("/Images/autoimg/otherimg/valid.png") no-repeat scroll center center;
+    display: inline-block;
+    text-indent: -9999px;
+    margin: -4px 5px -7px 5px;
+}
+
+.hc_icomiste {
+    float: left;
+    margin: -30px 0px 0px 290px;
+}
+
+.hc_item .spanmsci {
+    font-size: 11px;
+    color: rgb(194, 2, 16);
+    margin: 60px;
+}
+
+/*企业会员注册成功提示样式*/
+/*注册成功样式*/
+.member_information {
+    width: 100%;
+    height: 432px;
+    margin-top: 10px;
+}
+
+..member_information .info_content div info_title {
+    width: 925px;
+    height: 38px;
+    border-top: 1px solid #e3e3e3;
+    background: #f3f3f3;
+}
+
+.member_information .info_content {
+    width: 100%;
+    height: 260px;
+}
+
+    .member_information .info_content .success_register {
+        width: 538px;
+        height: 185px;
+        margin: auto;
+        margin-top: 35px;
+    }
+
+.info_content .success_register .success_info {
+    width: 100%;
+    height: 35px;
+    font-size: 25px;
+    color: #c21210;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+    .info_content .success_register .success_info span {
+        width: 50%;
+        height: 35px;
+        line-height: 35px;
+    }
+
+.info_content .shopping_info {
+    width: 100%;
+    text-align: center;
+    height: 35px !important;
+    margin: 25px auto 25px auto;
+    font-size: 18px;
+}
+
+.info_content .Warm_prompt {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+    .info_content .Warm_prompt .certification {
+        border: none;
+        display: block;
+        height: 36px;
+        width: 120px;
+        background: #ffc853;
+        text-align: center;
+        margin: auto;
+        font-size: 18px;
+        line-height: 36px;
+        color: #000000;
+        text-decoration: none;
+    }
+/*提示信息样式（公共）*/
+.prompt_info .errorem {
+    height: 15px;
+    line-height: 15px;
+    width: 15px;
+    float: left;
+    background: transparent url("/HC.Manage/images/publicimg/Input_error.png") no-repeat scroll 0% 0%;
+    margin-top: 11px;
+}
+/*底部样式*/
+.footer {
+    width: 100%;
+    height: 140px;
+    display: block;
+    margin-top: 20px;
+}
+
+.footer_nav {
+    width: 1000px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer_dis {
+    width: 458px;
+    height: 40px;
+    display: block;
+    float: left;
+}
+
+    .footer_dis p {
+        font-family: "微软雅黑";
+        font-size: 12px;
+        color: #000000;
+    }
+
+.footer_bar {
+    width: 380px;
+    height: 60px;
+    float: right;
+    display: block;
+}
+
+    .footer_bar ul {
+        padding: 0;
+        margin: 0;
+    }
+
+        .footer_bar ul li {
+            min-width: 80px;
+            float: left;
+            min-height: 20px;
+        }
+
+        * + html .footer_bar ul li {
+            min-width: 80px;
+            float: left;
+            min-height: 20px;
+            line-height: 24px;
+        }
+
+            .footer_bar ul li a {
+                color: #000000;
+            }
+/*注册成功页面*/
+.member_information .shopping_infos {
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.shopping_infos dl {
+    width: 100%;
+    height: 38px;
+    display: block;
+    float: left;
+}
+
+    .shopping_infos dl dt {
+        width: 80px;
+        height: 22px;
+        display: block;
+        float: left;
+        background: #ffc853;
+        margin: 16px 0px 16px 56px;
+        padding: 6px 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+.info_content .Warm_prompts {
+    width: 100%;
+    height: 35px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.Warm_prompts i {
+    font-style: normal;
+    color: #c20201;
+    float: left;
+    height: 25px;
+    width: 78px;
+}
+
+.info_content dl {
+    width: 86%;
+    display: block;
+    float: right;
+}

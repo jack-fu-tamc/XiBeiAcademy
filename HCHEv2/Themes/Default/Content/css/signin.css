@@ -1,0 +1,44 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
+    background-color: #020031;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.ico-admin,
+.ico-logout,
+.ico-login {
+    color: #fff;
+}
+
+.jumbotron {
+    padding: 180px 0;
+    color: #000;
+    text-align: left;
+
+}
+
+
+
+
+
+/*登录*/
+
+.form-signin {
+    /*max-width: 1000px;*/
+    padding: 80px 0px;
+    margin: 0 auto 0px;
+    background-color:#fff;
+    /*-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);*/
+    border-top: 5px solid #e0d8d8;
+    border-bottom: 5px solid #e0d8d8;
+}

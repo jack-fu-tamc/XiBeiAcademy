@@ -1,0 +1,30 @@
+﻿
+ 
+记录时间：2015-12-25 10:10:46,260 
+线程ID:[44] 
+日志级别：  ERROR 
+错误描述：Parameter 'p_AccModel' not found in the collection.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataTable(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 120在 Maticsoft.DAL.Procurment_InfoDtl.Add(Procurment_InfoDtl model) 位置 e:\ProTwoN\DAL\Procurment\Procurment_InfoDtl.cs:行号 45
+在 BLL.Procurment.Procurment_InfoDtlBll.Insert(Procurment_InfoDtl model) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoDtlBll.cs:行号 22
+在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 726
+ 
+
+ 
+记录时间：2015-12-25 10:10:55,355 
+线程ID:[44] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 713
+ 
+
+ 
+记录时间：2015-12-25 11:11:11,293 
+线程ID:[22] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 713
+ 
+
+ 
+记录时间：2015-12-25 16:01:31,106 
+线程ID:[85] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecT(Procurment_InfoMst model) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 671
+ 

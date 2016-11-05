@@ -1,0 +1,16 @@
+﻿
+ 
+记录时间：2015-12-18 16:14:21,210 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: value   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 624
+ 
+
+ 
+记录时间：2015-12-18 16:14:31,581 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: value   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 624
+ 

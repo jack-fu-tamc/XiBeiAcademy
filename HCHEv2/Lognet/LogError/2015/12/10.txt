@@ -1,0 +1,125 @@
+﻿
+ 
+记录时间：2015-12-10 09:54:38,643 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：对于“HCHEv2.Controllers.CommonController”中方法“System.Web.Mvc.ActionResult GetCarBrand(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-10 09:54:39,114 
+线程ID:[23] 
+日志级别：  ERROR 
+错误描述：对于“HCHEv2.Controllers.CommonController”中方法“System.Web.Mvc.ActionResult GetCarBrand(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-10 09:54:53,689 
+线程ID:[52] 
+日志级别：  ERROR 
+错误描述：对于“HCHEv2.Controllers.CommonController”中方法“System.Web.Mvc.ActionResult GetCarBrand(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-10 09:54:53,695 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：对于“HCHEv2.Controllers.CommonController”中方法“System.Web.Mvc.ActionResult GetCarBrand(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-10 11:01:05,599 
+线程ID:[29] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 15
+
+ 
+
+ 
+记录时间：2015-12-10 11:01:19,627 
+线程ID:[51] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 15
+
+ 
+
+ 
+记录时间：2015-12-10 11:11:16,131 
+线程ID:[44] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml(20): error CS0266: 无法将类型“System.Collections.Generic.IEnumerable<string>”隐式转换为“System.Collections.Generic.List<string>”。存在一个显式转换(是否缺少强制转换?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-10 11:43:07,067 
+线程ID:[25] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Core.CommonMethod.UntilMethod.GetCharSpellCode(String CnChar) 位置 e:\ProTwoN\HC.Core\Common\UntilMethod.cs:行号 356在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.<Execute>b__7(SelectListItem x) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 350
+ 
+
+ 
+记录时间：2015-12-10 11:43:44,158 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Core.CommonMethod.UntilMethod.GetCharSpellCode(String CnChar) 位置 e:\ProTwoN\HC.Core\Common\UntilMethod.cs:行号 356在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.<Execute>b__7(SelectListItem x) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 350
+ 
+
+ 
+记录时间：2015-12-10 11:44:16,274 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.<Execute>b__7(SelectListItem x) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 350
+ 
+
+ 
+记录时间：2015-12-10 11:44:24,238 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.<Execute>b__7(SelectListItem x) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 350
+ 
+
+ 
+记录时间：2015-12-10 11:44:25,951 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.<Execute>b__7(SelectListItem x) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 350
+ 
+
+ 
+记录时间：2015-12-10 11:45:21,877 
+线程ID:[25] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Core.CommonMethod.UntilMethod.GetCharSpellCode(String CnChar) 位置 e:\ProTwoN\HC.Core\Common\UntilMethod.cs:行号 356在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.<Execute>b__7(SelectListItem x) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 350在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 352
+ 
+
+ 
+记录时间：2015-12-10 11:46:04,278 
+线程ID:[29] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Core.CommonMethod.UntilMethod.GetCharSpellCode(String CnChar) 位置 e:\ProTwoN\HC.Core\Common\UntilMethod.cs:行号 356在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.<Execute>b__7(SelectListItem x) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 350在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 352
+ 
+
+ 
+记录时间：2015-12-10 15:32:38,982 
+线程ID:[74] 
+日志级别：  ERROR 
+错误描述：应为“{”，但找到的是“<”。块语句必须括在“{”和“}”中。不能在 CSHTML 页中使用单语句控制流的语句。例如，不允许使用以下语句:
+
+@if(isLoggedIn)
+    <p>Hello, @user</p>
+
+请改为将块内容括在“{}”中:
+
+@if(isLoggedIn) {
+    <p>Hello, @user</p>
+}
+   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 

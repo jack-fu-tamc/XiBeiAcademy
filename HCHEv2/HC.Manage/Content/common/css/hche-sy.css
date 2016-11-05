@@ -1,0 +1,163 @@
+/*首页logo部分*/
+.logo {
+    background: url('/Images/autoimg/publicimg/logo.png') no-repeat;
+    height: 60px;
+    width: 198px;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 42px;
+}
+/*全局搜索样式*/
+.searchbox {
+    width: 520px;
+    height: 80px;
+    margin: 25px auto 15px auto;
+}
+
+    .searchbox ul {
+        height: 30px;
+        width: 500px;
+        list-style: none;
+        margin: 0 !important;
+    }
+
+        .searchbox ul li {
+            float: left;
+        }
+
+            .searchbox ul li a {
+                float: left;
+                line-height: 30px;
+                padding: 0 20px;
+                text-decoration: none;
+                color: #000;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .searchbox ul li .style1 {
+                background-color: #c20201;
+                color: #fff;
+            }
+
+            .searchbox ul li .style2 {
+                background-color: #c20201;
+                color: #fff;
+            }
+
+.bodys input {
+    height: 38px;
+    line-height: 30px;
+    width: 390px;
+    padding: 0 10px;
+    float: left;
+    border-radius: 0 !important;
+}
+
+.bodys p {
+    margin: 0 !important;
+}
+
+.bodys .one {
+    border: #c20201 3px solid;
+}
+
+.bodys .two {
+    border: #c20201 3px solid;
+}
+
+.bodys .one1 {
+    background-color: #c20201;
+}
+
+.bodys .two2 {
+    background-color: #c20201;
+}
+
+.bodys button {
+    float: left;
+    border: 0;
+    height: 44px;
+    width: 100px;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+    overflow: hidden;
+}
+/*首页微信部分*/
+.weixin {
+    background: url("../../../images/publicimg/app_ewm.png") no-repeat;
+    height: 94px;
+    width: 187px;
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.weixinFoot {
+    background: url('../../../images/publicimg/erwm.png') no-repeat;
+    height:118px;
+    width: 100px;
+    display: block;
+    margin-top:18px;
+    margin-bottom: 20px;
+}
+
+
+/*首页主导航*/
+
+.nav_bg {
+    background: #fff;
+    height: 47px;
+    width: 100%;
+}
+
+.nav_la img {
+    width: 20px;
+    height: 10px;
+}
+
+.nav_bg ul {
+    margin: 0 !important;
+}
+
+    .nav_bg ul li a {
+        color: #000;
+        font-size: 16px;
+    }
+
+.hc_topLi .hc_la {
+    background: transparent url("/Images/autoimg/otherimg/arrow_white.png") no-repeat scroll 4px -12px;
+    width: 22px;
+    height: 20px;
+    float: left;
+    display: block;
+}
+
+.hc_topHom {
+    background: transparent url("/Images/autoimg/otherimg/top_icon.png") no-repeat scroll 0px -21px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    display: block;
+    margin-left: -10px;
+}
+
+.hc_topright .hc_la {
+    background: transparent url("/Images/autoimg/otherimg/arrow_white.png") no-repeat scroll 1px -12px;
+    width: 16px;
+    height: 20px;
+    float: left;
+    display: block;
+}
+
+.hc_topright .hc_la {
+    background: transparent url("/Images/autoimg/otherimg/arrow_white.png") no-repeat scroll 1px -12px;
+    width: 16px;
+    height: 20px;
+    float: left;
+    display: block;
+}
+

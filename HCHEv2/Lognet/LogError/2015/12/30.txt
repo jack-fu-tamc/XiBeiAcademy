@@ -1,0 +1,330 @@
+﻿
+ 
+记录时间：2015-12-30 09:20:42,803 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseDetail.cshtml(32): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“ProcurementDesc”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“ProcurementDesc”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-30 10:53:58,003 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：发生一个或多个错误。   </br>在 HC.Service.Authentication.FormsAuthenticationService.GetAuthenticatedCustomer() 位置 e:\ProTwoN\HC.Service\Authentication\FormsAuthenticationService.cs:行号 190在 HC.Web.Framework.WebWorkContext.GetCurrentUser() 位置 e:\ProTwoN\HC.Web.Framework\WebWorkContext.cs:行号 47
+在 HC.Web.Framework.WebWorkContext.get_CurrentCustomer() 位置 e:\ProTwoN\HC.Web.Framework\WebWorkContext.cs:行号 80
+在 HC.Web.Framework.ManageStoreAllowNavigationAttributecs.OnActionExecuting(ActionExecutingContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\ManageStoreAllowNavigationAttributecs.cs:行号 49
+
+ 
+
+ 
+记录时间：2015-12-30 10:53:58,005 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：发生一个或多个错误。   </br>在 HC.Service.Authentication.FormsAuthenticationService.GetAuthenticatedCustomer() 位置 e:\ProTwoN\HC.Service\Authentication\FormsAuthenticationService.cs:行号 190在 HC.Web.Framework.WebWorkContext.GetCurrentUser() 位置 e:\ProTwoN\HC.Web.Framework\WebWorkContext.cs:行号 47
+在 HC.Web.Framework.WebWorkContext.get_CurrentCustomer() 位置 e:\ProTwoN\HC.Web.Framework\WebWorkContext.cs:行号 80
+在 HC.Web.Framework.ManageStoreAllowNavigationAttributecs.OnActionExecuting(ActionExecutingContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\ManageStoreAllowNavigationAttributecs.cs:行号 49
+
+ 
+
+ 
+记录时间：2015-12-30 11:35:51,473 
+线程ID:[40] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseDetail.cshtml(32): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“ProcurementDesc”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“ProcurementDesc”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-30 13:30:09,883 
+线程ID:[75] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-30 13:30:27,197 
+线程ID:[80] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-30 13:57:21,882 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-30 13:57:48,902 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-30 14:00:36,899 
+线程ID:[42] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController._ajaxAllOffer(GridCommand cmd, Int32 dtlID) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 1104
+ 
+
+ 
+记录时间：2015-12-30 14:00:47,384 
+线程ID:[55] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController._ajaxAllOffer(GridCommand cmd, Int32 dtlID) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 1104
+ 
+
+ 
+记录时间：2015-12-30 15:09:52,998 
+线程ID:[15] 
+日志级别：  ERROR 
+错误描述：列“ProcurmentID”不属于表 ds。   </br>在 HC.Manage.Controllers.PurchaseController.tableToReturnModelList(DataTable dt, Int32 curentUserID, Int32 purchasePeopleID) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 406在 HC.Manage.Controllers.PurchaseController._ajaxAllOffer(GridCommand cmd, Int32 dtlID) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 1113
+ 
+
+ 
+记录时间：2015-12-30 16:39:45,920 
+线程ID:[31] 
+日志级别：  ERROR 
+错误描述：Parameter 'p_SystemUserID' not found in the collection.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 177在 Maticsoft.DAL.Acc_Info.GetList(Acc_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Accessories\Acc_Info.cs:行号 42
+在 BLL.Accessories.Acc_InfoBll.GetList(Acc_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Accessories\Acc_InfoBll.cs:行号 28
+在 HC.Manage.Controllers.ProductController.onsaleAjax(GridCommand cmd, OnSaleProductModelList model) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 2066
+ 
+
+ 
+记录时间：2015-12-30 16:40:04,074 
+线程ID:[28] 
+日志级别：  ERROR 
+错误描述：Parameter 'p_SystemUserID' not found in the collection.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 177在 Maticsoft.DAL.Acc_Info.GetList(Acc_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Accessories\Acc_Info.cs:行号 42
+在 BLL.Accessories.Acc_InfoBll.GetList(Acc_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Accessories\Acc_InfoBll.cs:行号 28
+在 HC.Manage.Controllers.ProductController.onsaleAjax(GridCommand cmd, OnSaleProductModelList model) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 2066
+ 
+
+ 
+记录时间：2015-12-30 16:57:29,469 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 16:58:16,997 
+线程ID:[49] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 16:58:51,830 
+线程ID:[41] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 16:58:54,253 
+线程ID:[50] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 16:59:33,448 
+线程ID:[50] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:55,703 
+线程ID:[50] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:57,123 
+线程ID:[24] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:58,005 
+线程ID:[50] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:58,282 
+线程ID:[32] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:58,549 
+线程ID:[49] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:58,749 
+线程ID:[32] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:58,800 
+线程ID:[49] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:59,010 
+线程ID:[50] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:59,186 
+线程ID:[49] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:59,300 
+线程ID:[50] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:00:59,434 
+线程ID:[49] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:01:02,711 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:01:15,996 
+线程ID:[41] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:01:51,661 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:02:02,717 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：无法对 null 引用执行运行时绑定   </br>在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.<>c__DisplayClass14.<Execute>b__8(GridPagerSettingsBuilder seting) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 127在 ASP._Page_HC_Manage_Views_purchase_PruchaseRecommend_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml:行号 87
+
+ 
+
+ 
+记录时间：2015-12-30 17:03:42,852 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseRecommend.cshtml(129): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“onSales”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“onSales”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-30 18:21:40,029 
+线程ID:[37] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _releaseSuply(Int32, Int32)”的不可以为 null 的类型“System.Int32”的参数“delID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-30 18:22:25,015 
+线程ID:[43] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _releaseSuply(Int32, Int32)”的不可以为 null 的类型“System.Int32”的参数“accid”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-30 18:33:17,021 
+线程ID:[38] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseDetail.cshtml(32): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“ProcurementDesc”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“ProcurementDesc”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-30 18:34:04,461 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseDetail.cshtml(32): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“ProcurementDesc”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“ProcurementDesc”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-30 19:07:40,645 
+线程ID:[50] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\editorPurchase.cshtml(89): error CS1061: “HC.Manage.Models.procurent.releaseProcurmentModel”不包含“ProcurementDesc”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.releaseProcurmentModel”的第一个参数的扩展方法“ProcurementDesc”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-30 20:34:17,109 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\releasePurchaseSecT.cshtml(24): error CS0246: 未能找到类型或命名空间名称“procurmentPostModelJson”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 

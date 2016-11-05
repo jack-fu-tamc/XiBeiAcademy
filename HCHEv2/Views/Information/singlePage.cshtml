@@ -1,0 +1,135 @@
+﻿@using HC.Data.Models
+@model NewsClass
+@{
+    ViewBag.Title = Html.Raw(Model.ClassName);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section headCSS{
+    <link href="~/Scripts/ad-gallery/jquery.ad-gallery.css" type="text/css" rel="stylesheet">
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="block block_bg">
+    <div class="area_l">
+        <div class="leftnav">
+            <div class="leftnav2">
+                <div class="leftnav_title"><b>@ViewBag.parentName</b><span>SCHOOL NEWS</span></div>
+                <div class="leftnav_bg">
+                    @{Html.RenderAction("LeftNav", "Information", new { id = Model.ParentID, curenId = Model.ClassID });}
+                </div>
+            </div>
+        </div>
+        <div class="clr20"></div>
+
+        <div class="column_left_01">
+            <div class="column_t"><p class="column_title">热点新闻</p></div>
+            <div class="column_c">
+                <div class="left_01">
+                    @{Html.RenderAction("leftNewsDelivery", "Information");}
+                </div>
+            </div>
+        </div>
+
+        
+
+        <script type="text/javascript" src="/scripts/SpryCollapsiblePanel.js"></script>
+    </div>
+    <div class="area_r">
+        <!--当前位置 -->
+        <div class="crumb">
+            <div class="position">
+                <a href="/" title="首页" class="home"></a>
+                <p>
+                    <a href="/">首页</a>
+                    @Html.Raw(ViewData["nav"].ToString())
+                </p>
+            </div>
+            <div class="title"><p>@Html.Raw(Model.ClassName)</p></div>
+            <div class="clr"></div>
+        </div>
+
+
+        <!--网站内容 -->
+        <div class="about_content">
+            <!--相册显示-->
+            @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
+            {
+                <div style="min-height:450px;">
+                    <div class="">
+                        <!--start-->
+                        
+
+                        <div id="container">
+                            <div class="ad-gallery" id="gallery">
+                                <div id="descriptions"></div>
+                                <div class="ad-image-wrapper"></div>
+                                <div class="ad-controls"></div>
+                                <div class="ad-nav">
+                                    <div class="ad-thumbs">
+                                        <ul class="ad-thumb-list">
+                                            @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).ToList())
+                                            {
+                                                <li>
+                                                    <a href="@item.AttaUrl">
+                                                        <img src="@item.AttaUrl" alt="@item.AttaDescribe">
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end -->
+                        <div class="c_both"></div>
+                    </div>
+                </div>
+            }
+
+            @*@Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))*@
+            @Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))
+
+        </div>
+
+        <div class="bottom_top clearfix">
+           
+            <p class="fr"><a href="/">&lt; 返回首页</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><img src="/images/common/ico_top.gif"></a></p>
+        </div>
+    </div>
+    <div class="clr"></div>
+</div>
+@section footScript{
+    
+    <script src="~/Scripts/ad-gallery/jquery.ad-gallery.js" type="text/javascript" charset="UTF-8"></script>
+    
+    <script type="text/javascript">
+        $(function () {
+            var galleries = $('.ad-gallery').adGallery();
+            $('#switch-effect').change(
+        function () {
+            galleries[0].settings.effect = $(this).val();
+            return false;
+        }
+      );
+            $('#toggle-slideshow').click(
+        function () {
+            galleries[0].slideshow.toggle();
+            return false;
+        }
+      );
+        });
+</script>
+
+    }

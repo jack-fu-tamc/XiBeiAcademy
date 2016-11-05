@@ -1,0 +1,258 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure;
+@using HC.Service.User;
+@using HC.Data.Models
+@model RolesManageModel
+@{
+    var pageSize = 20;
+    ViewBag.Title = "角色管理";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsell.css" type="text/css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsellAB.css" type="text/css" />
+    <style type="text/css">
+        #onsalesM .checkedbox {
+            height: auto;
+            margin-top: 10px;
+        }
+
+        #importexcel-window table td {
+            text-align: left;
+            /*width: 200px;*/
+        }
+
+        select {
+            width: 158px;
+            margin-bottom: 0px;
+        }
+
+        .errorTr span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+}
+
+
+
+
+<div class="buyerright">
+    <div class="sellinggoodslist">
+        <div class="sellinggoodsserchnav">
+            <div class="hcmoneynav">
+                <div class="hche_soldgoods">
+                     <i>角色管理</i>
+                    ROLES MANAGE
+                </div>
+                <div class="hche_soldgoodsimg">
+                </div>
+                <div class="hche_private">
+                   
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="salegoodslist">
+            @(Html.Telerik().Grid<UserGroup>(Model.Roels.Data).Name("onsalesM")
+            .ToolBar(toolBar => toolBar.Template(
+                @<div style="padding: 10px">
+                   
+                    <a id="AddTypeAtrit" href="@Url.Action("AddUserGroup", "User")" class="del_show shopchoose">添加角色</a>
+                </div>))
+                       .ClientEvents(events =>
+                       events.OnDataBinding("onsaleBinding")
+                       .OnDataBound("onsaleBound")
+                       .OnRowDataBound("onRowDataBound")
+               )
+           .Columns(columns =>
+                   {
+                       columns.Bound(x => x.GroupName).Title("角色名称").Width(50)
+                           .Template(@<text>
+
+                            <div class="goodsdetailed">
+                                <p><a href="javascript:;">@item.GroupName </a></p>
+                            </div>
+                        </text>).ClientTemplate("<div class=\"goodsdetailed\"><p><a href=\"javascript:;\"><#= GroupName #> </a></p></div>"
+                    );
+                       columns.Bound(x => x.Comments).Title("备注");
+                     
+                       columns.Bound(x => x.UserGroupID)
+                                       .Width(100)
+                                       .Template(@<text><span><a href="/manage/user/AddUserGroup/@item.UserGroupID" >修改</a></span><span><a href="###" class="deleteArtistTtype" cateid="@item.UserGroupID">删除</a></span></text>)
+                                       .ClientTemplate("<span><a href=\"/manage/user/AddUserGroup/<#= UserGroupID #>\"  class=\"aletAtistType\">修改</a></span><span><a href=\"###\" onclick=\"deleteArtistType(this)\" class=\"deleteArtistTtype\" cateID=\"<#= UserGroupID #>\">删除</a></span>")
+                                       .Title("操作");
+
+
+                   }).NoRecordsTemplate("暂无数据")
+.Pageable(seting => seting.Total(Model.Roels.Total).PageSize(pageSize).Position(GridPagerPosition.Bottom))
+                                                                 .DataBinding(binding => binding.Ajax().Select("ajaxRoles", "User")).EnableCustomBinding(true)
+
+            )
+        </div>
+
+
+
+
+
+    </div>
+</div>
+@section footScript{
+    <script type="text/javascript">
+        var flag=true;
+        $(document).ready(function () {
+            var eleName="onsalesM";
+            var totalH= $("#"+eleName).height();
+            var headH=$("#"+eleName+" .t-grid-header").height();
+            var toolBarH=$("#"+eleName+" .t-toolbar").height();
+            var curnetH=totalH-headH-toolBarH;
+            var paddH=(curnetH-20)/2;
+            $("#"+eleName+" table").prepend("<div class=\"coverWait\" style=\"position: absolute;height:"+curnetH+"px  ;width: 100%;background-color: #E5E5E5;\"><span style=\"text-align: center; display: block; padding-top: "+paddH+"px; color: #777;\">请稍等，数据加载中......</span></div>");
+
+
+
+            //扩展trim 支持ie8
+            if (!String.prototype.trim) { //判断下浏览器是否自带有trim()方法
+                String.prototype.trim = function () {
+                    return this.replace(/(^\s*)|(\s*$)/g, "");
+                }
+            }
+            //扩展结束
+
+            //更改成文字
+            $(".t-arrow-next").each(function (i, e) {
+                $(this).text("下一页");
+            });
+            $(".t-arrow-prev").each(function (i, e) {
+                $(this).text("上一页");
+            });
+            //更改成文字结束
+            $(".t-arrow-first").css({ "display": "none" });
+            $(".t-arrow-last").css({ "display": "none" });
+            $(".t-refresh").css({ "display": "none" });
+
+            processGridDsiplay("#onsalesM");
+            $(".t-widget").show();
+
+            $("#importexcel-window").css({"display":"none"});
+            $("#importTemp-window").css({"display":"none"});
+            $(".t-close").text("");
+
+
+          
+
+            //取消错误
+            $("#importexcel-window .hc_nameinput").click(function(){
+                $("span[valfor='"+$(this).attr("id")+"']").text("").hide();
+                flag=true;
+            })
+        });
+
+
+
+
+
+
+
+        //转为汉字的处理 如果ajax请求返回totalcount是0  则不执行 ondatabind
+        function processGridDsiplay(ele) {
+            var str = $("" + ele + " .t-status-text").text().trim();
+            var indexOF = str.indexOf("f");
+            var totalDate = str.substr(indexOF + 1).trim();
+            var pageSize=@pageSize;
+            var totalPage=Math.ceil(totalDate/pageSize);
+            $(""+ele+" .t-status-text").text("共"+totalPage+"页");
+        }
+
+        function dumps(obj) {
+            var result = [];
+            $.each(obj, function (key, value) { result.push(value); });
+
+            //var results=[];
+            //$.each(obj,function(k,v){results.push( k+"-"+v ) });
+            //console.log(results);
+            return result;
+        }
+
+
+
+
+
+
+
+
+        function onsaleBinding(e) {
+
+        }
+
+        function onsaleBound(e) {
+            //处理分页
+            if($(e.currentTarget).find(".t-numeric").children().length>0){
+                var ajaxPageCount= $(e.currentTarget).find(".t-numeric").find("a").length+1;
+                $(e.currentTarget).find(".t-status-text").text("共"+ajaxPageCount+"页");
+            }else{
+                $(e.currentTarget).find(".t-status-text").text("共"+0+"页");
+            }
+            //处理分页
+
+            //移除等待提示层
+            var eleName=$(e.delegateTarget).attr("id");
+            $("#onsalesM table div.coverWait").remove();
+        }
+
+        function onRowDataBound(e){
+            var s = e.dataItem;
+            var rowItem = e.row;
+
+            if(s.UserGroupID==1){
+                $(rowItem).find("td:last").find("span:eq(1)").remove();
+            }
+
+            if(s.UserGroupID==6){
+                $(rowItem).find("td:last").find("span:eq(1)").remove();
+            }
+        }
+
+
+
+      
+
+       
+
+
+        //删除角色
+        function deleteArtistType(e){
+            var userGroupID=$(e).attr("cateid");
+            if(confirm("确定要删除该角色吗？")){
+                $.ajax({
+                    url: "/manage/User/_DeleteUserGroup/"+userGroupID,
+                    type: 'GET',
+                    dataType: 'json',
+                    error: function (xhr, status) {
+                        alert("删除出错");
+                    },
+                    success: function (Data) {
+                      
+                        if(Data=="success"){
+                            var grid = $('#onsalesM').data('tGrid');
+                            grid.ajaxRequest();
+                        }else{
+                            alert(Data);
+                        }
+                    }
+                });
+            }
+        }
+
+      
+
+       
+
+    </script>
+}

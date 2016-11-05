@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.title = Model.ClassName;
+}
+
+@using HC.Data.Models
+@model NewsClass
+
+
+
+@section lanmuName{
+    <span class="header_c">@Model.ClassName</span>
+}
+
+
+
+<div class="block">
+    <!--子栏目 -->
+    <!--有几个栏目就显示几 最大04 -->
+    <!--<div class="submenu submenu04">
+      <ul>
+        <li class="on"><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+      </ul>
+      <div class="clr"></div>
+    </div>
+    <div class="clr10"></div> -->
+    <!--栏目内容 -->
+    <div class="about_content">
+        @Html.Raw(Model.PageContent)
+    </div>
+</div>
+
+
+ 
+
+

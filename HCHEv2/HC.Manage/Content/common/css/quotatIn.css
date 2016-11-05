@@ -1,0 +1,717 @@
+.rightcontent {
+    float: left;
+    display: inline-block;
+}
+
+.hcmoneynav {
+    height: 40px;
+    background: #F5F5F5 none repeat scroll 0% 0%;
+    width: 100%;
+    font-family: "雅黑";
+}
+
+.myhcmoney {
+    float: left;
+    margin-left: 30px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #C20201;
+    width: 145px;
+}
+
+.hcmoneyimgleft {
+    float: left;
+    font-size: 15px;
+}
+
+.hcmoneyimg {
+    background: transparent url("../../../images/publicimg/pd_Shop_star.png") repeat scroll 0% 0%;
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-top: 11px;
+    margin-right: 5px;
+}
+
+.hcmone {
+    font-style: normal;
+}
+
+.hcprivate {
+    float: right;
+    margin-right: 30px;
+    color: #CE9D63;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+
+.hcmoneyimgright {
+    float: right;
+}
+
+.hc_seek {
+    margin: 16px 5px;
+    height: 35px;
+}
+
+    .hc_seek .hc_inputsek {
+        float: left;
+        height: 34px;
+    }
+
+    .hc_seek .hc_seekinp {
+        width: 282px;
+        height: 32px;
+        line-height: 30px;
+        float: left;
+        border-radius: 0px;
+        padding: 0px 0px 0px 6px;
+        border-right: none !important;
+        outline: none !important;
+    }
+
+    .hc_seek .hc_seekbut {
+        float: left;
+        height: 34px;
+        width: 86px;
+        color: #000;
+        text-align: center;
+        overflow: hidden;
+        background: #EEE none repeat scroll 0% 0%;
+        border: 1px solid #CCC;
+    }
+
+.hc_GJseek {
+    width: 210px;
+    height: 34px;
+    float: left;
+    line-height: 32px;
+    margin-left: 35px;
+}
+
+    .hc_GJseek .hc_seekspan {
+        border: 1px solid #CCC;
+        text-align: center;
+        width: 130px;
+        float: left;
+        cursor: pointer;
+    }
+
+    .hc_GJseek .hc_butsel {
+        float: left;
+        border: 1px solid #C20201;
+        height: 33px;
+        width: 60px;
+        color: #C20201;
+        text-align: center;
+        overflow: hidden;
+        margin-left: 16px;
+        background: #FFF none repeat scroll 0% 0%;
+        border-radius: 4px;
+        line-height: 19px;
+    }
+
+.hc_butsel:hover {
+    background: #C20201;
+    color: #FFF;
+}
+
+.hc_XLseek {
+    height: 50px;
+    margin-top: -5px;
+}
+
+    .hc_XLseek .hc_SJname {
+        width: 215px;
+        height: 40px;
+        float: left;
+        line-height: 40px;
+    }
+
+    .hc_XLseek .hc_CJteach {
+        width: 320px;
+        height: 40px;
+        float: left;
+        line-height: 40px;
+    }
+
+    .hc_XLseek .hc_JYselest {
+        width: 215px;
+        height: 40px;
+        float: left;
+        line-height: 40px;
+    }
+
+    .hc_XLseek .hc_PJselest {
+        width: 170px;
+        height: 40px;
+        float: left;
+        line-height: 40px;
+    }
+
+    .hc_XLseek span {
+        float: left;
+    }
+
+    .hc_XLseek .hc_SJname {
+        line-height: 40px;
+    }
+
+    .hc_XLseek .hc_NCinput {
+        width: 119px;
+        height: 32px;
+        border-radius: 0px;
+        line-height: 30px;
+        padding: 0px 0px 0px 4px;
+        margin-top: 5px;
+        box-shadow: none;
+    }
+
+.hc_CJteach .mh_date {
+    width: 100px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    padding: 0px 0px 0px 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    background: transparent url("../images/buyers/order_icon.png") no-repeat scroll 77px center;
+    box-shadow: none;
+}
+
+.hc_ZTselet {
+    position: absolute;
+    float: left;
+    margin-left: 70px;
+    margin-top: 5px;
+    height: 35px;
+    *margin-left: 0px;
+}
+
+    .hc_ZTselet dt {
+        height: 29px;
+        display: inline-block;
+        border: 1px solid #CCC;
+        line-height: 23px;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        z-index: 99;
+        width: 113px;
+        padding-top: 3px;
+        position: relative;
+        padding-left: 15px;
+        font-weight: 100;
+    }
+
+    .hc_ZTselet dd {
+        position: absolute;
+        left: 0px;
+        top: 33px;
+        border-right: 1px solid #ECECEC;
+        background: #ECECEC none repeat scroll 0% 0%;
+        display: none;
+        z-index: 9000;
+    }
+
+        .hc_ZTselet dd ul {
+            width: 129px;
+            height: 80px;
+            overflow: auto;
+            z-index: 6000;
+            display: block;
+            margin: 0px;
+        }
+
+            .hc_ZTselet dd ul li {
+                width: 129px;
+                font-size: 14px;
+            }
+
+.hc_indent ul li {
+    display: block;
+    width: 100px;
+    float: left;
+    font-size: 15px;
+    height: 38px;
+    line-height: 40px;
+}
+
+.hc_ZTselet dd ul li a {
+    line-height: 20px;
+    display: block;
+    padding: 7px 15px;
+}
+
+.icoemimg {
+    background: url("../images/Sellering/Menu_arrow.png") no-repeat scroll -22px 4px;
+    width: 15px;
+    height: 20px;
+    float: right;
+}
+
+.icodownimg {
+    background: transparent url("../images/Sellering/Menu_arrow.png") no-repeat scroll -5px 4px;
+    width: 15px;
+    height: 20px;
+    float: right;
+}
+
+.seekico_lis {
+    background: transparent url("../../../Content/pic/Menu_arrow.png") no-repeat scroll -11px 5px !important;
+    *background: url("../../../Content/pic/Menu_arrow.png") no-repeat scroll -12px -1px !important;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-top: 4px;
+}
+
+.seekico {
+    background: transparent url("../../../Content/pic/Menu_arrow.png") no-repeat scroll 5px 5px;
+    *background: transparent url("../../../Content/pic/Menu_arrow.png") no-repeat scroll 5px -1px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-top: 4px;
+}
+
+.hc_GJseek .hc_seekspan {
+    text-align: center;
+    cursor: pointer;
+}
+/*日期样式*/
+input {
+    width: 100px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    padding: 0px 0px 0px 4px;
+}
+
+.calender {
+    width: 255px;
+    margin: 50px auto;
+    top: 0;
+    left: 0;
+    border: 1px #ccc solid;
+    background: #fff;
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+
+.calendertb {
+    width: 100%;
+}
+
+    .calendertb td {
+        width: 35px;
+        height: 35px;
+        border: 1px #CCCCCC solid;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+        .calendertb td.hover, .calendertb td.weekendhover {
+            background: #D6D6D6;
+        }
+
+    .calendertb th {
+        width: 35px;
+        height: 30px;
+        border: 1px #CCCCCC solid;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        color: #979797;
+    }
+
+.tdtoday {
+    background: #0080FF;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border: 1px #CCCCCC solid;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.getyear {
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    text-align: center;
+}
+
+.preMonth {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #0080FF;
+}
+
+.nextMonth {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #0080FF;
+}
+
+.hc_CJteach .mh_date {
+    width: 100px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    padding: 0px 0px 0px 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    background: transparent url("../../../images/publicimg/order_icon.png") no-repeat scroll 80px center;
+}
+
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    background: #fff;
+    filter: alpha(opacity=10);
+    opacity: 0.1;
+    display: none;
+}
+
+.getyear select {
+    width: auto;
+}
+
+#tabs {
+    width: 723px;
+    position: relative;
+    margin: auto;
+    height: 30px;
+    float: left;
+}
+
+    #tabs .tab_tltle_lists {
+        width: 734px;
+        float: right;
+        background: #FFF none repeat scroll 0% 0%;
+        height: 30px;
+    }
+
+    #tabs .tab_menus {
+        width: 750px;
+        float: left;
+        position: absolute;
+        z-index: 1;
+    }
+
+.tab_menus {
+    *margin: 0px;
+}
+
+.tab_tltle_lists ul {
+}
+
+#tabs .tab_menus .selects {
+    cursor: pointer;
+    border-width: 4px 1px 2px;
+    border-style: solid;
+    border-color: #C20201 #C20201 #FFF;
+    min-width: 82px;
+    margin-top: -4px;
+    padding: 0px 5px;
+    color: #C20201;
+}
+
+#tabs .tab_menus li {
+    float: left;
+    min-width: 84px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: medium medium 0px;
+    border-style: none;
+    border-color: -moz-use-text-color;
+    cursor: pointer;
+    text-align: center;
+    margin: 0px;
+    padding: 0px 5px;
+    list-style: outside none none;
+}
+
+#tabs .tab_menus .selects {
+    cursor: pointer;
+    border-width: 4px 1px 2px;
+    border-style: solid;
+    border-color: #C20201 #C20201 #FFF;
+    min-width: 82px;
+    margin-top: -4px;
+    padding: 0px 5px;
+    color: #C20201;
+}
+
+.offerstate {
+    float: left;
+    font-family: '宋体';
+    color: #000;
+}
+
+.hc_floorer {
+    border-bottom: 1px solid #C20201;
+    width: 920px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.list_cont_ones ul {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #CCC;
+    border-left: none;
+    border-right: none;
+    background: #EEE;
+    float: left;
+    margin: 0px 0px 0px 0px !important;
+}
+
+    .list_cont_ones ul li {
+        list-style: none;
+        float: left;
+        height: 37px;
+        line-height: 37px;
+        text-align: center;
+        font-size: 12px;
+        border-top: none;
+    }
+
+.offerlistsnavdes {
+    width: 360px;
+}
+
+.offerlistsnav {
+    width: 110px;
+}
+
+.offerlistsnavmany {
+    width: 118px;
+}
+
+.adoptdescribe {
+    float: left;
+    width: 360px;
+    border-right: 1px solid #CCC;
+    height: 141px;
+}
+
+.listdetail {
+    background: #FFF !important;
+    height: auto !important;
+    display: block !important;
+    float: left !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+
+.adoptdescribeimg {
+    width: 102px;
+    height: 102px;
+    margin: 20px;
+    float: left;
+}
+
+    .adoptdescribeimg img {
+        width: 102px;
+        height: 102px;
+    }
+
+.adoptcartype {
+    width: 199px;
+    float: left;
+}
+
+.problemdescribe {
+    width: 199px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: left;
+    line-height: 26px;
+    height: 78px;
+    overflow: hidden;
+}
+
+.adoptcarstyle {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 199px;
+    text-align: left;
+    height: 37px;
+    overflow: hidden;
+    color: #C20201;
+}
+
+.publishperson {
+    width: 109px;
+    border-right: 1px solid #CCC;
+    height: 141px;
+    float: left;
+}
+
+.publishpersoncolor {
+    color: #C20201;
+}
+
+.publishperson span {
+    display: block;
+    margin-top: 40px;
+}
+
+.mysiter {
+    border-right: 1px solid #CCC;
+    height: 141px;
+    float: left;
+    width: 117px;
+}
+
+    .mysiter span {
+        display: block;
+        margin-top: 40px;
+    }
+
+.listdetailoption {
+    width: 109px;
+    float: left;
+    height: 141px;
+}
+
+.publishpersonborder {
+    border-right: none !important;
+}
+
+.listdetailoption span {
+    display: block;
+    line-height: 30px !important;
+}
+
+.optionitem {
+    margin-top: 30px;
+}
+
+.listdetailoptionborder {
+    border-right: 1px solid #CCC;
+    height: 141px;
+    width: 109px;
+}
+
+.optionitemview {
+    height: 32px;
+    width: 80px !important;
+    border: 1px solid #C20201;
+    border-radius: 3px;
+    margin-bottom: 13px;
+    color: #C20201;
+    line-height: 28px;
+    background: #FFF;
+    font-family: "宋体";
+    font-size: 12px;
+}
+
+    .optionitemview:hover {
+        background: #C20201;
+        color: #FFF;
+    }
+
+.optionitemdel {
+    margin-top: 28px;
+}
+
+.ownernumber {
+    margin-top: 15px;
+}
+
+.listdetail LI {
+    height: 141PX !important;
+    width: 100%;
+    margin: 0px;
+}
+
+.ownername {
+    line-height: 37px !important;
+}
+
+.listdetailoptionname {
+    width: 109px !important;
+    height: 141px;
+    float: left;
+    border-right: 1px solid rgb(204, 204, 204);
+}
+
+.type_pages {
+    float: right;
+}
+
+.list_cont_ones .t-widget {
+    border: 0px;
+}
+
+
+.t-grid .t-alt {
+    background: #fff;
+}
+
+.field-validation-error {
+    color: #C20201;
+}
+
+.hche_shopordershow .t-grid td {
+    border-right: none !important;
+}
+
+.list_cont_ones .t-grid {
+    float: left;
+    width: 920px;
+    border: none !important;
+}
+
+.t-no-data td {
+    border: 1px solid #ccc !important;
+    border-top: none;
+}
+
+#opened tr {
+    border-bottom: none;
+}
+
+.t-grid-pager {
+    border-bottom: 1px solid #ccc !important;
+    width: 920px;
+}
+
+.offerlists {
+    float: left;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.list_cont_ones .t-grid td {
+    border-right: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-bottom:1px solid #ccc;
+}

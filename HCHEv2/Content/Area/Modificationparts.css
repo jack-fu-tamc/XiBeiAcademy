@@ -1,0 +1,155 @@
+.hcgz_location {
+    height: 40px;
+    line-height: 40px;
+    font-family: SimSun;
+    font-size: 12px;
+}
+
+    .hcgz_location span {
+        margin-left: 10px;
+    }
+
+.hcgz_grabblediv {
+    height: auto;
+    background: #FFF none repeat scroll 0% 0%;
+    float: left;
+}
+
+    .hcgz_grabblediv .hcgz_choicesp {
+        height: 50px;
+        line-height: 50px;
+        margin: 0px 20px 0px;
+        padding-left: 15px;
+        float: left;
+        width: 1115px;
+    }
+
+        .hcgz_grabblediv .hcgz_choicesp span {
+            padding: 5px;
+        }
+
+.hcgz_carhor {
+    background: transparent url("/Images/Brandfittings/close-red.png") no-repeat scroll right -1px;
+    border: 1px solid #C20201;
+    cursor: pointer;
+    padding-right: 30px !important;
+    margin-left: 10px;
+}
+
+.hcgz_accessories {
+    border-bottom: 1px solid #CCC;
+    line-height: 50px;
+    margin: 0px 20px;
+    padding-left: 15px;
+    float: left;
+    width: 1115px;
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    margin-bottom:20px;
+}
+
+    .hcgz_accessories.hcgz_maxheight {
+        max-height: 120px;
+    }
+
+    .hcgz_accessories .hcgz_brandpj {
+        float: left;
+        color: #C20201;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .hcgz_accessories .hcgz_accessoriesultex {
+        float: left;
+        width: 1015px;
+    }
+
+        .hcgz_accessories .hcgz_accessoriesultex ul {
+            margin: 0px;
+            float: left;
+        }
+
+            .hcgz_accessories .hcgz_accessoriesultex ul li {
+                display: block;
+                float: left;
+                line-height: 40px;
+                margin: 0px 18px 0px 15px;
+                cursor: pointer;
+            }
+
+                .hcgz_accessories .hcgz_accessoriesultex ul li:hover {
+                    color: #c20201;
+                }
+
+.hc_evenmore {
+    float: left;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin: -1px 522px auto;
+    background: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+    .hc_evenmore .hc_iocleft {
+        float: left;
+        margin-left: 25px;
+    }
+
+    .hc_evenmore .hc_iocdow {
+        background: transparent url("/Images/Brandfittings/spxq_fl_arrow.png") no-repeat scroll 5px -27px;
+        height: 10px;
+        width: 20px;
+        float: left;
+        margin-top: 10px;
+    }
+
+.hc_evenup {
+    float: left;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin: -1px 522px auto;
+    background: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    display: none;
+    margin-bottom: 20px;
+}
+
+    .hc_evenup .hc_iocuplift {
+        float: left;
+        margin-left: 25px;
+    }
+
+    .hc_evenup .hc_iocupdow {
+        background: transparent url("/Images/Brandfittings/spxq_fl_arrow.png") no-repeat scroll 5px -17px;
+        height: 10px;
+        width: 20px;
+        float: left;
+        margin-top: 10px;
+    }
+
+.hcgz_selectlisspan {
+    height: 55px;
+    margin-left: 10px;
+}
+
+    .hcgz_selectlisspan span {
+        border: 1px solid #fff;
+        cursor: pointer;
+        padding-right: 30px !important;
+        margin-right: 6px;
+        padding: 5px;
+    }
+
+    .hcgz_selectlisspan .hc_spanboderimg {
+        background: transparent url("/Images/Brandfittings/left_arrow_down.png") no-repeat scroll 70px 8px;
+        border: 1px solid #c20201;
+    }

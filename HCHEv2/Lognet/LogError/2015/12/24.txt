@@ -1,0 +1,84 @@
+﻿
+ 
+记录时间：2015-12-24 10:56:43,458 
+线程ID:[82] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 10:56:44,707 
+线程ID:[43] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 10:56:45,023 
+线程ID:[21] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 11:58:44,865 
+线程ID:[78] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 11:59:12,775 
+线程ID:[58] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 13:48:24,256 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 14:29:24,133 
+线程ID:[44] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 14:42:50,737 
+线程ID:[22] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 14:46:08,098 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 14:48:18,428 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 17:35:14,418 
+线程ID:[31] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 
+
+ 
+记录时间：2015-12-24 18:33:01,452 
+线程ID:[29] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 705
+ 

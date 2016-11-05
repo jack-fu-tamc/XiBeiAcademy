@@ -1,0 +1,220 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Service.Section;
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+@{
+    Layout = null;
+    var _InewsSectionService = EngineContext.Current.Resolve<ISectionService>();
+    var NewsClass = _InewsSectionService.getAllSection();
+    var MultipleLevelOne = new List<NewsClass>();
+    var levelOne = NewsClass.SectionLists.Where(x => x.ParentID == 0);
+    var sectionIDs = ViewBag.sectionIDs as List<int>;
+
+
+
+    foreach (var section in levelOne)
+    {
+        if (!sectionIDs.Contains(section.ClassID))
+        {
+            continue;
+        }
+
+        var subsSectins = NewsClass.SectionLists.Where(x => x.ParentID == section.ClassID).Select(x => x.IsSingle);
+
+        if (subsSectins.Count() == 0 && section.IsSingle == 0)//添加 没有子栏目但是 本栏目可以添加新闻的栏目
+        {
+            MultipleLevelOne.Add(section);
+        }
+
+        if (subsSectins.All(a => a == 1))
+        {//1为单页
+
+        }
+        else
+        {
+            MultipleLevelOne.Add(section);
+        }
+    }
+    
+}
+<script src="~/HC.Manage/Content/common/script/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+    .hc_textlable {
+        width: 101px !important;
+    }
+
+    #Certication {
+        /*padding-left: 0px !important;*/
+        padding-top: 10px;
+    }
+
+    .hc_chk {
+        padding-left: 103px !important;
+    }
+
+    .hc_item .hc_attestationBtn {
+        margin: 0px 0px 21px 365px !important;
+    }
+
+    .splitSection {
+        margin-top: 15px;
+    }
+
+    .modalPromission {
+        margin-left: 30px;
+    }
+
+        .modalPromission input {
+            margin-top: 0px;
+        }
+
+        .modalPromission label {
+            float: left;
+            margin-right: 15px;
+        }
+
+    .sectionMoudal {
+        float: left;
+        width: 127px;
+        margin-right: 20px;
+    }
+
+    .NewsMenueSubSection {
+        display: block;
+    }
+
+    .NewsThreeMenueSubSection {
+        display: block;
+    }
+
+    .oneLevelName {
+        width: 100%;
+    }
+
+    .sectionMoudal p {
+       padding-right: 0 !important;
+    }
+
+    .sectionMoudal input {
+        margin-top: 0px;
+    }
+
+    .hc_attestationBtn {
+        background-color: #0088cc;
+    }
+
+    .hc_item .hc_fl .spanmsci {
+        display: none;
+    }
+    .sectionMoudal p {
+    margin-bottom: 0px;
+    background-color: #0088cc;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+    .NewsMenueSubSection {
+    
+    background-color: #eeeeee;
+    padding: 10px 0px 0px 10px;
+    cursor: pointer;
+    width: inherit;
+}
+    body {
+    margin: 0;
+    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+}
+</style>
+
+<div class="newSectionMenue">
+    <div class="backManage"></div>
+    @foreach (var oneLevel in MultipleLevelOne)
+    {
+        var subLevel = _InewsSectionService.GetSubNewClassByParentNewClass(oneLevel.ClassID);
+        <div class="sectionMoudal">
+           
+
+
+            @if (subLevel.Count > 0)
+            {
+                <p class="oneLevelName">@oneLevel.ClassName</p>
+            }
+            else
+            {
+                <p class="oneLevelName"><input type="checkbox" value="@oneLevel.ClassID" /> @oneLevel.ClassName</p>
+            }
+
+
+
+            @if (subLevel.Count > 0)
+            {
+                foreach (var subS in subLevel)
+                {
+
+                    if (!sectionIDs.Contains(subS.ClassID))
+                    {
+                        continue;
+                    }
+
+
+                    var threeLevel = _InewsSectionService.GetSubNewClassByParentNewClass(subS.ClassID);
+                    if (threeLevel.Count > 0)//有三级栏目
+                    {
+                        <div class="NewsMenueSubSection menueSubSectionSpecial">
+                            <div class="threeParent">
+                                <span>@subS.ClassName</span>
+                            </div>
+
+                            @foreach (var three in threeLevel)
+                            {
+
+                                if (!sectionIDs.Contains(three.ClassID))
+                                {
+                                    continue;
+                                }
+
+                                if (three.IsSingle == 0)
+                                {
+                                    <div class="NewsThreeMenueSubSection">
+                                        <input type="checkbox" class="" value="@three.ClassID"  /> <span>@three.ClassName</span>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    }
+                    else//无三级栏目
+                    {
+                        if (subS.IsSingle == 0)
+                        {
+                            <div class="NewsMenueSubSection">
+                                <input type="checkbox" class="" value="@subS.ClassID" /><span>@subS.ClassName</span>
+                            </div>
+                        }
+                    }
+
+
+                }
+            }
+        </div>
+    }
+
+</div>
+<div style="clear:both"></div>
+<button id="pushTargetID">确认</button>
+
+<script type="text/javascript">
+    $("#pushTargetID").click(function () {
+        var ids = [];
+        var idsEle = $(".newSectionMenue input:checkbox:checked")
+        $.each(idsEle, function (i, v) {
+            ids.push($(v).val());
+        })       
+        var dialog = top.dialog.get(window);
+        dialog.close(ids); // 关闭（隐藏）对话框
+        dialog.remove();   // 主动销毁对话框
+        return false;
+    })
+</script>

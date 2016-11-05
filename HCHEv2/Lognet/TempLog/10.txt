@@ -1,0 +1,94 @@
+﻿
+记录时间：2015-07-10 13:50:08,529 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：文件“E:\ProTwoN\HCHEv2\Lognet\LogError\2015\07\10.txt”正由另一进程使用，因此该进程无法访问此文件。   位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 78
+ 
+
+ 
+记录时间：2015-07-10 13:59:26,598 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：文件“E:\ProTwoN\HCHEv2\Lognet\LogError\2015\07\10.txt”正由另一进程使用，因此该进程无法访问此文件。   位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 781位置 e:\ProTwoN\HCHEv2\Controllers\AppLogRecordController.cs:行号 91
+
+ 
+
+ 
+记录时间：2015-07-10 14:02:16,286 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：文件“E:\ProTwoN\HCHEv2\Lognet\LogError\2015\07\10.txt”正由另一进程使用，因此该进程无法访问此文件。   %newline %n位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 781位置 e:\ProTwoN\HCHEv2\Controllers\AppLogRecordController.cs:行号 91
+
+ 
+
+ 
+记录时间：2015-07-10 14:03:32,087 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：文件“E:\ProTwoN\HCHEv2\Lognet\LogError\2015\07\10.txt”正由另一进程使用，因此该进程无法访问此文件。   </br>位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 781位置 e:\ProTwoN\HCHEv2\Controllers\AppLogRecordController.cs:行号 91
+
+ 
+
+ 
+记录时间：2015-07-10 15:18:57,715 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：文件“E:\ProTwoN\HCHEv2\Lognet\LogError\2015\07\10.txt”正由另一进程使用，因此该进程无法访问此文件。   </br>在 HC.Core.Common.logHelper.fileRWhelper.ReadFile(String Path) 位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 781在 HCHEv2.Controllers.AppLogRecordController.TextDetails() 位置 e:\ProTwoN\HCHEv2\Controllers\AppLogRecordController.cs:行号 91
+
+ 
+
+ 
+记录时间：2015-07-10 16:29:50,350 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：目标文件“E:\ProTwoN\HCHEv2\Lognet\TempLog”是目录，不是文件。   </br>在 HCHEv2.Controllers.AppLogRecordController.TextDetails() 位置 e:\ProTwoN\HCHEv2\Controllers\AppLogRecordController.cs:行号 91
+
+ 
+
+ 
+记录时间：2015-07-10 16:32:07,270 
+线程ID:[14] 
+日志级别：  ERROR 
+错误描述：文件“E:\ProTwoN\HCHEv2\Lognet\LogError\2015\07\10.txt”正由另一进程使用，因此该进程无法访问此文件。   </br>在 HCHEv2.Controllers.AppLogRecordController.TextDetails() 位置 e:\ProTwoN\HCHEv2\Controllers\AppLogRecordController.cs:行号 91
+
+ 
+
+ 
+记录时间：2015-07-10 16:50:52,370 
+线程ID:[26] 
+日志级别：  ERROR 
+错误描述：无法找到指定文件。   </br>在 HC.Core.Common.logHelper.fileRWhelper.GetFileNames(String directoryPath) 位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 46
+
+ 
+
+ 
+记录时间：2015-07-10 17:06:00,360 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：无法找到指定文件。   </br>在 HC.Core.Common.logHelper.fileRWhelper.GetFileNames(String directoryPath) 位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 46
+
+ 
+
+ 
+记录时间：2015-07-10 17:06:35,966 
+线程ID:[31] 
+日志级别：  ERROR 
+错误描述：无法找到指定文件。   </br>在 HC.Core.Common.logHelper.fileRWhelper.GetFileNames(String directoryPath) 位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 46
+
+ 
+
+ 
+记录时间：2015-07-10 17:06:41,364 
+线程ID:[31] 
+日志级别：  ERROR 
+错误描述：无法找到指定文件。   </br>在 HC.Core.Common.logHelper.fileRWhelper.GetFileNames(String directoryPath) 位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 46
+
+ 
+
+ 
+记录时间：2015-07-10 17:08:01,426 
+线程ID:[37] 
+日志级别：  ERROR 
+错误描述：无法找到指定文件。   </br>在 HC.Core.Common.logHelper.fileRWhelper.GetFileNames(String directoryPath) 位置 e:\ProTwoN\HC.Core\Common\logHelper\fileRWhelper.cs:行号 46
+
+ 

@@ -1,0 +1,24 @@
+﻿
+ 
+记录时间：2015-07-23 12:00:06,795 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：不存在具有键“aa”的“IEnumerable<SelectListItem>”类型的 ViewData 项。   </br>在 ASP._Page_HC_Manage_Views_home_testGrid_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Home\testGrid.cshtml:行号 32
+
+ 
+
+ 
+记录时间：2015-07-23 12:00:11,568 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：不存在具有键“aa”的“IEnumerable<SelectListItem>”类型的 ViewData 项。   </br>在 ASP._Page_HC_Manage_Views_home_testGrid_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Home\testGrid.cshtml:行号 32
+
+ 
+
+ 
+记录时间：2015-07-23 13:20:58,989 
+线程ID:[110] 
+日志级别：  ERROR 
+错误描述：不存在具有键“aa”的“IEnumerable<SelectListItem>”类型的 ViewData 项。   </br>在 ASP._Page_HC_Manage_Views_home_testGrid_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Home\testGrid.cshtml:行号 32
+
+ 

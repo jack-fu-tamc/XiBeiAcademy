@@ -1,0 +1,166 @@
+﻿@using HC.Data.Models
+@{
+    
+    var curentPage = int.Parse(ViewBag.curentPage.ToString());
+    var totalCount = int.Parse(ViewBag.TottalCount.ToString());
+    var totalPage = Math.Ceiling((float)totalCount / 15);
+    var curentNewsClass = ViewData["curentNewsClass"] as NewsClass;
+}
+
+@model List<News>
+
+@section headScript{
+    <script type="text/javascript" src="~/Scripts/jq-1.7.js"></script>
+    <script id="lightbox1" type="text/javascript" src="~/Scripts/lightbox.js"></script>
+<script id="lightbox2" type="text/javascript" src=""></script>
+<script type="text/javascript" src="~/mContent/scripts/JSLoader.js"></script>
+}
+@section headCSS{
+    <link href="~/Content/jquery.lightbox.css" rel="stylesheet" type="text/css" />
+   
+}
+
+
+
+@section lanmuName{
+    <span class="header_c">@curentNewsClass.ClassName</span>
+}
+<div class="block block2">
+    <!--子栏目 -->
+    <!--有几个栏目就显示几 最大04 -->
+    <!--<div class="submenu submenu04">
+      <ul>
+        <li class="on"><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+      </ul>
+      <div class="clr"></div>
+    </div>
+    <div class="clr10"></div> -->
+    <!--栏目内容 -->
+    <div class="pic_list">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <div class="bg">
+                        <div class="pic">
+                            <span class="pic_center">
+                                <i></i>
+                                <a title="@item.NewsTitle" href="@item.PicURL" rel="lightbox-tour" class="lightbox-enabled"><img src="@item.PicURL"></a>
+                            </span>
+                        </div>
+                        <div class="title_bg">
+                            <p class="title"><a href="javascript:void(0)"><span>MORE</span>@item.NewsTitle</a></p>
+                        </div>
+                    </div>
+                </li>
+            }
+
+
+        </ul>
+        <div class="clr"></div>
+    </div>
+    <div class="page"><a href="javascript:void(0)" id="loadMore" curentpage="@curentPage">加载更多</a></div>
+
+</div>
+
+<div id="reloadJs"></div>
+
+@section footScript{
+<script type="text/javascript" src="~/Scripts/jq-1.7.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var totalPage = '@totalPage';
+            $("#loadMore").click(function () {
+                var curentP = $(this).attr("curentPage").trim() * 1;
+
+                if ((curentP + 1) > totalPage) {
+                    $("#loadMore").html("没有更多了");
+                } else {
+                    $.ajax({
+                        type: "GET",
+                        url: "/Information/SectionMobileAjax/@curentNewsClass.ClassID?page=" + (curentP + 1),
+                        dataType: "json",
+                        success: function (data) {
+                            var appHtml="";
+                            var newsPic = "";
+                            var contentSubStr = "";
+                            for (var i = 1; i <= data.length; i++) {
+
+
+
+
+                                if (data[i - 1].PicURL != "") {
+                                    newsPic = data[i - 1].PicURL;
+                                } else {
+                                    newsPic = "";
+                                }
+
+                                if (data[i - 1].NewsContent.length > 0) {
+                                    contentSubStr = data[i - 1].NewsContent.subStr(0, 200);
+                                } else {
+                                    contentSubStr = data[i - 1].NewsContent;
+                                }
+                                 appHtml+= " <li>" +
+                   "<div class=\"bg\">" +
+                       "<div class=\"pic\">" +
+                           "<span class=\"pic_center\">" +
+                               "<i></i>" +
+                               "<a title=\"" + data[i - 1].NewsTitle + "\" href=\"" + newsPic + "\" rel=\"lightbox-tour\" class=\"lightbox-enabled\"><img src=\"" + newsPic + "\"></a>" +
+                           "</span>" +
+                       "</div>" +
+                       "<div class=\"title_bg\">" +
+                           "<p class=\"title\"><a href=\"javascript:void(0)\"><span>MORE</span>" + data[i - 1].NewsTitle + "</a></p>" +
+                       "</div>" +
+                   "</div>" +
+               "</li>"; 
+                            }
+                           
+                            $(".pic_list ul").append(appHtml);
+                           // $("#reloadJs").html("<script type=\"text/javascript\" src=\"../../Scripts/lightbox.js\"><\/script>");
+                            $("#loadMore").attr("curentPage", curentP + 1);
+                        }
+                    });
+
+
+
+
+                   
+                    //var rootObject = document.getElementById("reloadJs");
+                    //var oScript = document.createElement("script");
+                    //oScript.type = "text/javascript";
+                    //oScript.src = "/Scripts/lightbox.js"; //test.js方法中有一个方法function test(){alert("test");}
+                    //rootObject.appendChild(oScript);
+
+
+
+                    //var oScript1 = document.createElement("script");
+                    //oScript1.type = "text/javascript";
+                    //oScript1.src = "/Scripts/jquery.lightbox.min.js"; //test.js方法中有一个方法function test(){alert("test");}
+                    //rootObject.appendChild(oScript1);
+
+                    //document.getElementById('lightbox1').src = "/Scripts/lightbox.js";
+                    //document.getElementById('lightbox1').src = "/Scripts/jquery.lightbox.min.js";
+                    //document.getElementById('s1').src = "/Scripts/jquery.lightbox.min.js";
+                    //JSLoader.load('/Scripts/lightbox.js');
+                    //JSLoader.load('/Scripts/jquery.lightbox.min.js');
+                    //$.get("/Scripts/lightbox.js", "", "");
+                    //$.get("/Scripts/jquery.lightbox.min.js", "", "");
+                    setTimeout('initLightBox()', 1000);
+                   
+                }
+            })
+
+
+
+            
+        })
+
+        function initLightBox() {
+            $.Lightbox = new $.LightboxClass();
+            $.Lightbox.domReady();
+        }
+    </script>
+}

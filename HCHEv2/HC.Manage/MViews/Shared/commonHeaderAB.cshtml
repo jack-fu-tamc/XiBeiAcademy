@@ -1,0 +1,198 @@
+﻿@using HC.Core;
+@using Maticsoft.Model;
+@using HC.Service.Account
+@using HC.Core.Infrastructure;
+@using HC.Core.CommonMethod;
+@{
+    ViewBag.Title = "Header";
+    var modelU = (User_Info)ViewBag.curentUser;
+    var modelUserInfo = modelU ?? WorkContext.CurrentCustomer;
+
+    var compName = "";
+    if (modelUserInfo.UserType == 1)
+    { }
+    else
+    {
+        var expUserService = EngineContext.Current.Resolve<IUser_ExpService>();
+        compName = expUserService.GetShopInfoByUserID(WorkContext.CurrentCustomer.Id).Corpcomp;
+    }
+}
+<!-- 顶部导航开始 -->
+<input id="merchantName" type="hidden" value="@compName.Trim()" />
+<div id="header" class="hc_topNav">
+    <div class="container">
+        <div class="hc_topWelcome">
+            <ul>
+                <li style="padding-left:0;margin-left:10px">您好, <a href="/ManageCenter/PersonalData">@modelUserInfo.UserName</a></li>
+                <li><a href="@Url.Action("LogOffAcc", "Home")">退出</a></li>
+                <li class="infornation" style="width:84px;margin-left:-10px;">
+                    @{Html.RenderAction("msg", "Common");}
+                </li>
+
+                <li class="hc_topLi" style="margin-left:0px;width: 64px;overflow: hidden;background: #000 none repeat scroll 0% 0%;color: #000;">
+                    <a href="#" class="hc_ddr"></a>
+                    <i class="hc_la"></i>
+                    <div class="hc_addrs" style="display:none">
+                        @*<p class="hc_hot" value="12">陕西</p><p>广西</p>
+                            <p>辽宁</p>*@
+                    </div>
+                </li>
+
+                <li class="hc_topleftHom"><i class="hc_topHom"></i><a href="/">首页</a></li>
+            </ul>
+            <ul class="hc_topright">
+                <li style="width: 76px; text-align: center; padding-left: 10px; " class="he_jy">
+                    <a href="/ManageCenter/OrderManage">我的交易</a>
+                    <i class="hc_la"></i>
+                    <div class="subNav" style="display:none;">
+                        <ul>
+                            <li style="padding-left: 0px;"><a href="/ManageCenter/OrderManage">我的订单</a></li>
+                            <li style="padding-left: 0px;"><a href="#">我的待定</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li style="width:80px;margin-left:-10px">
+                    <i class="hc_cart"></i>
+                    <a href="@Url.Action("ShoppingCart", "Shopping")">购物车</a>
+                </li>
+                <li style="width: 76px; background: rgb(0, 0, 0);">
+                    <a href="javascript:void(0);">卖家中心</a>
+                    <i class="hc_la"></i>
+                </li>
+                <li class="hc_topwidth " style="width:76px;">
+                    <a href="#">客服中心</a>
+                    <i class="hc_la"></i>
+                    <div class="hc_kff" style="display:none">
+                        <p><img src="~/HC.Manage/Images/publicimg/top_Service_icon.png" /><span>客服咨询热线</span><span style="margin-top:-17px;">029-68215588</span></p>
+                        <p><a href="http://wpa.qq.com/msgrd?v=3&uin=1979910613&site=qq&menu=yes" target="_blank"><img src="~/HC.Manage/Images/publicimg/top_qq_btn.png" /></a></p>
+                    </div>
+                </li>
+                <li class="hc_topleftHom hc_open" style="width:86px;">
+                    <a href="@UntilMethod.appsetingValue("runCarAdress")">去谁帮我养车</a>
+                </li>
+
+                <li class="hc_topleftphone" style="width:70px;">
+                    <i class="hc_topPhone"></i>
+                    <a href="#">APP</a>
+                    <div class="hc_slidePhone" style="display: none; width: auto; height:auto;">
+                        <p style="width: auto;"><a href="/ManageCenter/OrderManage?menuimg=1"><img src="~/HC.Manage/images/publicimg/erw.png" style="margin: 19px 15px;" /></a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--滑下搜索-->
+    <!--[if IE 8]>
+    <style type="text/css" />
+    .search input.inp_srh {
+         *width:383px;
+        *height:24px;
+    }
+    </style>
+    <![endif]-->
+</div>
+<div class="none"></div>
+
+@if (!string.IsNullOrEmpty(compName))
+{
+    <!--即时沟通-->
+    <div id="chatContener" style="width:100px; height:30px; position:fixed; z-index:99; top:91%; left:90%;  border:none; background-color:black;">
+        <div style="height:80px;width:369px; z-index:199; border: none; position: absolute; opacity:0; display:none; filter:alpha(opacity=0);" id="dragdiv"></div>
+        <iframe scrolling="no" src="@Url.Action("chatMerchant", "common")" id="chat" width="100" height="30" style=" background-color:white;   border:none; overflow:hidden; "></iframe>
+    </div>
+}
+    @*<iframe scrolling="no" src="@Url.Action("chatMerchant","common")" id="chat" width="100" height="30" style="position:fixed; background-color:white;  z-index:99; top:91%; right:0; border:none; overflow:hidden; "></iframe>*@
+
+
+    <!-- logo,搜索部分-->
+    @{Html.RenderAction("centerSerchAB", "Common");}
+    <!--logo,搜索部分end-->
+    <!--后台横向导航-->
+    @{Html.RenderAction("centerNavMenuAB", "Common");}
+    <!--后台横向导航end-->
+
+
+
+
+
+
+    <script type="text/javascript">
+        $.getJSON("/Common/GetBaseCity?nodetype=1&unid=0", function (data) {
+            $(".hc_addrs").html("");
+            $.each(data, function (i, item) {
+                $(".hc_addrs").append("<p value=\"" + item["unid"] + "\">" + item["city"] + "</p>");
+            });
+        })
+
+
+        //获取中文地址
+        $(function () {
+            var provinceCoe;
+
+            $.getJSON("/common/getProvinceByIP", function (data) {
+                provinceCoe = data;
+                $('.hc_addrs p').each(function (i, v) {
+                    if (provinceCoe == $(v).attr("value")) {
+                        $(".hc_ddr").html($(v).text());
+                        $(v).addClass("hc_hot");
+                    }
+                });
+            });
+
+
+        })
+
+
+        var flag = '@compName';
+
+        if (flag.length > 0 && flag != "") {
+            //窗口拖动
+            $(document).ready(function () {
+
+                var contentEle = window.top.document.getElementById("chat").contentWindow.document.getElementById("Mcontent");
+
+                $("#dragdiv").mousedown(function (e)//e鼠标事件
+                {
+                    $(this).css("cursor", "move");//改变鼠标指针的形状
+                   
+                    var offset = $("#chatContener").offset();//DIV在页面的位置
+                    var x = e.pageX - offset.left;//获得鼠标指针离DIV元素左边界的距离
+                    var y = e.pageY - offset.top;//获得鼠标指针离DIV元素上边界的距离
+                   
+                    $(document).bind("mousemove", function (ev)//绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件
+                    {
+                        //console.log(ev.clientX + "x"); console.log(ev.clientY + "y");
+                        //$("#chatContener").stop();//  stop() 方法停止当前正在运行的动画。
+                        //var _x = ev.pageX - x;//获得X轴方向移动的值
+                        //var _y = ev.pageY - y;//获得Y轴方向移动的值
+                        var _x = ev.clientX - x;//获得X轴方向移动的值
+                        var _y = ev.clientY - y;//获得Y轴方向移动的值
+                        //$("#chatContener").animate({ left: _x + "px", top: _y + "px" }, 10);
+                        $("#chatContener").css({ "left": _x + "px", "top": _y + "px" });
+                    });
+                });
+                $(document).mouseup(function () {
+                    $("#chatContener").css("cursor", "default");
+                    $(this).unbind("mousemove");
+                })
+            })
+
+            //function testfn(e) {
+            //    var e = e || window.event;
+            //    console.log("e.clientY----" + e.clientY);
+            //    console.log("clientY" + e.clientY);
+            //    console.log("clientX" + e.clientX);
+            //    console.log(e.clientX > document.body.clientWidth);
+            //    console.log(e.altKey);
+            //    if (e.clientY < 0) {
+            //        //alert("closed");
+            //        return "aaa";
+            //    }
+            //    if (e.clientX > document.body.clientWidth && e.clientY < 0 || e.altKey) {
+            //        return "bbb";
+            //    }
+            //    return "ccc";
+            //}
+            //window.onbeforeunload = testfn;
+        }
+    </script>

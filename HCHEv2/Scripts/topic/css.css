@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+/*焦点图*/
+.banner_index{height:80px;position: relative;overflow:hidden;margin:0 auto; width: 320px;}
+.banner_index .btn,.banner_pro .bBtn{position: absolute;top:25px;width: 16px;height: 28px;display: block;z-index: 3;}
+.banner_index .btnPre,.banner_pro .bPre{background: url(topic.png) no-repeat;left:0; /*opacity:0.50; filter:alpha(opacity=50);*/}
+/*.banner_index .btnPre:hover,.banner_pro .bPre:hover{opacity:0.80; filter:alpha(opacity=80);}*/
+.banner_index .btnNext,.banner_pro .bNext{background: url(topic.png) no-repeat right 0;right: 0; /*opacity:0.50; filter:alpha(opacity=50);*/}
+/*.banner_index .btnNext:hover,.banner_pro .bNext:hover{opacity:0.80; filter:alpha(opacity=80);}*/
+.banner_index .banner_wrap{position: absolute;left:0px;top: 0px; z-index: 2;}
+.banner_index .banner_wrap img{width:320px; height:80px;}
+.banner_index .banner_wrap li{/*width: 1230px;*/float: left;}
+
+/*小点控制*/
+.indexBanner_num{margin: 0 auto;padding:0 0 27px;text-align: center; position: relative; z-index:100; display:none;} 
+.indexBanner_num a{width: 18px;height: 18px;display: inline-block;_zoom:1;background: #A0A183;font-size: 0px;line-height: 0px;margin:0 5px; border-radius:50%;}
+.indexBanner_num a.on,.indexBanner_num a:hover{background: #FF7F02;}
+
+
+/*修改*/
+.banner_index{margin:0 auto 0;}
+/*.banner_index .banner_wrap{top: 40px;}*/
+/*.banner_index .btnPre,.banner_pro .bPre{right:25px; left:auto;}*/
+

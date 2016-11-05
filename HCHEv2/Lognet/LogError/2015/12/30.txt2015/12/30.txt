@@ -1,0 +1,8 @@
+﻿
+ 
+记录时间：2015-12-30 13:59:11,975 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 

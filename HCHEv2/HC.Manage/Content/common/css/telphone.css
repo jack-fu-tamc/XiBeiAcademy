@@ -1,0 +1,198 @@
+﻿.hctl_complete{
+    background:#fff;
+float: left;
+border: 1px solid #ccc;
+min-height:780px;
+*padding-bottom:20px;
+}
+.hctl_complete .hctl_teltop{
+    padding: 15px 25px 0px;
+float: left;
+}
+.hctl_complete .hctl_teltop .hctl_chinhot{
+    font-size: 18px;
+color: #C20201;
+margin-right: 12px;
+float: left;
+}
+.hctl_complete .hctl_teltop .hctl_elishhot{
+    font-size: 16px;
+color: #AF7E52;
+margin-right: 12px;
+float: left;
+}
+.hctl_complete .hctl_teltop .hctl_striping{
+    border-bottom: 1px dashed #AF7E52;
+float: left;
+width: 650px;
+height: 11px;
+margin: 0px;
+}
+.hctl_complete .hctl_teltop .hctl_telimg {
+    background: transparent url("../../../images/publicimg/phone_icon.png") no-repeat scroll 0px 0px;
+width: 30px;
+height: 30px;
+float: left;
+margin-left: 10px;
+}
+.hctl_metelpoh{
+    background: #EFF4FA url("../../../images/publicimg/phone_bg.jpg") no-repeat scroll center bottom;
+    float: left;
+width: 820px;
+margin: 20px 50px 15px 50px;
+}
+.hctl_metelpoh .hc_sucetel{
+    float: right;
+margin: 20px 25px 0px 0px;
+font-size: 15px;
+}
+.hctl_metelpoh .hc_sucetel a{
+    color: #3075b0;
+}
+.hctl_metelpoh .hc_teltext{
+float: left;
+margin: 70px 0px 20px 80px;
+color: #3075B0;
+width: 150px;
+line-height: 30px;
+*padding-bottom:20px;
+}
+.hctl_metelpoh .hc_teltext .fontsize{
+    font-size:19px;
+    width: 160px;
+display: block;
+}
+.hctl_metelpoh .hc_teltext .fontsomsize{
+    font-size:16px;
+    display: block;
+    width: 160px;
+}
+.hctl_metelpoh .hc_teltext .fontsomsize .hc_spanright{
+display: block;
+width: 160px;
+margin-left: 48px;
+
+}
+.hctl_metelpoh .hc_teltext .fontsomsize .hc_spanrighttel{
+display: block;
+width: 151px;
+text-align: right;
+}
+.hctl_maxtelpoh{
+ background: #eff4fa url("../../../images/publicimg/phone_bg.jpg") no-repeat scroll 0px 0px;
+ float: left;
+width: 820px;
+margin: 5px 50px 30px;
+min-height:500px;
+background-position:bottom;
+*min-height:0px;
+
+
+}
+.hctl_maxtelpoh .colorbrown{
+    font-size: 19px;
+color: #b07f54;
+margin: 40px 0px 0px 50px;
+}
+.hctl_maxtelpoh .hc_textfont{
+    margin: 20px 0px 0px 90px;
+font-size: 16px;
+}
+.hctl_maxtelpoh .hctl_fixedline{
+margin: 20px 0px 0px 90px;
+float: left;
+}
+.hctl_maxtelpoh .hctl_fixedline .hc_fixedtext{
+font-size: 16px;
+color: #3075B0;
+float: left;
+display: block;
+height: 30px;
+line-height: 30px;
+}
+.hctl_maxtelpoh .hctl_fixedline .areacode{
+    width: 50px;
+border-radius: 0px;
+margin-bottom: 2px;
+}
+.hctl_maxtelpoh .hctl_fixedline .subcode{
+    width: 50px;
+border-radius: 0px;
+margin-bottom: 2px;
+}
+
+
+
+
+    .hctl_maxtelpoh .hctl_fixedline .spangap {
+        color: #3075B0;
+        margin: 0px 3px;
+    }
+.hctl_maxtelpoh .hctl_fixedline .spangapa{
+    color: #3075B0;
+margin: 0px 7px;
+}
+.samaddtelphon .closetel{
+    color:#ccc;
+    cursor:pointer;
+    margin-left: 5px;
+}
+.hctl_fixedline .addteldiv{
+    float: left;
+}
+.hctl_fixedline .addteldiv .samaddtelphon{
+    width: 512px;
+}
+.hctl_maxtelpoh .hctl_fixedline .hc_telint{
+    width: 150px;
+border-radius: 0px;
+margin-bottom: 2px;
+}
+.hctl_fixedbuttn{
+margin: 5px 0px 0px 137px;
+float: left;
+*margin-left:69px;
+}
+.hctl_fixedbuttn .buttonfix{
+    border: 1px solid #ccc;
+color: #9f9f9f;
+height: 25px;
+}
+.addteldiv .samaddtelphon .hc_cellphone{
+    width: 235px;
+border-radius: 0px;
+margin-bottom: 2px;
+}
+.hctl_fixedbuttn .buttonsus{
+    background: #469bdc;
+border-radius: 5px;
+border: 1px solid #469BDC;
+height: 35px;
+width: 110px;
+margin-top: 15px;
+color: #fff;
+font-size: 18px;
+margin-bottom: 30px;
+}
+/*验证*/
+.prompt_info {
+    text-align: left;
+    width: 47%;
+    float: right;
+    line-height: 36px;
+    height: 30px;
+    *margin-top: -35px;
+}
+.prompt_info label {
+    line-height: 28px;
+    height: 30px;
+    color:#c20201;
+}
+.prompt_info .errorem {
+    height: 15px;
+    line-height: 15px;
+    width: 15px;
+    float: left;
+    background: transparent url("../../../images/publicimg/Input_error.png") no-repeat scroll 0% 0%;
+    margin-top: 8px;
+}

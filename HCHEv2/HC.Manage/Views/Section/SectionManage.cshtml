@@ -1,0 +1,414 @@
+﻿@using HC.Core.Infrastructure;
+@using HC.Service.Account;
+@using HC.Data.ViewModels;
+@using HC.Service.User;
+@using Maticsoft.Model;
+@using HC.Core.Infrastructure;
+
+
+@model SectionList
+
+@{
+    ViewBag.Title = "栏目管理";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAbDefault.cshtml";
+    var Customer = WorkContext.CurrentCustomer;
+
+    var _iuser = EngineContext.Current.Resolve<IUserService>();
+
+    var curentUser = _iuser.getUserByID(Customer.Id);
+
+    var levelOneSections = Model.SectionLists.Where(x => x.ParentID == 0).ToList().OrderBy(x => x.ClassOrder);
+    
+    var sectionIDs= ViewBag.sectionIDs as List<int>;
+}
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/shipments.css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsell.css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/sectionManage.css" />
+<link rel="stylesheet" href="~/HC.Manage/Content/common/artdialog/ui-dialog.css">
+
+}
+@section headScript{
+    <script type="text/javascript" src="~/HC.Manage/Content/common/script/WelcomeCenter.js"></script>
+<script src="~/HC.Manage/Content/common/artdialog/dialog-min.js"></script>
+}
+@Html.Partial("_Notifications")
+<div class="buyerright">
+
+
+
+    <div class="sellinggoodsserchnav">
+        <div class="hcmoneynav">
+            <div class="hche_soldgoods">
+                <i>栏目管理</i>
+                SECTION MANAGE
+            </div>
+            <div class="hche_soldgoodsimg">
+            </div>
+            <div class="hche_private">
+
+            </div>
+        </div>
+    </div>
+
+
+
+  
+    @if (curentUser.UserGroupID == 1)
+    {
+        <p class="addNew"><a id="deletePro" class="del_show" href="@Url.Action("AddSection", "Section")">添加根栏目</a></p>
+    }
+
+    <div style="clear:both;"></div>
+    <div class="sectionHead">
+        <ul>
+            <li><span>栏目名称</span></li>
+            <li><span>栏目权重</span></li>
+            <li><span>栏目属性</span></li>
+            <li class="lastLISp"><span>操作</span></li>
+        </ul>
+        <div class="clearBoth"></div>
+    </div>
+
+
+
+    @foreach (var sec in levelOneSections)
+    {
+
+        if (!sectionIDs.Contains(sec.ClassID))
+        {
+            continue;
+        }
+        
+        
+        <div class="leveOne">
+            <ul>
+                <li><b class="dro-toggle">+</b><span>@Html.Raw(sec.ClassName)</span></li>
+                <li><span>@sec.ClassOrder</span></li>
+                <li><span>普通正常</span></li>
+                <li class="lastLI">
+                    
+                   
+                    @if (curentUser.UserGroupID == 1)
+                    {
+                        <a id="deletePro" class="del_show" href="@Url.Action("AddSection", "Section", new { id = sec.ClassID })">修改</a>      
+                    <a id="deletePro" class="del_show" href="@Url.Action("AddSection", "Section", new { ParentID =sec.ClassID})">添加子栏目</a>
+                         <a id="deletePro" class="del_show" onclick="deleteSection('@Url.Action("DeleteSection", "Section", new { id = sec.ClassID })');" href="javascript:void(0)">删除</a>
+                        
+                    }
+                    @*@if (sec.IsSingle == 0 && Model.SectionLists.Where(x => x.ParentID == sec.ClassID).Count() == 0)
+                    {
+                        <a id="deletePro" class="del_show" href="@Url.Action("AddNews", "News", new { ClassID = sec.ClassID })">添加新闻</a>
+                    }*@
+
+
+
+                </li>
+            </ul>
+            @{
+        var actionName = "Section";
+        switch (sec.ClassID)
+        {
+            case 1:
+                actionName = "SectionEducation";
+                break;
+            case 2077:
+                actionName = "SectionLibrary";
+                break;
+            default:
+                actionName = "Section";
+                break;                
+        }
+
+        var sigleName = "singlePage";
+        switch (sec.ClassID)
+        {
+            case 1:
+                sigleName = "singleEducationPage";
+                break;
+            case 2077:
+                sigleName = "singleLibraryPage";
+                break;
+            default:
+                sigleName = "singlePage";
+                break;
+        }
+                
+
+                    //二级栏目
+                    var subSectionList = Model.SectionLists.Where(x => x.ParentID == sec.ClassID).OrderBy(x => x.ClassOrder);
+                  
+                    foreach (var subsec in subSectionList)
+                    {
+
+                        if (!sectionIDs.Contains(subsec.ClassID))
+                        {
+                            continue;
+                        }
+                        
+                        var threeSectionList = Model.SectionLists.Where(x => x.ParentID == subsec.ClassID).OrderBy(x => x.ClassOrder);
+                        var threeCount = threeSectionList.Count();
+                        //var subsecMark = subsec.IsSingle == 1 ? "单页" : "列表";
+                        var subsecMark = "";
+                        switch (subsec.IsSingle)
+                        {
+                            case 0:
+                                subsecMark = "列表";
+                                break;
+                            case 1:
+                                subsecMark = "单页";
+                                break;
+                            case 2:
+                                subsecMark = "外链";
+                                break;
+                        }
+                        <div class="subSection">
+                            <ul>
+                                @if (threeCount > 0)
+                                {
+                                    <li class="firstLi"><b class="dro-toggle toggleThree">+</b><span>@Html.Raw(subsec.ClassName)</span></li>
+                                }
+                                else
+                                {
+                                    <li class="firstLi"><span>@Html.Raw(subsec.ClassName)</span></li>
+                                }
+                                
+                                <li><span>@subsec.ClassOrder</span></li>
+                                <li><span>@subsecMark</span></li>
+                                <li class="lastLI">
+                               
+                                     <a id="deletePro" class="del_show" href="@Url.Action("AddSection", "Section", new { id = subsec.ClassID })">修改</a>
+                                
+                                   
+
+                                    @if (subsec.IsSingle == 1)
+                                    {
+                                        <a id="deletePro" class="del_show" target="_blank" href="/Information/@sigleName/@subsec.ClassID">预览</a>
+                                    }
+                                    else if (subsec.IsSingle == 0)
+                                    {
+                                        if (threeSectionList.Count() == 0)
+                                        {
+                                            <a id="deletePro" class="del_show" target="_blank" href="/Information/@actionName/@subsec.ClassID">预览</a>
+                                        }
+
+                                        if (curentUser.UserGroupID == 1)
+                                        {
+                                              <a id="deletePro" class="del_show" href="@Url.Action("AddSection", "Section", new { ParentID = subsec.ClassID })">添加栏目</a>
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        <a id="deletePro" class="del_show" target="_blank" href="@subsec.linkAddress">预览</a>
+                                    }
+
+                                    @*@if (subsec.IsSingle == 1)
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            <a id="deletePro" class="del_show" href="@Url.Action("AddNews", "News", new { ClassID = subsec.ClassID })">添加新闻</a>
+
+                                        }*@
+                                    @if (curentUser.UserGroupID == 1)
+                                    {
+                                        @*<a id="deletePro" class="del_show" onclick="return deleteSection();" href="@Url.Action("DeleteSection", "Section", new { id = subsec.ClassID })">删除</a>*@
+                                          <a id="deletePro" class="del_show" onclick="deleteSection('@Url.Action("DeleteSection", "Section", new { id = subsec.ClassID })');" href="javascript:void(0)">删除</a>
+                                    }
+
+                                </li>
+                            </ul>
+
+                            @*三级栏目*@
+                           
+                            @foreach (var three in threeSectionList)
+                            {
+
+
+
+
+                                if (!sectionIDs.Contains(three.ClassID))
+                                {
+                                    continue;
+                                }
+
+                               // var threeMark = three.IsSingle == 1 ? "单页" : "列表";
+                                var threeMark = "";
+                                switch (subsec.IsSingle)
+                                {
+                                    case 0:
+                                        threeMark = "列表";
+                                        break;
+                                    case 1:
+                                        threeMark = "单页";
+                                        break;
+                                    case 2:
+                                        threeMark = "外链";
+                                        break;
+                                }
+                                <div class="threeSection">
+                                    <ul>
+                                        <li class="firstLi"><span>@Html.Raw(three.ClassName)</span></li>
+                                        <li><span>@three.ClassOrder</span></li>
+                                        <li><span>@threeMark</span></li>
+                                        <li class="lastLI">
+                                            <a id="deletePro" class="del_show" href="@Url.Action("AddSection", "Section", new { id = three.ClassID })">修改</a>
+
+                                            @if (three.IsSingle == 1)
+                                            {
+                                            <a id="deletePro" class="del_show" target="_blank" href="/Information/@sigleName/@three.ClassID">预览</a>
+                                            }
+                                            else if(three.IsSingle==0)
+                                            {
+                                            <a id="deletePro" class="del_show" target="_blank" href="/Information/@actionName/@three.ClassID">预览</a>
+                                            }
+                                            else
+                                            {
+                                            <a id="deletePro" class="del_show" target="_blank" href="@three.linkAddress">预览</a>
+                                            }
+
+                                            @if (curentUser.UserGroupID == 1)
+                                            {
+                                                @*<a id="deletePro" class="del_show" onclick="return deleteSection();" href="@Url.Action("DeleteSection", "Section", new { id = three.ClassID })">删除</a>*@
+                                                 <a id="deletePro" class="del_show" onclick="deleteSection('@Url.Action("DeleteSection", "Section", new { id = three.ClassID })');" href="javascript:void(0)">删除</a>
+                                            }
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            }
+
+
+                        </div>
+                    }
+            }
+            <div class="clearBoth"></div>
+        </div>
+
+    }
+</div>
+@section footScript{
+    <script type="text/javascript">
+        $(".dro-toggle").click(function () {
+            $(this).parent().parent().parent().find(".subSection").toggle();
+            if ($(this).html() == "+") {
+                $(this).html("-").addClass("bigFont");
+            } else {
+                $(this).html("+").removeClass("bigFont");
+            }
+
+        })
+
+
+        
+        $(".toggleThree").click(function () {
+            
+            var threeDivs = $(".toggleThree").parent().parent().parent().find(".threeSection")[0];
+            console.log(threeDivs);
+            //if ($(threeDivs).is(":hidden")) {
+            if ($(this).parent().parent().parent().find(".threeSection").is(":hidden")) {
+                $(this).parent().parent().parent().find(".threeSection").slideDown();   //如果元素为隐藏,则将它显现
+            }else{
+                $(this).parent().parent().parent().find(".threeSection").slideUp();     //如果元素为显现,则将其隐藏
+            }
+
+
+          
+            if ($(this).html() == "+") {
+                $(this).html("-").addClass("bigFont");
+            } else {
+                $(this).html("+").removeClass("bigFont");
+            }
+
+
+            if ($(this).html() == "+") {
+                $(this).html("-").addClass("bigFont");
+            } else {
+                $(this).html("+").removeClass("bigFont");
+            }
+
+
+        })
+
+
+
+
+       
+       
+
+
+
+        function deleteSection(e) {
+
+            var d = dialog({
+                title: '提示',
+                content: '<span>确定要删除吗？</span>',
+                okValue: '确定',
+                ok: function () {
+                    this.title('删除中...');
+                    location.href = e;
+                    return true;
+                },
+                cancelValue: '取消',
+                cancel: function () { }
+            });
+
+            d.showModal();
+
+            //if (confirm("确定要删除栏目吗？")) {
+
+            //} else {
+            //    if (e && e.preventDefault)
+            //        e.preventDefault();
+            //    else
+            //        window.event.returnValue = false;
+
+            //    return false;
+            //}
+        }
+    </script>
+}

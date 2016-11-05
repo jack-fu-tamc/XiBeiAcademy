@@ -1,0 +1,167 @@
+﻿.hc_elbowdoor {
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px 0px 15px 20px;
+}
+
+    .hc_elbowdoor .hc_elbowImg {
+        float: left;
+        width: 300px;
+        height: 300px;
+        margin-right: 10px;
+    }
+
+.hc_elbowImg img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hc_elbowdoor .hc_elbowTem {
+    float: left;
+    width: 840px;
+}
+
+    .hc_elbowdoor .hc_elbowTem .hc_elbowtit {
+        background: #eee;
+        width: 830px;
+        height: 45px;
+        line-height: 45px;
+        color: #c20201;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+        .hc_elbowdoor .hc_elbowTem .hc_elbowtit span {
+            margin-left: 30px;
+        }
+
+    .hc_elbowdoor .hc_elbowTem .hc_elbowlaser {
+        width: 830px;
+        margin: 5px 0px 0px 30px;
+        font-size: 16px;
+        float: left;
+        line-height: 35px;
+    }
+
+        .hc_elbowdoor .hc_elbowTem .hc_elbowlaser .hc_elbowtitle {
+            display: block;
+            float: left;
+        }
+
+        .hc_elbowdoor .hc_elbowTem .hc_elbowlaser .hc_elbowzhen {
+            display: block;
+            float: left;
+            width: 690px;
+        }
+
+.hc_aptitude {
+    float: left;
+    margin-bottom: 20px;
+    width: 1170px;
+    padding: 15px 0px 15px 0px;
+    background: #fff;
+}
+
+    .hc_aptitude .hc_adbantitImg {
+        border-bottom: 2px solid #c20201;
+        height: 30px;
+        line-height: 20px;
+        font-size: 18px;
+        color: #c20201;
+    }
+
+        .hc_aptitude .hc_adbantitImg .hc_biltit {
+            float: left;
+            margin-left: 15px;
+            width: 565px;
+        }
+
+            .hc_aptitude .hc_adbantitImg .hc_biltit .hc_imgz {
+                background-image: url('../../Images/images/dp_rz_icon.png');
+                display: block;
+                height: 26px;
+                width: 28px;
+                float: left;
+                margin-right: 10px;
+            }
+
+    .hc_aptitude .hc_aptituImg {
+        float: left;
+    }
+
+        .hc_aptitude .hc_aptituImg .hc_license {
+            float: left;
+            margin: 20px 50px 0px 15px;
+        }
+
+            .hc_aptitude .hc_aptituImg .hc_license img {
+                height: 200px;
+                width: 200px;
+            }
+
+        .hc_aptitude .hc_aptituImg .hc_permission {
+            float: left;
+            margin: 20px 50px 0px 334px;
+        }
+
+        .hc_aptitude .hc_aptituImg .hc_license img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .hc_aptitude .hc_aptituImg .hc_accredit {
+            margin: 20px 0px 0px 15px;
+        }
+
+            .hc_aptitude .hc_aptituImg .hc_accredit img {
+                height: 200px;
+                width: 200px;
+            }
+/*.hc_aptituImg .hc_license > img{
+       transition: .1s transform;
+  transform: translateZ(0);
+  width: 400px;
+   }
+   .hc_aptituImg .hc_license:hover > img{
+       transform: scale(1.5, 1.5);
+  transition: .3s transform;
+   }
+     .hc_aptituImg .hc_permission > img{
+       transition: .1s transform;
+  transform: translateZ(0);
+  width: 400px;
+   }
+   .hc_aptituImg .hc_permission:hover > img{
+       transform: scale(1.5, 1.5);
+  transition: .3s transform;
+   }
+    .hc_aptituImg .hc_accredit > img{
+       transition: .1s transform;
+  transform: translateZ(0);
+   }
+   .hc_aptituImg .hc_accredit:hover > img{
+       transform: scale(1.5, 1.5);
+  transition: .3s transform;
+   }*/
+#hc_replydiv {
+    z-index: 9999;
+    padding: 25px;
+    outline: 0px none;
+    display: block;
+    max-height: 395px;
+    max-width: 500px;
+    text-align: center;
+    background: rgba(99, 98, 98, 0.8) none repeat scroll 0% 0%;
+    position: fixed;
+    top: 260px;
+    left: 540px;
+}
+
+    #hc_replydiv img {
+        max-width: 500px;
+        max-height: 500px;
+        display: block;
+    }

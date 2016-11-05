@@ -1,0 +1,570 @@
+﻿@using HC.Core.Infrastructure
+@using HC.Service.Account
+@using Maticsoft.Model
+@using HC.Data.Models
+
+@model NewsClass
+@{
+    ViewBag.Title = "栏目添加";
+    //Layout = "~/HC.Manage/Views/Shared/manageLayout2.cshtml";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+    var modelU = (User_Info)ViewBag.curentUser;
+    var modelUserInfo = modelU ?? WorkContext.CurrentCustomer;
+    var buttonVisiable = (!string.IsNullOrEmpty(Model.NaviPIC)) == true ? "none" : "block";
+}
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/authentication.css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/kindEditor/themes/default/default.css" />
+
+    <style type="text/css">
+        .editorOut {
+            display: none;
+        }
+
+        .hc_textlable {
+            width: 101px !important;
+        }
+
+        #Certication {
+            padding-left: 0px !important;
+        }
+
+        .hc_chk {
+            padding-left: 103px !important;
+        }
+
+        .hc_item .hc_attestationBtn {
+            margin: 0px 0px 21px 365px !important;
+        }
+
+
+
+
+
+        #yingyeiew {
+            margin: 0px !important;
+            /*height:150px !important;*/
+            position: relative;
+        }
+
+        .hc-fls object {
+            display: block;
+            width: 130px;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 200;
+            margin-left: 127px;
+            margin-top: 58px;
+        }
+
+        .uploadifyQueue {
+            position: absolute;
+            /* left: 489px; */
+            margin-top: 38px;
+            margin-left: 90px;
+            z-index: 500;
+        }
+
+
+        .closeyy {
+            /*height: 20px;*/
+            position: absolute;
+            /*margin-top: -212px;
+            margin-left: 55px;*/
+            text-align: inherit;
+            line-height: 10px;
+            font-size: initial;
+            top: 0;
+            right: 0;
+        }
+
+            .closeyy img {
+                width: 20px;
+                height: 20px;
+            }
+    </style>
+}
+@section headScript{
+    <script type="text/javascript" src="~/HC.Manage/Content/common/script/authentication.js"></script>
+    <script type="text/javascript" src="~/HC.Manage/Content/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="~/HC.Manage/Content/ueditor/ueditor.all.min.js"></script>
+
+
+    <script type="text/javascript">
+
+
+        //banner和缩略图
+        var albumPCoverUe;
+        $(function () {
+
+
+            ue = UE.getEditor('PageContent', {
+                autoHeightEnabled: true,
+                autoFloatEnabled: true,
+                initialFrameHeight: 400,
+                initialFrameWidth: 800
+            });
+
+
+            albumPCoverUe = UE.getEditor('albumPCoverJs', {
+
+            });
+
+            ue.ready(function () {
+                ue.execCommand('serverparam', {
+                    'BusinessID': $("#hidContentID").val(), //业务Id
+                    'BusinessGuid': 1111,  //临时图片的Id
+                    'BusinessFlag': "news", //业务类型
+                    'BTBusinessID': $("#hidClassID").val(),   //根据BTBusinessID和BTBusinessFlag获取缩略图设置
+                    'BTBusinessFlag': "0000"
+                });
+            });
+
+
+            //相册
+            albumPCoverUe.ready(function () {
+                //设置编辑器不可用
+                //albumPCoverUe.setDisabled();  //这个地方要注意 一定要屏蔽
+                //隐藏编辑器，因为不会用到这个编辑器实例，所以要隐藏
+                albumPCoverUe.hide();
+                //        //侦听图片上传   原来单页相册使用
+                //        albumPCoverUe.addListener('beforeinsertimage', function (t, arg) {
+                //            var sbStr = "";
+                //            var i = 0;
+                //            for (var a in arg) {
+                //                sbStr += "<div style=\"display:inline-block; position:relative;\">" +
+                // "<img  src=\"" + arg[a].src + "\" style=\"height: 150px;width: 150px; display:block;\" />" +
+                //"<input class=\"album_input\" type=\"text\" placeholder=\"在此添加图片说明\" value=\"\">" +
+                // "<a onclick=\"removeAlbm(this)\" class=\"AlbumPicCover_close\">X</a></div>";
+                //                i++;
+                //            }
+                //            $(".albumPCoverDiv").prepend(sbStr);
+                //            $(".AlbumPicCover_close").show();
+                //        });
+
+
+                //侦听图片上传
+                albumPCoverUe.addListener('beforeinsertimage', function (t, arg) {
+                    $("#NaviImg").attr("src", arg[0].src);
+                    $("#NaviPIC").val(arg[0].src);
+                    $("#NaviImgBt").hide();
+                    $(".closeNavImg").show();
+                });
+
+
+
+                //视频文件上传
+                albumPCoverUe.addListener('afterUpfile', function (t, arg) {
+
+                   
+                    var re = arg.url.replace("/document/ueditor/file/", "");
+                    if (re.indexOf("?") > 0) {
+                        re = re.substring(0, re.indexOf("?"));
+                    }
+                    $("#SmallImg").attr("src", re);
+                    $("#SmallPic").val(re);
+                    $("#SmallImgBt").hide();
+                    $(".closeSmallImg").show();
+                });
+
+            });
+
+
+            //提交
+            $("#btnAttestation").click(function () {
+
+                //给相册input赋值
+                var attchmentData = {
+                    albumList: [],
+                }
+
+                function attchment() {
+                    this.AttachmentUrl = "";
+                    this.AttchmentIllustrate = "";
+                };
+
+                $.each($(".albumPCoverDiv div"), function (i, v) {
+                    var albumObj = new attchment();
+                    albumObj.AttachmentUrl = $(v).find("img").attr("src");
+                    albumObj.AttchmentIllustrate = $(v).find("input").val();
+                    attchmentData.albumList.push(albumObj);
+                })
+                //console.log(attchmentData);
+                $("#albumData").val(JSON.stringify(attchmentData));
+                $("textarea[name='PageContent']").val(ue.getContent());
+                $("form").submit();
+            })
+
+
+        })
+
+        //上传相册
+        function upAlbum() {
+            var myAlbum = albumPCoverUe.getDialog("insertimage");
+            myAlbum.open();
+        }
+
+        function upFile() {
+            var myFileUp = albumPCoverUe.getDialog("attachment");
+            myFileUp.open();
+        }
+
+
+        function closeNavImg(e) {
+            $("#NaviImg").attr("src", "");
+            $("#NaviPIC").val("");
+            $("#NaviImgBt").show();
+            $(".closeNavImg").hide();
+        }
+
+        //缩略图
+        function closeSmallImg(e) {
+            $("#SmallImg").attr("src", "");
+            $(e).hide();
+            $("#SmallPic").val("");
+            $("#SmallImgBt").show();
+        }
+    </script>
+
+}
+
+@section coverLayer{
+    <!--用于修改商品成功后的提示层和遮罩层-->
+    @*<div id="modifyCover1"></div>
+        <div id="authenticationCover1">
+            <p>正在提交资料，请稍等...</p>
+            <img src="~/HC.Manage/images/publicimg/wait.gif" />
+        </div>*@
+}
+
+
+
+@using (Html.BeginForm("AddSection", "Section", FormMethod.Post, new { enctype = "multipart/form-data", id = "formCertifiction" }))
+{
+
+    <!--相册-->
+    <script type="text/plain" id="albumPCoverJs">
+    </script>
+
+
+    <div class="buyerright">
+        <div class="hc_maintop">
+            <div class="hc_titletop">
+                <img src="~/HC.Manage/images/ManageImg/xin.png">
+                <img src="~/HC.Manage/images/ManageImg/xin.png">
+                栏目添加
+                <img src="~/HC.Manage/images/ManageImg/xin.png">
+                <img src="~/HC.Manage/images/ManageImg/xin.png">
+                @*<span class="hc_titleSpan">特权 ▪ 专享</span>*@
+            </div>
+        </div>
+
+        <!--企业认证-->
+        <div id="Certication">
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red">*</span>栏目名称：</span>
+                <div class="hc_fl">
+                    @Html.TextBoxFor(x => x.ClassName, new { @class = "hc_nameinput", @placeholder = "请输入栏目名称", @autocomplete = "off" })
+                    <span class="spanmsci">@Html.ValidationMessageFor(x => x.ClassName)</span>
+                </div>
+            </div>
+
+
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red"></span>栏目权重：</span>
+                <div class="hc_fl">
+                    @Html.TextBoxFor(x => x.ClassOrder, new { @class = "hc_telinput" })
+                    <span class="spanmsci cellPhoneValidate">@Html.ValidationMessageFor(x => x.ClassOrder)</span>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            @*@if (ViewBag.isLevelOne)
+            {*@
+
+
+
+
+                @*<div class="hc_item">
+                    <span class="hc_textlable">栏目缩略图：</span>
+                    <div class="hc-fls">
+
+                        <input class="hc_businessFile uploadPic" id="SmallImgBt" value="上传" onclick="upFile()" type="button">
+                        <div id="yingyeiew1" class="hc_shenfenimg">
+                            @if (!string.IsNullOrEmpty(Model.SmallPic))
+                            {
+                                <img id="SmallImg" src="@Model.SmallPic" style="height:150px;width:150px;" />
+                                <a class="closeSmallImg closeyy" onclick="closeSmallImg(this)"><img src="/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png"></a>
+                            }
+                            else
+                            {
+                                <img id="SmallImg" src="~/HC.Manage/images/publicimg/mentou_pic.gif" style="height:150px;width:150px;" />
+                                <a class="closeSmallImg closeyy" style="display:none;" onclick="closeSmallImg(this)"><img src="/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png"></a>
+                            }
+                        </div>
+                    </div>
+
+                    @Html.TextBoxFor(x => x.SmallPic, new { type = "input", Model.SmallPic, style = "width:1px;height:1px; visibility:hidden" })
+
+                </div>*@
+
+
+
+
+
+
+
+
+
+                <div class="hc_item">
+                    <span class="hc_textlable">栏目图片：</span>
+                    <div class="hc-fls">
+
+
+
+                        <input class="hc_businessFile uploadPic" style="display:@buttonVisiable" id="NaviImgBt" value="上传" onclick="upAlbum()" type="button">
+                        <div id="yingyeiew" class="hc_shenfenimg">
+                            @if (!string.IsNullOrEmpty(Model.NaviPIC))
+                            {
+                                <img id="NaviImg" src="@Model.NaviPIC" style="height:150px;width:150px;" />
+                                <a class="closeNavImg closeyy" onclick="closeNavImg(this)"><img src="/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png"></a>
+                            }
+                            else
+                            {
+                                <img id="NaviImg" src="~/HC.Manage/images/publicimg/mentou_pic.gif" style="height:150px;width:150px;" />
+                                <a class="closeNavImg closeyy" style="display:none;" onclick="closeNavImg(this)"><img src="/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png"></a>
+                            }
+                        </div>
+                    </div>
+
+                    @Html.TextBoxFor(x => x.NaviPIC, new { type = "input", Model.NaviPIC, style = "width:1px;height:1px; visibility:hidden" })
+
+                </div>
+
+
+
+
+            @*}*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            @*栏目简介*@
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red"></span>栏目简介：</span>
+                <div class="hc_fl">
+                    @Html.TextAreaFor(x => x.NaviContent, new { cols = "100", rows = "5", @class = "hc_textareaf", @placeholder = "请输入栏目简介", })
+                    <span class="spanmsci">@Html.ValidationMessageFor(x => x.NaviContent)</span>
+                </div>
+            </div>
+
+
+
+
+
+
+            @*是否为单页*@
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red"></span>栏目类型：</span>
+                <div class="hc_chk">
+
+
+
+                    @if (Model.ClassID != 0)
+                    {
+                        if (Model.IsSingle == 1)//单页
+                        {
+                            <input class="hc_radioinput" type="radio" name="product" id="rdoautoMobile" checked value="1" /><span class="hc_radiospan" id="autoMobile">单页</span>
+                            <input class="hc_radioinput" type="radio" name="product" id="rdosystemAcc" value="0" /><span class="hc_radiospan" id="systemAcc">列表</span>
+                            <input class="hc_radioinput" type="radio" name="product" id="rdoautolink" value="2" /><span class="hc_radiospan" id="autoMobile">外链</span>
+                        }
+                        else if (Model.IsSingle == 0)//列表
+                        {
+                            <input class="hc_radioinput" type="radio" name="product" id="rdoautoMobile" value="1" /><span class="hc_radiospan" id="autoMobile">单页</span>
+                            <input class="hc_radioinput" type="radio" name="product" id="rdosystemAcc" checked value="0" /><span class="hc_radiospan" id="systemAcc">列表</span>
+                            <input class="hc_radioinput" type="radio" name="product" id="rdoautolink" value="2" /><span class="hc_radiospan" id="autoMobile">外链</span>
+                        }
+                        else if (Model.IsSingle == 2)//外链
+                        {
+                            <input class="hc_radioinput" type="radio" name="product" id="rdoautoMobile" value="1" /><span class="hc_radiospan" id="autoMobile">单页</span>
+                            <input class="hc_radioinput" type="radio" name="product" id="rdosystemAcc" value="0" /><span class="hc_radiospan" id="systemAcc">列表</span>
+                            <input class="hc_radioinput" type="radio" name="product" id="rdoautolink" checked value="2" /><span class="hc_radiospan" id="autoMobile">外链</span>
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        <input class="hc_radioinput" type="radio" name="product" id="rdoautoMobile" value="1" /><span class="hc_radiospan" id="autoMobile">单页</span>
+                        <input class="hc_radioinput" type="radio" name="product" id="rdosystemAcc" checked value="0" /><span class="hc_radiospan" id="systemAcc">列表</span>
+                        <input class="hc_radioinput" type="radio" name="product" id="rdoautolink" value="2" /><span class="hc_radiospan" id="autoMobile">外链</span>
+                    }
+                    @Html.TextBox("IsSingle", Model.IsSingle, new { id = "IsSingle", style = "width:0px; height:0px;border:0px;padding: 0;" })
+                    <br />
+                </div>
+            </div>
+
+
+
+
+            @*是否显示*@
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red"></span>是否显示：</span>
+                <div class="hc_chk">
+
+
+                    @Html.RadioButtonFor(x => x.IsShowInNav, 1)<span class="hc_radiospan">是</span>
+                    @Html.RadioButtonFor(x => x.IsShowInNav, 0)<span class="hc_radiospan">否</span>
+                    @Html.TextBox("IsSingle", Model.IsSingle, new { id = "IsSingle", style = "width:0px; height:0px;border:0px;padding: 0;" })
+                    <br />
+                </div>
+            </div>
+
+
+
+            @*外链地址*@
+            <div class="hc_item linkAddressInput" style="display:none;">
+                <span class="hc_textlable"><span class="hc_red"></span>外链地址：</span>
+                <div class="hc_chk">
+                    @Html.TextBoxFor(x => x.linkAddress)
+                </div>
+            </div>
+
+
+            @*展示方式*@
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red"></span>展示方式：</span>
+                <div class="hc_chk">
+                     
+                </div>
+            </div>
+
+
+
+
+
+            @*单页内容*@
+            <div class="hc_item editorOut">
+
+                @*相册添加*@
+                <div class="hc_item morePic switchDiv" style="display:none;">
+                    <span class="hc_textlable"><span class="hc_red"></span>相册图片：</span>
+                    <div class="hc-fls albumPCoverDiv">
+                        @foreach (var att in Model.Attachments.Where(x => x.AttaType == 1))
+                        {
+                            <div style="display:inline-block; position:relative;">
+                                <img src="@att.AttaUrl" style="height: 150px;width: 150px; display:block;">
+                                <input class="album_input" placeholder="在此添加图片说明" type="text" value="@att.AttaDescribe">
+                                @*<input style="display:none;" type="text" value="@att.AttaUrl">*@
+                                <a onclick="removeAlbm(this)" class="AlbumPicCover_close" style="display: inline;">X</a>
+                            </div>
+                        }
+                        <input class="hc_businessFile uploadPic" id="upalbumBt" value="添加" onclick="upAlbum()" type="button">
+                    </div>
+                </div>
+
+
+                <span class="hc_textlable"><span class="hc_red">*</span>单页内容：</span>
+                <div class="hc_fl editor">
+                    @Html.TextAreaFor(x => x.PageContent, new { cols = "100", rows = "5", @class = "hc_textareaf" })
+                    <span class="spanmsci">@Html.ValidationMessageFor(x => x.PageContent)</span>
+                </div>
+
+
+                <input name="albumData" id="albumData" type="hidden" value="" />
+            </div>
+
+
+
+
+            <div class="hc_item">
+                <input class="hc_attestationBtn" id="btnAttestation" value="提交栏目" type="button">
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    @Html.HiddenFor(x => x.ParentID)
+    @Html.HiddenFor(x => x.ClassID)
+}
+
+
+@section footScript{
+    <script type="text/javascript">
+
+        //设置是否为单页
+        $(document).ready(function () {
+            $(".hc_radioinput").click(function () {
+                var checkedVal = $(".hc_radioinput:checked").val();
+                if (checkedVal == 1) {//单页
+                    $(".editorOut").show();
+                    $(".linkAddressInput").hide();
+                } else if (checkedVal == 0) {//列表
+                    $(".editorOut").hide();
+                    $(".linkAddressInput").hide();
+                    //KindEditor.instances[0].html("");
+                } else if (checkedVal == 2) {//外链
+                    $(".editorOut").hide();
+                    $(".linkAddressInput").show();
+                } else {
+
+                }
+                $("#IsSingle").val($(".hc_radioinput:checked").val());
+            });
+
+
+
+            //页面初始化编辑区是否显示
+            if ($(".hc_radioinput:checked").val() == 1) {//单页
+                $(".editorOut").show();
+                $(".linkAddressInput").hide();
+            } else if ($(".hc_radioinput:checked").val() == 0) {//列表
+                $(".editorOut").hide();
+                $(".linkAddressInput").hide();
+            } else if ($(".hc_radioinput:checked").val() == 2) {//外链
+                $(".editorOut").hide();
+                $(".linkAddressInput").show();
+            }
+        });
+    </script>
+}

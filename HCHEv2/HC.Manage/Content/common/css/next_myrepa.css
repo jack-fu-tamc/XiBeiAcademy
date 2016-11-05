@@ -1,0 +1,1207 @@
+.hc_indent .hc_indentforst {
+    height: 38px;
+    border-bottom: 2px solid #c20201;
+}
+
+.hc_indent ul {
+    margin-left: 25px;
+}
+
+.hc_indent .indentretimg {
+    background: transparent url("../images/icoo.png") no-repeat scroll 69px 8px;
+}
+
+.hc_indent .hc_indenths {
+    float: right;
+    margin-right: 24px;
+}
+
+    .hc_indent .hc_indenths li {
+        width: auto;
+        margin-top: -8px;
+    }
+
+        .hc_indent .hc_indenths li .font_a {
+            height: 38px;
+            width: 140px;
+            display: block;
+            border: 1px solid #c20201;
+            border-radius: 4px;
+            margin-bottom: 14px;
+            font-size: 16px;
+            text-align: center;
+            color: #c20201;
+        }
+
+    .hc_indent .hc_indenths .hc_hsimg {
+        background: transparent url("../images/buyers/order_icon.png") no-repeat scroll 25px -47px;
+        width: 50px;
+        height: 35px;
+        margin-top: 3px;
+    }
+
+.hc_indent ul li {
+    display: block;
+    width: 100px;
+    float: left;
+    font-size: 15px;
+    height: 38px;
+    line-height: 40px;
+}
+
+.hc_indent .hc_indered {
+    color: #c20201;
+}
+
+.hc_seek {
+    margin: 16px 5px;
+    height: 35px;
+}
+
+    .hc_seek .hc_inputsek {
+        float: left;
+        height: 34px;
+    }
+
+    .hc_seek .hc_seekinp {
+        width: 282px;
+        height: 32px;
+        line-height: 30px;
+        float: left;
+        border-radius: 0px;
+        padding: 0px 0px 0px 6px;
+    }
+
+    .hc_seek .hc_seekbut {
+        float: left;
+        border: 1px solid #ccc;
+        border-left: none;
+        height: 34px;
+        width: 86px;
+        color: #000;
+        text-align: center;
+        overflow: hidden;
+        background: #eee;
+    }
+
+.hc_GJseek {
+    width: 210px;
+    height: 34px;
+    float: left;
+    line-height: 32px;
+    margin-left: 35px;
+}
+
+    .hc_GJseek .hc_seekspan {
+        border: 1px solid #ccc;
+        text-align: center;
+        width: 130px;
+        float: left;
+        cursor: pointer;
+    }
+
+    .hc_GJseek .hc_butsel {
+        float: left;
+        border: 1px solid #C20201;
+        height: 33px;
+        width: 60px;
+        color: #C20201;
+        text-align: center;
+        overflow: hidden;
+        margin-left: 16px;
+        background: #FFF;
+        border-radius: 4px;
+    }
+
+        .hc_GJseek .hc_butsel:hover {
+            background: #C20201;
+            color: #FFF;
+        }
+
+    .hc_GJseek .hc_seekspan .seekico {
+        background: transparent url("../../../Content/pic/Menu_arrow.png") no-repeat scroll 5px 5px;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        margin-top: 4px;
+        *margin-top: -3px;
+    }
+
+    .hc_GJseek .hc_seekspan .seekico_lis {
+        background: transparent url("../../../Content/pic/Menu_arrow.png") no-repeat scroll -19px 7px;
+        *background: transparent url("../../../Content/pic/Menu_arrow.png") no-repeat scroll -19px 1px;
+        width: 17px;
+        height: 20px;
+        position: absolute;
+        margin-top: 2px;
+        margin-left: 7px;
+    }
+
+.hc_XLseek {
+    height: 50px;
+    margin-top: -5px;
+}
+
+.hc_ZTselet .cur {
+    background: url("../../../Content/pic/Menu_arrow.png") no-repeat scroll 106px center;
+    background: transparent url("../../../Content/pic/order_arrow_x.png") no-repeat scroll 108px center;
+}
+
+.hc_PJselet .cur {
+    background: transparent url("../../../Content/pic/order_arrow_x.png") no-repeat scroll 80px center;
+}
+
+.hc_XLseek .hc_NCinput {
+    width: 119px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    padding: 0px 0px 0px 4px;
+    margin-top: 5px;
+}
+
+.hc_ZTselet {
+    position: absolute;
+    float: left;
+    margin-left: 70px;
+    margin-top: 5px;
+    height: 35px;
+    *margin-left: 0px;
+}
+
+    .hc_ZTselet dt {
+        height: 29px;
+        display: inline-block;
+        border: 1px solid #CCC;
+        line-height: 23px;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        z-index: 99;
+        width: 114px;
+        padding-top: 3px;
+        position: relative;
+        padding-left: 15px;
+        font-weight: normal;
+        background: url("../../../Content/pic/Menu_arrow.png") no-repeat scroll 106px center;
+    }
+
+    .hc_ZTselet dd {
+        position: absolute;
+        left: 0px;
+        top: 33px;
+        border: 1px solid #ccc;
+        background: #fff;
+        display: none;
+        z-index: 9000;
+    }
+
+        .hc_ZTselet dd ul {
+            width: 129px;
+            height: 80px;
+            overflow: auto;
+            z-index: 6000;
+            display: block;
+            margin: 0px;
+        }
+
+            .hc_ZTselet dd ul li {
+                width: 129px;
+                font-size: 14px;
+            }
+
+                .hc_ZTselet dd ul li a {
+                    line-height: 20px;
+                    display: block;
+                    padding: 7px 15px;
+                }
+
+.hc_XLseek .hc_SJname {
+    width: 215px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+
+.hc_XLseek .hc_JYselest {
+    width: 215px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+
+.hc_XLseek .hc_CJteach {
+    width: 320px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+
+.hc_XLseek span {
+    float: left;
+}
+
+.hc_XLseek .hc_PJselest {
+    width: 170px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+/**pj**/
+
+.hc_PJselet {
+    position: absolute;
+    float: left;
+    margin-left: 70px;
+    margin-top: 5px;
+    height: 35px;
+    *margin-left: 0px;
+}
+
+    .hc_PJselet dt {
+        height: 29px;
+        display: inline-block;
+        border: 1px solid #CCC;
+        line-height: 23px;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        z-index: 99;
+        width: 84px;
+        padding-top: 3px;
+        position: relative;
+        padding-left: 15px;
+        font-weight: normal;
+        background: url("../../../Content/pic/Menu_arrow.png") no-repeat scroll 77px center;
+    }
+
+    .hc_PJselet dd {
+        position: absolute;
+        left: 0px;
+        top: 33px;
+        border: 1px solid #ccc;
+        background: #fff;
+        display: none;
+        z-index: 9000;
+    }
+
+        .hc_PJselet dd ul {
+            width: 99px;
+            height: 84px;
+            overflow: auto;
+            z-index: 6000;
+            display: block;
+            margin: 0px;
+        }
+
+            .hc_PJselet dd ul li {
+                width: 99px;
+                font-size: 14px;
+            }
+
+                .hc_PJselet dd ul li a {
+                    line-height: 20px;
+                    display: block;
+                    padding: 7px 15px;
+                }
+/*日期选择*/
+
+input {
+    width: 100px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    *line-height: 28px;
+}
+
+.calender {
+    width: 255px;
+    margin: 50px auto;
+    top: 0;
+    left: 0;
+    border: 1px #ccc solid;
+    background: #fff;
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+
+.calendertb {
+    width: 100%;
+}
+
+    .calendertb td {
+        width: 35px;
+        height: 35px;
+        border: 1px #CCCCCC solid;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+        .calendertb td.hover,
+        .calendertb td.weekendhover {
+            background: #D6D6D6;
+        }
+
+    .calendertb th {
+        width: 35px;
+        height: 30px;
+        border: 1px #CCCCCC solid;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        color: #979797;
+    }
+
+.tdtoday {
+    background: #0080FF;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border: 1px #CCCCCC solid;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.getyear {
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    text-align: center;
+}
+
+.preMonth {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #0080FF;
+}
+
+.nextMonth {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #0080FF;
+}
+
+.hc_CJteach .mh_date {
+    width: 100px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    padding: 0px 0px 0px 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    background: url("../../../images/publicimg/order_icon.png") no-repeat scroll 80px center;
+}
+
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    background: #fff;
+    filter: alpha(opacity=10);
+    opacity: 0.1;
+    display: none;
+}
+
+.getyear select {
+    width: auto;
+}
+
+
+/*添加*/
+
+.body_title {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background: #F3F3F3 none repeat scroll 0% 0%;
+    border-top: 1px solid #E3E3E3;
+}
+
+.title_left {
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    float: left;
+}
+
+.body_title em {
+    background: transparent url("../../../images/publicimg/pd_Shop_star.png") no-repeat scroll 0% 0%;
+    height: 19px;
+    width: 16px;
+    display: block;
+    float: left;
+    margin: 9px 5px 0px;
+}
+
+.body_title i {
+    display: block;
+    float: left;
+    color: #C20201;
+    font-style: normal;
+    font-size: 16px;
+    margin: 0px 10px;
+}
+
+.title_right {
+    width: 100px;
+    height: 30px;
+    line-height: 32px;
+    color: #AD7E52;
+    font-size: 15px;
+    float: right;
+    letter-spacing: 0.2em;
+}
+
+.select_type {
+    width: 100%;
+    height: 36px;
+    margin: 10px 0px;
+}
+
+    .select_type .type_last {
+        border-bottom: 1px solid #C20201;
+    }
+
+    .select_type ul {
+        margin: 0px;
+        padding: 0px;
+        height: 34px;
+    }
+
+        .select_type ul li {
+            list-style: outside none none;
+            float: left;
+            height: 30px;
+            text-align: center;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 0px 0px;
+            padding: 0px 11.5px;
+        }
+
+.color_next {
+    line-height: 38px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.type_show {
+    margin: 0px 0px;
+    padding: 0px 10px;
+    border-width: 4px 1px 1px;
+    border-style: solid;
+    border-color: #C20201 #C20201 #FFF;
+    color: #C20201;
+    line-height: 30px;
+}
+
+.unit_year {
+    width: 100%;
+    height: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.try_sex {
+    width: 294px !important;
+    height: 15px !important;
+    float: right;
+    display: none;
+    margin-top: -10px !important;
+}
+
+    .try_sex .tip_img {
+        height: 15px;
+        line-height: 15px;
+        width: 15px;
+        display: block;
+        float: left;
+        background: transparent url("../../../images/publicimg/Input_error.png") no-repeat scroll 0% 0%;
+    }
+
+    .try_sex .tip_text {
+        display: block;
+        float: left;
+        height: 15px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-left: 5px;
+        color: #C20201;
+    }
+/**/
+
+.buyerright .table_list {
+    height: auto;
+    border: 0px;
+    font-family: SimSun;
+}
+
+    .buyerright .table_list ul li {
+        float: left;
+        margin: 0px;
+        border-top: none;
+    }
+
+    .buyerright .table_list a {
+        outline: none;
+    }
+
+    .buyerright .table_list .title_list li {
+        height: 36px;
+    }
+
+    .buyerright .table_list .title_naxt {
+        background: #FEF5EC none repeat scroll 0% 0%;
+        height: 36px;
+        border: 1px solid #c20201;
+    }
+
+    .buyerright .table_list ul li {
+        list-style: none;
+        text-align: center;
+        height: 34px;
+        line-height: 34px;
+    }
+
+    .buyerright .table_list ul .order_product {
+        width: 355px;
+        border-right: none;
+    }
+
+    .buyerright .table_list ul .unit_price {
+        width: 90px;
+        border-right: none;
+        border-left: none;
+    }
+
+    .buyerright .table_list ul .unit_payment {
+        width: 113px;
+        border-right: none;
+    }
+
+    .buyerright .table_list ul .unit_Transaction {
+        width: 111px;
+        border-right: none;
+    }
+        
+    .buyerright .table_list ul {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .buyerright .table_list ul .unit_operation {
+            width: 105px;
+            border-collapse: collapse;
+        }
+
+        .buyerright .table_list ul .unit_number {
+            width: 50px;
+            border-left: none;
+        }
+
+.title_list_show {
+    border: 1px solid #d8d8d8;
+    background: #eeeeee;
+    width: 918px;
+    margin: 10px 0px 0px 0px !important;
+}
+
+.buyerright .table_list ul .cosplay_top {
+    height: 250px !important;
+}
+
+.go_payment {
+    background: #c20201 !important;
+    color: #fff !important;
+}
+
+.buyerright .table_list ul .order_date,
+.order_num {
+    width: 290px;
+    text-align: left;
+}
+
+.buyerright .table_list input {
+    outline: none;
+}
+
+.buyerright .table_list ul .order_date input {
+    float: left;
+    margin: 0px 12px 0px 12px;
+}
+
+.buyerright .table_list ul .order_date span {
+    display: block;
+    float: left;
+}
+
+.buyerright .table_list ul .shop_title {
+    width: 210px;
+    overflow: hidden;
+    height: 36px;
+}
+
+.buyerright .table_list ul .number_one {
+    width: 248px !important;
+}
+
+.buyerright .table_list ul .line_img {
+    width: 105px;
+    text-align: left;
+}
+
+    .buyerright .table_list ul .line_img span {
+        height: 20px;
+        display: block;
+        width: 70px;
+        background: url(../../../images/publicimg/Links.gif) no-repeat;
+        margin-top: 7px;
+    }
+
+    .buyerright .table_list ul .line_img em {
+        height: 20px;
+        display: block;
+        width: 23px;
+        background: url(../../../images/publicimg/Location_icon.png) no-repeat;
+        float: left;
+        margin: 9px 3px 0px 12px;
+    }
+
+.table_list .t-widget {
+    width: 920px;
+}
+
+.pec_text {
+    height: 133px;
+    width: 920px;
+    font-size: 12px;
+}
+
+.order_product_show {
+    width: 358px !important;
+}
+
+.sep-row li {
+    height: 10px !important;
+}
+
+.pec_text li {
+    height: 117px !important;
+    border: 1px solid #d8d8d8;
+    border-collapse: 0px;
+    border-bottom: 1px solid #d8d8d8;
+    padding-top: 16px;
+}
+
+.pec_text .order_image_show {
+    float: left;
+    margin: 0px 0px 16px 16px;
+    width: 100px;
+}
+
+.pec_text div {
+    height: 100px;
+    overflow: hidden;
+    width: 224px;
+    float: right;
+    margin: 0px 1px 17px;
+    line-height: 30px;
+}
+
+    .pec_text div a {
+        height: 72px;
+        display: block;
+        overflow: hidden;
+        line-height: 23px;
+        width: 96%;
+        text-align: left;
+    }
+
+.pec_text a:hover {
+    color: #c20201;
+}
+
+.unit_operation .evaluation_show {
+    display: block;
+    width: 75px;
+    height: 24px;
+    border: 1px solid #c20201;
+    background: #fff;
+    margin-left: 15px;
+    *margin-left: 0px;
+    line-height: 24px;
+    border-radius: 2px;
+    color: #c20201;
+}
+
+.opertain_show {
+    width: 100%;
+    height: 48px;
+    margin: 8px 0px;
+}
+
+    .opertain_show li {
+        padding-top: 8px;
+    }
+
+    .opertain_show .show_textbox {
+        width: 200px;
+        height: 32px;
+    }
+
+        .opertain_show .show_textbox .lable {
+            margin: 0px 8px 0px 12px;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+        }
+
+            .opertain_show .show_textbox .lable .all-selector {
+                margin-right: 5px;
+                vertical-align: middle;
+                outline: none;
+            }
+
+    .opertain_show .delete_show {
+        display: block;
+        float: left;
+        height: 30px;
+        width: 102px;
+        border: 1px solid #d8d8d8;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
+        background: #fff;
+        border-radius: 2px;
+        margin-left: 15px;
+    }
+
+    .opertain_show .show_page {
+        width: 270px;
+        float: right !important;
+    }
+
+        .opertain_show .show_page a {
+            width: 72px;
+            height: 30px;
+            border: 1px solid #d8d8d8;
+            display: block;
+            padding-right: 3px;
+        }
+
+        .opertain_show .show_page .prev_page {
+            float: right;
+            margin-left: 7px;
+        }
+
+.oder_num {
+    padding: 0px 10px 0px 18px;
+    width: 290px;
+    height: 36px;
+}
+
+.opertain_show .show_page em {
+    font-style: normal;
+}
+
+.opertain_show .show_page .prev_page i {
+    background: url(../../../Content/pic/Menu_arrow.png) no-repeat;
+    height: 10px;
+    width: 10px;
+}
+
+.opertain_show .show_page .next_page {
+    float: right;
+}
+
+.opertain_show .show_page .pric_page {
+    display: block;
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    width: 54px;
+}
+
+    .opertain_show .show_page .pric_page i {
+        font-style: normal;
+    }
+
+    .opertain_show .show_page .pric_page .first_page {
+        padding-left: 14px;
+    }
+
+.list_contain {
+    width: 100%;
+    height: auto;
+    float: left;
+    display: inline-block;
+}
+
+.car_color {
+    color: #c20201;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+    text-indent: 1em;
+    height: 30px;
+    overflow: hidden;
+}
+
+.top_center .top_text {
+    margin-top: 30px;
+}
+
+    .top_center .top_text a:hover {
+        text-decoration: none;
+    }
+
+.top_center .name_text {
+    margin-top: 12px;
+}
+.top_center .agreeP{
+    margin:0 auto;
+    width:89px;
+}
+
+.tipsAlipay {
+    position: absolute;
+    display: none;
+    margin-top: -39px;
+    *margin-top: -48px;
+    width: 114px;
+    margin-left: -71px;
+    border: 1px solid #CCC;
+    border-radius:2px;
+    background:#fff;
+}
+
+    .first_triangle {
+        position: absolute;
+        border-width: 8px;
+        border-color: #CCC transparent transparent;
+        border-style: solid dashed dashed;
+        margin-top: -3px;
+        *margin-top:-12px;
+        margin-left: -22px;
+        display:none;
+    }
+
+   .cover_triangle {
+        position: absolute;
+        border-width: 8px;
+        border-style: solid dashed dashed;
+        margin-top: -5px;
+          *margin-top:-14px;
+        margin-left: -22px;
+        border-color: #fff transparent transparent;
+        display:none;
+    }
+
+}
+
+
+.top_center .agreeP {
+    width: 89px;
+    margin: 0 auto;
+    *line-height:30px;
+}
+
+.top_center p {
+    margin: 0px;
+}
+
+.top_text_color {
+    color: #c20201;
+}
+
+.moth_giv {
+    float: left;
+    min-height: 500px;
+}
+
+.pec_text .alert_big_show {
+    width: 462px;
+    height: 220px;
+    background: transparent;
+    position: absolute;
+    margin-left: -355px;
+    *margin-left: -423px;
+    margin-top: 0px !important;
+    display: none;
+}
+
+.pec_text .alert_div {
+    width: 462px !important;
+    height: 200px !important;
+    background: #cccccc none repeat scroll 0% 0%;
+    float: left;
+    margin-top: 20px;
+}
+
+.pec_text .consumer_code {
+    width: 100% !important;
+    float: left !important;
+    height: 30px !important;
+    line-height: 30px;
+    margin-top: 35px !important;
+}
+
+.pec_text .consumer_code_next {
+    width: 100% !important;
+    float: left !important;
+    height: 30px !important;
+    line-height: 30px;
+    margin-top: 0px;
+}
+
+.consumer_code span {
+    display: block;
+    float: left;
+    height: 30px;
+    margin-left: 20px;
+    *margin-left: 13px;
+}
+
+.consumer_code_input {
+    height: 40px;
+    width: 265px;
+    float: left;
+    border-radius: 0px !important;
+}
+
+.pec_text .hc_reply_arrow {
+    position: absolute;
+    border-width: 9px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #CCC;
+    border-image: none;
+    top: 2px;
+    *top: -27px;
+    left: 415px;
+}
+
+.hc_reply_arrow2 {
+    position: absolute;
+    border-width: 9px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #FFF;
+    border-image: none;
+    top: 8px;
+    *top: -22px;
+    left: 415px;
+}
+
+.pec_text .alert_next {
+    width: 450px;
+    height: 186px;
+    margin: auto;
+    background: #fff;
+    margin: 6px;
+}
+
+.consumer_code_next .relase_btn {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    float: left;
+    background: #c20201;
+    color: #fff;
+    margin-left: 152px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.pec_text .consumer_code_next .relase_btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.pec_text .pax_year {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    color: #7c7c7c;
+}
+
+.hc_closdiv {
+    display: block;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    *top: 25px;
+    *right: 5px;
+    width: 15px;
+    font-size: 14px;
+    font-family: microsoft yahei;
+    color: #A89F9F;
+}
+
+.img_cost {
+    padding-left: 5px;
+    height: 18px;
+    width: 45px;
+}
+
+.pec_text .top_center .line_img_ext {
+    width: 75px;
+    height: 20px;
+    float: left;
+    line-height: 20px;
+    display: block;
+    background: transparent url("../../../images/publicimg/Links.gif") no-repeat scroll 0% 0%;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.pec_text .botm_height {
+    height: 250px !important;
+}
+
+.top_change {
+    margin-top: 65px !important;
+}
+
+.t-widget {
+    border: none !important;
+}
+
+    .t-widget table {
+        font-family: SimSun;
+    }
+
+.t-grid tr {
+    border-bottom: none !important;
+}
+
+.t-grid table td {
+    border-right: none !important;
+    padding: 0px;
+}
+
+.t-alt {
+    background: #fff !important;
+}
+
+.t-grid-header .t-header {
+    border-right: none !important;
+}
+
+.t-grid-header {
+    border: 1px solid #ccc !important;
+}
+
+.t-grid-pager {
+    border: 1px solid #ccc !important;
+    border-top: none !important;
+}
+
+.t-select .t-icon {
+    background: transparent url("../../../Content/pic/Menu_arrow.png") no-repeat scroll 30% center !important;
+    *background: transparent url("../../../Content/pic/Menu_arrow.png") no-repeat scroll 42% 10% !important;
+}
+
+.hc_ZTselet {
+    width: 125px;
+}
+
+.hc_PJselet {
+    width: 100px;
+}
+
+.t-input {
+    max-width: 100px;
+    *max-width: 99px;
+    *min-width: 64px;
+}
+
+.t-select, .t-arrow-down {
+    width: 14px !important;
+}
+
+.t-group {
+    box-shadow: none !important;
+    background: #fff !important;
+    max-height: 160px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: -1px !important;
+}
+
+.t-popup .t-item {
+    height: 30px;
+    line-height: 30px;
+}
+
+.t-grid table .t-no-data td {
+    border: 1px solid #ccc !important;
+    border-top: none;
+}
+
+ /*遮罩层*/
+    #modifyCover2 {
+    top: 40%;
+    background: #fff;
+    height: 100px;
+    width: 400px;
+    position: fixed;
+    left: 40%;
+    z-index: 60000;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+    #modifyCover2 p {
+    width: 94%;
+    display: block;
+    margin: auto;
+}
+/*#confirmBut {
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #c20201;
+    width: 50px;
+    border-radius: 4px;
+    color: #fff;
+    margin: 0px 5px;
+}*/
+
+
+    .confirmBut {
+        line-height: 30px !important;
+    height: 30px !important;
+    display: inline-block !important;
+    background-color: #c20201;
+    width: 50px !important;
+    border-radius: 4px;
+    color: #fff;
+    margin: 0px 5px;
+}
+
+    .confirmBut:hover {
+       color:white !important;
+}

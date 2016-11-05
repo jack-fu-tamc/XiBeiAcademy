@@ -1,0 +1,635 @@
+﻿/*搜索*/
+.hc_seek {
+    margin: 16px 5px;
+    height: 35px;
+}
+
+    .hc_seek .hc_inputsek {
+        float: left;
+        height: 34px;
+    }
+
+    .hc_seek .hc_seekinp {
+        width: 282px;
+        height: 32px;
+        line-height: 30px;
+        float: left;
+        border-radius: 0px;
+        padding: 0px 0px 0px 6px;
+    }
+
+    .hc_seek .hc_seekbut {
+        float: left;
+        border: 1px solid #ccc;
+        border-left: none;
+        height: 34px;
+        width: 86px;
+        color: #000;
+        text-align: center;
+        overflow: hidden;
+        background: #eee;
+    }
+
+.hc_GJseek {
+    width: 410px;
+    height: 34px;
+    float: left;
+    line-height: 32px;
+    margin-left: 35px;
+}
+
+    .hc_GJseek .hc_seekspan {
+        border: 1px solid #ccc;
+        text-align: center;
+        width: 130px;
+        float: left;
+        cursor: pointer;
+    }
+
+    .hc_GJseek .hc_butsel {
+        float: left;
+        border: 1px solid #C20201;
+        height: 33px;
+        width: 60px;
+        color: #C20201;
+        text-align: center;
+        overflow: hidden;
+        margin-left: 16px;
+        background: #FFF;
+        border-radius: 4px;
+    }
+
+        .hc_GJseek .hc_butsel:hover {
+            background: #C20201;
+            color: #FFF;
+        }
+.hc_XLseek {
+    float:left;
+    margin-top: -5px;
+}
+/*日期选择*/
+input {
+    width: 100px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    padding: 0px 0px 0px 4px;
+}
+
+.calender {
+    width: 255px;
+    margin: 50px auto;
+    top: 0;
+    left: 0;
+    border: 1px #ccc solid;
+    background: #fff;
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+
+.calendertb {
+    width: 100%;
+}
+
+    .calendertb td {
+        width: 35px;
+        height: 35px;
+        border: 1px #CCCCCC solid;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+        .calendertb td.hover, .calendertb td.weekendhover {
+            background: #D6D6D6;
+        }
+
+    .calendertb th {
+        width: 35px;
+        height: 30px;
+        border: 1px #CCCCCC solid;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        color: #979797;
+    }
+
+.tdtoday {
+    background: #0080FF;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border: 1px #CCCCCC solid;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.getyear {
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    text-align: center;
+}
+
+.preMonth {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #0080FF;
+}
+
+.nextMonth {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #0080FF;
+}
+
+
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    background: #fff;
+    filter: alpha(opacity=10);
+    opacity: 0.1;
+    display: none;
+}
+
+.getyear select {
+    width: auto;
+}
+/*列表*/
+.list_repair {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    font-family:SimSun;
+}
+#newrepairGrid {
+    font-size:12px;
+}
+    .list_repair ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .list_repair ul li {
+            height: auto;
+            list-style: none;
+            display: inline-block;
+            float: left;
+        }
+
+    .list_repair .car_type_title {
+        background: #eeeeee;
+        height: 40px;
+        border-bottom:1px solid #ccc;
+    }
+
+.repair_type_show {
+    width: 140px;
+}
+
+.repair_briefly_show {
+    width: 215px;
+}
+
+.repair_address_show {
+    width: 130px;
+}
+
+.repair_service_show {
+    width: 115px;
+}
+
+.repair_release_show {
+    width: 100px;
+}
+
+.repair_participate_show {
+    width: 100px;
+}
+
+.repair_operation_show {
+    width: 117px;
+}
+
+.list_repair .car_type {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.list_repair .car_briefly {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.list_repair .car_address {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.list_repair .service_mode {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.list_repair .release_time {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.list_repair .participate {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.list_repair .operation {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.car_type_content {
+    width: 100%;
+    height: 135px;
+    border-bottom: 1px solid #ccc;
+}
+
+    .car_type_content .car_img {
+        height: 100px;
+        width: 100%;
+        float: left;
+        margin: 10px 0px 25px 0px;
+    }
+
+        .car_type_content .car_img .img_show {
+            height: 50px;
+            margin: 10px 0px 0px 15px;
+            float: left;
+        }
+
+            .car_type_content .car_img .img_show img {
+                width: 100px;
+                height: 100px;
+            }
+
+.sort_text {
+    height: 90px;
+    width: 215px;
+    float: left;
+    margin: 24px 10px 10px 7px;
+    overflow: hidden;
+}
+
+    .sort_text p {
+        margin: 0px 0px 5px 0px;
+        height: 20px;
+        width: 301px;
+        overflow: hidden;
+    }
+
+    .sort_text a:hover {
+        text-decoration: none;
+        color: #c20201;
+    }
+
+.address_text {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    margin: 38px 5px 25px 0px;
+    overflow: hidden;
+}
+
+    .address_text em {
+        display: block;
+        float: left;
+        height: 20px;
+        width: 25px;
+        background: transparent url("/Images/images/cartimg/address.png") no-repeat scroll 0% 0%;
+        margin-top: 15px;
+    }
+
+.service_text {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    margin: 38px 0px 25px 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.service_text_color {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    margin: 38px 0px 25px 0px;
+    overflow: hidden;
+    text-align: center;
+    color: #c20201;
+}
+
+.time_text {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    margin: 38px 0px 25px 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.home_text {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    margin: 38px 0px 25px 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.button_text {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    margin: 38px 0px 25px 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+    .button_text a {
+        display: block;
+        height: 28px;
+        line-height: 28px;
+        width: 86px;
+        background: #FFF none repeat scroll 0% 0%;
+        color: #0253A4;
+        margin-top: 7px;
+        border: 1px solid #0253A4;
+        border-radius: 2px;
+    }
+
+        .button_text a:hover {
+            background: #0253A4 none repeat scroll 0% 0%;
+            color: #FFF;
+        }
+
+    .button_text .repair_details {
+        display: block;
+        height: 28px;
+        line-height: 28px;
+        width: 86px;
+        background: #fff;
+        color: #0253a4;
+        margin-top: 7px;
+        border: 1px solid #0253a4;
+        border-radius: 2px;
+    }
+
+.type_page {
+    width: 100%;
+    height: 135px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+}
+
+    .type_page .sorts {
+        padding-top: 25px;
+    }
+
+.repair_people_show {
+    width: 235px;
+}
+
+.repair_price_show {
+    width: 125px;
+}
+
+.repair_time_show {
+    width: 150px;
+}
+
+.color_text {
+    color: #c20201;
+    font-weight: bold;
+}
+
+.repair_hide {
+    display: none;
+}
+/*日期选择*/
+
+input {
+    width: 100px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    padding: 0px 0px 0px 4px;
+}
+
+.calender {
+    width: 255px;
+    margin: 50px auto;
+    top: 0;
+    left: 0;
+    border: 1px #ccc solid;
+    background: #fff;
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+
+.calendertb {
+    width: 100%;
+}
+
+    .calendertb td {
+        width: 35px;
+        height: 35px;
+        border: 1px #CCCCCC solid;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+        .calendertb td.hover,
+        .calendertb td.weekendhover {
+            background: #D6D6D6;
+        }
+
+    .calendertb th {
+        width: 35px;
+        height: 30px;
+        border: 1px #CCCCCC solid;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        color: #979797;
+    }
+    .body_title {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background: #F3F3F3 none repeat scroll 0% 0%;
+    border-top: 1px solid #E3E3E3;
+}
+    .title_left {
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    float: left;
+}
+    .body_title em {
+    background: transparent url("../../../images/publicimg/pd_Shop_star.png") no-repeat scroll 0% 0%;
+    height: 19px;
+    width: 16px;
+    display: block;
+    float: left;
+     margin: 9px 2px 0px 2px;
+}
+    .body_title i {
+    display: block;
+    float: left;
+    color: #C20201;
+    font-style: normal;
+    font-size: 16px;
+     margin: 0px 2px 0px 4px;
+}
+    .title_right {
+    width: 100px;
+    height: 30px;
+    line-height: 32px;
+    color: #AD7E52;
+    font-size: 15px;
+    float: right;
+    letter-spacing: 0.2em;
+}
+.tdtoday {
+    background: #0080FF;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border: 1px #CCCCCC solid;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.getyear {
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    text-align: center;
+}
+
+.preMonth {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #0080FF;
+}
+
+.nextMonth {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #0080FF;
+}
+
+.hc_CJteach .mh_date {
+    width: 100px;
+    height: 32px;
+    border-radius: 0px;
+    line-height: 30px;
+    padding: 0px 0px 0px 4px;
+    margin-top: 5px;
+    cursor: pointer;
+    background: transparent url("../../../images/publicimg/order_icon.png") no-repeat scroll 80px center;
+}
+
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    background: #fff;
+    filter: alpha(opacity=10);
+    opacity: 0.1;
+    display: none;
+}
+
+.getyear select {
+    width: auto;
+}
+
+.t-grid td {
+    text-align:left !important;
+}
+
+.t-grid tr {
+    border-bottom: 0px !important;
+}
+
+.t-widget, .t-input[type="text"] {
+    border: 0px !important;
+    border-right: none !important;
+}
+
+.t-grid tr {
+    border-bottom: 0px !important;
+}
+
+#newrepairGrid td {
+  border-right:none !important;
+ 
+}
+#newrepairGrid .t-no-data td {
+    text-align:center !important;
+     border-bottom:1px solid #ccc;
+}
+
+.t-grid .t-alt {
+    background-color: #FFF;
+}
+
+.t-grid .t-grid-pager {
+    border-right: none;
+    border-bottom:1px solid #ccc;
+}

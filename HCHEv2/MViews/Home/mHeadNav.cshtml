@@ -1,0 +1,34 @@
+﻿@using HC.Data.Models
+@using HC.Service.Section
+@using HC.Core.Infrastructure
+@{
+    Layout = null;
+}
+@model List<NewsClass>
+
+<select style="display: none;" id="selectdd">
+    <option value="/">首页</option>
+
+    @foreach (var item in Model)
+    {
+        var _InewsSectionService = EngineContext.Current.Resolve<ISectionService>();
+        var subNewsClass = _InewsSectionService.GetSubNewClassByParentNewClass(item.ClassID).Where(x => x.IsShowInNav == 1).OrderBy(x => x.ClassOrder);
+
+        if (subNewsClass.Count() > 0)
+        {
+            <option value="@Url.Action("subNewsClassMobile", "Information", new { id = item.ClassID })">@item.ClassName</option>
+        }
+        else
+        {
+            if (item.IsSingle == 1)
+            {
+
+                <option value="@Url.Action("singlePage", "Information", new { id = item.ClassID })">@item.ClassName</option>
+            }
+            else
+            {
+                <option value="@Url.Action("SectionMobile", "Information", new { id = item.ClassID })">@item.ClassName</option>
+            }
+        }
+    }
+</select>

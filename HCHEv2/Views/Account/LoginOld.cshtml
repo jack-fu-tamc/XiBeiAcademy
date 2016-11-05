@@ -1,0 +1,145 @@
+﻿@using HCHEv2.Models.Login;
+@using HC.Web.Framework.UI.Captcha
+@model LoginModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>登录</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="renderer" content="webkit" />
+    <link href='~/Content/Common/css.css' rel="stylesheet" type="text/css" />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="~/Content/login/placeHolder.js"></script>
+    <style type="text/css">
+        input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {          
+                   　　background-color: #FFFFFF; 
+                       background-image: none;
+                       color:#333;
+        } 
+        input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
+
+
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+                $(window).load(function () {
+                    $('ul input:not(input[type=submit])').each(function () {
+                        var outHtml = this.outerHTML;
+                        $(this).append(outHtml);
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+<body style="background-color: #fff;">
+    @*@Html.Partial("cxHeader")*@
+    <div class="login_bj1">
+        <div class="login_bj2">
+            <div class="login_bk">
+                @using (Html.BeginForm("Login", "account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @autocomplete = "off", @class = "registerform" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="login">
+                        <div class="login_form">
+                            <div class="error-box">
+                                @Html.ValidationMessageFor(x => x.UserName)
+                                @Html.ValidationMessageFor(x => x.Password)
+                                @Html.ValidationMessageFor(x => x.CaptchaCode)
+                                @{
+                    var keys = ViewData.ModelState.Keys.ToList();
+                    foreach (var key in keys)
+                    {
+                        var errors = ViewData.ModelState[key].Errors.ToList();
+                        if ((key == "loginFaile") && (errors.Count > 0))
+                        {
+                            foreach (var error in errors)
+                            {
+                                <span> @error.ErrorMessage </span>
+                            }
+                        }
+                    }
+                    }
+                            </div>
+                            <ul>
+                                <li>
+                                    @Html.TextBoxFor(x => x.UserName, new { @placeholder = "用户名", @autocomplete = "off", @onfocus = "clearError()" })<a class="clear"></a>
+                                </li>
+                                <li>
+                                    @Html.TextBoxFor(x => x.Password, new { @type = "password", @placeholder = "密码", @onfocus = "clearError()" })<a class="clear"></a>
+                                </li>
+                            </ul>
+                     @{
+                    var loginTimes = ViewData["LoginTimes"] ?? 0;
+                    if (int.Parse(loginTimes.ToString()) > 1)
+                    {
+                        <div class="fm-item pos-r">
+                            @Html.TextBoxFor(x => x.CaptchaCode, new { @id = "i-text", @placeholder = "验证码", @autocomplete = "off", @onfocus = "clearError()", @Value = "" })<a class="clear"></a>
+                            <!--验证码图片-->
+                            <div class="ui-form-explain">
+                                <!--生成一个自定义格式的img标签-->
+                                @Html.Raw(Html.GenerateCaptcha("imgCaptcha", "loadCaptcha();", new { @class = "yzm-img" }, Url.Content("~/Images/login/Captcha.png"), "点击更换"))
+                            </div>
+                            <!--验证码图片end-->
+                        </div>
+                    }
+                    }
+                            <!--验证码end-->
+                        </div>
+                        <input type="hidden" value="" id="captReturn" name="captReturn" />
+                        <input type="hidden" value="@(ViewData["LoginTimes"] ?? 0)" name="loginTimes" id="loginTimes" />
+                        <div class="button"><input type="submit" value="" name="Submit"></div>
+                      
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        loadCaptcha();
+        function loadCaptcha() {
+            $.ajax({
+                type: 'GET',
+                url: '/common/generateCaptcha',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                cache: false,
+                success: function (data) {
+                    $("#imgCaptcha").attr('src', data.src);
+                    $("#captReturn").val(data.capt);
+                },
+                error: function (data) { }
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        //
+        $(document).ready(function () {
+            var that = $("input[name=UserName]");
+            var ele = $(that).next();
+            ele.css({ "text-indent": "12px" });
+            ele.css({"top":"36","left":"-12"})
+
+            var that = $("input[name=Password]");
+            var ele = $(that).next();
+            ele.css({ "text-indent": "12px" });
+            ele.css({ "top": "36", "left": "-12" })
+
+            var that = $("input[name=CaptchaCode]");
+            var ele = $(that).next();
+            ele.css({ "text-indent": "12px" });
+        });
+
+    </script>
+
+   
+</body>
+</html>

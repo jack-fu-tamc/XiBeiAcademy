@@ -1,0 +1,164 @@
+.cartlogo {
+    background: url(/Images/autoimg/publicimg/logo.png) no-repeat;
+    width: 164px;
+    height: 74px;
+    display: block;
+    float: left;
+    border-right: solid 1px #000000;
+    margin: 40px 10px 20px 10px;
+}
+
+.logofont {
+    width: 90px;
+    height: 40px;
+    float: left;
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 60px 10px 20px 16px;
+    line-height: 33px;
+}
+
+.cartbor {
+    width: 604px;
+    height: 140px;
+    float: right;
+    display: block;
+}
+
+.curss {
+    color: #c20201 !important;
+}
+
+.curr {
+    border-bottom: solid 1px #C20201 !important;
+}
+
+.cartbor ul {
+    list-style-type: none;
+    width: 490px;
+    height: 80px;
+    display: block;
+    margin: 33px 20px 19px 0px;
+    float: left;
+    background: url(/Images/publicimg/gwlc_step_line.png) repeat-x 35px 25px;
+}
+
+    .cartbor ul li {
+        width: 163px;
+        height: 80px;
+        display: block;
+        float: left;
+    }
+
+.cartbor li p {
+    width: 114px;
+    height: 55px;
+    float: left;
+    display: block;
+    color: #999;
+}
+
+.cartbor li span {
+}
+
+.cartbor .ileft {
+    background: url(/Images/publicimg/gwlc_step1c.png) no-repeat;
+    width: 55px;
+    height: 55px;
+    display: block;
+    float: left;
+}
+
+.cartbor .icent {
+    background: url(/Images/publicimg/gwlc_step2c.png) no-repeat center;
+    width: 55px;
+    height: 55px;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.cartbor .iright {
+    background: url(/Images/publicimg/gwlc_step3b.png) no-repeat;
+    width: 55px;
+    height: 55px;
+    display: block;
+    float: right !important;
+}
+/*内容*/
+.hche_paysuccess {
+    height: auto;
+width: 100%;
+background: #FFF none repeat scroll 0% 0%;
+padding-top: 20px;
+padding-bottom: 35px;
+padding-left: 28px;
+}
+
+.hche_paysuccessnav {
+    height: 40px;
+    width: 97.5%;
+    line-height: 45px;
+}
+
+    .hche_paysuccessnav span {
+        color: #C20201;
+        margin-left: 10px;
+    }
+
+.hche_successtips {
+    width: 1040px;
+    height: 218px;
+    border: 1px solid #CCC;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    line-height: 40px;
+    overflow:hidden;
+}
+
+    .hche_successtips div {
+        width: 100%;
+        margin: auto;
+    }
+
+.hche_money {
+    font-size: 18px;
+    color: #C20201;
+}
+
+.hche_selldetail, .hche_friendiytips {
+    font-family: SimSun;
+}
+
+.linked {
+    background: url(/Images/cart/Links.gif) no-repeat;
+    margin-right: 20px;
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+}
+
+.hche_phonedetail span {
+    display: block;
+    float:left;
+}
+
+.hche_againanddetail a {
+    display: inline-block;
+    border: 1px solid #C20201;
+    height: 36px;
+    width: 102px;
+    line-height: 36px;
+    margin-right: 28px;
+    border-radius: 2px;
+}
+
+.hche_againanddetail {
+    margin-top: 30px !important;
+}
+.hche_friendiytips {
+    color: #af7e52;
+}

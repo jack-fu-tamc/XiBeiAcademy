@@ -1,0 +1,166 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Service.Section;
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+
+@{
+    Layout = null;
+    var _InewsSectionService = EngineContext.Current.Resolve<ISectionService>();
+    var NewsClass = _InewsSectionService.getAllSection();
+    var MultipleLevelOne = new List<NewsClass>();
+    var levelOne = NewsClass.SectionLists.Where(x => x.ParentID == 0);
+    var sectionIDs = ViewBag.sectionIDs as List<int>;
+     
+   
+
+    foreach (var section in levelOne)
+    {
+        if(!sectionIDs.Contains(section.ClassID))
+        {
+            continue;
+        }
+        
+        var subsSectins = NewsClass.SectionLists.Where(x => x.ParentID == section.ClassID).Select(x => x.IsSingle);
+
+        if (subsSectins.Count() == 0 && section.IsSingle == 0)//添加 没有子栏目但是 本栏目可以添加新闻的栏目
+        {
+            MultipleLevelOne.Add(section);
+        }
+
+        if (subsSectins.All(a => a == 1))
+        {//1为单页
+
+        }
+        else
+        {
+            MultipleLevelOne.Add(section);
+        }
+    }
+    TempData["MultipleLevelOne"] = MultipleLevelOne;
+    //ViewBag.MultipleLevelOne = MultipleLevelOne;
+}
+
+<div class="newSectionMenue">
+    <div class="backManage"></div>
+    @foreach (var oneLevel in MultipleLevelOne)
+    {
+        var subLevel = _InewsSectionService.GetSubNewClassByParentNewClass(oneLevel.ClassID);
+        <div class="sectionMoudal">
+            <p class="oneLevelName" classid="@oneLevel.ClassID">@oneLevel.ClassName</p>
+            @if (subLevel.Count > 0)
+            {
+                foreach (var subS in subLevel)
+                {
+
+                    if (!sectionIDs.Contains(subS.ClassID))
+                    {
+                        continue;
+                    }
+                    
+                    
+                    var threeLevel = _InewsSectionService.GetSubNewClassByParentNewClass(subS.ClassID);
+                    if (threeLevel.Count > 0)//有三级栏目
+                    {
+                        <div class="NewsMenueSubSection menueSubSectionSpecial">
+                            <div class="threeParent">
+                                <span classid="@subS.ClassID">@subS.ClassName</span><span class="threeParentIoc threeParentIocOff"></span>
+                            </div>
+
+                            @foreach (var three in threeLevel)
+                            {
+
+                                if (!sectionIDs.Contains(three.ClassID))
+                                {
+                                    continue;
+                                }
+                                
+                                if (three.IsSingle == 0)
+                                {
+                                    <div class="NewsThreeMenueSubSection">
+                                        <span classid="@three.ClassID">@three.ClassName</span>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    }
+                    else//无三级栏目
+                    {
+                        if (subS.IsSingle == 0)
+                        {
+                            <div class="NewsMenueSubSection">
+                                <span classid="@subS.ClassID">@subS.ClassName</span>
+                            </div>
+                        }
+                    }
+
+
+                }
+            }
+        </div>
+    }
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".oneLevelName").click(function () {
+            $(this).parent().siblings("div").find(".NewsMenueSubSection").slideUp();
+            //$(this).parent().siblings("div").slideUp();
+            $(this).parent().find(".NewsMenueSubSection").slideDown();
+            $(this).parent().siblings().find("div").removeClass("selectSection");
+
+            $(this).parent().siblings().find(".NewsThreeMenueSubSection").slideUp();
+            $(this).parent().siblings().find(".threeParentIoc").removeClass("threeParentIocOn").addClass("threeParentIocOff");
+        })
+
+        $(".backManage").click(function () {//返回按钮
+            $(".newSectionMenue").slideUp();
+            $(".hche_leftnav ul").slideDown();
+
+            //location.href = '/Manage/news/newsmanage';
+            location.href = '/Manage';
+        })
+
+        //$(".NewsMenueSubSection").hover(function () {
+        //    $(this).animate({ marginLeft: "15px" }); //alert(0);
+        //}, function () {
+        //    $(this).animate({ marginLeft: "0px" }); //alert(1);
+        //})
+
+
+        $(".threeParent").click(function () {
+
+            $(this).parent().parent().find(".NewsThreeMenueSubSection").slideUp();
+            $(this).parent().parent().find(".threeParentIoc").removeClass("threeParentIocOn").addClass("threeParentIocOff");
+
+
+            if ($(this).parent().find(".NewsThreeMenueSubSection").is(":hidden")) {
+                $(this).parent().find(".NewsThreeMenueSubSection").slideDown().removeClass("threeSectionSelect");
+                $(this).find(".threeParentIoc").removeClass("threeParentIocOff").addClass("threeParentIocOn");//收缩箭头
+               // $(this).find("div").removeClass("threeSectionSelect");
+            } else {
+                $(this).parent().find(".NewsThreeMenueSubSection").slideUp();
+                $(this).find(".threeParentIoc").removeClass("threeParentIocOn").addClass("threeParentIocOff");//收缩箭头
+
+
+              
+            }
+        })
+
+        $(".NewsMenueSubSection").not(".menueSubSectionSpecial").click(function () {//普通二级栏目
+            $(this).addClass("selectSection");
+            $(this).siblings().removeClass("selectSection");
+            $(this).parent().find(".NewsThreeMenueSubSection").slideUp();
+        })
+
+        $(".menueSubSectionSpecial").click(function () {//有三级栏目的二级栏目
+            $(this).addClass("selectSection");
+            $(this).siblings().removeClass("selectSection");
+          
+        })
+
+        $(".NewsThreeMenueSubSection").click(function () {//三级栏目
+            $(this).siblings().removeClass("threeSectionSelect");
+            $(this).addClass("threeSectionSelect");
+        })
+    })
+</script>

@@ -1,0 +1,86 @@
+﻿@{
+    Layout = null;
+    var singleName = "singlePage";
+    var sectionNmae = "Section";
+    var i = 0;
+    switch (ViewBag.toView as string)
+    {
+        case "Library":
+            singleName = "singleLibraryPage";
+            sectionNmae = "SectionLibrary";
+            break;
+        case "Education":
+            singleName = "singleEducationPage";
+            sectionNmae = "SectionEducation";
+            break;
+    }
+    
+    
+}
+@using HC.Service.Section
+@using HC.Core.Infrastructure
+
+
+@model List<HC.Data.Models.NewsClass>
+
+<ul>
+    @foreach (var nClass in Model)
+    {
+        if (nClass.IsSingle == 1)//单页
+        {
+            if (ViewBag.curentClassId == nClass.ClassID)//当前栏目
+            {
+                <li class="on"><a href="@Url.Action(singleName, "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></li>
+            }
+            else
+            {
+                <li><a href="@Url.Action(singleName, "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></li>
+            }
+        }
+        else if(nClass.IsSingle==0)//列表
+        {
+            var _IsectionService = EngineContext.Current.Resolve<ISectionService>();
+            var subSection = _IsectionService.GetSubNewClassByParentNewClass(nClass.ClassID);
+
+
+            if (subSection.Count > 0)//有子栏目
+            {
+                i++;
+                <li>
+                    <div id="CollapsiblePanel_@i" name="CollapsiblePanels" class="CollapsiblePanel CollapsiblePanelClosed">
+                        <div class="CollapsiblePanel_bt">@Html.Raw(nClass.ClassName)</div>
+                        <div class="CollapsiblePanelContent">
+                            <div class="CollapsiblePanelContent_bj">
+                                @foreach (var sub in subSection)
+                                {
+                                    <a href="@Url.Action(sectionNmae, "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            }
+            else//无子栏目
+            {
+                if (ViewBag.curentClassId == nClass.ClassID)//当前栏目
+                {
+                    <li class="on"><a href="@Url.Action(sectionNmae, "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></li>
+                }
+                else
+                {
+                    <li><a href="@Url.Action(sectionNmae, "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></li>
+                }
+            }
+        }
+        else if (nClass.IsSingle == 2)//外链
+        {
+            <li><a href="@nClass.linkAddress">@Html.Raw(nClass.ClassName)</a></li>
+        }
+        else
+        {
+
+        }
+
+    }
+</ul>

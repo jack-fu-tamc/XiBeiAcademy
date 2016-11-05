@@ -1,0 +1,18 @@
+﻿
+ 
+记录时间：2015-12-07 13:49:50,480 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 200
+ 
+
+ 
+记录时间：2015-12-07 15:00:14,354 
+线程ID:[26] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 200
+ 

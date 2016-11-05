@@ -1,0 +1,19 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    Layout = null;
+    ViewBag.Title = "";
+}
+
+
+<h2>Error2</h2>
+
+@if (Model != null)
+{
+    <p>
+        @Model.Exception.GetType().Name<br />
+        位置 @Model.ControllerName @Model.ActionName
+    </p>
+    <p>错误详细:</p>
+    <p>@Model.Exception.Message</p>
+}

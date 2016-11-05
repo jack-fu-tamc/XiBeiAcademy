@@ -1,0 +1,368 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+@using HC.Service.User;
+
+@model ArtistTypeListModel
+@{
+    var pageSize = 20;
+    ViewBag.Title = "分类管理";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+
+    var _iuser = EngineContext.Current.Resolve<IUserService>();
+    var Customer = WorkContext.CurrentCustomer;
+    var curentUser = _iuser.getUserByID(Customer.Id);
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsell.css" type="text/css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsellAB.css" type="text/css" />
+    @*<link rel="stylesheet" href="~/HC.Manage/Content/common/css/authentication.css" />*@
+    <style type="text/css">
+        #onsalesM .checkedbox {
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+}
+
+@*导入产品*@
+@{Html.Telerik().Window()
+        .Name("importexcel-window")
+        .Title("分类--新增/修改")
+        .Content(@<text>
+
+            <table style="text-align: left; margin-top: 29px;">
+                <tr>
+                    <th>
+                        <span>分类名称：</span>
+                    </th>
+                    <td colspan="2">
+                        <input class="" style="width:214px;" id="TypeName" value="" placeholder="输入分类名称" />
+                        <input type="hidden" id="artistTypeCateID" value="1" />
+                        <input type="hidden" id="artistTypeID" value="-1" />
+                    </td>
+                    <td>
+                        <input type="button" id="AddAristTypeBtn" class="hc_businessFile uploadPic" value="保存" />
+                    </td>
+                </tr>
+                @*<tr>
+
+                        <td>
+
+                            <input type="button" id="AddAristTypeBtn" class="hc_businessFile uploadPic" name="TypeName" value="确认"  />
+
+                        </td>
+                    </tr>*@
+            </table>
+        </text>)
+        .Width(400)
+        .Draggable(true)
+        .Modal(true).Effects(x => x.Opacity())
+        .Visible(false)
+        .Render();
+}
+
+
+<div class="buyerright">
+    <div class="sellinggoodslist">
+        <div class="sellinggoodsserchnav">
+            <div class="hcmoneynav">
+                <div class="hche_soldgoods">
+                    <i>人员分类管理</i>
+                    CATE MANAGE
+                </div>
+                <div class="hche_soldgoodsimg">
+                </div>
+                <div class="hche_private">
+                    @*特权 ▪ 专享*@
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="salegoodslist">
+            @(Html.Telerik().Grid<ArtistType>(Model.ArtistTypes.Data).Name("onsalesM")
+            .ToolBar(toolBar => toolBar.Template(
+                @<div style="padding: 10px">
+
+                    <input type="checkbox" id="selectAll" />全选
+                    @*<a id="deleteAtrit" class="del_show">删除</a>*@
+                    <a id="AddTypeAtrit" class="del_show shopchoose">添加分类</a>
+                    @* <a id="OffRecommendPro" class="del_show shopchoose">取消推荐</a>
+                        <a id="OpIsMainOn" class="del_show shopchoose">设为主营</a>
+                        <a id="OpIsMainOff" class="del_show shopchoose">取消主营</a>
+                        <a id="offSale" class="del_show">下架</a>
+                        <a id="importPro" class="del_show">导入商品</a>
+                        <a id="importProTemp" class="del_show" style="width:90px;">导入模板下载</a>*@
+                </div>))
+                       .ClientEvents(events =>
+                       events.OnDataBinding("onsaleBinding")
+                       .OnDataBound("onsaleBound")
+                       .OnRowDataBound("onRowDataBound")
+               )
+           .Columns(columns =>
+                   {
+                       columns.Bound(x => x.TypeName).Title("分类名称").Width(50)
+                           .Template(@<text>
+                            <div class="checkedbox"><input type="checkbox" class="checkboxGroups" name="check" value="@item.ArtistTypeID"></div>
+                            <div class="goodsdetailed">
+                                <p><a href="javascript:;">@item.TypeName </a></p>
+                            </div>
+                        </text>).ClientTemplate("<div class=\"checkedbox\"><input type=\"checkbox\" class=\"checkboxGroups\" name=\"check\" value=\"<#= ArtistTypeID #>\"></div><div class=\"goodsdetailed\"><p><a href=\"javascript:;\"><#= TypeName #> </a></p></div>"
+                    );
+                       columns.Bound(x => x.Effective).Title("是否有效").Width(63);
+                       columns.Bound(x => x.ArtistCategory).Title("类型").Width(63).HtmlAttributes(new { @class = "DtdIESeven" });
+                       columns.Bound(x => x.ArtistTypeID)
+                                       .Width(50)
+                                       .Template(@<text><span><a href="###" cateid="@item.ArtistTypeID">修改</a></span><span><a href="###" class="deleteArtistTtype" cateid="@item.ArtistTypeID">删除</a></span></text>)
+                                       .ClientTemplate("<span><a href=\"javascript:void(0)\" onclick=\"alertArtistType(this)\" class=\"aletAtistType\" cateID=\"<#= ArtistTypeID #>\" cateName=\"<#= TypeName #>\">修改</a></span><span><a href=\"###\" onclick=\"deleteArtistType(this)\" class=\"deleteArtistTtype\" cateID=\"<#= ArtistTypeID #>\">删除</a></span>")
+                                       .Title("操作");
+
+
+                   }).NoRecordsTemplate("暂无数据")
+.Pageable(seting => seting.Total(Model.ArtistTypes.Total).PageSize(pageSize).Position(GridPagerPosition.Bottom))
+                                                                                         .DataBinding(binding => binding.Ajax().Select("_ajaxOperaCateManage", "Home")).EnableCustomBinding(true)
+
+            )
+        </div>
+
+
+
+
+
+    </div>
+</div>
+@section footScript{
+    <script type="text/javascript">
+        var selectedIds = [];
+
+        $(document).ready(function () {
+
+
+
+
+            var eleName="onsalesM";
+            var totalH= $("#"+eleName).height();
+            var headH=$("#"+eleName+" .t-grid-header").height();
+            var toolBarH=$("#"+eleName+" .t-toolbar").height();
+            var curnetH=totalH-headH-toolBarH;
+            var paddH=(curnetH-20)/2;
+            $("#"+eleName+" table").prepend("<div class=\"coverWait\" style=\"position: absolute;height:"+curnetH+"px  ;width: 100%;background-color: #E5E5E5;\"><span style=\"text-align: center; display: block; padding-top: "+paddH+"px; color: #777;\">请稍等，数据加载中......</span></div>");
+
+
+
+            //扩展trim 支持ie8
+            if (!String.prototype.trim) { //判断下浏览器是否自带有trim()方法
+                String.prototype.trim = function () {
+                    return this.replace(/(^\s*)|(\s*$)/g, "");
+                }
+            }
+            //扩展结束
+
+            //更改成文字
+            $(".t-arrow-next").each(function (i, e) {
+                $(this).text("下一页");
+            });
+            $(".t-arrow-prev").each(function (i, e) {
+                $(this).text("上一页");
+            });
+            //更改成文字结束
+            $(".t-arrow-first").css({ "display": "none" });
+            $(".t-arrow-last").css({ "display": "none" });
+            $(".t-refresh").css({ "display": "none" });
+
+            processGridDsiplay("#onsalesM");
+            $(".t-widget").show();
+
+
+
+
+            //全选按钮事件
+            $('#selectAll').click(function () {
+                $('.checkboxGroups').attr('checked', $(this).is(':checked')).change();
+            });
+
+            //给grid中checkbox绑定change事件
+            $('.checkboxGroups:input[type=checkbox]').live('change', function (e) {
+                var $check = $(this);
+
+                if ($check.is(":checked") == true) {
+                    var checked = jQuery.inArray($check.val(), selectedIds);
+                    if (checked == -1) {
+                        //add id to selectedIds.
+                        selectedIds.push($check.val());
+                    }
+                }
+                else {
+                    var checked = jQuery.inArray($check.val(), selectedIds);
+                    if (checked > -1) {
+                        //remove id from selectedIds.
+                        selectedIds = $.grep(selectedIds, function (item, index) {
+                            return item != $check.val();
+                        });
+                    }
+                }
+                updateMasterCheckbox();
+            });
+
+
+
+            $("#importexcel-window").css({"display":"none"});
+            $("#importTemp-window").css({"display":"none"});
+            $(".t-close").text("");
+
+
+            //分类保存按钮
+            $("#AddAristTypeBtn").click(function(){
+                var tname=$("#TypeName").val();
+                var tArtistID=$("#artistTypeID").val();
+
+                if(tname.length==0){
+                    return false;
+                }
+                $('#importexcel-window').data('tWindow').center().close();
+                var grid = $('#onsalesM').data('tGrid');
+
+                $.ajax({
+                    url: "@(Url.Action("_ajaxAddAtirstType", "Home"))",
+                    data: { artistName: tname,artistType:2,artistID: tArtistID},
+                    type: 'GET',
+                    dataType: 'json',
+                    error: function (xhr, status) {
+                        alert("错误");
+                    },
+                    success: function (Data) {
+                        if(Data=="OK"){
+                            clearSelectIDS();
+                            var grid = $('#onsalesM').data('tGrid');
+                            grid.ajaxRequest();
+                        }else{
+                            alert("错误");
+                        }
+                    }
+                });
+            })
+
+        });
+
+        //转为汉字的处理 如果ajax请求返回totalcount是0  则不执行 ondatabind
+        function processGridDsiplay(ele) {
+            var str = $("" + ele + " .t-status-text").text().trim();
+            var indexOF = str.indexOf("f");
+            var totalDate = str.substr(indexOF + 1).trim();
+            var pageSize=@pageSize;
+            var totalPage=Math.ceil(totalDate/pageSize);
+            $(""+ele+" .t-status-text").text("共"+totalPage+"页");
+        }
+
+        function dumps(obj) {
+            var result = [];
+            $.each(obj, function (key, value) { result.push(value); });
+
+            //var results=[];
+            //$.each(obj,function(k,v){results.push( k+"-"+v ) });
+            //console.log(results);
+            return result;
+        }
+
+        function onsaleBinding(e) {
+
+        }
+
+        function onsaleBound(e) {
+            //处理分页
+            if($(e.currentTarget).find(".t-numeric").children().length>0){
+                var ajaxPageCount= $(e.currentTarget).find(".t-numeric").find("a").length+1;
+                $(e.currentTarget).find(".t-status-text").text("共"+ajaxPageCount+"页");
+            }else{
+                $(e.currentTarget).find(".t-status-text").text("共"+0+"页");
+            }
+            //处理分页
+
+            //移除等待提示层
+            var eleName=$(e.delegateTarget).attr("id");
+            $("#onsalesM table div.coverWait").remove();
+
+            $('.checkboxGroups:input[type=checkbox]').each(function () {
+                var currentId = $(this).val();
+                var checked = jQuery.inArray(currentId, selectedIds);
+                $(this).attr('checked', checked > -1);
+            });
+            updateMasterCheckbox();
+        }
+
+        function onRowDataBound(e){
+            var s = e.dataItem;
+            var rowItem = e.row;
+            var result = dumps(s);
+            var newsShowType=s.ArtistCategory=="1"?"人员":"戏种";
+            $(rowItem.cells[2]).text(newsShowType);
+            var isEffective=s.Effective==true?"有效":"无效";
+            $(rowItem.cells[1]).text(isEffective);
+
+            if('@curentUser.UserGroupID'!='1'){
+                $(rowItem).find("td:last").find("span:eq(1)").remove();
+            }
+
+        }
+
+        //更新主checbox
+        function updateMasterCheckbox() {
+            var numChkBoxes = $('.checkboxGroups').length;
+            var numChkBoxesChecked = $('.checkboxGroups:input[checked]').length;
+            $('#selectAll').attr('checked', (numChkBoxes == numChkBoxesChecked) && (numChkBoxes > 0));
+        }
+
+        function clearSelectIDS()
+        {
+            selectedIds=[];
+        }
+
+        //添加分类
+        $("#AddTypeAtrit").click(function (e) {
+
+            $("#TypeName").val("");
+            $("#artistTypeID").val("-1");
+
+            e.preventDefault();
+            $('#importexcel-window').data('tWindow').center().open();
+        });
+
+        //修改分类
+        function alertArtistType(e){
+            $("#artistTypeID").val($(e).attr("cateid"));
+            $("#TypeName").val($(e).attr("cateName"));
+            $('#importexcel-window').data('tWindow').center().open();
+        }
+
+
+        //删除分类
+        function deleteArtistType(e){
+            var artistID=$(e).attr("cateid");
+            $.ajax({
+                url: "/manage/home/_ajaxDeleteAtirstType/"+artistID,
+                data: { id: artistID },
+                type: 'GET',
+                dataType: 'json',
+                error: function (xhr, status) {
+                    alert("删除出错");
+                },
+                success: function (Data) {
+                    console.log(Data);
+                    if(Data=="OK"){
+                        var grid = $('#onsalesM').data('tGrid');
+                        grid.ajaxRequest();
+                    }else{
+                        alert("删除出错");
+                    }
+                }
+            });
+        }
+
+    </script>
+}

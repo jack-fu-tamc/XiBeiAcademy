@@ -1,0 +1,309 @@
+/*招商政策*/
+table td, th {
+    border: 1px solid #CCC;
+    *border-right: 0;
+}
+.cart-rcon {
+    margin: auto;
+}
+
+.cart_rcon_cont {
+    width: 100%;
+    margin-top: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+    .cart_rcon_cont p {
+        height: auto;
+        line-height: 24px;
+        font-size: 13px;
+        margin: 11px 0px;
+        letter-spacing: 0.5px;
+        padding: 0px 10px;
+        text-indent:2em;
+    }
+
+    .cart_rcon_cont .title_cart_rcon {
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        text-indent: 0;
+    }
+
+    .cart_rcon_cont .title_cart_first {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        text-indent: 0;
+    }
+
+    .cart_rcon_cont .distance {
+        margin: 10px 0px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        text-indent: 0;
+    }
+
+    .cart_rcon_cont .title_cart_secend {
+        text-indent: 4em;
+    }
+
+    .cart_rcon_cont .title_cart_thride {
+        text-indent: 6em;
+    }
+
+    .cart_rcon_cont table {
+        width: 100%;
+        border-color: #ccc;
+    }
+
+        .cart_rcon_cont table td {
+            text-align: center;
+            border-color: #ccc;
+            line-height: 30px;
+            height:30px;
+        }
+
+        .cart_rcon_cont table .terms {
+            text-align: left;
+            text-indent: 1em;
+        }
+
+.accessories {
+    border-collapse: collapse;
+}
+
+    .accessories table {
+        border: none;
+        border:0;
+    }
+   
+.top_year_show {
+    *margin-top:0px;
+}
+   .accessories .top_year_show td {
+        *height:31px;
+    }
+    .accessories .top_year {
+        *height:32px;
+        
+    }
+        .accessories table td {
+            border:none;
+            border-bottom: 1px solid #ccc;
+            line-height: 30px;
+            height: 30px;
+
+        }
+
+        .accessories table .delete_accessories {
+            border-bottom: none;
+            *border-right: none;
+        }
+
+.change_colors {
+    background: #eeeeee ;
+}
+
+.cart_rcon_cont .signed_page {
+    text-indent: 0;
+}
+
+/*fabuguiz*/
+.cart_rcon_cont .title_cart_text {
+    font-size: 15px;
+    font-family: 宋体,sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+/***/
+.cart_rcon_cont p i {
+    color: #c20201;
+    font-style: normal;
+}
+
+.cart_rcon_cont .title_cart_secend_clos {
+    margin: 0px;
+    line-height: 30px;
+}
+
+.cart_rcon_cont p em {
+    font-style: normal;
+    font-weight: 900;
+}
+
+.rule_change td {
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.clos_rul table td {
+    line-height: 30px;
+    vertical-align: bottom;
+}
+
+.rule_change .delete_accessories {
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+}
+
+.rule_change .right_border {
+    border-right: none;
+}
+
+.rule_change {
+    height: 3300px;
+}
+
+.cart_rcon_cont .rule_change .top_show td {
+    text-align: center;
+}
+
+.cart_rcon_cont .rule_change td p {
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.table_show_you {
+    width: 97%;
+    height: auto;
+    float: left;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background:#F5F4F1 ;
+    margin:0px 10px;
+}
+    .table_show_you p {
+        text-indent:0;
+    }
+
+    .table_show_you ul {
+        margin: 0px;
+        padding: 0px;
+        height: auto;
+    }
+
+        .table_show_you ul li {
+            list-style: none;
+            float: left;
+            line-height: 30px;
+            font-size:13px;
+        }
+
+.serial_number {
+    height: 60px;
+    text-align: center;
+}
+
+.table_show_you .serial_number li {
+    height: 60px;
+    line-height: 60px;
+}
+
+.serial_number_first {
+    width: 10%;
+    border-bottom: 1px solid #ccc;
+}
+
+.table_show_you p {
+    border-bottom: 1px solid #ccc;
+}
+
+.serial_number_two {
+    width: 30%;
+    *width: 28%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.serial_number_three {
+    width: 30%;
+    *width: 32%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.serial_number_four {
+    width: 29.6%;
+    border-bottom: 1px solid #ccc;
+}
+
+    .serial_number_four div {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+    }
+
+        .serial_number_four div span {
+            width: 49.6%;
+            height: 30px;
+            line-height: 30px;
+            float: left;
+            display: block;
+            text-align: center;
+        }
+
+.seral_bot {
+    border-bottom: 1px solid #ccc;
+}
+
+.eral_left {
+    border-right: 1px solid #ccc;
+}
+
+.serial_number_four .number_one {
+    display: block;
+    float: left;
+    height: auto;
+    width: 41.6%;
+    border-right: 1px solid #ccc;
+    padding: 0px 10px;
+    min-height: 1607px;
+    text-align:left;
+}
+
+.serial_number_four .number_one_next {
+    display: block;
+    float: left;
+    height: auto;
+    width: 41.6%;
+    border-right: 1px solid #ccc;
+    padding: 0px 10px;
+    min-height: 824px;
+    text-align:left;
+}
+
+.serial_number_four .number_two {
+    display: block;
+    float: left;
+    height: auto;
+    width: 41.6%;
+    padding: 0px 10px;
+}
+
+.one_next {
+    height: 1607px;
+    text-align: center;
+}
+
+.cart_rcon_cont .bot_delete {
+    border-bottom: none;
+}
+
+.two_next {
+    height: 1848px !important;
+    text-align: center;
+}
+
+.three_next {
+    height: 824px !important;
+    text-align: center;
+}
+.cart_rcon_cont .over_show {
+   border-bottom:none;
+}

@@ -1,0 +1,860 @@
+﻿/*左侧导航列表*/
+.hche_leftnav {
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+
+
+    .hche_leftnav ul {
+        margin: 0px !important;
+    }
+
+.hche_firstmenuimg {
+    background: transparent url("/Images/images/buyers/order_icon.png") no-repeat scroll 94% -3%;
+    width: 25px;
+    height: 25px;
+    display: block;
+    float: left;
+    margin-left: 28px;
+    margin-right: 12px;
+    margin-top: 5px;
+}
+
+.hche_firstmenu a {
+    color: #C20201;
+}
+
+.hche_leftnav ul li {
+    list-style: none;
+    border-bottom: 1px solid #CCC;
+    width: 92%;
+}
+
+.hche_secondmenu {
+    height: 46px;
+    line-height: 46px;
+}
+
+.hche_secondmenuimg {
+    background: transparent url("/Images/images/buyers/seliet.png") no-repeat scroll 108% -8%;
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 17px;
+}
+
+.hche_sericentermimg {
+    background: transparent url("/Images/images/buyers/order_icon.png") no-repeat scroll 94% 97% !important;
+}
+
+.hche_memberinfomimg {
+    background: transparent url("/Images/images/buyers/order_icon.png") no-repeat scroll 94% 47% !important;
+}
+
+.hche_leftnav ul li a:hover {
+    color: #C20201;
+    cursor: pointer;
+}
+
+.hche_leftnav {
+    width: 100%;
+}
+
+.hche_onclickchange {
+    color: #C20201;
+}
+
+.hche_onclickmenuimg {
+    background: transparent url("/Images/images/buyers/seliet.png") no-repeat scroll 108% 183%;
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 17px;
+}
+/*右边内容*/
+.buyerright {
+    width: 920px;
+    height: auto;
+    display: block;
+    float: right;
+    margin: 20px 0px 20px 0px;
+}
+/*收藏商品样式*/
+.hc_indent .hc_indentforst {
+    height: 38px !important;
+    border-bottom: 2px solid #c20201 !important;
+    width: 908px;
+    margin: 15px 5px 0px;
+}
+
+.list_repair {
+    width: 902px;
+    margin: 0px 9px;
+}
+
+.hc_indent ul {
+    margin-left: 25px !important;
+}
+
+.hc_indent .indentretimg {
+    background: transparent url("/Images/images/icoo.png") no-repeat scroll 76px 8px;
+}
+
+.hc_indent .hc_indenths {
+    float: right;
+    margin-right: 24px;
+}
+
+    .hc_indent .hc_indenths li {
+        width: auto;
+    }
+
+        .hc_indent .hc_indenths li .font_a {
+            color: #5e5e5e;
+        }
+
+    .hc_indent .hc_indenths .hc_hsimg {
+        background: transparent url("/Images/images/buyers/order_icon.png") no-repeat scroll 25px -47px;
+        width: 50px;
+        height: 35px;
+        margin-top: 3px;
+    }
+
+.hc_indent ul li {
+    display: block;
+    width: 100px;
+    float: left;
+    font-size: 15px;
+    height: 38px;
+    line-height: 40px;
+}
+
+.hc_indent .hc_indered {
+    color: #c20201;
+}
+
+.buyerright table {
+    height: auto;
+    width: 100%;
+}
+
+    .buyerright table a {
+        outline: none;
+    }
+
+.buyerright ul li {
+    display: block;
+    float: left;
+}
+
+.buyerright table .title_list td {
+    background: #eeeeee;
+    height: 36px;
+    border: 1px solid #d8d8d8;
+    *border: none;
+}
+
+.buyerright table .title_naxt td {
+    background: #FEF5EC;
+    height: 36px;
+    border: 1px solid #c20201;
+    *border: none;
+}
+
+.buyerright ul li {
+    list-style: none;
+    line-height: 34px;
+}
+
+.order_products {
+    width: 592px;
+    float: left;
+}
+
+.tab_box ul {
+    margin: 0px 0px 6px;
+}
+
+.unit_payment {
+    width: 12%;
+    border-right: none;
+    border-left: none;
+}
+
+.unit_Transactions {
+    width: 108px;
+    text-align: center;
+    float: left;
+}
+
+.unit_operations {
+    width: 192px;
+    float: left;
+}
+
+.unit_number {
+    width: 10%;
+    border-left: none;
+}
+
+.number_one {
+    border-right: 1px solid #EEE;
+    *border-right: none;
+}
+
+.number_two {
+    border-right: 1px solid #FEF5EC;
+    *border-right: none;
+}
+
+.number_three {
+    border-right: 1px solid #EEE;
+    *border-right: none;
+}
+
+.order_date, .order_num {
+    width: 355px;
+    text-align: left;
+}
+
+.buyerright ul input {
+    outline: none;
+}
+
+.order_date input {
+    float: left;
+    margin: 10px 12px;
+}
+
+.order_date span {
+    display: block;
+    float: left;
+}
+
+.shop_title {
+    width: 210px;
+}
+
+.line_img {
+    width: 105px;
+    text-align: left;
+}
+
+    .line_img span {
+        height: 20px;
+        display: block;
+        width: 70px;
+        background: url(/Images/images/Links.gif) no-repeat;
+        margin-top: 0px;
+    }
+
+    .line_img em {
+        height: 20px;
+        display: block;
+        width: 23px;
+        background: url(/Images/images/buyers/Location_icon.png) no-repeat;
+        float: left;
+        margin: 9px 3px 0px 12px;
+    }
+
+.pec_texts {
+    height: 133px;
+    font-family: '宋体';
+    font-size: 12px;
+    border: 1px solid rgb(204, 204, 204);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.collprod {
+    width: 100%;
+    display: inline-block;
+    font-family: SimSun;
+}
+
+.tableborder {
+    height: 133px;
+    font-family: SimSun;
+    font-size: 12px;
+    width: 100%;
+    border: 1px solid #C20201;
+    margin-bottom: 15px;
+}
+
+.c2020color {
+    padding-top: 15px;
+}
+
+.order_img_show {
+    float: left;
+    margin: 0px 0px 16px 10px;
+    width: 100px;
+}
+
+
+    .order_img_show img {
+        width: 100px;
+        height: 100px;
+    }
+
+.goosddetailover {
+    height: 60px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.hche_checkbox {
+    margin-left: 10px !important;
+    float: left !important;
+}
+
+.goodsprice {
+    height: 34px;
+    line-height: 23px;
+    color: #C20201;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.addcarts {
+    height: 34px;
+    margin-top: 20px;
+}
+
+.buyagain {
+    text-align: right;
+    padding-right: 26px;
+}
+
+.carts {
+    *margin-right: 38px;
+}
+
+.shopplace {
+    float: right;
+    display: block;
+    margin-right: 5px;
+    line-height: 45px;
+}
+
+.shopplaces {
+    display: block;
+    float: left;
+    margin-top: 5px;
+    line-height: 34px;
+}
+
+.sorts {
+    text-align: center;
+    background: #FFF none repeat scroll 0% 0%;
+    height: 59px;
+    line-height: 59px;
+}
+
+    .sorts .placeimg {
+        height: 20px;
+        display: block;
+        width: 23px;
+        background: transparent url("/Images/images/buyers/Location_icon.png") no-repeat scroll 0% 0%;
+        float: left;
+        margin: 11px 3px 0px 25px;
+    }
+
+.goodsd {
+    height: 100px;
+    overflow: hidden;
+    width: 300px;
+    float: left;
+    margin: 3px 10px 17px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.doing_repair {
+    color: #C20201;
+    cursor: pointer;
+}
+
+.adopt_repair {
+    color: #000;
+    cursor: pointer;
+}
+
+.unit_operations .evaluations_show {
+    display: block;
+    width: 80px;
+    height: 24px;
+    border: 1px solid #C20201;
+    margin-left: 100px;
+    line-height: 24px;
+    border-radius: 2px;
+    color: #C20201;
+    text-align: center;
+}
+
+.evaluations_show {
+    *float: left !important;
+}
+
+.opertains_show {
+    width: 100%;
+    height: 35px;
+    margin-top: 8px !important;
+    font-family: SimSun;
+}
+
+    .opertains_show .show_textboxs {
+        width: 534px;
+        height: 32px;
+    }
+
+        .opertains_show .show_textboxs .lable {
+            margin: 0px 8px 0px 11px;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+        }
+
+            .opertains_show .show_textboxs .lable .all_selector {
+                margin-right: 5px;
+                vertical-align: middle;
+                outline: none;
+            }
+
+    .opertains_show .del_show {
+        display: block;
+        float: left;
+        height: 30px;
+        width: 75px;
+        border: 1px solid #d8d8d8;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
+        background: #fff;
+        border-radius: 2px;
+        margin-left: 15px;
+        font-size: 12px;
+    }
+
+.shopplace em {
+    font-style: italic;
+    height: 20px;
+    display: block;
+    width: 23px;
+    background: transparent url("/Images/images/buyers/Location_icon.png") no-repeat scroll 0% 0%;
+    float: left;
+    margin: 12px 0px 0px;
+}
+
+.opertains_show .show_pages {
+    height: 32px;
+    line-height: 32px;
+    width: 367px;
+}
+
+    .opertains_show .show_pages a {
+        width: 72px;
+        height: 30px;
+        border: 1px solid #d8d8d8;
+        display: block;
+        padding-right: 3px;
+        text-align: center;
+    }
+
+        .opertains_show .show_pages a i {
+            display: block;
+            width: 15px;
+            height: 20px;
+            background: transparent url("/Images/images/page_arrow.png") no-repeat scroll 21% 0%;
+            float: left;
+            margin-top: 5px;
+        }
+
+    .opertains_show .show_pages .prev_pages {
+        float: right;
+        margin-left: 7px;
+    }
+
+.oder_num {
+    padding: 0px 30px;
+}
+
+.opertains_show .show_pages em {
+    font-style: normal;
+}
+
+.opertains_show .show_pages .next_pages {
+    color: #CCC;
+}
+
+.opertains_show .show_pages .prev_pages i {
+    background: transparent url("/Images/images/page_arrow.png") no-repeat scroll 59% 0%;
+    height: 20px;
+    width: 15px;
+    display: block;
+    float: right;
+    margin-top: 6px;
+}
+
+.opertains_show .show_pages .next_pages {
+    float: right;
+}
+
+.opertains_show .show_pages .pric_pages {
+    display: block;
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    width: 54px;
+}
+
+    .opertains_show .show_pages .pric_pages i {
+        font-style: normal;
+    }
+
+    .opertains_show .show_pages .pric_pages .first_pages {
+        padding-left: 14px;
+    }
+/*收藏店铺样式*/
+.hche_shopnam {
+    margin: 5px 10px 17px !important;
+    line-height: 20px !important;
+}
+
+.maindistance {
+    margin: 0px 0px 5px;
+    font-size: 14px;
+}
+
+    .maindistance a {
+        font-weight: 800;
+    }
+
+.hche_goodsereval i {
+    background: transparent url("/Images/images/hche_repairfin/pd_Shop_star.png") no-repeat scroll 0% 0%;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+    margin-top: 0px;
+}
+
+.hche_goodsereval {
+    *float: left !important;
+    height: 34px;
+    line-height: 20px;
+}
+
+.hche_badgraystar {
+    background: transparent url("/Images/images/hche_repairfin/pd_Shop_star.png") no-repeat scroll 99% 0% !important;
+    float: none !important;
+}
+
+.secviceeval {
+    width: 200px !important;
+}
+
+.shoporder {
+    width: 500px;
+}
+
+.eval {
+    margin-top: 25px;
+}
+
+.catslist {
+    position: absolute;
+    display: block;
+    width: 500px;
+    height: 250px;
+    background: #fff;
+    border: solid 5px #ddd;
+    margin-right: 420px;
+    right: 4%;
+    top: 30%;
+    z-index: 4000;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+
+.catslistt {
+    position: absolute;
+    display: block;
+    width: 500px;
+    height: 250px;
+    background: #fff;
+    border: solid 5px #ddd;
+    margin-right: 420px;
+    right: 4%;
+    top: 30%;
+    z-index: 5000;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+
+.choosebox {
+    padding: 50px 0px 0px 50px;
+}
+
+    .choosebox ul {
+        margin: 5px 0px 20px 0px;
+    }
+
+    .choosebox li {
+        float: left;
+        margin-right: 10px;
+        display: inline;
+        line-height: 28px;
+        height: 27px;
+        width: 82px;
+    }
+
+        .choosebox li a {
+            float: left;
+            background: #fff;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            height: 18px;
+            line-height: 18px;
+            padding: 4px 12px;
+            display: block;
+            text-decoration: none;
+        }
+
+            .choosebox li a:hover {
+                border: 1px solid #c20201;
+            }
+
+            .choosebox li a.current {
+                background: #fff url(/Images/images/right-icon.gif) no-repeat 100% 100%;
+                border: 1px solid #A10000;
+                outline: none;
+                text-decoration: none;
+            }
+
+        .choosebox li input {
+            display: none;
+        }
+
+.choose .btn-img {
+    width: 186px;
+    height: 48px;
+    line-height: 48px;
+    overflow: hidden;
+    background: #efefef;
+    border: 1px solid #c20201;
+    text-align: center;
+    color: #c20201;
+    font-size: 18px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    outline: none;
+}
+
+.choose .add_shopcar {
+    width: 186px;
+    height: 48px;
+    line-height: 48px;
+    overflow: hidden;
+    background: #c20201;
+    border: 1px solid #c20201;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 40px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    outline: none;
+}
+
+.add_shopcart {
+    width: 186px;
+    height: 48px;
+    line-height: 48px;
+    overflow: hidden;
+    background: #f8f8f8;
+    border: 1px solid #c20201;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    margin-left: 40px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    outline: none;
+}
+
+.clearfix_two {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    height: 28px;
+    margin-bottom: 20px;
+}
+
+.clearfix .add_Reductions {
+    display: block;
+    height: 28px;
+    width: 90px;
+}
+
+.Spinner {
+    display: block;
+    overflow: hidden;
+    width: 100px;
+    margin: 0 auto 15px auto;
+}
+
+    .Spinner .Amount {
+        width: 24px;
+        height: 17px;
+        padding: 4px 5px;
+        line-height: 17px;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: #d9d9d9;
+        float: left;
+        text-align: center;
+        color: #565656;
+        outline: 0;
+        display: block;
+    }
+
+.add_Reductions .Spinner a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #d9d9d9;
+    background-color: #f7f7f7;
+    float: left;
+    cursor: pointer;
+    outline: 0;
+    padding: 0px;
+}
+
+    .add_Reductions .Spinner a i {
+        font-style: normal;
+        background: url(/Images/images/BuynBtn.png) no-repeat;
+        display: block;
+        width: 9px;
+        height: 9px;
+        margin: 8px;
+        text-indent: 999999%;
+        overflow: hidden;
+    }
+
+.add_Reductions .Spinner .Decrease i {
+    background-position: -9px -9px;
+}
+
+.hc_tis {
+    margin-bottom: 10px;
+    height: 68px;
+    display: block;
+}
+
+.closeico {
+    position: absolute;
+    float: right;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(/Images/publicimg/close.png);
+    margin-left: 480px;
+    margin-top: -210px;
+}
+
+.closeicoo {
+    position: absolute;
+    float: right;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(/Images/publicimg/close.png);
+    margin-left: 480px;
+    margin-top: -198px;
+}
+
+.add_Reductions .Spinner .Increase i {
+    background-position: -9px -0px;
+}
+
+.add_Reductions .Spinner .DisDe i {
+    background-position: -0px -9px;
+}
+
+.add_Reductions .Spinner .DisIn i {
+    background-position: -0px -0px;
+}
+
+.go_shop {
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+}
+
+.collection_product {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    float: left;
+    margin-top: 18px;
+    background: #efefef;
+}
+
+    .collection_product .collection_product_left {
+        width: 45%;
+        display: block;
+        height: 45px;
+        line-height: 45px;
+        padding-left: 20px;
+        float: left;
+    }
+
+        .collection_product .collection_product_left em {
+            display: block;
+            height: 25px;
+            line-height: 25px;
+            width: 25px;
+            background: url(/Images/images/pd_ad_icon.png) no-repeat;
+            float: left;
+            margin-top: 10px;
+        }
+
+    .collection_product .collection_product_right {
+        width: 45%;
+        display: block;
+        height: 45px;
+        line-height: 45px;
+        padding-left: 20px;
+        float: left;
+    }
+
+        .collection_product .collection_product_right em {
+            display: block;
+            height: 25px;
+            line-height: 25px;
+            width: 25px;
+            background: url(/Images/images/pd_ad_icon.png) no-repeat 110% 0%;
+            float: left;
+            margin-top: 10px;
+        }
+
+    .collection_product a {
+        outline: none;
+        cursor: pointer;
+    }
+
+        .collection_product a:hover {
+            color: #c20201;
+        }

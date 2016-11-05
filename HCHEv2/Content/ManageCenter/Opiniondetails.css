@@ -1,0 +1,153 @@
+.buyerright {
+    margin-top: 20px;
+    min-height: 600px;
+    width: 918px;
+    float: right;
+}
+
+.opinonrt {
+    /*border: solid 1px #ccc;*/
+    height: auto;
+    display: block;
+    float: left;
+}
+
+.opinonrtit {
+    width: 866px;
+    height: 64px;
+    border-bottom: solid 1px #ccc;
+    display: block;
+    margin: auto;
+}
+
+    .opinonrtit span {
+        float: left;
+        width: 68px;
+        height: 20px;
+        margin-top: 25px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .opinonrtit p {
+        float: left;
+        width: 90px;
+        height: 20px;
+        margin-top: 25px;
+        font-size: 16px;
+    }
+
+.opinoncent {
+    width: 96%;
+    display: block;
+    margin: auto;
+}
+
+    .opinoncent ul li {
+        list-style-type: none;
+        height: auto;
+        display: inline-block;
+        *line-height: 30px;
+        *float:left;
+    }
+
+    .opinoncent span {
+        color: #333;
+        float: left;
+        height: auto;
+        display: block;
+        width: 100px;
+        text-align: right;
+    }
+
+    .opinoncent p {
+        color: #333;
+        float: left;
+        display: block;
+        height: auto;
+        text-align: left;
+        width: 750px;
+        word-break: break-all;
+    }
+
+.opinonft {
+    width: 866px;
+    display: block;
+    margin: auto;
+}
+
+.opinonftt {
+    width: 100%;
+    height: 64px;
+    display: block;
+    margin: auto;
+}
+
+    .opinonftt span {
+        float: left;
+        width: 100px;
+        height: 20px;
+        margin-top: 25px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+.opinonfcent {
+    margin: auto;
+    display: block;
+    width: 96%;
+    text-indent: 34px;
+}
+
+.opinonfdat {
+    width: 110px;
+    height: 50px;
+    float: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.opinonbom {
+    width: 34%;
+    height: 64px;
+    display: block;
+    margin: auto;
+}
+
+.op-flbtn {
+    width: 30px;
+    height: 20px;
+    display: block;
+    float: left;
+    border: solid 1px #C02021;
+    border-radius: 3px;
+    margin: 20px 0px 0px 0px;
+    padding: 9px 36px;
+}
+
+.op-ribtn {
+    width: 30px;
+    height: 20px;
+    display: block;
+    float: left;
+    background: #C02021;
+    border: solid 1px #C02021;
+    color: #fff;
+    border-radius: 3px;
+    margin: 20px 0px 0px 80px;
+    padding: 9px 36px;
+}
+
+.hc_patImg {
+    height: 80px;
+    width: 550px;
+    float: left;
+    margin-right: 15px;
+}
+
+    .hc_patImg img {
+        height: 80px;
+        width: 80px;
+        float: left;
+        margin-right: 15px;
+    }

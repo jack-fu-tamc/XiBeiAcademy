@@ -1,0 +1,108 @@
+﻿
+ 
+记录时间：2015-12-17 09:19:43,631 
+线程ID:[22] 
+日志级别：  ERROR 
+错误描述：Procedure or function '`Procurment_Info_Select`' cannot be found in database '`AUTOBOBO`'.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 26
+在 BLL.Procurment.Procurment_InfoBll.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 19
+在 HC.Manage.Controllers.PurchaseController._ajaxAllPurchase(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 443
+ 
+
+ 
+记录时间：2015-12-17 09:19:44,008 
+线程ID:[19] 
+日志级别：  ERROR 
+错误描述：Procedure or function '`Procurment_Info_SelectForExp`' cannot be found in database '`AUTOBOBO`'.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.PurchaseController._ajaxMySupply(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 533
+ 
+
+ 
+记录时间：2015-12-17 09:19:44,526 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：Procedure or function '`Procurment_Info_Select`' cannot be found in database '`AUTOBOBO`'.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 26
+在 BLL.Procurment.Procurment_InfoBll.GetList(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 19
+在 HC.Manage.Controllers.PurchaseController._ajaxMyPurchase(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 490
+ 
+
+ 
+记录时间：2015-12-17 12:03:06,530 
+线程ID:[73] 
+日志级别：  ERROR 
+错误描述：Unable to connect to any of the specified MySQL hosts.   </br>在 Maticsoft.DBUtility.MysqlHelper.PrepareCommand(MySqlCommand cmd, MySqlConnection conn, CommandType cmdType, String cmdText, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 195在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataTable(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 114在 Maticsoft.DAL.User_Info.GetUserInfo(User_Info_Search model) 位置 e:\ProTwoN\DAL\Account\User_Info.cs:行号 45
+在 BLL.Account.User_InfoBll.GetUserInfo(User_Info_Search model) 位置 e:\ProTwoN\BLL\Account\User_InfoBll.cs:行号 35
+在 HC.Service.Authentication.FormsAuthenticationService.GetAuthenticatedCustomerFromUserName(String name) 位置 e:\ProTwoN\HC.Service\Authentication\FormsAuthenticationService.cs:行号 439在 HC.Service.Authentication.FormsAuthenticationService.GetAuthenticatedCustomer(String placeholder) 位置 e:\ProTwoN\HC.Service\Authentication\FormsAuthenticationService.cs:行号 289在 HC.Web.Framework.PublicStoreAllowNavigationAttributecs.OnActionExecuting(ActionExecutingContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\PublicStoreAllowNavigationAttributecs.cs:行号 55
+
+ 
+
+ 
+记录时间：2015-12-17 12:03:27,500 
+线程ID:[63] 
+日志级别：  ERROR 
+错误描述：Unable to connect to any of the specified MySQL hosts.   </br>在 Maticsoft.DBUtility.MysqlHelper.PrepareCommand(MySqlCommand cmd, MySqlConnection conn, CommandType cmdType, String cmdText, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 195在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataTable(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 114在 Maticsoft.DAL.User_Info.GetUserInfo(User_Info_Search model) 位置 e:\ProTwoN\DAL\Account\User_Info.cs:行号 45
+在 BLL.Account.User_InfoBll.GetUserInfo(User_Info_Search model) 位置 e:\ProTwoN\BLL\Account\User_InfoBll.cs:行号 35
+在 HC.Service.Authentication.FormsAuthenticationService.GetAuthenticatedCustomerFromUserName(String name) 位置 e:\ProTwoN\HC.Service\Authentication\FormsAuthenticationService.cs:行号 439在 HC.Service.Authentication.FormsAuthenticationService.GetAuthenticatedCustomer() 位置 e:\ProTwoN\HC.Service\Authentication\FormsAuthenticationService.cs:行号 160在 HC.Web.Framework.WebWorkContext.GetCurrentUser() 位置 e:\ProTwoN\HC.Web.Framework\WebWorkContext.cs:行号 47
+在 HC.Web.Framework.WebWorkContext.get_CurrentCustomer() 位置 e:\ProTwoN\HC.Web.Framework\WebWorkContext.cs:行号 80
+在 HC.Web.Framework.ManageStoreAllowNavigationAttributecs.OnActionExecuting(ActionExecutingContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\ManageStoreAllowNavigationAttributecs.cs:行号 49
+
+ 
+
+ 
+记录时间：2015-12-17 16:24:19,096 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.testTemp() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 609
+ 
+
+ 
+记录时间：2015-12-17 16:53:36,492 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 Maticsoft.Model.Common.GetImageURL() 位置 e:\ProTwoN\Model\Public\Common.cs:行号 91
+在 HC.Manage.Controllers.CommonController.fileUpZs() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\CommonController.cs:行号 493
+ 
+
+ 
+记录时间：2015-12-17 16:54:57,425 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 Maticsoft.Model.Common.GetImageURL() 位置 e:\ProTwoN\Model\Public\Common.cs:行号 91
+在 HC.Manage.Controllers.ProductController.KindUploadImageOfProduct() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1806
+ 
+
+ 
+记录时间：2015-12-17 16:55:04,444 
+线程ID:[38] 
+日志级别：  ERROR 
+错误描述：此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。   </br>
+ 
+
+ 
+记录时间：2015-12-17 16:55:31,622 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。   </br>
+ 
+
+ 
+记录时间：2015-12-17 16:55:46,814 
+线程ID:[37] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 Maticsoft.Model.Common.GetImageURL() 位置 e:\ProTwoN\Model\Public\Common.cs:行号 91
+在 HC.Manage.Controllers.ProductController.KindUploadImageOfProduct() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1806
+ 
+
+ 
+记录时间：2015-12-17 17:46:31,753 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.testTem() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 607
+ 
+
+ 
+记录时间：2015-12-17 17:46:40,597 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.testTem() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 607
+ 

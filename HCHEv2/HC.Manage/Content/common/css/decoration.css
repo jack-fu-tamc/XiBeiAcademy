@@ -1,0 +1,349 @@
+.hc-decont {
+    background: #fff;
+    float: left;
+    border: 1px solid #ccc;
+    min-height: 780px;
+    padding-bottom: 20px;
+}
+
+.hctl_teltop {
+    padding: 15px 25px 0px;
+    float: left;
+}
+
+    .hctl_teltop .hctl_chinhot {
+        font-size: 18px;
+        color: #C20201;
+        margin-right: 12px;
+        float: left;
+    }
+
+    .hctl_teltop .hctl_elishhot {
+        font-size: 16px;
+        color: #AF7E52;
+        margin-right: 12px;
+        float: left;
+    }
+
+    .hctl_teltop .hctl_striping {
+        border-bottom: 1px dashed #AF7E52;
+        float: left;
+        width: 526px;
+        height: 11px;
+        margin: 0px;
+    }
+
+    .hctl_teltop .hctl_telimg {
+        width: 80px;
+        height: 30px;
+        float: left;
+        margin-left: 10px;
+        color: #AF7E52;
+    }
+
+.hc-main {
+    background: #EFF4FA;
+    float: left;
+    width: 820px;
+    min-height: 812px;
+    margin: 20px 50px 15px 50px;
+}
+
+.hc-tops {
+    width: 94%;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hc-lfs {
+    width: 374px;
+    height: 260px;
+    display: block;
+    float: left;
+    margin-top: 40px;
+}
+
+    .hc-lfs dl dt span {
+        float: left;
+        color: #AF7E52;
+        width: 100%;
+        padding-left: 12px;
+        padding-bottom: 16px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .hc-lfs dl dd input {
+        width: 300px;
+    }
+
+.hc-fls {
+    width: 300px;
+    height: 260px;
+    display: block;
+    float: right;
+    margin-top: 40px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.yingyeValidate {
+    width: 300px;
+    height: auto;
+    display: block;
+    float: right;
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+.hc_businessFile {
+    width: 90px;
+    height: 30px;
+    display: block;
+    margin: 5px 120px;
+    padding: 0 20px;
+    border: solid 1px #ccc;
+}
+
+.hc-sq {
+    width: 94%;
+    /*height: 550px;*/
+    display: block;
+    margin: 0 auto;
+}
+
+.hc-sqtit {
+    float: left;
+    color: #AF7E52;
+    width: 65%;
+    height: 40px;
+    padding-left: 12px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: solid 1px #ccc;
+}
+
+.hc-sqcont {
+    width: 96%;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.hc_patImg {
+    height: auto;
+    width: auto;
+    margin: 20px 0px 0px 0px !important;
+    border: none;
+    display: block;
+    float: left;
+    position: relative;
+    margin-top:10px;
+padding-bottom:15px;
+   
+}
+.hc_addimg {
+    float: left;
+    margin-top: 186px;
+    margin-left: 20px;
+}
+
+.hc_imgshow {
+    float: left;
+    margin:0;
+}
+
+.closeBusLicense {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+}
+
+.Btime {
+    cursor: pointer !important;
+}
+
+.Etime {
+    cursor: pointer !important;
+}
+
+.submitDecoration {
+    width: 100px !important;
+    border: none;
+    margin-right: 200px;
+    margin-top: 55px;
+    border-radius: 4px;
+    color: #FFF;
+    background: none no-repeat scroll 0% 0% #C20201;
+    height: 32px;
+}
+
+.selectDeco {
+    float: left;
+    border-bottom: solid 1px #ccc;
+    height: 40px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #AF7E52;
+    width: 33%;
+    position: relative;
+}
+
+.showSelect {
+    float: left;
+    border-bottom: solid 1px #ccc;
+    height: 40px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #AF7E52;
+    width: 33%;
+    position: relative;
+    z-index: 98;
+    /*position: absolute;
+    top: 20px;
+    left: 0;*/
+}
+
+    .showSelect ul {
+        list-style: none;
+        z-index: 210;
+    }
+
+    .showSelect span {
+        float: left;
+        line-height: 30px;
+    }
+
+    .showSelect .addBrand {
+        width: 50px;
+        display: inline-block;
+        height: 32px;
+        background: #c20201;
+        text-align: center;
+        border-radius: 4px;
+        color: #fff;
+        margin-left: 12px;
+        cursor: pointer;
+    }
+
+.select-text {
+    cursor: default;
+    display: block;
+    border: 1px solid #CCC;
+    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    color: #333333;
+    font-size: 14px;
+    border-right: none;
+    background-color: white;
+    height: 30px;
+    width: 96px;
+    padding-left: 5px;
+}
+
+.icon-select {
+    background-position: 0px -2px;
+    background-image: url(../../../images/ManageImg/xla.png);
+    border: 1px solid #CCC;
+    border-left: none;
+    height: 30px;
+    width: 35px;
+    margin-top: 0px;
+}
+
+.dropdown-select {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 38px;
+    width: 136px;
+    border: 1px solid #CCC;
+    border-top: none;
+    background-color: white;
+    padding-top: 4px;
+    /*border-bottom: none;*/
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+    .dropdown-select li {
+        /*border-bottom: 1px solid #CCC;*/
+        color: #333333;
+        font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        padding-left: 5px;
+    }
+
+        .dropdown-select li:hover {
+            background-color: #EEEEEE;
+        }
+
+
+.imgList {
+    float: left;
+    width: 203px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 65px;
+}
+
+    .imgList object {
+        float: left;
+        width: 203px;
+        margin-left: -79px;
+        text-align: center;
+        position: absolute;
+        margin-top: 99px;
+        z-index: 200;
+    }
+
+.uploadifyQueue {
+    position: absolute;
+    z-index: 200;
+    margin-top: 75px;
+    *margin-top: 85px;
+    *margin-left: -119px;
+}
+
+.reportreg .alignLeft {
+    margin-left: 0px;
+}
+
+.hc-fls object {
+    display: block;
+    width: 130px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 200;
+    left: 90px;
+    top: 141px;
+}
+
+.hc_shenfenimg {
+    margin-top: 10px;
+    position: relative;
+}
+
+.closeyy {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.hc-fls .uploadifyQueue {
+    margin-top: 127px;
+    *margin-left: 0px;
+    *margin-top: 130px;
+}
+
+.hc-fls .uploadifyQueueItem {
+    width: 285px;
+}
+/*.imgList>span{
+    margin-bottom:10px;
+}*/

@@ -1,0 +1,37 @@
+﻿@using HC.Web.Framework.UI;
+@{
+    //成功消息提示
+    var successMessages = new List<string>();
+    if (TempData[string.Format("HC.notifications.{0}", NotifyType.Success)] != null)
+    {
+        successMessages.AddRange(TempData[string.Format("HC.notifications.{0}", NotifyType.Success)] as IList<string>);
+    }
+    if (ViewData[string.Format("HC.notifications.{0}", NotifyType.Success)] != null)
+    {
+        successMessages.AddRange(ViewData[string.Format("HC.notifications.{0}", NotifyType.Success)] as IList<string>);
+    }
+
+    //错误消息提示
+    var errorMessages = new List<string>();
+    if (TempData[string.Format("HC.notifications.{0}", NotifyType.Error)] != null)
+    {
+        errorMessages.AddRange(TempData[string.Format("HC.notifications.{0}", NotifyType.Error)] as IList<string>);
+    }
+    if (ViewData[string.Format("HC.notifications.{0}", NotifyType.Error)] != null)
+    {
+        errorMessages.AddRange(ViewData[string.Format("HC.notifications.{0}", NotifyType.Error)] as IList<string>);
+    }
+}
+
+@foreach (var message in successMessages)
+{
+    <div class="messageBox messageBoxSuccess">
+        <p class="successText"> @message</p>
+    </div>
+}
+@foreach (var message in errorMessages)
+{
+    <div class="messageBox messageBoxError">
+        <p class="errorText">@Html.Raw(message)</p>
+    </div>
+}

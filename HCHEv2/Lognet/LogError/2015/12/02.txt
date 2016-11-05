@@ -1,0 +1,328 @@
+﻿
+ 
+记录时间：2015-12-02 10:55:38,869 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_Views_Shop_Shop_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\Views\Shop\Shop.cshtml:行号 500
+ 
+
+ 
+记录时间：2015-12-02 11:00:22,208 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：长度不能小于 0。
+参数名: length   </br>在 HCHEv2.Controllers.CommonController.commonLogin() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 667
+ 
+
+ 
+记录时间：2015-12-02 11:04:44,401 
+线程ID:[25] 
+日志级别：  ERROR 
+错误描述：长度不能小于 0。
+参数名: length   </br>在 HCHEv2.Controllers.CommonController.commonLogin() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 667
+ 
+
+ 
+记录时间：2015-12-02 11:05:49,210 
+线程ID:[25] 
+日志级别：  ERROR 
+错误描述：长度不能小于 0。
+参数名: length   </br>在 HCHEv2.Controllers.CommonController.commonLogin() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 667
+ 
+
+ 
+记录时间：2015-12-02 11:06:56,253 
+线程ID:[32] 
+日志级别：  ERROR 
+错误描述：长度不能小于 0。
+参数名: length   </br>在 HCHEv2.Controllers.CommonController.commonLogin() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 667
+ 
+
+ 
+记录时间：2015-12-02 11:07:30,272 
+线程ID:[32] 
+日志级别：  ERROR 
+错误描述：长度不能小于 0。
+参数名: length   </br>在 HCHEv2.Controllers.CommonController.commonLogin() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 667
+ 
+
+ 
+记录时间：2015-12-02 11:18:16,216 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：长度不能小于 0。
+参数名: length   </br>在 HCHEv2.Controllers.CommonController.commonLogin() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 667
+ 
+
+ 
+记录时间：2015-12-02 11:19:18,786 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：长度不能小于 0。
+参数名: length   </br>在 HCHEv2.Controllers.CommonController.commonLogin() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 667
+ 
+
+ 
+记录时间：2015-12-02 11:20:51,215 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：长度不能小于 0。
+参数名: length   </br>在 HCHEv2.Controllers.CommonController.commonLogin() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 667
+ 
+
+ 
+记录时间：2015-12-02 14:04:13,784 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：未找到视图“mdecoration”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/HC.Manage/Views/Shared/mdecoration.vbhtml
+~/HC.Manage/Views/Shared/mdecoration.cshtml
+~/HC.Manage/Views/home/mdecoration.vbhtml
+~/HC.Manage/Views/home/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/home/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/home/mdecoration.vbhtml
+~/Areas/Manage/Themes/Default/Views/Shared/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/Shared/mdecoration.vbhtml
+~/Areas/Manage/Views/home/mdecoration.cshtml
+~/Areas/Manage/Views/home/mdecoration.vbhtml
+~/Areas/Manage/Views/Shared/mdecoration.cshtml
+~/Areas/Manage/Views/Shared/mdecoration.vbhtml
+~/Themes/Default/Views/home/mdecoration.cshtml
+~/Themes/Default/Views/home/mdecoration.vbhtml
+~/Themes/Default/Views/Shared/mdecoration.cshtml
+~/Themes/Default/Views/Shared/mdecoration.vbhtml
+~/Views/home/mdecoration.cshtml
+~/Views/home/mdecoration.vbhtml
+~/Views/Shared/mdecoration.cshtml
+~/Views/Shared/mdecoration.vbhtml   </br>
+ 
+
+ 
+记录时间：2015-12-02 14:43:27,952 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mdecoration”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/HC.Manage/Views/Shared/mdecoration.vbhtml
+~/HC.Manage/Views/Shared/mdecoration.cshtml
+~/HC.Manage/Views/home/mdecoration.vbhtml
+~/HC.Manage/Views/home/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/home/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/home/mdecoration.vbhtml
+~/Areas/Manage/Themes/Default/Views/Shared/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/Shared/mdecoration.vbhtml
+~/Areas/Manage/Views/home/mdecoration.cshtml
+~/Areas/Manage/Views/home/mdecoration.vbhtml
+~/Areas/Manage/Views/Shared/mdecoration.cshtml
+~/Areas/Manage/Views/Shared/mdecoration.vbhtml
+~/Themes/Default/Views/home/mdecoration.cshtml
+~/Themes/Default/Views/home/mdecoration.vbhtml
+~/Themes/Default/Views/Shared/mdecoration.cshtml
+~/Themes/Default/Views/Shared/mdecoration.vbhtml
+~/Views/home/mdecoration.cshtml
+~/Views/home/mdecoration.vbhtml
+~/Views/Shared/mdecoration.cshtml
+~/Views/Shared/mdecoration.vbhtml
+~/MViews/home/mdecoration.cshtml
+~/MViews/Shared/mdecoration.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-02 14:57:35,540 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未找到视图“mdecoration”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/HC.Manage/Views/Shared/mdecoration.vbhtml
+~/HC.Manage/Views/Shared/mdecoration.cshtml
+~/HC.Manage/Views/home/mdecoration.vbhtml
+~/HC.Manage/Views/home/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/home/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/home/mdecoration.vbhtml
+~/Areas/Manage/Themes/Default/Views/Shared/mdecoration.cshtml
+~/Areas/Manage/Themes/Default/Views/Shared/mdecoration.vbhtml
+~/Areas/Manage/Views/home/mdecoration.cshtml
+~/Areas/Manage/Views/home/mdecoration.vbhtml
+~/Areas/Manage/Views/Shared/mdecoration.cshtml
+~/Areas/Manage/Views/Shared/mdecoration.vbhtml
+~/Themes/Default/Views/home/mdecoration.cshtml
+~/Themes/Default/Views/home/mdecoration.vbhtml
+~/Themes/Default/Views/Shared/mdecoration.cshtml
+~/Themes/Default/Views/Shared/mdecoration.vbhtml
+~/Views/home/mdecoration.cshtml
+~/Views/home/mdecoration.vbhtml
+~/Views/Shared/mdecoration.cshtml
+~/Views/Shared/mdecoration.vbhtml
+~/MViews/home/mdecoration.cshtml
+~/MViews/Shared/mdecoration.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-02 14:59:29,158 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_MViews_home_mdecoration_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\MViews\home\mdecoration.cshtml:行号 15
+
+ 
+
+ 
+记录时间：2015-12-02 15:01:26,802 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_MViews_home_mdecoration_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\MViews\home\mdecoration.cshtml:行号 15
+
+ 
+
+ 
+记录时间：2015-12-02 15:12:48,317 
+线程ID:[24] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_MViews_home_mdecoration_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\MViews\home\mdecoration.cshtml:行号 15
+
+ 
+
+ 
+记录时间：2015-12-02 15:51:47,589 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：未找到视图“mmsg”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/HC.Manage/Views/Shared/mmsg.vbhtml
+~/HC.Manage/Views/Shared/mmsg.cshtml
+~/HC.Manage/Views/Common/mmsg.vbhtml
+~/HC.Manage/Views/Common/mmsg.cshtml
+~/Areas/Manage/Themes/Default/Views/Common/mmsg.cshtml
+~/Areas/Manage/Themes/Default/Views/Common/mmsg.vbhtml
+~/Areas/Manage/Themes/Default/Views/Shared/mmsg.cshtml
+~/Areas/Manage/Themes/Default/Views/Shared/mmsg.vbhtml
+~/Areas/Manage/Views/Common/mmsg.cshtml
+~/Areas/Manage/Views/Common/mmsg.vbhtml
+~/Areas/Manage/Views/Shared/mmsg.cshtml
+~/Areas/Manage/Views/Shared/mmsg.vbhtml
+~/Themes/Default/Views/Common/mmsg.cshtml
+~/Themes/Default/Views/Common/mmsg.vbhtml
+~/Themes/Default/Views/Shared/mmsg.cshtml
+~/Themes/Default/Views/Shared/mmsg.vbhtml
+~/Views/Common/mmsg.cshtml
+~/Views/Common/mmsg.vbhtml
+~/Views/Shared/mmsg.cshtml
+~/Views/Shared/mmsg.vbhtml
+~/MViews/Common/mmsg.cshtml
+~/MViews/Shared/mmsg.cshtml
+~/HC.Manage/MViews/Common/mmsg.cshtml
+~/HC.Manage/MViews/Shared/mmsg.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-02 15:51:50,294 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：未找到视图“mcenterSerch”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/HC.Manage/Views/Shared/mcenterSerch.vbhtml
+~/HC.Manage/Views/Shared/mcenterSerch.cshtml
+~/HC.Manage/Views/Common/mcenterSerch.vbhtml
+~/HC.Manage/Views/Common/mcenterSerch.cshtml
+~/Areas/Manage/Themes/Default/Views/Common/mcenterSerch.cshtml
+~/Areas/Manage/Themes/Default/Views/Common/mcenterSerch.vbhtml
+~/Areas/Manage/Themes/Default/Views/Shared/mcenterSerch.cshtml
+~/Areas/Manage/Themes/Default/Views/Shared/mcenterSerch.vbhtml
+~/Areas/Manage/Views/Common/mcenterSerch.cshtml
+~/Areas/Manage/Views/Common/mcenterSerch.vbhtml
+~/Areas/Manage/Views/Shared/mcenterSerch.cshtml
+~/Areas/Manage/Views/Shared/mcenterSerch.vbhtml
+~/Themes/Default/Views/Common/mcenterSerch.cshtml
+~/Themes/Default/Views/Common/mcenterSerch.vbhtml
+~/Themes/Default/Views/Shared/mcenterSerch.cshtml
+~/Themes/Default/Views/Shared/mcenterSerch.vbhtml
+~/Views/Common/mcenterSerch.cshtml
+~/Views/Common/mcenterSerch.vbhtml
+~/Views/Shared/mcenterSerch.cshtml
+~/Views/Shared/mcenterSerch.vbhtml
+~/MViews/Common/mcenterSerch.cshtml
+~/MViews/Shared/mcenterSerch.cshtml
+~/HC.Manage/MViews/Common/mcenterSerch.cshtml
+~/HC.Manage/MViews/Shared/mcenterSerch.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-02 15:51:52,225 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：未找到视图“mcenterNavMenu”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/HC.Manage/Views/Shared/mcenterNavMenu.vbhtml
+~/HC.Manage/Views/Shared/mcenterNavMenu.cshtml
+~/HC.Manage/Views/Common/mcenterNavMenu.vbhtml
+~/HC.Manage/Views/Common/mcenterNavMenu.cshtml
+~/Areas/Manage/Themes/Default/Views/Common/mcenterNavMenu.cshtml
+~/Areas/Manage/Themes/Default/Views/Common/mcenterNavMenu.vbhtml
+~/Areas/Manage/Themes/Default/Views/Shared/mcenterNavMenu.cshtml
+~/Areas/Manage/Themes/Default/Views/Shared/mcenterNavMenu.vbhtml
+~/Areas/Manage/Views/Common/mcenterNavMenu.cshtml
+~/Areas/Manage/Views/Common/mcenterNavMenu.vbhtml
+~/Areas/Manage/Views/Shared/mcenterNavMenu.cshtml
+~/Areas/Manage/Views/Shared/mcenterNavMenu.vbhtml
+~/Themes/Default/Views/Common/mcenterNavMenu.cshtml
+~/Themes/Default/Views/Common/mcenterNavMenu.vbhtml
+~/Themes/Default/Views/Shared/mcenterNavMenu.cshtml
+~/Themes/Default/Views/Shared/mcenterNavMenu.vbhtml
+~/Views/Common/mcenterNavMenu.cshtml
+~/Views/Common/mcenterNavMenu.vbhtml
+~/Views/Shared/mcenterNavMenu.cshtml
+~/Views/Shared/mcenterNavMenu.vbhtml
+~/MViews/Common/mcenterNavMenu.cshtml
+~/MViews/Shared/mcenterNavMenu.cshtml
+~/HC.Manage/MViews/Common/mcenterNavMenu.cshtml
+~/HC.Manage/MViews/Shared/mcenterNavMenu.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-02 15:51:55,756 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-02 15:51:58,304 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未找到视图“mgetProvinceByIP”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/common/mgetProvinceByIP.cshtml
+~/Themes/Default/Views/common/mgetProvinceByIP.vbhtml
+~/Themes/Default/Views/Shared/mgetProvinceByIP.cshtml
+~/Themes/Default/Views/Shared/mgetProvinceByIP.vbhtml
+~/Views/common/mgetProvinceByIP.cshtml
+~/Views/common/mgetProvinceByIP.vbhtml
+~/Views/Shared/mgetProvinceByIP.cshtml
+~/Views/Shared/mgetProvinceByIP.vbhtml
+~/MViews/common/mgetProvinceByIP.cshtml
+~/MViews/Shared/mgetProvinceByIP.cshtml
+~/HC.Manage/Views/common/mgetProvinceByIP.cshtml
+~/HC.Manage/Views/common/mgetProvinceByIP.vbhtml
+~/HC.Manage/Views/Shared/mgetProvinceByIP.cshtml
+~/HC.Manage/Views/Shared/mgetProvinceByIP.vbhtml
+~/HC.Manage/MViews/common/mgetProvinceByIP.cshtml
+~/HC.Manage/MViews/Shared/mgetProvinceByIP.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-02 17:11:42,640 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 200
+ 

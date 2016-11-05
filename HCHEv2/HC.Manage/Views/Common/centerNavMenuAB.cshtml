@@ -1,0 +1,24 @@
+﻿@using HC.Core.CommonMethod;
+
+@*<nav class="nav_bg">
+    <div class="container">
+        <ul class="ul-left" id="nav-2015">
+            <li style="width: 230px;" id="category-2015" onmouseover="this.className='on'" onmouseleave="this.className=''">
+                <span class="nav_qz ld"><i class="nav_limg"></i>卖家中心</span>
+            </li>
+            <li class="stores_left">
+                <a href="/ManageCenter/PersonalData" title="">账户设置<i></i></a>
+            </li>
+
+            <li class="stores_left">
+                <a href="/NewsManage/NewsNotice" title="">消息</a>
+            </li>
+            @if (WorkContext.IsCommercial)
+            {
+                <li class="stores_left">
+                    <a href="/Shop/ShopPage?userid=@ViewData["userIDMD5"]" title="">进入店铺</a>
+                </li>
+            }
+        </ul>
+    </div>
+</nav>*@

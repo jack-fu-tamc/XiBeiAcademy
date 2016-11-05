@@ -1,0 +1,149 @@
+﻿body {
+    margin: 0px;
+    font-family: "Microsoft YaHei",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+.gh_MyRecommend{
+    color: #dd1110;
+padding: 20px 0px 10px 00px;
+border-bottom: 1px solid #ccc;
+margin: 0px 20px 10px 20px;
+}
+.gh_MyRecommend span{
+    margin-left: 10px;
+font-size: 16px;
+}
+.gh_listTitel{
+    margin: 0px 20px 10px 20px;
+background: #eee;
+height: 35px;
+border: 1px solid #d8d8d8;
+line-height: 35px;
+}
+.gh_listTitel span{
+    display:block;
+    float:left;
+    text-align: center;
+    width: 100px;
+}
+.gh_listRank{
+    margin: 0px 20px 10px 20px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.gh_listRank .gh_shouName{
+    border-right:1px solid #ccc;
+    float: left;
+padding: 10px 0px 10px 10px;
+}
+.gh_listRank .gh_shouName .gh_choice{
+    float: left;
+margin-right: 5px;
+}
+    .gh_listRank .gh_shouName .gh_choice .checkboxSpan {
+   width: 15px;
+height: 20px;
+padding-top: 8px;
+cursor: pointer;
+text-align: center;
+background: url("../../../images/publicimg/mc_checkbox-b.png");
+background-repeat: no-repeat;
+background-position: 1px 8px;
+line-height: 0px;
+margin-top: 3px;
+display: block;
+    }
+    .gh_listRank .gh_shouName .gh_choice .checkboxSpan.rabuit {
+   background-position: -14px 8px;
+}
+
+.gh_listRank .gh_shouName .gh_shopTit{
+    float: left;
+    margin-top: 5px;
+}
+.gh_listRank .gh_shouName .gh_shopTit .gh_shopImg{
+    float: left;
+width: 100px;
+height: 100px;
+}
+.gh_listRank .gh_shouName .gh_shopTit .gh_shopImg img{
+    width: 100px;
+height: 100px;
+}
+.gh_listRank .gh_shouName .gh_shopTit .gh_shopSpan{
+    float:left;
+    width: 250px;
+}
+.gh_listRank .gh_shouName .gh_shopTit .gh_shopSpan .gh_spanText{
+    display: block;
+float: left;
+width: 235px;
+margin-left: 10px;
+overflow: hidden;
+height: 40px;
+font-size: 14px;
+}
+.gh_listRank .gh_shouName .gh_shopTit .gh_shopSpan .gh_TJspan{
+    float: left;
+margin-left: 10px;
+width: 240px;
+}
+.gh_listRank .gh_shouName .gh_shopTit .gh_shopSpan .gh_FBtime{
+    display: block;
+margin-top: 80px;
+*margin-top:40px;
+font-size: 13px;
+margin-left: 10px;
+}
+.gh_listRank .gh_monaySpan{
+    float: left;
+width: 100px;
+text-align: center;
+line-height: 125px;
+border-right: 1px solid #ccc;
+}
+.gh_listRank .gh_monayLock{
+    float: left;
+width: 93px;
+text-align: center;
+line-height: 125px;
+}
+.gh_listRank .gh_monayLock a:hover{
+    color:#c20201;
+}
+.gh_paging{
+float: left;
+margin: 0px 20px 20px;
+width: 880px;
+text-align: center;
+height: 40px;
+line-height: 40px;
+}
+.gh_sumberBut{
+    float: left;
+margin: 0px 20px 25px;
+width: 880px;
+text-align: center;
+}
+.gh_sumberBut .sumberOK{
+    background: #c20201;
+border: 1px solid #c20201;
+border-radius: 4px;
+height: 35px;
+width: 110px;
+font-size: 17px;
+color: #fff;
+margin-right: 20px;
+}
+.gh_sumberBut .sumberFlie{
+background: #fff;
+border: 1px solid #C20201;
+border-radius: 4px;
+height: 35px;
+width: 110px;
+font-size: 17px;
+color: #c20201;
+margin-left: 20px;
+}

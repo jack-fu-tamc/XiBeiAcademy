@@ -1,0 +1,820 @@
+﻿body {
+    background: #003e80;
+}
+a {
+    cursor:pointer;
+    outline:none;
+}
+    a:hover {
+        text-decoration:none;
+    }
+.hc_topNav {
+    *left:0;
+}
+.body_spdp {
+    width: 100%;
+    height: 305px;
+    margin-top: 40px;
+}
+
+.back_spdp {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    display: inline-block;
+    position: relative;
+}
+
+.content_spdp {
+    width: 1120px;
+    margin: 25px;
+    display: inline-block;
+}
+
+    .content_spdp ul {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+        .content_spdp ul li {
+            list-style: none;
+            float: left;
+            width: 265px;
+            height: 160px;
+            margin-left: 20px;
+            border-radius: 12px;
+        }
+
+        .content_spdp ul .first_account {
+            margin-left: 0;
+            background: #a2d4fa;
+        }
+
+        .content_spdp ul li span {
+            display: inline-block;
+            float: left;
+            line-height: 30px;
+        }
+
+        .content_spdp ul li .text_spdp {
+            width: 90px;
+            height: 110px;
+            margin: 20px 21px 30px;
+        }
+
+        .content_spdp ul li p {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            line-height: 27px;
+        }
+
+        .content_spdp ul li .title_spdp {
+            font-size: 22px;
+            color: #016ec2;
+            line-height: 30px;
+            padding-bottom: 5px;
+        }
+
+.img_spdp {
+    margin: 20px 0px 30px;
+}
+
+.first_accountimg {
+    margin-top: 38px;
+}
+
+.scend_accountimg {
+    margin-top: 16px;
+}
+
+.thried_accountimg {
+    margin-top: 22px;
+}
+
+.four_accountimg {
+    margin-top: 24px;
+}
+
+.loan_spdp {
+    background: #f5da8f;
+}
+
+.Conduct_spdp {
+    background: #c5e6b8;
+}
+
+.Discount_spdp {
+    background: #a3e0dc;
+}
+
+.content_spdp ul li .title_loan {
+    font-size: 22px;
+    color: #c20201;
+    line-height: 30px;
+    padding-bottom: 5px;
+}
+
+.content_spdp ul li .title_Conduct {
+    font-size: 22px;
+    color: #006607;
+    line-height: 30px;
+    padding-bottom: 5px;
+}
+
+.content_spdp ul li .title_Discount {
+    font-size: 22px;
+    color: #028385;
+    line-height: 30px;
+    padding-bottom: 5px;
+}
+
+.user_account {
+    width: 100%;
+    height: 50px;
+    background: #a2d3fb;
+    margin-top: 22px;
+    font-size: 18px;
+    line-height: 50px;
+    color: #016EC2;
+}
+
+.account_spdp {
+    width: 100%;
+    margin-top: 22px;
+    height: 310px;
+}
+
+    .account_spdp ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .account_spdp ul li {
+            float: left;
+            margin-left: 20px;
+            width: 358px;
+            height: 310px;
+            border: 1px solid #ccc;
+            border-radius: 0;
+        }
+
+        .account_spdp ul .account_first {
+            margin-left: 0;
+        }
+
+.title_add {
+    width: 320px;
+    height: 50px;
+    margin: 0px 19px;
+    border-bottom: 1px dashed #ccc;
+    font-size: 18px;
+    line-height: 50px;
+    color: #016EC2;
+}
+
+
+    .title_add img {
+        margin: 10px 8px 10px 10px;
+    }
+
+.date_spdp {
+    width: 100%;
+    height: 253px;
+    background: url('../../Images/spdp/1new_bg1.jpg') no-repeat;
+    margin-top: 6px;
+}
+
+    .date_spdp span {
+        display: inline-block;
+        float: left;
+        line-height: 30px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+.title_date {
+    text-align: left;
+    margin-left: 37px;
+}
+
+.most_date {
+    width: 211px;
+}
+
+.btn_date {
+    display: inline-block;
+    margin: 30px 35px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+    width: 282px;
+}
+
+.btn1_date {
+    display: inline-block;
+    width: 113px;
+    height: 43px;
+    background: url('../../Images/spdp/1new_bt1.png') no-repeat;
+    margin-left: 25px;
+    color: #fff;
+}
+
+.btn2_date {
+    display: inline-block;
+    width: 113px;
+    height: 43px;
+    background: url('../../Images/spdp/1new_bt2.png') no-repeat;
+    margin-left: 25px;
+    color: #fff;
+}
+
+.color_date {
+    color: #c20201;
+}
+
+.margin_show {
+    text-align: left;
+    margin-top: 0;
+    margin-left: 37px;
+}
+
+.most_dateshow {
+    width: 209px;
+    margin-top: 0;
+    *width:220px;
+}
+
+.open_account {
+    width: 100%;
+    height: 34px;
+    display: inline-block;
+    margin: 10px 0px;
+}
+
+.Settlement_spdp {
+    background: url('../../Images/spdp/1new_bg2.jpg') no-repeat;
+    width: 100%;
+    height: 253px;
+    margin-top: 6px;
+}
+
+    .Settlement_spdp .title_date, .Settlement_spdp .most_date {
+        margin-top: 15px;
+    }
+
+.height_date {
+    height: 125px;
+}
+
+.Credit_spdp {
+    background: url('../../Images/spdp/1new_bg3.jpg') no-repeat;
+}
+
+.open_account a {
+    display: inline-block;
+    width: 108px;
+    line-height: 32px;
+    height: 32px;
+    border: 1px solid #c20201;
+    margin: 0px 10px;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.open_account .open_nest {
+    margin-left: 35px;
+}
+
+.open_account a span {
+    height: 32px;
+    width: 88px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.open_account a i {
+    font-style: normal;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: url('../../Images/spdp/1new_arrow.png') no-repeat;
+    margin-top: 9px;
+    *margin-top: 0px;
+}
+
+.open_account a .changeImg {
+    background: url('../../Images/spdp/1new_arrow.png') no-repeat 100% 0%;
+}
+
+.Loan_account {
+    background: #f6da90;
+    color: #c20201;
+}
+
+    .Loan_account img {
+        margin-left: 5px;
+    }
+
+.Credit_account {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin-top: 22px;
+}
+
+.top_Credit {
+    height: 318px;
+    border-bottom: 1px solid #ccc;
+}
+
+.Credit_title {
+    height: 50px;
+    width: 100%;
+    background: #efefef;
+    color: #c20201;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+    .Credit_title img {
+        margin: 5px 10px 5px 20px;
+    }
+
+.Credit_contain {
+    width: 372px;
+    height: 256px;
+    border-right: 1px dashed #CCC;
+    margin: 6px 0px;
+    float: left;
+}
+
+.border_show {
+    border-right: none;
+}
+
+.Credit_show1 {
+    background: url('../../Images/spdp/2loan_pic1.png') no-repeat 90% 69%;
+}
+
+.Credit_show2 {
+    background: url('../../Images/spdp/2loan_pic2.png') no-repeat 90% 69%;
+}
+
+.Credit_show3 {
+    background: url('../../Images/spdp/2loan_pic3.png') no-repeat 90% 86%;
+}
+
+.Credit_contain p {
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+    text-indent: 2.1em;
+    font-size: 12px;
+    color: #656565;
+}
+
+.Credit_contain .pos_credit {
+    color: #c20201;
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 30px;
+    text-indent: 1.7em;
+}
+
+.Credit_contain .most_crident {
+    font-size: 14px;
+    height: 60px;
+    color: #333;
+    line-height: 30px;
+    text-indent: 1.9em;
+}
+
+.Credit_contain .wit_most {
+    font-size: 14px;
+    height: 60px;
+    color: #333;
+    line-height: 30px;
+    padding-left: 27px;
+    text-indent: 0;
+    width: 185px;
+}
+
+.Credit_Shower {
+    width: 237px;
+    word-break: break-all;
+}
+
+    .Credit_Shower a {
+        display: inline-block;
+        height: 30px;
+        width: 90px;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        background: #857bb8;
+        margin: 5px 0px 15px 25px;
+        border-radius: 4px;
+        line-height: 30px;
+    }
+
+.mortgage_post {
+    width: 100%;
+    height: 309px;
+}
+
+.post_tager {
+    width: 559px;
+    border-right: 1px solid #ccc;
+    height: 309px;
+    float: left;
+}
+
+.tagetr_show {
+    border-right: none;
+}
+
+.mortgage_contain {
+    width: 525px;
+    margin: 35px 0px 0px 35px;
+    height: 234px;
+}
+
+.mortgage_post_img1 {
+    background: url('../../Images/spdp/2loan_pic4.png') no-repeat 90% 86%;
+}
+
+.mortgage_post_img2 {
+    background: url('../../Images/spdp/2loan_pic5.png') no-repeat 90% 86%;
+}
+
+.mortgage_mosts {
+    font-size: 16px;
+    color: #c20201;
+    width: 372px;
+}
+
+.Reservation_post {
+    width: 100%;
+    height: 34px;
+    display: inline-block;
+    margin: 10px 0px;
+}
+
+    .Reservation_post span {
+        height: 32px;
+        width: 85px;
+        text-align: center;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 32px;
+        float: left;
+    }
+
+    .Reservation_post .Reservation_btn1 {
+        display: inline-block;
+        width: 108px;
+        line-height: 32px;
+        height: 32px;
+        border: 1px solid #C20201;
+        border-radius: 4px;
+        background: #FFF none repeat scroll 0% 0%;
+        float: left;
+    }
+
+    .Reservation_post a i {
+        font-style: normal;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        background: url('../../Images/spdp/1new_arrow.png') no-repeat;
+        margin-top: 9px;
+        *margin-top: 0px;
+    }
+
+    .Reservation_post a .changeImgs {
+        background: url('../../Images/spdp/1new_arrow.png') no-repeat 100% 0%;
+    }
+
+    .Reservation_post .Reservation_btn2 {
+        display: inline-block;
+        width: 108px;
+        line-height: 32px;
+        height: 32px;
+        border: 1px solid #f5da8f;
+        border-radius: 4px;
+        background: #f5da8f;
+        color: #c20201;
+        margin-left: 20px;
+    }
+
+    .Reservation_post .detailas_post {
+        width: 108px;
+    }
+
+.show_detail {
+    width: 300px;
+    margin-top: 10px;
+    display:inline-block;
+}
+
+    .show_detail span {
+        float: left;
+        font-size: 14px;
+        margin: 0;
+        width: auto;
+        max-width: 170px;
+        text-align: left;
+        line-height:24px;
+        height:24px;
+    }
+
+    .show_detail p {
+        width: 100%;
+        float: left;
+        margin: 0px 0px 0px 5px;
+        line-height: 30px;
+    }
+
+.tagetr_show .show_detail span {
+    max-width: 270px;
+    line-height: 24px;
+    height: 24px;
+}
+
+.financial_spdp {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.financial_title {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+    .financial_title img {
+        margin: 12px 10px 0px 20px;
+    }
+
+.color_financial {
+    color: #006607;
+    background: #c5e6b8;
+    border: 1px solid #c5e6b8;
+}
+
+.financial_contain {
+    width: 100%;
+    height: 175px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.aggressive {
+    width: 369px;
+    height: 160px;
+    border-right: 1px dashed #ccc;
+    margin: 8px 0px;
+    display: inline-block;
+    float: left;
+}
+
+.aggressive_change {
+    border-right: none;
+    width: 370px;
+}
+
+.aggressive_img1 {
+    background: url('../../Images/spdp/3money_pic1.png') no-repeat 100% 100%;
+}
+
+.aggressive_img2 {
+    background: url('../../Images/spdp/3money_pic2.png') no-repeat 100% 100%;
+}
+
+.aggressive_img3 {
+    background: url('../../Images/spdp/3money_pic3.png') no-repeat 100% 100%;
+}
+
+.aggressive_texts {
+    color: #c20201;
+    font-size: 16px;
+    line-height: 30px;
+    width: 250px;
+    padding-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.aggressive_ones {
+    font-size: 14px;
+    line-height: 30px;
+    width: 295px;
+    padding-left: 30px;
+}
+
+.aggressive_btns {
+    height: 30px;
+    width: 90px;
+    border-radius: 4px;
+    background: #28a1a6;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    line-height: 29px;
+    margin-left: 30px;
+}
+
+.preferential_psdp {
+    background: #a3e0dc;
+    color: #027577;
+    border: 1px solid #a3e0dc;
+}
+
+.preferential_img {
+    padding: 0px 10px 0px 25px;
+}
+
+.preferential_contain {
+    width: 100%;
+    height: 309px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.preferential_next {
+    width: 279px;
+    height: 240px;
+    float: left;
+    margin: 10px 0px;
+}
+
+.line_prefer {
+    border-right: 1px dashed #ccc;
+}
+
+.preferential_next .aggressive_texts {
+    width: 228px;
+    padding: 0px 0px 0px 30px;
+    margin-top: 0;
+}
+
+.preferential_next .aggressive_ones {
+    width: 228px;
+    padding: 0px 0px 0px 30px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.bottom_texts {
+    padding: 0px 0px 0px 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: rgb(101, 101, 101);
+}
+
+.red_most {
+    font-size: 12px;
+    color: #c20201;
+    margin-top: 10px;
+    padding: 0px 0px 0px 30px;
+    width: 228px;
+}
+
+.immediately_btn {
+    display: inline-block;
+    height: 30px;
+    width: 90px;
+    font-size: 16px;
+    color: #FFF;
+    text-align: center;
+    background: #d7b478 none repeat scroll 0% 0%;
+    margin: 5px 0px 10px 30px;
+    border-radius: 4px;
+    line-height: 30px;
+}
+
+.card_psdp {
+    margin-left: 30px;
+}
+
+.heighter_psdp {
+    height: 48px;
+}
+
+.courtesy_contain {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: inline-block;
+}
+
+.vip_spdp {
+    width: 280px;
+    height: 310px;
+    border-right: 1px solid #ccc;
+    float: left;
+}
+
+.vip_ones {
+    font-size: 14px;
+    line-height: 30px;
+    width: 225px;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+.vip_spdpImg1 {
+    background: url('../../Images/spdp/4courtesy_pic3.png') no-repeat 50% 91%;
+}
+
+.vip_spdpImg2 {
+    background: url('../../Images/spdp/4courtesy_pic4.png') no-repeat 50% 91%;
+}
+
+.vip_spdpImg3 {
+    background: url('../../Images/spdp/4courtesy_pic5.png') no-repeat 95% 82%;
+}
+
+.vip_spdpImg4 {
+    background: url('../../Images/spdp/4courtesy_pic6.png') no-repeat 92% 91%;
+}
+
+.added_services {
+    width: 839px;
+    height: 310px;
+    float: left;
+}
+
+.added_select {
+    width: 290px;
+    float: right;
+    height: 50px;
+    *margin-top: -50px;
+}
+
+    .added_select a {
+        display: inline-block;
+        height: 30px;
+        width: 118px;
+        border: 1px solid #c20201;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        margin-left: 15px;
+    }
+
+.home_service {
+    color: #C20201;
+    font-size: 16px;
+    line-height: 25px;
+    width: 229px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.preferential_next .width_home {
+    width: 140px;
+}
+
+.preferential_next .width_homelog {
+    width: 109px;
+}
+.phone_date {
+    width:200px;
+}
+.show_next {
+    float:left;
+}
+.show_detail .night_date {
+    max-width:none;
+}
+.foot_text {
+    color:#efefef;
+    font-size:14px;
+    text-align:center;
+    margin-top:20px;
+}
+.bto_foot {
+    padding-bottom:50px;
+}
+.Online {
+    position:fixed;
+    bottom:35%;
+    right:-10px;
+    width:100px;
+    height:129px;
+    display:inline-block;
+    background:url('../../Images/spdp/Online.png') no-repeat;
+    outline:none;
+}
+    .Online:focus {
+        outline:none;
+    }

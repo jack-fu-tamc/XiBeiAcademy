@@ -1,0 +1,7 @@
+﻿
+ 
+记录时间：2015-12-11 17:20:55,387 
+线程ID:[45] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.ProductController.KindUploadImageOfProcurment() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1806
+ 

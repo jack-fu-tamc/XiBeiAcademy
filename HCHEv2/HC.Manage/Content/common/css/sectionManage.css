@@ -1,0 +1,170 @@
+﻿ .clearBoth {
+               clear: both;
+           }
+
+           ul {
+               list-style: none;
+               height: 50px;
+           }
+
+
+           /************************************************/
+
+           .sectionHead {
+               background-color: #EEE;
+               color: #4B6888;
+           }
+
+               .sectionHead ul li {
+                   float: left;
+                   height: 50px;
+                   line-height: 50px;
+                   font-size: 18px;
+                   width: 125px;
+               }
+
+                   .sectionHead ul li:last-child {
+                       width: 525px;
+                   }
+
+                       .sectionHead ul li:last-child span {
+                           padding-left: 200px;
+                       }
+
+                   .sectionHead ul li span {
+                       padding-left: 33px;
+                   }
+
+           /************************************************/
+
+
+
+
+
+           /************************************************/
+           .leveOne {
+               margin-top: 5px;
+           }
+
+               .leveOne b {
+                   position: absolute;
+                       padding-left: 5px;
+               }
+
+               .leveOne ul li {
+                   float: left;
+                   height: 50px;
+                   line-height: 50px;
+                   font-size: 16px;
+                   /*width: 125px;*/
+                   width:123px;
+                       text-align: left;
+               }
+
+               .leveOne > ul {
+                   margin-bottom: 10px;
+               }
+
+                   .leveOne > ul li {
+                       background-color: rgb(125, 194, 229);
+                   }
+
+
+               .leveOne ul li:last-child {
+                   width: 395px;
+                   padding-left: 130px;
+               }
+
+                   .leveOne ul li:last-child span {
+                       padding-left: 200px;
+                   }
+
+               .leveOne ul li span {
+                   padding-left: 28px;
+               }
+
+           /************************************************/
+
+           .subSection {
+               display: none;
+           }
+
+               .subSection li {
+                   background-color: rgb(255, 245, 230);
+                   height: 40px !important;
+                   line-height: 40px !important;
+               }
+
+               .subSection li {
+                   font-size: 14px !important;
+               }
+
+
+
+
+
+
+
+           .del_show {
+               font-size: 13px;
+               margin: 0px 0px 0px 0px;
+               width: 90px;
+           }
+
+           .dro-toggle {
+               cursor: pointer;
+           }
+
+           .title_lanmu {
+               font-size: 20px;
+               margin-top: 19px;
+               float: left;
+           }
+
+           .addNew {
+               float: right;
+               margin-top: 19px;
+               margin-right: 13px;
+           }
+
+           .bigFont {
+               font-size: 26px;
+           }
+
+           /*特殊字段过长的样式*/
+
+           /*.leveOne .subSection ul li:nth-child(1){
+               width:250px;
+           }*/
+
+           .lastLI {
+               width: 395px !important;
+               padding-left: 130px;
+                   text-align: left !important;
+           }
+
+           .sectionHead ul li.lastLISp {
+               /*width: 525px;*/
+               width:520px;
+           }
+
+               .sectionHead ul li.lastLISp span {
+                   padding-left: 200px;
+               }
+           /*.subSection .firstLi{
+            width:250px;
+        }*/
+
+
+
+           /*三级栏目*/
+           .threeSection{
+               display:none;
+              
+           }
+           .threeSection li{
+               background-color:#e7ece7;
+           }
+           .sellinggoodsserchnav{
+               margin-top: 13px;
+           }

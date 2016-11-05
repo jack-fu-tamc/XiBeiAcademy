@@ -1,0 +1,41 @@
+
+/*买家中心右侧样式*/
+.returnpolicys {
+    width: 100%;
+    margin: 30px 0;
+    font-size:13px;
+}
+
+.returnpolicynav {
+    width: 100%;
+}
+
+    .returnpolicynav p {
+        font-weight: 700;
+    }
+
+.returnpolicyscontents p {
+    text-indent: 3em;
+}
+
+
+.buyerright h5 {
+    margin: 17px 0;
+}
+.cart-rconauto {
+    margin:auto;
+
+}
+
+.cart-rtits {
+    height: 70px;
+    margin-top: 30px;
+    border-top: 1px dashed #CCC;
+}
+
+    .cart-rtits p {
+        float: right;
+        margin-right: 30px;
+        margin-top: 10px;
+    }
+/*帮助页面中心样式结束*/

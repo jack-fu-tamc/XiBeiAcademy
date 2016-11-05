@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "搜索结果";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+    var curentPage = int.Parse(ViewBag.curentPage.ToString());
+    var totalCount = int.Parse(ViewBag.TottalCount.ToString());
+    var totalPage = Math.Ceiling((float)totalCount / 8);
+
+
+    var skey = ViewContext.RouteData.Values["skey"].ToString();
+
+    System.Text.RegularExpressions.Regex regex6 = new System.Text.RegularExpressions.Regex(@"<img[^>]+>", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+
+
+
+
+}
+
+@model List<HC.Data.Models.News>
+@section headCSS{
+    <style type="text/css">
+        .nei_right {
+            width: 100% !important;
+        }
+    </style>
+
+}
+
+
+
+
+
+<div class="bj1">
+    <div class="bj2">
+        <div class="bj3">
+            <div class="block">
+                @Html.Action("HeadNav", "Home")
+
+                <div class="neirong_top"></div>
+                <div class="neirong">
+                    <div class="nei">
+
+                        <div class="nei_right">
+                            <!--当前位置 -->
+                            <div class="crumb">
+                                <div class="position">
+                                    <a href="/" title="首页" class="home"></a>
+                                    <p>
+                                        <a href="/">首页</a>
+                                        <span>&gt;</span>搜索
+                                    </p>
+                                </div>
+
+                                <div class="clr"></div>
+                            </div>
+                            <!--当前位置-end-->
+                            <div class="right_title">
+                                <p>搜索结果</p>
+                            </div>
+
+
+
+
+                            <div class="part_14">
+                                <ul>
+                                    @foreach (var nes in Model)
+                                    {
+                                        <li>
+                                            <p class="title"><a href="/Information/news/@nes.NewsID">@nes.NewsTitle</a></p>
+
+                                            @{var finallText = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(nes.NewsContent, "<[^>]+>", ""), "&[^;]+;", "");
+
+
+                                            if (finallText.Length < 211)
+                                            {
+                                                <p style="word-wrap:break-word" class="needs"> @Html.Raw(finallText) </p>
+                                            }
+                                            else
+                                            {
+                                                <p style="word-wrap:break-word" class="needs"> @Html.Raw(finallText.Substring(0, 210)) </p>
+                                            }
+                                            }
+                                        </li>
+                                    }
+
+                                    @if (Model.Count == 0)
+                                    {
+                                        <p style="height:114px;">没有搜索到结果</p>
+                                    }
+                                </ul>
+                            </div>
+
+
+
+
+
+                            <div class="page">
+
+                                @if (totalPage > 1)
+                                {
+                                    <span class="a1">
+                                        <b>&lt;&lt;</b><!--第一页-->
+                                        <b>&lt;</b><!--上一页-->
+                                        @if (totalPage <= 5)
+                                        {
+                                            for (int j = 1; j <= totalPage; j++)
+                                            {
+                                                if (curentPage == j)
+                                                {
+                                                    <span>@curentPage</span>
+                                                }
+                                                else
+                                                {
+                                                    <a href="/Home/SearchContent/@skey/@j/m">@j</a>
+                                                }
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            if (curentPage <= 3)
+                                            {
+                                                for (int j = 1; j <= 5; j++)
+                                                {
+                                                    if (curentPage == j)
+                                                    {
+                                                        <span>@curentPage</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="/Home/SearchContent/@skey/@j/m">@j</a>
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (totalPage - curentPage < 2)
+                                                {
+                                                    for (var p = curentPage - 2 + (totalPage - curentPage - 2); p <= totalPage; p++)
+                                                    {
+                                                        if (curentPage == p)
+                                                        {
+                                                            <span>@curentPage</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a href="/Home/SearchContent/@skey/@p/m">@p</a>
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    for (var k = curentPage - 2; k <= curentPage + 2; k++)
+                                                    {
+                                                        if (curentPage == k)
+                                                        {
+                                                            <span>@curentPage</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a href="/Home/SearchContent/@skey/@k/m">@k</a>
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+
+                                        <b>&gt;</b><!--下一页-->
+                                        <b>&gt;&gt;</b><!--末页-->
+                                    </span>
+                                }
+
+                            </div>
+
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

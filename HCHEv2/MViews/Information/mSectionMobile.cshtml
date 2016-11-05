@@ -1,0 +1,217 @@
+﻿@{
+    var curentPage = int.Parse(ViewBag.curentPage.ToString());
+    var totalCount = int.Parse(ViewBag.TottalCount.ToString());
+    var totalPage = Math.Ceiling((float)totalCount / 10);
+    var curentNewsClass = ViewData["curentNewsClass"] as NewsClass;
+
+
+
+
+    bool isVido;
+    if (Model.Count == 0)
+    {
+        isVido = false;
+    }
+    else
+    {
+        isVido = Model.FirstOrDefault().NewsType == 3 ? true : false;
+    }
+
+
+}
+@using HC.Data.Models
+@model List<News>
+
+@section headCss{
+    <style type="text/css">
+        .sum p {
+            text-align: left !important;
+        }
+    </style>
+}
+
+
+<!-- website wrapper starts -->
+<div class="websiteWrapper" style="">
+
+    <!-- header wrapper starts -->
+    <div class="headerOuterWrapper">
+        <div class="headerWrapper">
+            <div style=" text-align:center;margin:12px 0 0px 0; width:100%;display:block; position:absolute;">
+                <h3 class="pageTitlec">@curentNewsClass.ClassName</h3>
+            </div>
+            <div style="">
+                <a class="maingoback" href="javascript:history.go(-1)" target=_self>
+                    <img src="~/Images/mobile/common/iconArrowRightBg16.png" alt="" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- header wrapper ends -->
+    <!-- page wrapper starts -->
+    <!-- page content wrapper starts -->
+    <div class="contain">
+        <div class="pictext_list">
+            <ul>
+
+                @foreach (var nes in Model)
+                {
+
+                    if (!isVido)//非视频
+                    {
+                        <li>
+                            @if (string.IsNullOrEmpty(nes.PicURL))
+                            {
+                                <div class="pic"><img src="@nes.PicURL"></div>
+                            }
+                            else
+                            {
+                                <div class="pic"><img src="@nes.PicURL"></div>
+                            }
+
+                            <div class="text">
+                                <a href="/Information/news/@nes.NewsID">@nes.NewsTitle</a>
+                                @if (nes.NewsContent.Length > 101)
+                                {
+
+                                    var finallText = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(nes.NewsContent, "<[^>]+>", ""), "&[^;]+;", "");
+
+                                    if (finallText.Length > 101)
+                                    {
+                                        finallText = finallText.Substring(0, 100);
+                                    }
+
+                                    <p class="sum">@finallText</p>
+                                }
+                                else
+                                {
+                                    <div class="sum">@System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(nes.NewsContent, "<[^>]+>", ""), "&[^;]+;", "")</div>
+                                }
+                            </div>
+                            <div class="clr"></div>
+                        </li>
+                    }
+                    else//视频
+                    {
+                        <li>
+                            @if (!string.IsNullOrEmpty(nes.Attachments.FirstOrDefault().AttaDescribe))
+                            {
+                                <div class="pic"><img src="@nes.Attachments.FirstOrDefault().AttaDescribe"></div>
+                            }
+                            else
+                            {
+                                <div class="pic"><img src=""></div>
+                            }
+
+                            <div class="text">
+                                <a href="/Information/news/@nes.NewsID">@nes.NewsTitle</a>
+                                @if (nes.NewsContent.Length > 51)
+                                {
+
+                                    var finallText = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(nes.NewsContent, "<[^>]+>", ""), "&[^;]+;", "");
+
+                                    if (finallText.Length > 51)
+                                    {
+                                        finallText = finallText.Substring(0, 50);
+                                    }
+
+                                    <p class="sum">@finallText</p>
+                                }
+                                else
+                                {
+                                    <div class="sum">@System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(nes.NewsContent, "<[^>]+>", ""), "&[^;]+;", "")</div>
+                                }
+                            </div>
+                            <div class="clr"></div>
+                        </li>
+                    }
+
+
+                }
+
+
+            </ul>
+            <div class="more"><a href="javascript:void(0)" id="loadMore" curentpage="@curentPage">加载更多</a></div>
+        </div>
+    </div>
+    <!-- page content wrapper ends -->
+</div>
+<!-- page wrapper ends -->
+@section footScript{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var totalPage = '@totalPage';
+            $("#loadMore").click(function () {
+                var curentP = $(this).attr("curentPage").trim() * 1;
+
+                if ((curentP + 1) > totalPage) {
+                    $("#loadMore").html("没有更多了");
+                } else {
+                    $.ajax({
+                        type: "GET",
+                        url: "/Information/SectionMobileAjax/@curentNewsClass.ClassID?page=" + (curentP + 1),
+                        dataType: "json",
+                        success: function (data) {
+
+                            var newsPic = "";
+                            var contentSubStr = "";
+                            for (var i = 1; i <= data.length; i++) {
+
+
+
+
+                                if (data[i - 1].PicURL != "") {
+                                    newsPic = data[i - 1].PicURL;
+                                } else {
+                                    newsPic = "";
+                                }
+
+                                if (data[i - 1].NewsContent.length > 0) {
+                                    contentSubStr = data[i - 1].NewsContent.subStr(0, 200);
+                                } else {
+                                    contentSubStr = data[i - 1].NewsContent;
+                                }
+
+
+
+
+                                var appHtml = "<li>" +
+            "<div class=\"pic\"><img src=\"" + newsPic + "\"></div>" +
+            "<div class=\"text\">" +
+              "<a href=\"/Information/news/" + data[i - 1].NewsID + "\">" + data[i - 1].NewsTitle + "</a>" +
+              "<p>" + contentSubStr + "</p>" +
+            "</div>" +
+            "<div class=\"clr\"></div>" +
+          "</li>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                $(".pictext_list ul").append(appHtml);
+                            }
+                            $("#loadMore").attr("curentPage", curentP + 1);
+                        }
+                    });
+                }
+            })
+        })
+    </script>
+}

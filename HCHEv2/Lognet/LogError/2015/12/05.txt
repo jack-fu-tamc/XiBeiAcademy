@@ -1,0 +1,48 @@
+﻿
+ 
+记录时间：2015-12-05 09:47:15,625 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Web.Framework.mobileProcessAttribute.OnActionExecuted(ActionExecutedContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\mobileProcessAttribute.cs:行号 42
+
+ 
+
+ 
+记录时间：2015-12-05 10:16:34,594 
+线程ID:[58] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Web.Framework.mobileProcessAttribute.OnActionExecuted(ActionExecutedContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\mobileProcessAttribute.cs:行号 42
+
+ 
+
+ 
+记录时间：2015-12-05 10:16:45,256 
+线程ID:[53] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Web.Framework.mobileProcessAttribute.OnActionExecuted(ActionExecutedContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\mobileProcessAttribute.cs:行号 42
+
+ 
+
+ 
+记录时间：2015-12-05 10:17:28,996 
+线程ID:[59] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Web.Framework.mobileProcessAttribute.OnActionExecuted(ActionExecutedContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\mobileProcessAttribute.cs:行号 42
+
+ 
+
+ 
+记录时间：2015-12-05 10:22:57,927 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Web.Framework.mobileProcessAttribute.OnActionExecuted(ActionExecutedContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\mobileProcessAttribute.cs:行号 42
+
+ 
+
+ 
+记录时间：2015-12-05 10:26:27,924 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Web.Framework.mobileProcessAttribute.OnActionExecuted(ActionExecutedContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\mobileProcessAttribute.cs:行号 42
+
+ 

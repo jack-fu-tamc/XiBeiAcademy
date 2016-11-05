@@ -1,0 +1,460 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+@model NewsModelList
+@{
+    var pageSize = 10;
+    ViewBag.Title = "新闻回收管理";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsell.css" type="text/css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsellAB.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="~/HC.Manage/Content/jedate/skin/jedate.css">
+    <style type="text/css">
+        .allSections {
+            /*display: none;*/
+        }
+
+        .checkedbox {
+            height: 50px !important;
+        }
+
+        .goodsdetailed {
+            margin-top: 0px !important;
+        }
+
+        #onsalesM .goodsdetailed p {
+            min-height: auto !important;
+        }
+
+        .curentSectionNews {
+            background-color: #0088CC;
+            color: white;
+        }
+
+        .showNews {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .levelTwo .showNews, .levelThree .showNews {
+            margin-right: 7px;
+        }
+    </style>
+}
+@section headScript{
+    <script type="text/javascript" src="~/HC.Manage/Content/jedate/jedate.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#goSearchOnsale").click(function(){
+
+                searchModel.searchKey=$("#Title").val();
+                //console.log(searchModel);
+                var grid = $("#onsalesM").data('tGrid');
+                grid.currentPage = 1;
+                grid.ajaxRequest();
+            })
+        })
+    </script>
+}
+
+
+
+
+
+<div class="buyerright">
+    <div class="sellinggoodslist">
+        <div class="sellinggoodsserchnav">
+            <div class="hcmoneynav">
+                <div class="hche_soldgoods">
+                    <i>新闻回收管理</i>
+                    RECYCLE MANAGE
+                </div>
+                <div class="hche_soldgoodsimg">
+                </div>
+                <div class="hche_private">
+                    @*特权 ▪ 专享*@
+                </div>
+            </div>
+
+
+
+
+
+            <div class="sellinggoodsserch sellgoodstitsel">
+                <div class="sellingser">
+                    
+                    <div class="serchcondition">
+                        <div class="hc_CJteach">
+                            <span>发布时间：</span>
+
+                            @Html.TextBox("StartTime", "", new { @class = "mh_date", @readonly = "readonly" })
+                            -
+                            @Html.TextBox("EndTime", "", new { @class = "mh_date", @readonly = "readonly" })
+                        </div>
+                        <div class="goodserch">
+                            <input id="goSearchOnsale" type="button" value="搜索" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="salegoodslist">
+            @(Html.Telerik().Grid<NewsWithNotNewsClass>(Model.news.Data).Name("onsalesM")
+            .ToolBar(toolBar => toolBar.Template(
+                @<div style="padding: 10px">
+
+                    <input type="checkbox" id="selectAll" />全选
+                    <a id="deletePro" class="del_show">彻底删除</a>
+                     <a id="recoverNews" class="del_show">恢复</a>
+                </div>))
+                       .ClientEvents(events =>
+                       events.OnDataBinding("onsaleBinding")
+                       .OnDataBound("onsaleBound")
+                       .OnRowDataBound("onRowDataBound")
+               )
+           .Columns(columns =>
+                   {
+                       columns.Bound(x => x.NewsTitle).Title("新闻标题").Width(50)
+                           .Template(@<text>
+                            <div class="checkedbox"><input type="checkbox" class="checkboxGroups" name="check" value="@item.NewsID"></div>
+                            
+                            <div class="goodsdetailed">
+                                <p><a href="javascript:;">@item.NewsTitle </a></p>
+                                
+                                <p class="publishtime"><a href="javascript:;">发布时间：@item.CreatTime</a></p>
+                            </div>
+                        </text>).ClientTemplate("<div class=\"checkedbox\"><input type=\"checkbox\" class=\"checkboxGroups\" name=\"check\" value=\"<#= NewsID #>\"></div><div class=\"goodsdetailed\"> <p><a href=\"javascript:;\"><#= NewsTitle #></a></p><p class=\"publishtime\"><a href=\"javascript:;\">发布时间：<#= CreatTime #></a></p>"
+                    );
+                       
+
+                       columns.Bound(x => x.Author).Title("发布人").Width(63);
+
+
+                       columns.Bound(x => x.NewsType).Title("新闻类型").Width(63).HtmlAttributes(new { @class = "DtdIESeven" })
+                           .Template(@<text> <span> @item.NewsType</span> </text>).ClientTemplate("");
+                       columns.Bound(x => x.IsHot).Title("属性").Width(63).HtmlAttributes(new { @class = "singTotalIESeven" });
+
+
+                       
+                       
+                   }).NoRecordsTemplate("暂无数据")
+.Pageable(seting => seting.Total(Model.news.Total).PageSize(pageSize).Position(GridPagerPosition.Bottom))
+                                                     .DataBinding(binding => binding.Ajax().Select("NewsRecycleAjax", "News")).EnableCustomBinding(true)
+
+            )
+        </div>
+
+
+
+
+
+    </div>
+</div>
+<script type="text/javascript">
+    var selectedIds = [];
+
+    $(document).ready(function () {
+
+
+
+
+        var eleName="onsalesM";
+        var totalH= $("#"+eleName).height();
+        var headH=$("#"+eleName+" .t-grid-header").height();
+        var toolBarH=$("#"+eleName+" .t-toolbar").height();
+        var curnetH=totalH-headH-toolBarH;
+        var paddH=(curnetH-20)/2;
+        $("#"+eleName+" table").prepend("<div class=\"coverWait\" style=\"position: absolute;height:"+curnetH+"px  ;width: 100%;background-color: #E5E5E5;\"><span style=\"text-align: center; display: block; padding-top: "+paddH+"px; color: #777;\">请稍等，数据加载中......</span></div>");
+
+
+
+        //扩展trim 支持ie8
+        if (!String.prototype.trim) { //判断下浏览器是否自带有trim()方法
+            String.prototype.trim = function () {
+                return this.replace(/(^\s*)|(\s*$)/g, "");
+            }
+        }
+        //扩展结束
+
+        //更改成文字
+        $(".t-arrow-next").each(function (i, e) {
+            $(this).text("下一页");
+        });
+        $(".t-arrow-prev").each(function (i, e) {
+            $(this).text("上一页");
+        });
+        //更改成文字结束
+        $(".t-arrow-first").css({ "display": "none" });
+        $(".t-arrow-last").css({ "display": "none" });
+        $(".t-refresh").css({ "display": "none" });
+
+        processGridDsiplay("#onsalesM");
+        $(".t-widget").show();
+
+        //全选按钮事件
+        $('#selectAll').click(function () {
+            $('.checkboxGroups').attr('checked', $(this).is(':checked')).change();
+        });
+
+        //给grid中checkbox绑定change事件
+        $('.checkboxGroups:input[type=checkbox]').live('change', function (e) {
+            var $check = $(this);
+
+            if ($check.is(":checked") == true) {
+                var checked = jQuery.inArray($check.val(), selectedIds);
+                if (checked == -1) {
+                    //add id to selectedIds.
+                    selectedIds.push($check.val());
+                }
+            }
+            else {
+                var checked = jQuery.inArray($check.val(), selectedIds);
+                if (checked > -1) {
+                    //remove id from selectedIds.
+                    selectedIds = $.grep(selectedIds, function (item, index) {
+                        return item != $check.val();
+                    });
+                }
+            }
+            updateMasterCheckbox();
+        });
+
+
+
+        $("#importexcel-window").css({"display":"none"});
+        $("#importTemp-window").css({"display":"none"});
+        $(".t-close").text("");
+        
+    });
+
+    //转为汉字的处理 如果ajax请求返回totalcount是0  则不执行 ondatabind
+    function processGridDsiplay(ele) {
+        var str = $("" + ele + " .t-status-text").text().trim();
+        var indexOF = str.indexOf("f");
+        var totalDate = str.substr(indexOF + 1).trim();
+        var pageSize=@pageSize;
+        var totalPage=Math.ceil(totalDate/pageSize);
+        $(""+ele+" .t-status-text").text("共"+totalPage+"页");
+    }
+
+    function dumps(obj) {
+        var result = [];
+        $.each(obj, function (key, value) { result.push(value); });
+
+        //var results=[];
+        //$.each(obj,function(k,v){results.push( k+"-"+v ) });
+        //console.log(results);
+        return result;
+    }
+
+
+
+
+    var searchModel = {
+        NewsClassID:0,
+        searchType:-1,
+        searchKey:"",
+        startTime:"",
+        endTime:"",
+        sortType:1
+    };
+
+
+
+    function onsaleBinding(e) {
+        e.data = searchModel;
+    }
+
+    function onsaleBound(e) {
+
+        //处理分页
+        if($(e.currentTarget).find(".t-numeric").children().length>0){
+            var ajaxPageCount= $(e.currentTarget).find(".t-numeric").find("a").length+1;
+            $(e.currentTarget).find(".t-status-text").text("共"+ajaxPageCount+"页");
+        }else{
+            $(e.currentTarget).find(".t-status-text").text("共"+0+"页");
+        }
+        //处理分页
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //移除等待提示层
+        var eleName=$(e.delegateTarget).attr("id");
+        $("#onsalesM table div.coverWait").remove();
+
+
+
+        $('.checkboxGroups:input[type=checkbox]').each(function () {
+            var currentId = $(this).val();
+            var checked = jQuery.inArray(currentId, selectedIds);
+            $(this).attr('checked', checked > -1);
+        });
+        updateMasterCheckbox();
+    }
+
+    function onRowDataBound(e){
+        var s = e.dataItem;
+        var rowItem = e.row;
+        var result = dumps(s);
+
+        var newsShowType=s.PicURL==""?"文字":"图片";
+        $(rowItem.cells[2]).text(newsShowType);
+
+
+        //console.log(s.IsHot);
+        //console.log(s.IsRec);
+
+        var recTxt=s.IsRec==1?"推荐":"";
+        var hotRxt=s.IsHot==1?"热点":"";
+
+        $(rowItem.cells[3]).text(recTxt+"  "+hotRxt);
+    }
+
+    //更新主checbox
+    function updateMasterCheckbox() {
+        var numChkBoxes = $('.checkboxGroups').length;
+        var numChkBoxesChecked = $('.checkboxGroups:input[checked]').length;
+        $('#selectAll').attr('checked', (numChkBoxes == numChkBoxesChecked) && (numChkBoxes > 0));
+    }
+
+
+  
+
+    function onopen(e){
+        $('#importexcel-window').data('tWindow').center().close();
+    }
+
+    //删除新闻
+    $("#deletePro").click(function(){
+        if(selectedIds.length==0){
+            alert("请选择要删除的项");
+        }else{
+
+            if(confirm("确定要删除新闻吗？"))
+            {
+                var proids=selectedIds.join(',');
+                $.ajax({
+                    url: "@(Url.Action("_deleteNewsAbsoulte", "News"))",
+                    data: { ids: proids },
+                    type: 'GET',
+                    dataType: 'json',
+                    error: function (xhr, status) {
+                        alert("删除出错");
+                    },
+                    success: function (Data) {
+                        if(Data=="success"){
+                            clearSelectIDS();
+                            var grid = $('#onsalesM').data('tGrid');
+                            grid.ajaxRequest();
+                        }else{
+                            alert("删除出错");
+                        }
+                    }
+                });
+            }
+        }
+    })
+
+    
+    $("#recoverNews").click(function(){
+        if(selectedIds.length==0){
+            alert("请选择要恢复的项");
+        }else{
+
+            if(confirm("确定要恢复新闻吗？"))
+            {
+                var proids=selectedIds.join(',');
+                $.ajax({
+                    url: "@(Url.Action("_recoverNews", "News"))",
+                    data: { ids: proids },
+                type: 'GET',
+                dataType: 'json',
+                error: function (xhr, status) {
+                    alert("删除出错");
+                },
+                success: function (Data) {
+                    if(Data=="success"){
+                        clearSelectIDS();
+                        var grid = $('#onsalesM').data('tGrid');
+                        grid.ajaxRequest();
+                    }else{
+                        alert("删除出错");
+                    }
+                }
+            });
+        }
+    }
+    })
+
+
+
+
+
+
+    function clearSelectIDS()
+    {
+        selectedIds=[];
+    }
+
+
+
+
+    jeDate({
+        dateCell: '#StartTime',
+        format: 'YYYY-MM-DD',
+        minDate: '1900-01-01 23:59:59', //设定最小日期为当前日期
+        festival: true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        isTime: true,
+        choosefun: function(datas){
+            searchModel.startTime=datas;
+        },
+        clearfun:function(){
+            searchModel.startTime="";
+        },
+        okfun:function(val){searchModel.startTime=val;}
+    })
+    jeDate({
+        dateCell: '#EndTime',
+        format: 'YYYY-MM-DD',
+        minDate: '1900-01-01 23:59:59', //设定最小日期为当前日期
+        festival: true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        isTime: true,
+        choosefun: function(datas){
+            searchModel.endTime=datas;
+        },
+        clearfun:function(){
+            searchModel.endTime="";
+        },
+        okfun:function(val){searchModel.endTime=val; }
+    })
+
+</script>
+

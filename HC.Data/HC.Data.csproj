@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01FDCFED-35A3-4541-BC5E-2BF448F7FDE9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HC.Data</RootNamespace>
+    <AssemblyName>HC.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.Mvc">
+      <HintPath>..\packages\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\ArtistType.cs" />
+    <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\CxUser.cs" />
+    <Compile Include="Models\FileRecord.cs" />
+    <Compile Include="Models\LeaveMessage.cs" />
+    <Compile Include="Models\Mapping\ArtistTypeMap.cs" />
+    <Compile Include="Models\Mapping\AttachmentMap.cs" />
+    <Compile Include="Models\Mapping\CxUserMap.cs" />
+    <Compile Include="Models\Mapping\FileRecordMap.cs" />
+    <Compile Include="Models\Mapping\LeaveMessageMap.cs" />
+    <Compile Include="Models\Mapping\NewsClassMap.cs" />
+    <Compile Include="Models\Mapping\NewsMap.cs" />
+    <Compile Include="Models\Mapping\OpLogMap.cs" />
+    <Compile Include="Models\Mapping\UserGroupMap.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\NewsClass.cs" />
+    <Compile Include="Models\OpLog.cs" />
+    <Compile Include="Models\UserGroup.cs" />
+    <Compile Include="ViewModels\WebSiteViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AnalyslsNewsByMonth.cs" />
+    <Compile Include="ViewModels\ArtistTypeListModel.cs" />
+    <Compile Include="ViewModels\EducationIndexModel.cs" />
+    <Compile Include="ViewModels\IndexModel.cs" />
+    <Compile Include="ViewModels\LeaveMesModelList.cs" />
+    <Compile Include="ViewModels\libraryIndexModel.cs" />
+    <Compile Include="ViewModels\LogResultViewModel.cs" />
+    <Compile Include="ViewModels\NewsModelList.cs" />
+    <Compile Include="ViewModels\NewsViewModel.cs" />
+    <Compile Include="ViewModels\RegisterModel.cs" />
+    <Compile Include="ViewModels\RolesManageModel.cs" />
+    <Compile Include="ViewModels\SectionList.cs" />
+    <Compile Include="ViewModels\UserManageModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,16 @@
+﻿
+ 
+记录时间：2015-11-24 10:34:42,017 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 Maticsoft.Model.Common.GetImageURL() 位置 e:\ProTwoN\Model\Public\Common.cs:行号 77
+在 HC.Manage.Controllers.ProductController.KindUploadImageOfProduct() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1790
+ 
+
+ 
+记录时间：2015-11-24 10:43:17,882 
+线程ID:[17] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 Maticsoft.Model.Common.GetImageURL() 位置 e:\ProTwoN\Model\Public\Common.cs:行号 77
+在 HC.Manage.Controllers.ProductController.KindUploadImageOfProduct() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\ProductController.cs:行号 1790
+ 

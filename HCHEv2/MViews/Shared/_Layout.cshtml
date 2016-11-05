@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="generator" content="bd-mobcard" />
+    <meta name="format-detection" content="telephone=yes" />
+    <title>@ViewBag.title</title>
+    <link href="~/mContent/styles/css.css" rel="stylesheet" type="text/css">
+    <link href="~/mContent/styles/module.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+    @RenderSection("headCSS", false)   
+    <script type="text/javascript" src="~/mContent/scripts/huadongmen.js"></script>
+    @RenderSection("headScript", false)
+</head>
+
+<body>
+    <header></header><!--解决uc浏览器字体变大问题 -->
+   
+    <div class="header_top">
+        <div class="header">
+            <div class="header_l"><a onclick="javascript:history.back(-1);" href="javascript:void(0)"></a></div>
+            <div class="header_r header_r_hover">
+                @Html.Action("HeadNav", "Home")
+            </div>
+            @RenderSection("lanmuName",false)
+           
+            <div class="clr"></div>
+        </div>
+    </div>
+ 
+
+    
+    @RenderBody()
+
+
+
+
+    <div class="footer"><div class="line"></div>Copyright © 2016 西安电力高等专科学校</div>    
+    <!-- 下拉菜单重写 -->
+    <script type="text/javascript" src="~/mContent/scripts/menu/SelectRe.js"></script>
+
+    <!-- 仅本页面调用的方法 -->
+    <script type="text/javascript">
+        $(function () {
+            /*模拟下拉框*/
+            xdmJS.selectAnalog("selectdd", "");
+        });
+    </script>
+    @RenderSection("FootScript", false)
+</body>
+</html>

@@ -1,0 +1,441 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure;
+@using HC.Service.User;
+@using HC.Data.Models
+@model UserGroup
+@{
+    if (Model.UserGroupID > 0)
+    {
+        ViewBag.Title = "角色修改";
+    }
+    else
+    {
+        ViewBag.Title = "角色添加";
+    }
+
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+    var MultipleLevelOne= ViewBag.MultipleLevelOne as List<NewsClass>;
+
+    //var orderMultipleLevelOne = new List<NewsClass>();
+
+    //foreach (var levelOne in MultipleLevelOne)
+    //{
+
+    //}
+    
+    
+    
+    var _InewsSectionService = EngineContext.Current.Resolve<ISectionService>();
+    var k = 0;
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/authentication.css" />
+    <style type="text/css">
+        .hc_textlable {
+            width: 101px !important;
+        }
+
+        #Certication {
+            /*padding-left: 0px !important;*/
+            padding-top:10px;
+        }
+
+        .hc_chk {
+            padding-left: 103px !important;
+        }
+
+        .hc_item .hc_attestationBtn {
+            margin: 0px 0px 21px 365px !important;
+        }
+
+        .splitSection {
+            margin-top: 15px;
+        }
+        .modalPromission{
+            margin-left:30px;
+        }
+        .modalPromission input{
+            margin-top:0px;
+        }
+        .modalPromission label{
+            float:left;
+            margin-right:15px;
+        }
+        .sectionMoudal{
+                float: left;
+    width: 100px;
+    margin-right: 11px;
+        }
+        .NewsMenueSubSection{
+            display:block;
+        }
+        .NewsThreeMenueSubSection{
+            display:block;
+        }
+        .oneLevelName{
+            width:100%;
+        }
+        .sectionMoudal p{
+            padding-right:0;
+        }
+        .sectionMoudal input{
+            margin-top:0px;
+        }
+        .hc_attestationBtn{
+                background-color: #0088cc;
+        }
+       .hc_item .hc_fl .spanmsci{
+            display:none;
+        }
+       .NewsMenueSubSection{
+           background-color: #ffffff !important;
+       }
+    </style>
+
+}
+
+
+<div class="buyerright">
+    <!--基本信息-->
+    <div class="hc_maintop">
+        <div class="hc_titletop">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            @ViewBag.Title
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+        </div>
+    </div>
+    <div> 
+        <div class="hc_item">
+            <span class="hc_textlable"><span class="hc_red"></span>角色名称：</span>
+            <div class="hc_fl">
+                @Html.TextBoxFor(x => x.GroupName, new { @class = "hc_nameinput", style = "width:200px;", @placeholder = "角色名称" })
+                <span class="spanmsci">角色名称不可为空</span>
+            </div>
+        </div>
+
+        <div class="hc_item">
+            <span class="hc_textlable"><span class="hc_red"></span>备注说明：</span>
+            <div class="hc_fl">
+                @Html.TextAreaFor(x => x.Comments, new { @class = "hc_nameinput", @placeholder = "备注说明" })
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+
+
+    <!--功能模块权限-->
+    <div class="hc_maintop splitSection">
+        <div class="hc_titletop">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            功能模块权限
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+        </div>
+    </div>
+    <div id="functionalModule">
+        <div class="hc_item">
+            <div class="modalPromission">
+                <label for="newsManage"><input type="checkbox" value="8" id="newsManage" /><span>常规管理</span></label>
+                <label for="audit"><input type="checkbox" value="1" id="audit" /><span>新闻审核</span></label>
+                <label for="analyze"><input type="checkbox" value="2" id="analyze" /><span>统计分析</span></label>
+                <label for="newsRecycle"><input type="checkbox" value="7" id="newsRecycle" /><span>回收站</span></label>
+                <label for="account"><input type="checkbox" value="3" id="account" /><span>用户管理</span></label>
+                <label for="siteSet"><input type="checkbox" value="4" id="siteSet" /><span>站点设置</span></label>
+                <label for="logRecord"><input type="checkbox" value="6" id="logRecord" /><span>日志管理</span></label>
+                <label for="newsRelease"><input type="checkbox" value="5" id="newsRelease" /><span>新闻直发</span></label>
+                <label for="enteredSystem"><input type="checkbox" value="9" id="enteredSystem" /><span>报名系统</span></label>                
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+
+
+
+    <!--栏目权限-->
+    <div class="hc_maintop splitSection">
+        <div class="hc_titletop">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            栏目权限
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+        </div>
+    </div>
+    <div id="Certication">
+        
+
+
+
+
+
+        @foreach (var oneLevel in MultipleLevelOne)
+        {           
+            var subLevel = _InewsSectionService.GetSubNewClassByParentNewClass(oneLevel.ClassID);            
+            <div class="sectionMoudal">     
+                           @if (subLevel.Count > 0)
+                           {
+                               <p class="oneLevelName">@oneLevel.ClassName</p>
+                           }
+                           else
+                           {
+                               <p class="oneLevelName"><input type="checkbox"  value="@oneLevel.ClassID" /> @oneLevel.ClassName</p>
+                           }
+                
+                @if (subLevel.Count > 0)
+                {
+                    foreach (var subS in subLevel)
+                    {
+                        var threeLevel = _InewsSectionService.GetSubNewClassByParentNewClass(subS.ClassID);
+                        if (threeLevel.Count > 0)//有三级栏目
+                        {
+                            <div class="NewsMenueSubSection menueSubSectionSpecial">
+                                <div class="threeParent">
+                                    <input type="radio" class="" value="@subS.ClassID" style="visibility:hidden;" /> <span >@subS.ClassName</span>
+                                </div>
+
+                                @foreach (var three in threeLevel)
+                                {
+                                     <div class="NewsThreeMenueSubSection">
+                                         <input type="checkbox" class="" value="@three.ClassID" levelTwoClassID="@subS.ClassID" levelOneClassID="@oneLevel.ClassID" /> <span>@three.ClassName</span>
+                                      </div>
+                                }
+                            </div>
+                        }
+                        else//无三级栏目
+                        {
+                             <div class="NewsMenueSubSection">
+                                 <input type="checkbox" class="" value="@subS.ClassID" leveloneclassid="@oneLevel.ClassID" />  <span> @subS.ClassName</span>
+                                </div>
+                        }
+                    }
+                }
+            </div>
+            ++k;
+            if (k % 8 == 0)
+            {
+                <div style="clear:both;"></div>
+            }
+               
+        }
+
+
+
+
+
+    </div>
+    <div style="clear:both;"></div>
+
+
+
+    <div class="hc_maintop">
+        <div class="hc_titletop" style="text-align: center;">
+            <input class="hc_attestationBtn" id="btnAttestation" value="保存" tabindex="20" type="button">
+        </div>
+    </div>
+
+</div>
+@section footScript{
+    
+    <script type="text/javascript">
+
+        //JS扩展
+        if (!String.prototype.trim) { 
+            String.prototype.trim = function () {
+                return this.replace(/(^\s*)|(\s*$)/g, "");
+            }
+        }
+
+        Array.prototype.indexOf = function(val) {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] == val) return i;
+            }
+            return -1;
+        };
+
+        Array.prototype.remove = function(val) {
+            var index = this.indexOf(val);
+            if (index > -1) {
+                this.splice(index, 1);
+            }
+        };
+        //扩展结束
+
+
+        var viewModel = {
+            UserGroupID: "@Model.UserGroupID",
+            GroupName: "@Model.GroupName",
+            Comments: "@Model.Comments",
+            SectionPermission: [],
+            ManagePermission: []
+        };
+
+
+       
+      
+        
+           
+
+       
+
+
+
+        $(document).ready(function () {
+            //viewModel初始化
+            var SectionPermission = "@Model.SectionPermission";
+            var ManagePermission = "@Model.ManagePermission";
+            if (SectionPermission.length > 0) {
+                viewModel.SectionPermission = SectionPermission.split(',');
+            }
+            if (ManagePermission.length > 0) {
+                viewModel.ManagePermission = ManagePermission.split(',');
+            }
+
+            //页面初始化
+            $.each(viewModel.ManagePermission, function (i, v) {
+                $(".modalPromission input:checkbox[value='"+v+"']").attr("checked", true)
+            })
+            $.each(viewModel.SectionPermission, function (i, v) {
+                $("#Certication input:checkbox[value='" + v + "']").attr("checked", true)
+            })
+
+
+
+
+            //错误处理
+            $("#GroupName").click(function () {
+                $(this).next().hide();
+            })
+
+
+
+
+            //栏目模块
+            $("#Certication input[type=checkbox]").click(function () {
+                if (viewModel.SectionPermission.length == 0) {
+                    viewModel.SectionPermission.push($(this).val());
+                    if (typeof ($(this).attr("leveltwoclassid")) != "undefined") {
+                        viewModel.SectionPermission.push($(this).attr("leveltwoclassid"));
+                    }
+                    if (typeof ($(this).attr("leveloneclassid")) != "undefined") {
+                        viewModel.SectionPermission.push($(this).attr("leveloneclassid"));
+                    }
+                } else {
+                    if ($(this).is(":checked")) {//选中
+                        viewModel.SectionPermission.push($(this).val());
+                        if (typeof ($(this).attr("leveltwoclassid")) != "undefined") {
+                            if (viewModel.SectionPermission.indexOf($(this).attr("leveltwoclassid")) > -1) {
+
+                            } else{
+                                viewModel.SectionPermission.push($(this).attr("leveltwoclassid"));
+                            }
+                        }
+                        if (typeof ($(this).attr("leveloneclassid")) != "undefined") {
+                            if (viewModel.SectionPermission.indexOf($(this).attr("leveloneclassid")) > -1) {
+
+                            } else {
+                                viewModel.SectionPermission.push($(this).attr("leveloneclassid"));
+                            }                           
+                        }
+                    } else {//取消选中
+                        viewModel.SectionPermission.remove($(this).val());
+                        var parentEle = $(this).parents(".sectionMoudal");
+
+
+
+
+
+
+
+                        if (typeof ($(this).attr("leveltwoclassid")) != "undefined") {
+                            var sameLevelEles=parentEle.find("input:checkbox[leveltwoclassid='"+$(this).attr("leveltwoclassid")+"']:checked"); 
+                            if (sameLevelEles.length==0) {
+                                viewModel.SectionPermission.remove($(this).attr("leveltwoclassid"));
+                            }
+                        }
+                        if (typeof ($(this).attr("leveloneclassid")) != "undefined") {
+                            var sameLevelEles1 = parentEle.find("input:checkbox[leveloneclassid='" + $(this).attr("leveloneclassid") + "']:checked");
+                            if (sameLevelEles1.length == 0) {
+                                viewModel.SectionPermission.remove($(this).attr("leveloneclassid"));
+                            }
+                        }
+
+
+
+
+
+
+
+
+
+                    }
+                }
+            })
+         
+            //功能模块
+            $("#functionalModule input[type=checkbox]").click(function () {
+                if (viewModel.ManagePermission.length == 0) {
+                    viewModel.ManagePermission.push($(this).val())
+                } else {
+                    if ($(this).is(":checked")) {
+                        viewModel.ManagePermission.push($(this).val());                        
+                    } else {
+                        viewModel.ManagePermission.remove($(this).val());
+                    }                    
+                }
+            })
+
+
+
+            //数组复原
+            function resetArray() {
+                //二次点击
+                viewModel.SectionPermission = viewModel.SectionPermission.split(',');
+                viewModel.ManagePermission = viewModel.ManagePermission.split(',');
+            }
+
+
+
+            //保存
+            $("#btnAttestation").click(function () {
+                viewModel.GroupName = $("#GroupName").val().trim();
+                viewModel.Comments = $("#Comments").val().trim();
+                viewModel.SectionPermission = viewModel.SectionPermission.join(',');
+                viewModel.ManagePermission = viewModel.ManagePermission.join(',');
+                //console.log(viewModel);
+
+                //验证必填
+                if (viewModel.GroupName.length == 0) {
+                    $(".spanmsci").show();
+                    $("#GroupName").focus();
+                    resetArray();
+                    return false;
+                }
+
+                $.ajax({
+                    url: "@(Url.Action("_AddUserGroup", "User"))",
+                    data: viewModel,
+                type: 'POST',
+                dataType: 'json',
+                error: function (xhr, status) {
+                    alert("失败");
+                },
+                success: function (Data) {
+                    if(Data=="success"){                        
+                        location.href = "/Manage/User/Roles";                        
+                    }else{
+                        alert("出错");
+                    }
+                }
+            });
+                resetArray();
+            })
+        })
+    </script>
+}

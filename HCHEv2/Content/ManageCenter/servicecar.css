@@ -1,0 +1,534 @@
+.hc_registerCentre {
+    border: 1px solid #cccccc;
+    margin-top: 25px;
+    width: 920px;
+    height: auto;
+}
+
+.address_title {
+    height: 34px;
+    line-height: 34px;
+    width: 910px;
+    font-size: 15px;
+    border-bottom: 2px solid #c20201;
+    color: #c20201;
+    padding-left: 10px;
+}
+
+.hc_registerCentre .hc_center {
+    width: 865px;
+    margin: auto;
+    min-height:400px;
+}
+
+.add_address {
+    width: 100%;
+    height: 42px;
+    border-bottom: 1px solid #cccccc;
+}
+
+    .add_address .add_content {
+        width: 100%;
+        height: 21px;
+        margin: 22px 0px;
+        *margin: 11px 0px;
+    }
+
+        .add_address .add_content span {
+            float: left;
+        }
+
+.add_img {
+    height: 21px;
+    width: 21px;
+    background: url(/Images/images/buyers/address_add.png);
+    margin-left: 15px;
+}
+
+.add_content em {
+    font-style: normal;
+    color: #c20201;
+    padding: 0px 5px 0px 10px;
+}
+
+.hc_center .add_nextadd {
+    margin-top: 5px;
+}
+
+.hc_item {
+    width: 100%;
+    margin: 14px 0px 5px 0px;
+    min-height: 35px;
+    float:left;
+}
+
+.try_sex {
+    height: 15px;
+    float: right;
+    width: 100%;
+    margin: 4px 0px 10px;
+}
+
+    .try_sex .tip_img {
+        height: 15px;
+        line-height: 15px;
+        width: 15px;
+        display: block;
+        float: left;
+        background: transparent url("/Images/images/buyers/Input_error.png") no-repeat scroll 0% 0%;
+        margin-left:100px;
+    }
+
+    .try_sex .tip_text {
+        display: block;
+        float: left;
+        height: 15px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-left: 5px;
+        color: #C20201;
+    }
+
+.hc_item .hc_textlable {
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    width: 80px;
+    text-align: right;
+}
+
+.hc_item .hc_fl {
+    float: left;
+    width: 764px;
+    height: 35px;
+    margin-left: 20px;
+}
+
+    .hc_item .hc_fl .hc_sketchinput {
+        width: 285px;
+        border-radius: 0px;
+        *margin-left: -20px;
+    }
+
+#city_china_val select {
+    height: 35px;
+    width: 130px;
+    margin-right: 5px;
+}
+
+.hc_item .hc_fl input {
+    height: 25px;
+    width: 130px;
+    margin-right: 5px;
+    line-height:25px;
+}
+
+.hc_item .hc_fl .hc_sescinput {
+    width: 750px;
+}
+
+.hc_item .hc_fl .hc_nameinput {
+    width: 288px;
+}
+
+.hc_item .hc_fl .hc_telinput {
+    width: 288px;
+}
+
+#city_china_val option {
+    height: 20px;
+    line-height: 20px;
+}
+
+#registnext {
+    width: 95px;
+    height: 35px;
+    color: #fff;
+    background: #c20201;
+    border: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.hc_slesesebg {
+    width: 220px;
+    height: 30px;
+    border-width: 1px medium 1px 1px;
+    border-style: solid none solid solid;
+    border-color: #CCC -moz-use-text-color #CCC #CCC;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    background: #FFF url("/Images/publicimg/xla.png") no-repeat scroll 184px 0px;
+    display: block;
+    float: left;
+}
+
+.hc_searchsel {
+    border: 1px solid #CCC;
+    height: 33px;
+    margin: 0px 10px 0px 0px;
+    width: 130px;
+    float: left;
+}
+
+    .hc_searchsel .select_box {
+        font-size: 14px;
+        color: #999;
+        width: 130px;
+        line-height: 33px;
+        position: relative;
+    }
+
+.select_car {
+    border: 1px solid #c20201;
+    height: 30px !important;
+    width: 95px !important;
+    color: #c20201;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-right: 20px;
+    *margin-left:-20px;
+}
+
+.hc_searchsel .select_showbox {
+    height: 35px;
+    background: transparent url("/Images/order_arrow_x.png") no-repeat scroll 110px center;
+    text-indent: 0.5em;
+}
+
+.hc_searchsel .select_option {
+    border-width: medium 1px 1px;
+    border-style: none solid solid;
+    border-color: -moz-use-text-color #CCC #CCC;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    display: none;
+    left: -11px;
+    top: 34px;
+    position: absolute;
+    z-index: 99;
+    background: #FFF none repeat scroll 0% 0%;
+    padding: 0px;
+}
+
+    .hc_searchsel .select_option li {
+        text-indent: 0.5em;
+        width: 130px;
+        cursor: pointer;
+        height: 30px;
+        line-height: 30px;
+    }
+
+        .hc_searchsel .select_option li.selected {
+            background-color: #F3F3F3;
+            color: #999;
+        }
+
+.hc_searchsel select {
+    display: none;
+}
+
+.hc_Iwantziliao .hc_heig {
+    height: 35px;
+}
+
+.hc_nav {
+    width: 132px;
+    height: 35px;
+    margin: 0px 10px 0px 0px;
+    float: left;
+}
+
+    .hc_nav p {
+        display: block;
+        padding-left: 10px;
+        line-height: 30px;
+        border: 1px solid #CACACA;
+        margin: 0px;
+        font-size: 15px;
+        cursor: pointer;
+        background: transparent url("/Images/images/order_arrow_x.png") no-repeat scroll 110px 8px;
+    }
+
+.hc_new {
+    width: 130px;
+    position: absolute;
+    border: 1px solid #CACACA;
+    display: none;
+    margin: 0px;
+    z-index: 1000;
+    padding: 0px;
+}
+
+.hc_nav ul li {
+    line-height: 30px;
+    padding-left: 10px;
+    background: #FFF none repeat scroll 0% 0%;
+    color: #999;
+    cursor: pointer;
+    list-style: none;
+}
+/*车型*/
+.most_carstyle {
+    width: 100%;
+    height: auto;
+}
+
+.contain_car {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+    .contain_car .cartype_left {
+        width: 450px;
+        height: 126px;
+        float: left;
+    }
+
+    .contain_car .cartype_right {
+        width: 450px;
+        height: 126px;
+        float: left;
+    }
+
+    .contain_car .line_color {
+        border: 1px solid #cccccc;
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+
+    .contain_car .line_color_show {
+        border: 1px solid #c20201;
+        cursor: pointer;
+    }
+
+.most_text {
+    width: 424px;
+    height: 100px;
+    margin: 13px;
+}
+
+.most_textleft {
+    width: 300px;
+    height: 100px;
+    float: left;
+}
+
+.most_textright {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+    .most_textright img {
+            width: 100px;
+    height: 100px;
+    }
+
+.img_top {
+    width: 100%;
+    height: 50px;
+}
+
+    .img_top .img_left {
+        height: 50px;
+        width: 50px;
+        float: left;
+    }
+
+    .img_top .img_right {
+        float: right;
+        height: 50px;
+        width: 230px;
+        margin-top: 5px;
+    }
+
+        .img_top .img_right p {
+            height: 28px;
+            line-height: 28px;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+.img_bottom {
+    width: 100%;
+    height: 34px;
+    margin: 20px 0px;
+}
+
+    .img_bottom .rent_car {
+        width: 120px;
+        height: 32px;
+        background: #e4e4e4;
+        float: left;
+    }
+
+        .img_bottom .rent_car .bot_img {
+            width: 12px;
+            height: 32px;
+            display: block;
+            float: left;
+            background: url(/Images/images/buyers/my_car_icon.png)no-repeat 100% 50%;
+            margin: 0px 5px 0px 8px;
+        }
+
+        .img_bottom .rent_car .bot_text {
+            width: 85px;
+            height: 32px;
+            line-height: 32px;
+            display: block;
+            float: left;
+            font-size: 14px;
+            color: #c20201;
+        }
+
+.car_pic {
+    float: left;
+    width: 60px;
+    height: 32px;
+    background: url(/Images/images/buyers/my_carbg_right.png) no-repeat;
+}
+
+.set_car {
+    float: right;
+    width: 90px;
+    height: 26px;
+}
+
+    .set_car .set_show {
+        line-height: 25px;
+        background: #c20201;
+        color: #fff;
+        text-align: center;
+        width: 90px;
+        height: 26px;
+        border-radius: 2px;
+        display: none;
+    }
+
+.first_show {
+    border: 1px solid #c20201 !important;
+}
+
+.postin_btn {
+    position: absolute;
+    height: 28px;
+    width: 63px;
+    z-index: 200;
+    margin-left: 387px;
+    display: none;
+}
+
+    .postin_btn a {
+        background: #c20201;
+        color: #fff;
+        height: 28px;
+        line-height: 26px;
+        width: 63px;
+        display: block;
+        border-radius: 1px;
+    }
+
+    .postin_btn em {
+        height: 28px;
+        width: 17px;
+        background: url(/Images/images/buyers/my_car_icon.png)no-repeat 0% 50%;
+        display: block;
+        float: left;
+        margin-left: 5px;
+    }
+/**/
+
+form {
+    margin: 0px;
+}
+
+.title_ctrl {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #c20201;
+    margin: 10px 0px;
+    padding-left: 15px;
+}
+
+.hide_most {
+    width: 63px;
+    height: 28px;
+    line-height: 28px;
+    display: block;
+    border: 1px solid #C20201;
+    background: #C20201;
+    margin: 17px 0px 0px 5px;
+    border-radius: 2px;
+    text-align: center;
+    color: #fff;
+}
+
+.title_next_show:hover {
+    border: 1px solid #c20201;
+}
+
+.hc_patImg {
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #CCC;
+    background-color: #FFFBF4;
+}
+
+.hc_item .hc_fl .hc_addimg {
+    border: 0px none;
+    height: 35px !important;
+    width: 77px !important;
+    color: #000;
+    font-size: 15px;
+    line-height: 34px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #E3E3E3;
+    margin-top: 65px;
+    padding: 0px 10px;
+}
+
+.hc_cartForm .hc_item .hc_fl {
+    padding: 0px 30px 0px 140px;
+    border-radius: 0px;
+}
+
+.hc_item_new {
+    height: 100px !important;
+}
+
+    .hc_item_new .hc_fl {
+        height: 100px !important;
+    }
+
+.hc_item .hc_fl .hc_Iwantbut {
+    width: 105px;
+    height: 36px;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #C20201;
+    border-radius: 4px;
+    border: none;
+    margin-top: 5px;
+    padding: 0px;
+    *margin-left: -20px;
+}

@@ -1,0 +1,409 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+@model LogResultViewModel
+@{
+    var pageSize = 20;
+    ViewBag.Title = "日志记录";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+    var users = ViewBag.users as List<CxUser>;
+
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsell.css" type="text/css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsellAB.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="~/HC.Manage/Content/jedate/skin/jedate.css">
+    @*<link rel="stylesheet" href="~/HC.Manage/Content/common/artdialog/ui-dialog.css">*@
+    <style type="text/css">
+        .allSections {
+            /*display: none;*/
+        }
+
+        .checkedbox {
+            height: 50px !important;
+        }
+
+        .goodsdetailed {
+            margin-top: 0px !important;
+        }
+
+        #onsalesM .goodsdetailed p {
+            min-height: auto !important;
+        }
+
+        .curentSectionNews {
+            background-color: #0088CC;
+            color: white;
+        }
+
+        .showNews {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .levelTwo .showNews, .levelThree .showNews {
+            margin-right: 7px;
+        }
+
+        .propertySet span {
+            font-size: 15px;
+            color: #333333;
+            font-family: '微软雅黑';
+            margin-right: 20px;
+        }
+
+        .propertySet {
+            text-align: center;
+        }
+    </style>
+}
+@section headScript{
+    <script type="text/javascript" src="~/HC.Manage/Content/jedate/jedate.js"></script>
+    @*<script src="~/HC.Manage/Content/common/artdialog/dialog-plus-min.js"></script>*@
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#goSearchOnsale").click(function(){
+                console.log(searchModel);
+                var grid = $("#onsalesM").data('tGrid');
+                grid.currentPage = 1;
+                grid.ajaxRequest();
+            })
+        })
+
+    </script>
+}
+
+
+
+
+
+<div class="buyerright">
+    <div class="sellinggoodslist">
+        <div class="sellinggoodsserchnav">
+            <div class="hcmoneynav">
+                <div class="hche_soldgoods">
+                    <i>日志记录</i>
+                    RECORD
+                </div>
+                <div class="hche_soldgoodsimg">
+                </div>
+                <div class="hche_private">
+                    @*特权 ▪ 专享*@
+                </div>
+            </div>
+
+
+
+
+
+            <div class="sellinggoodsserch sellgoodstitsel">
+                <div class="sellingser">
+
+                    <div class="serchcondition">
+                        <div class="hc_CJteach">
+                            <span>记录时间：</span>
+
+                            @Html.TextBox("StartTime", "", new { @class = "mh_date", @readonly = "readonly" })
+                            -
+                            @Html.TextBox("EndTime", "", new { @class = "mh_date", @readonly = "readonly" })
+                        </div>
+                        <div class="hc_JYselest sortbysale">
+                            <span>用户：</span>
+                            <dl class="hc_ZTselet">
+                                <select id="orderColumn" class="valid">
+                                    @*<option value="1">发布时间</option>
+                                        <option value="2">点击量</option>
+                                        <option value="3">权重</option>*@
+                                    <option value="0" selected>不限</option>
+                                    @foreach (var cu in users)
+                                    {
+                                        <option value="@cu.UserID">@cu.UserName</option>
+                                    }
+                                </select>
+                            </dl>
+
+                        </div>
+
+                        <div class="goodserch">
+                            <input id="goSearchOnsale" type="button" value="搜索" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="salegoodslist">
+            @(Html.Telerik().Grid<OpLog>(Model.Logs.Data).Name("onsalesM")
+            @*.ToolBar(toolBar => toolBar.Template(
+                  @<div></div>
+                ))*@
+.ClientEvents(events =>
+                                               events.OnDataBinding("onsaleBinding")
+                                               .OnDataBound("onsaleBound")
+                                               .OnRowDataBound("onRowDataBound")
+                                       )
+                           .Columns(columns =>
+                                   {
+                                       columns.Bound(x => x.OpDescriptions).Title("操作描述").Width(50)
+                                           .Template(@<text>
+                                            <div class="goodsdetailed">
+                                                <p><a href="javascript:;">@item.OpDescriptions </a></p>
+                                            </div>
+                                        </text>).ClientTemplate("<div class=\"goodsdetailed\"> <p><a href=\"javascript:;\"><#= OpDescriptions #></a></p></div>"
+                    );
+
+
+                                       columns.Bound(x => x.UserAccount).Title("账号").Width(63);
+
+
+                                       columns.Bound(x => x.UserRealName).Title("操作人").Width(63);
+                                       columns.Bound(x => x.CreateTime).Title("记录时间").Width(80);
+
+
+                                       columns.Bound(x => x.OpResult).Title("操作结果").Width(63);
+
+                                   }).NoRecordsTemplate("暂无数据")
+                                                                                                                                        .Pageable(seting => seting.Total(Model.Logs.Total).PageSize(pageSize).Position(GridPagerPosition.Bottom))
+                                                                                                                                                                                                  .DataBinding(binding => binding.Ajax().Select("_ajaxLogRecord", "Home")).EnableCustomBinding(true)
+
+            )
+        </div>
+
+
+
+
+
+    </div>
+</div>
+<script type="text/javascript">
+
+    //Date.prototype.format = function (format) //author: meizz
+    //{
+    //    var o = {
+    //        "M+": this.getMonth() + 1, //month
+    //        "d+": this.getDate(),    //day
+    //        "h+": this.getHours(),   //hour
+    //        "m+": this.getMinutes(), //minute
+    //        "s+": this.getSeconds(), //second
+    //        "q+": Math.floor((this.getMonth() + 3) / 3),  //quarter
+    //        "S": this.getMilliseconds() //millisecond
+    //    }
+    //    if (/(y+)/.test(format)) format = format.replace(RegExp.$1,
+    //    (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    //    for (var k in o) if (new RegExp("(" + k + ")").test(format))
+    //        format = format.replace(RegExp.$1,
+    //      RegExp.$1.length == 1 ? o[k] :
+    //        ("00" + o[k]).substr(("" + o[k]).length));
+    //    return format;
+    //}
+
+    ////处理序列化后的时间
+    //function formatTime(val) {
+    //    var re = /-?\d+/;
+    //    var m = re.exec(val);
+    //    var d = new Date(parseInt(m[0]));
+    //    // 按【2012-02-13 09:09:09】的格式返回日期
+    //    return d.format("yyyy-MM-dd hh:mm:ss");
+    //}
+
+    //var formatDate = function (date) {
+    //    var y = date.getFullYear();
+    //    var m = date.getMonth() + 1;
+    //    m = m < 10 ? '0' + m : m;
+    //    var d = date.getDate();
+    //    d = d < 10 ? ('0' + d) : d;
+    //    return y + '-' + m + '-' + d;
+    //};
+
+    var formatDateTime = function (date) {
+        var y = date.getFullYear();
+        var m = date.getMonth() + 1;
+        m = m < 10 ? ('0' + m) : m;
+        var d = date.getDate();
+        d = d < 10 ? ('0' + d) : d;
+        var h = date.getHours();
+        var minute = date.getMinutes();
+        minute = minute < 10 ? ('0' + minute) : minute;
+
+        var s=date.getSeconds();
+        s=s<10?('0'+s):s;                
+        return y + '-' + m + '-' + d+' '+h+':'+minute+':'+s;
+    };
+
+
+
+    $(document).ready(function () {
+
+        var eleName="onsalesM";
+        var totalH= $("#"+eleName).height();
+        var headH=$("#"+eleName+" .t-grid-header").height();
+        var toolBarH=$("#"+eleName+" .t-toolbar").height();
+        var curnetH=totalH-headH-toolBarH;
+        var paddH=(curnetH-20)/2;
+        $("#"+eleName+" table").prepend("<div class=\"coverWait\" style=\"position: absolute;height:"+curnetH+"px  ;width: 100%;background-color: #E5E5E5;\"><span style=\"text-align: center; display: block; padding-top: "+paddH+"px; color: #777;\">请稍等，数据加载中......</span></div>");
+
+        //扩展trim 支持ie8
+        if (!String.prototype.trim) { //判断下浏览器是否自带有trim()方法
+            String.prototype.trim = function () {
+                return this.replace(/(^\s*)|(\s*$)/g, "");
+            }
+        }
+        //扩展结束
+
+
+
+
+        //更改成文字
+        $(".t-arrow-next").each(function (i, e) {
+            $(this).text("下一页");
+        });
+        $(".t-arrow-prev").each(function (i, e) {
+            $(this).text("上一页");
+        });
+        //更改成文字结束
+        $(".t-arrow-first").css({ "display": "none" });
+        $(".t-arrow-last").css({ "display": "none" });
+        $(".t-refresh").css({ "display": "none" });
+
+        processGridDsiplay("#onsalesM");
+        $(".t-widget").show();
+
+        $("#importexcel-window").css({"display":"none"});
+        $("#importTemp-window").css({"display":"none"});
+        $(".t-close").text("");
+
+
+
+
+
+
+
+
+
+    });
+
+    //转为汉字的处理 如果ajax请求返回totalcount是0  则不执行 ondatabind
+    function processGridDsiplay(ele) {
+        var str = $("" + ele + " .t-status-text").text().trim();
+        var indexOF = str.indexOf("f");
+        var totalDate = str.substr(indexOF + 1).trim();
+        var pageSize=@pageSize;
+        var totalPage=Math.ceil(totalDate/pageSize);
+        $(""+ele+" .t-status-text").text("共"+totalPage+"页");
+    }
+
+    function dumps(obj) {
+        var result = [];
+        $.each(obj, function (key, value) { result.push(value); });
+
+        //var results=[];
+        //$.each(obj,function(k,v){results.push( k+"-"+v ) });
+        //console.log(results);
+        return result;
+    }
+
+
+
+
+    var searchModel = {
+        UserID:-1,
+        startTime:"",
+        endTime:"",
+    };
+
+
+
+    function onsaleBinding(e) {
+        e.data = searchModel;
+        //console.log(searchModel);
+    }
+
+    function onsaleBound(e) {
+
+        //处理分页
+        if($(e.currentTarget).find(".t-numeric").children().length>0){
+            var ajaxPageCount= $(e.currentTarget).find(".t-numeric").find("a").length+1;
+            $(e.currentTarget).find(".t-status-text").text("共"+ajaxPageCount+"页");
+        }else{
+            $(e.currentTarget).find(".t-status-text").text("共"+0+"页");
+        }
+        //处理分页
+
+        //移除等待提示层
+        var eleName=$(e.delegateTarget).attr("id");
+        $("#onsalesM table div.coverWait").remove();
+
+    }
+
+    function onRowDataBound(e){
+        var s = e.dataItem;
+        var rowItem = e.row;
+        //console.log(s.CreateTime.toString());
+        //console.log(formatDate(s.CreateTime));
+        //$(rowItem.cells[3]).text(formatTime(s.CreateTime.toString().replace(/[^0-9]/ig,"")));
+        $(rowItem.cells[3]).text(formatDateTime(s.CreateTime));
+    }
+
+
+
+
+    jeDate({
+        dateCell: '#StartTime',
+        format: 'YYYY-MM-DD',
+        minDate: '1900-01-01 23:59:59', //设定最小日期为当前日期
+        festival: true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        isTime: true,
+        choosefun: function(datas){
+            searchModel.startTime=datas;
+        },
+        clearfun:function(){
+            searchModel.startTime="";
+        },
+        okfun:function(val){searchModel.startTime=val;}
+    })
+    jeDate({
+        dateCell: '#EndTime',
+        format: 'YYYY-MM-DD',
+        minDate: '1900-01-01 23:59:59', //设定最小日期为当前日期
+        festival: true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        isTime: true,
+        choosefun: function(datas){
+            searchModel.endTime=datas;
+        },
+        clearfun:function(){
+            searchModel.endTime="";
+        },
+        okfun:function(val){searchModel.endTime=val; }
+    })
+
+
+
+
+
+    $("#orderColumn").change(function(){
+        searchModel.UserID=$(this).val();
+    })
+
+
+
+
+
+
+
+
+</script>
+

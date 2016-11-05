@@ -1,0 +1,16 @@
+﻿
+ 
+记录时间：2015-12-10 11:06:22,797 
+线程ID:[11] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 15
+
+ 
+
+ 
+记录时间：2015-12-10 11:08:35,052 
+线程ID:[14] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 ASP._Page_HC_Manage_Views_Product_releaseProductAcc_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Product\releaseProductAcc.cshtml:行号 15
+
+ 

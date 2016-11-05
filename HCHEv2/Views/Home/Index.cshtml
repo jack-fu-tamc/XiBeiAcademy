@@ -1,0 +1,283 @@
+﻿@using HC.Data.ViewModels
+@model IndexModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.title = "电力专科学校";
+}
+@section headScript{
+    <script type="text/javascript" src="~/Scripts/huadongmen.js"></script>
+    }
+<div class="block_01">
+    <div class="area_l">
+        <div class="silbo-slide_02">
+            <div id="SlidePlayer_02">
+                <ul class="Slides">
+                    @foreach (var picNews in Model.BigPicNews)
+                    {
+                        <li title="@picNews.NewsTitle"><a href="@Url.Action("news", "Information", new { id = picNews.NewsID })"><img src="@picNews.PicURL" alt="@picNews.NewsTitle" /></a></li>
+                    }
+                   
+                </ul>
+            </div>
+            <script type="text/javascript">
+                TB.widget.SimpleSlide.decorate('SlidePlayer_02', {
+                    eventType: 'mouse', effect: 'fade', onInit: function () {
+                        var lis = $D.getElementsByClassName('Slides', 'ul', $D.get('SlidePlayer_02'))[0].getElementsByTagName('li'),
+                            titles = [], hrefs = [];
+                        for (var i = 0; i < lis.length; i++) {
+                            var el, innerEl;
+                            el = document.createElement('div');
+                            el.className = 'SlideTitle';
+                            el.innerHTML = lis[i].getAttribute('title') + '<b></b>';
+                            lis[i].appendChild(el);
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+    <div class="area_r">
+        <div class="tab_01">
+            <div class="tab_t">
+                <p class="tab_more"><a href="/Information/Section/2067">更多&gt;&gt;</a></p>
+                <ul class="clearfix">
+                    <li onmousemove="huadongmen(1,2,'anniu2_','neirong2_')" id="anniu2_1" class="on"><p>重要新闻</p></li>
+                    <li onmousemove="huadongmen(2,2,'anniu2_','neirong2_')" id="anniu2_2"><p>校园动态</p></li>
+                </ul>
+            </div>
+            <div class="tab_c" id="neirong2_1">
+                <div class="part_01">
+                    <ul>
+                        @foreach (var im in Model.ImportantNews)
+                        {
+
+                            <li><span class="time">@im.CreatTime.ToString("MM-dd")</span><a href="@Url.Action("news", "Information", new { id = im.NewsID })" title="@im.NewsTitle">@im.NewsTitle</a></li>
+                        }
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="tab_c" id="neirong2_2" style="display: none">
+                <div class="part_01">
+                    <ul>
+                        @foreach (var dt in Model.SchooleActivitiesNews)
+                        {
+
+                            <li><span class="time">@dt.CreatTime.ToString("MM-dd")</span><a href="@Url.Action("news", "Information", new { id = dt.NewsID })" title="@dt.NewsTitle">@dt.NewsTitle</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr20"></div>
+</div>
+
+<div class="block">
+    <div class="column_01">
+        <div class="column_t"><span class="column_more"><a href="/Home/Education" target="_blank">更多&gt;&gt;</a></span><p class="column_title"><span class="a1">教育教学</span></p></div>
+        <div class="column_c">
+            <div class="part_02">
+                <div class="part_l">
+                    <ul class="clearfix">
+                        <li><a href="/Information/SectionEducation/1060"><img src="/images/jpg_01a.jpg" alt="教学运行" /><span>教学运行</span></a></li>
+                        <li><a href="/Information/SectionEducation/2"><img src="/images/jpg_01b.jpg" alt="继续教育" /><span>继续教育</span></a></li>
+                        <li><a href="/Information/SectionEducation/2071"><img src="/images/jpg_01c.jpg" alt="诊断与改进" /><span>诊断与改进</span></a></li>
+                        <li><a href="/Information/SectionEducation/2072"><img src="/images/jpg_01d.jpg" alt="合作办学" /><span>合作办学</span></a></li>
+                    </ul>
+                </div>
+                <div class="part_c">
+                    <ul>
+                        @foreach (var ed in Model.EducationNews)
+                        {
+                            <li><span class="time">@ed.CreatTime.ToString("yyyy-MM-dd")</span><span class="classify"><a href="@Url.Action("newsEducation", "Information", new { id = ed.NewsID })">[@ed.NewsClass.ClassName]</a></span><a href="@Url.Action("newsEducation", "Information", new { id = ed.NewsID })" title="@ed.NewsTitle">@ed.NewsTitle</a></li>
+                        }
+                    </ul>
+                </div>
+                <div class="part_r">
+                    <ul class="clearfix">
+                        <li><a href="#" title="门户系统登录"></a></li>
+                        <li><a href="#" title="学校微博"></a></li>
+                        <li class="a1"><a href="#"><i></i></a></li>
+                        <li><a href="/Home/Library" title="图书馆"></a></li>
+                    </ul>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clr20"></div>
+</div>
+
+<div class="block_02">
+    <div class="area_l">
+        <div class="column_01">
+            <div class="column_t"><span class="column_more"><a href="/Information/Section/39" target="_blank">更多&gt;&gt;</a></span><p class="column_title"><span class="a2">招生就业</span></p></div>
+            <div class="column_c">
+                <div class="part_03">
+                    <div class="hot">
+
+
+
+                        @if (Model.EmploymentRecNews != null)
+                        {
+
+                            Model.EmploymentRecNews.NewsContent = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(Model.EmploymentRecNews.NewsContent, "<[^>]+>", ""), "&[^;]+;", "");
+
+                            if (Model.EmploymentRecNews.NewsContent.Length > 28)
+                            {
+                                Model.EmploymentRecNews.NewsContent = Model.EmploymentRecNews.NewsContent.Substring(0, 28);
+                            }
+
+                            <p class="pic"><a href="@Url.Action("news", "Information", new { id = Model.EmploymentRecNews.NewsID })" title="标题"><img src="@Model.EmploymentRecNews.PicURL" alt="标题" /></a></p>
+                            <div class="title_bg">
+                                <p class="title"><a href="@Url.Action("news", "Information", new { id = Model.EmploymentRecNews.NewsID })" title="@Model.EmploymentRecNews.NewsTitle">@Model.EmploymentRecNews.NewsTitle</a></p>
+                                <div class="sum">@Model.EmploymentRecNews.NewsContent</div>
+                            </div>
+                        }
+
+
+
+
+
+
+
+                        <div class="clr"></div>
+                    </div>
+                    <ul class="list">
+                        @foreach (var em in Model.EmploymentNews)
+                        {
+                            <li><span class="time">@em.CreatTime.ToString("MM-dd")</span><a href="@Url.Action("news", "Information", new { id = em.NewsID })" title="@em.NewsTitle">@em.NewsTitle</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="area_c">
+        <div class="column_01">
+            <div class="column_t"><span class="column_more"><a href="/Information/Section/44" target="_blank">更多&gt;&gt;</a></span><p class="column_title"><span class="a3">资格认证</span></p></div>
+            <div class="column_c">
+                <div class="part_03">
+                    <div class="hot">
+
+
+
+
+
+
+                        @if (Model.CertificationRecNews != null)
+                        {
+                            Model.CertificationRecNews.NewsContent = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(Model.CertificationRecNews.NewsContent, "<[^>]+>", ""), "&[^;]+;", "");
+
+                            if (Model.CertificationRecNews.NewsContent.Length > 28)
+                            {
+                                Model.CertificationRecNews.NewsContent = Model.CertificationRecNews.NewsContent.Substring(0, 28);
+                            }
+
+
+                            <p class="pic"><a href="@Url.Action("news", "Information", new { id = Model.CertificationRecNews.NewsID })" title="@Model.CertificationRecNews.NewsTitle"><img src="@Model.CertificationRecNews.PicURL" alt="@Model.CertificationRecNews.NewsTitle" /></a></p>
+                            <div class="title_bg">
+                                <p class="title"><a href="@Url.Action("news", "Information", new { id = Model.CertificationRecNews.NewsID })" title="@Model.CertificationRecNews.NewsTitle">@Model.CertificationRecNews.NewsTitle</a></p>
+                                <div class="sum">@Model.CertificationRecNews.NewsContent</div>
+                            </div>
+                        }
+
+
+
+
+
+
+
+
+
+                        <div class="clr"></div>
+                    </div>
+                    <ul class="list">
+                        @foreach (var ce in Model.CertificationNews)
+                        {
+                            <li><span class="time">@ce.CreatTime.ToString("MM-dd")</span><a href="@Url.Action("news", "Information", new { id = ce.NewsID })" title="@ce.NewsTitle">@ce.NewsTitle</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="area_r">
+        <div class="column_01">
+            <div class="column_t"><span class="column_more"><a href="/Information/Section/32" target="_blank">更多&gt;&gt;</a></span><p class="column_title"><span class="a4">名师风采</span></p></div>
+            <div class="column_c">
+                <div class="part_03">
+                    <div class="hot_list">
+                        <ul>
+                            @foreach (var tere in Model.TeacherBearingRecNews)
+                            {
+                                <li><a href="@Url.Action("news", "Information", new { id = tere.NewsID })" title="@tere.NewsTitle"><img src="@tere.PicURL" alt="@tere.NewsTitle" /><span class="title">@tere.NewsTitle</span></a></li>
+                            }
+                        </ul>
+                        <div class="clr"></div>
+                    </div>
+                    <ul class="list">
+                        @foreach (var te in Model.TeacherBearingNews)
+                        {
+                            <li><span class="time">@te.CreatTime.ToString("MM-dd")</span><a href="@Url.Action("news", "Information", new { id = te.NewsID })" title="@te.NewsTitle">@te.NewsTitle</a></li>
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr20"></div>
+</div>
+
+<div class="block">
+    <div class="column_01">
+        <div class="column_t"><span class="column_more"><a href="/Information/Section/48" target="_blank">更多&gt;&gt;</a></span><p class="column_title"><span class="a5">校园生活</span></p></div>
+        <div class="column_c">
+            <div class="part_04">
+                @{
+                    var lastLifeNews =new HC.Data.Models.News();
+                    if (Model.SchooleLifeNews.Count > 0)
+                    {
+                        lastLifeNews = Model.SchooleLifeNews.FirstOrDefault();
+                    }
+                }
+
+                <div class="hot">                    
+                    <a href="@Url.Action("news", "Information", new { id = lastLifeNews.NewsID })" title="@lastLifeNews.NewsTitle"><img src="@lastLifeNews.PicURL" alt="@lastLifeNews.NewsTitle" /><span class="title">@lastLifeNews.NewsTitle</span></a>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        @for (var k = 1; k < Model.SchooleLifeNews.Count; k++)
+                        {
+                            <li><a href="@Url.Action("news", "Information", new { id = Model.SchooleLifeNews[k].NewsID })" title="@Model.SchooleLifeNews[k].NewsTitle"><img src="@Model.SchooleLifeNews[k].PicURL" /><span class="title">@Model.SchooleLifeNews[k].NewsTitle</span></a></li>
+                        }
+
+                    </ul>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clr20"></div>
+</div>
+
+<div class="block">
+    <div class="part_05">
+        <ul>
+            <li><a href="#" target="_blank"><img src="~/images/ls/link1.gif" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/images/ls/link2.gif" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/images/ls/link3.gif" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/images/ls/link4.gif" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/images/ls/link5.gif" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/images/ls/link6.gif" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/images/ls/link7.gif" /></a></li>
+        </ul>
+        <div class="clr"></div>
+    </div>
+    <div class="clr20"></div>
+</div>

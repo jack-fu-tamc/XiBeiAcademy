@@ -1,0 +1,249 @@
+﻿.hcxq_shipments{
+    border: 1px solid #ccc;
+}
+.hcxq_shipments .hc_titwz {
+    height: 30px;
+    background: #ECECEC;
+    line-height: 30px;
+    margin: 10px 15px 10px 15px;
+}
+.hcxq_shipments .hc_titwz .youwz {
+    margin-left: 15px;
+}
+.hcxq_shipments .xq_text{
+    height: 30px;
+margin-top: 20px;
+margin-left: 27px;
+}
+.hcxq_shipments .xq_text .buyesxq{
+    color:#c20201;
+    font-size:16px;
+}
+.hcxq_shipments .xq_text .buyesxq .bolod{
+    font-weight:bolder;
+}
+.xq_buysDiv{
+    border:1px solid #ccc;
+    margin: 0px 15px 0px 15px;
+}
+.xq_buysDiv .xq_nubmtem{
+    padding: 15px 30px 20px 30px;
+height: 70px;
+line-height: 40px;
+}
+.xq_buysDiv .xq_nubmtem span{
+    display: block;
+width: 385px;
+float: left;
+}
+.xq_tablelis{
+    border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+width: 100%;
+}
+.xq_tablelis .teltname{
+    font-size: 15px;
+font-weight: bolder;
+background: #eee;
+color: #5d5d5d;
+height: 35px;
+text-align: center;
+}
+.xq_tablelis .shop_img{
+    width: 100px;
+height: 100px;
+margin: 10px;
+float: left;
+}
+.xq_tablelis .shop_text{
+    float: left;
+width: 350px;
+margin-top: 20px;
+}
+.xq_tabletrone{
+    border-bottom: 1px solid #ccc;
+}
+.xq_tabletrone .xq_tdright{
+    height: 120px;
+border-right: 1px solid #ccc;
+}
+.xq_tabletrone .xq_tdright .manycenter{
+    height: 80px;
+text-align: center;
+}
+.xq_tabletrone .totalmany{
+    display: block;
+height: 55px;
+text-align: center;
+color: #c20201;
+}
+.hcxq_goodmany{
+    height: 65px;
+line-height: 65px;
+text-align: right;
+}
+.hcxq_goodmany .textmany{
+    font-size: 15px;
+margin-right: 10px;
+}
+.hcxq_goodmany .manynumb{
+    font-size: 17px;
+color: #c20201;
+margin-right: 30px;
+}
+.xq_delivery{
+    height: 80px;
+border: 1px solid #ccc;
+margin: 0px 15px;
+padding: 15px 30px 20px;
+line-height: 40px;
+}
+.xq_delivery .mysiname{
+    width: 400px;
+    *width:415px;
+display: block;
+float: left;
+}
+.xq_delivery .mysite{
+   
+display: block;
+float: left;
+}
+
+.hc_serveradio {
+    height: 25px;
+    line-height: 25px;
+    width: 135px;
+    float: left;
+    margin-left: 20px;
+}
+
+ .hc_serveradio .pay_list_c1.rabuit {
+    background-position: 1px 0px;
+}
+ .hc_serveradio .pay_list_c1 {
+    width: 24px;
+    height: 18px;
+    float: left;
+    padding-top: 3px;
+    cursor: pointer;
+    text-align: center;
+    background-image: url("../../../images/publicimg/repair_radio.png");
+    background-repeat: no-repeat;
+    background-position: -20px 0px;
+    line-height: 0px;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.hc_serveradio .radioclass {
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor: pointer;
+    margin-top: 0px;
+}
+.xq_distribution{
+    height: 130px;
+border: 1px solid #ccc;
+padding: 15px 30px 20px;
+margin: 0px 15px;
+}
+.xq_distribution .xq_distrdivtion{
+    height: 30px;
+}
+.xq_distribution .xq_distrdivtion .distrfonttet{
+    display: block;
+float: left;
+}
+.xq_logistics{
+    margin-top:10px;
+}
+.xq_logistics .xq_sticssamdiv{
+    margin-bottom: 15px;
+}
+.xq_logistics .xq_sticssamdiv input{
+    border-radius: 0px;
+margin-bottom: 5px;
+width: 340px;
+}
+.xq_logistics .xq_sticssamdiv .spanpis{
+    display: block;
+width: 70px;
+text-align: right;
+float: left;
+margin-right: 5px;
+line-height: 30px;
+}
+.xq_susbut{
+    text-align: center;
+height: 120px;
+line-height: 110px;
+}
+.xq_susbut .fabuton{
+    border: 1px solid #c20201;
+border-radius: 4px;
+background: #c20201;
+color: #fff;
+height: 45px;
+width: 130px;
+font-size: 18px;
+}
+.prompt_info {
+    text-align: left;
+    width: 47%;
+    float: right;
+    line-height: 36px;
+    height: 30px;
+}
+.prompt_info label {
+    line-height: 28px;
+    height: 30px;
+    color: #C20201;
+}
+.prompt_info .errorem {
+    height: 15px;
+    line-height: 15px;
+    width: 15px;
+    float: left;
+    background: transparent url("../../../images/publicimg/Input_error.png") no-repeat scroll 0% 0%;
+    margin-top: 8px;
+}
+
+.messageBox {
+    width: 918px;
+    float: right;
+    background-color:#fff;
+    margin-top:20px;
+    border-radius:5px;
+
+}
+.messageBoxError{
+    border:1px solid red;
+}
+
+.messageBoxError img {
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
+    height: 45px;
+    width: 45px;
+}
+.messageBoxError p {
+    height: 30px;
+    margin: 0;
+    line-height: 30px;
+    width: 855px;
+    float: left;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.messageBoxError span {
+    width: 855px;
+    float: left;
+    color: #c20201;
+    height: auto;
+}
+
+.messageBoxError > span {
+    margin-bottom: 10px;
+}

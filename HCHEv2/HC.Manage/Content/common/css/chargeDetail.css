@@ -1,0 +1,294 @@
+﻿/*我的烩车币和收支明细页面*/
+.hcmoney {
+    height: 230px;
+    width: 100%;
+    display: inline-block;
+    *margin-bottom: 25px;
+}
+
+.hcmoneynav {
+    height: 40px;
+    background: #F5F5F5;
+    width: 100%;
+}
+
+.myhcmoney {
+    float: left;
+    margin-left: 30px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(194, 2, 1);
+    width: 160px;
+}
+
+.hcprivate {
+    float: right;
+    margin-right: 30px;
+    color: #CE9D63;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+
+.hcmoneyimg {
+    background: transparent url("../../../images/publicimg/pd_Shop_star.png") no-repeat scroll 0% 0%;
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-top: 11px;
+    margin-right: 5px;
+}
+
+.hcmoneyimgleft {
+    float: left;
+}
+
+.hcmoneyimgright {
+    float: right;
+}
+
+.hcmone {
+    font-style: normal;
+    font-size: 15px;
+}
+
+.userhcmoney {
+    float: left;
+    width: 600px;
+}
+
+.groomseller {
+    float: right;
+    width: 262px;
+    height: 80px;
+    background: #EEE;
+    margin-top: 30px;
+}
+
+.userhcmoneyimg {
+    margin: 30px;
+}
+
+.userhcmoneytext {
+    margin-top: 35px;
+}
+
+.usertip {
+    display: inline-block;
+    width: 300px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+}
+
+.userhcmoneytext p {
+    display: inline-block;
+    width: 300px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+}
+
+.userhcmoneytext span i {
+    color: #C20201;
+}
+
+.userhcmoneytext span a {
+    color: #C20201;
+}
+
+.moneyimg {
+    background: transparent url("../../../images/publicimg/mc_money_glowing.png") no-repeat scroll 0% 0%;
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.hcmoneytotal {
+    float: left;
+}
+
+.hcbusinessinto span {
+    width: 100px;
+    display: block;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin-right: 45px;
+    color: #C20201;
+}
+
+.businessinto {
+    margin-top: 11px;
+}
+
+.groomsellerimg {
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.hcmoneyborder {
+    border-top: 2px solid #F0F0F0;
+}
+
+    .hcmoneyborder .usergroom {
+        width: 98%;
+        margin: 0px 9px;
+        border-bottom: 1px dashed #CCC;
+        height: 138px;
+    }
+
+.hcincomestate {
+    width: 98%;
+    margin: 0px 9px;
+}
+/*收支明细*/
+.hc_floorer .hc_come {
+    float: right;
+    color: #C20201;
+}
+
+    .hc_floorer .hc_come a {
+        color: #C20201;
+        padding-right: 5px;
+        line-height: 30px;
+        outline: none;
+    }
+
+.hc_floorer img {
+    float: left;
+}
+
+.hc_floorer #tabs {
+    width: 723px;
+    position: relative;
+    margin: auto;
+    height: 30px;
+    float: left;
+}
+
+    .hc_floorer #tabs ul li {
+        list-style: none;
+    }
+
+    .hc_floorer #tabs .tab_tltle_lists {
+        width: 734px;
+        float: left;
+        background: #fff;
+        height: 30px;
+    }
+
+.tab_tltle_lists ul {
+    *margin: 0 !important;
+}
+
+.hc_floorer #tabs .lists_night {
+    width: 670px !important;
+}
+
+.hc_floorer #tabs .lists_last {
+    width: 726px !important;
+}
+
+.hc_floorer #tab .lists_first {
+    width: 734px !important;
+}
+
+#tabs .tab_menus {
+    width: 750px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+    margin:0;
+}
+
+.hc_floorer #tabs .lists_last .tab_menus li {
+    padding: 0px !important;
+}
+
+.hc_floorer #tabs .lists_last .tab_menus li {
+    padding: 0px !important;
+}
+
+.hc_floorer #tabs .lists_last .tab_menus span {
+    margin-right: -3px !important;
+}
+
+#tabs .tab_menus li {
+    float: left;
+    min-width: 84px;
+    *min-width: 95px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-bottom: 0px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 0px 0 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0px 5px;
+    *padding: 0px;
+    *width: 83px;
+    list-style: none;
+}
+
+#tab_list_conts {
+    height: auto;
+    clear: both;
+    position: relative;
+    font-family: SimSun;
+    font-size: 14px;
+    width: 902px;
+margin-bottom: 20px;
+*padding-bottom:20px;
+}
+
+#tabs .tab_menus .selects {
+    cursor: pointer;
+    border-left: 1px solid #C20201;
+    border-right: 1px solid #C20201;
+    border-top: 4px solid #C20201;
+    min-width: 82px;
+    border-bottom: 2px solid #fff;
+    margin-top: -4px;
+    padding: 0px 5px;
+    color: #C20201;
+}
+
+    #tabs .tab_menus .selects span {
+        display: none;
+    }
+
+.hide {
+    display: none;
+}
+
+.hc_floorer {
+    margin-top: 0px;
+    height: 30px;
+    margin-bottom: 13px;
+    border-bottom: 1px solid #C20201;
+}
+
+.list_cont_ones ul {
+    margin: 0px;
+}
+
+.t-grid .t-alt {
+    background: #fff;
+}
+
+.t-grid td {
+    font-size: 12px;
+}
+
+.t-grid td {
+    *border-bottom: 1px solid #ccc;
+}
+.t-grid-header .t-header {
+    *border-bottom:1px solid #ccc;
+}

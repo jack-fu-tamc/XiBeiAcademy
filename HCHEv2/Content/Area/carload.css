@@ -1,0 +1,277 @@
+﻿/* CSS Document */
+.hc_biglist {
+    height: auto;
+    background: #FFF;
+    width: 1164px;
+    margin: 0px 3px;
+}
+
+    .hc_biglist .hc_ZMlist {
+        width: 100%;
+        height: 34px;
+        border-bottom: 1px solid #FFF;
+        line-height: 34px;
+    }
+
+    .hc_biglist .hc_listimg {
+        margin: 0px 0px 0px 117px;
+        width: 974px;
+        float: left;
+        background: rgb(221, 221, 221) none repeat scroll 0% 0%;
+        height: 246px;
+        cursor: pointer;
+    }
+
+    .hc_biglist .hc_ZMlist span {
+        color: #C20201;
+        margin-left: 6px;
+        float: left;
+        font-size: 15px;
+    }
+
+    .hc_biglist .hc_ZMlist {
+        line-height: 34px;
+        background: #EEE;
+    }
+
+.hc_ZMlist ul {
+    float: right;
+    width: 1046px;
+    height: 34px;
+    margin: 0px;
+    list-style: outside none none;
+    cursor: pointer;
+}
+
+    .hc_ZMlist ul .hc_wid {
+        color: #FFF;
+        background: #C20201 !important;
+    }
+
+    .hc_ZMlist ul li {
+        width: 46px;
+        float: left;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        color: #000;
+        background: #eee;
+    }
+
+.hc_SZlilist a {
+    color: #C20201;
+    font-size: 14px;
+}
+
+.hc_ZMlist ul .hc_listSZimg {
+    background: transparent url("../images/Menu_arrow.png") no-repeat scroll 60px 10px !important;
+    width: 80px !important;
+}
+
+.hc_ZMlist ul .hc_listimgSz {
+    background: transparent url("../images/Menu.png") no-repeat scroll 44px 9px !important;
+    width: 80px !important;
+}
+
+.hc_listimg img {
+    margin-bottom: 12px;
+    border: 1px solid #FFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0px none;
+}
+/**下拉样式*/
+div.screening {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    position: fixed;
+    z-index: 4;
+}
+
+    div.screening > ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border-bottom: solid 1px #d3d3d3;
+        overflow: hidden;
+    }
+
+        div.screening > ul > li {
+            float: left;
+            width: 33%;
+            text-align: center;
+            line-height: 3rem;
+            border-left: solid 1px #d3d3d3;
+        }
+/* grade */
+.grade-eject, .Category-eject, .Sort-eject {
+    width: 100%;
+    z-index: 1;
+}
+
+    .grade-eject > ul, .Category-eject > ul, .Sort-eject > ul {
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+        height: 245px;
+        width: 24%;
+    }
+
+        .grade-eject > ul > li, .Category-eject > ul > li, .Sort-eject > ul > li {
+            line-height: 45px;
+            font-size: 14px;
+            padding-left: 20px;
+            border-bottom: 1px solid #EEE;
+        }
+
+        .grade-eject > ul.grade-w, .Category-eject > ul.Category-w {
+            background: #ddd;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .grade-eject > ul.grade-t, .Category-eject > ul.Category-t {
+            background: #eee;
+            position: absolute;
+            z-index: 2;
+            left: 100%;
+            display: none;
+        }
+
+            .grade-eject > ul.grade-t > li, .Category-eject > ul.Category-t > li {
+                border-bottom: solid 1px #fff;
+                border-left: 1px solid #FFF;
+            }
+
+        .grade-eject > ul.grade-s, .Category-eject > ul.Category-s {
+            background: #fff;
+            position: absolute;
+            z-index: 3;
+            left: 100%;
+            list-style-type: none;
+            display: none;
+        }
+
+            .grade-eject > ul.grade-s > li, .Category-eject > ul.Category-s > li {
+                border-bottom: solid 1px #eee;
+                margin-left: 20px;
+                padding: 0;
+            }
+
+.grade-w-roll {
+    top: 3rem;
+}
+
+    .grade-w-roll::after {
+        position: fixed;
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: rgba(0,0,0,0.2);
+        top: 0;
+    }
+/*Sort-eject*/
+.Sort-Sort {
+    background: #fff;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    list-style-type: none;
+}
+
+    .Sort-Sort > li {
+        border-bottom: solid 1px #eee;
+        padding: 0;
+    }
+
+.Sort-height {
+    height: 343px;
+}
+/*车型车系css**/
+.hche_cartypes {
+    height: auto;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+    .hche_cartypes span {
+        float: left;
+        font-size: 14px;
+        line-height: 35px;
+        width: 110px;
+        text-align: right;
+    }
+
+    .hche_cartypes ul {
+        float: left;
+        width: 84%;
+        margin: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #CCC;
+    }
+
+        .hche_cartypes ul li {
+            list-style: none;
+            float: left;
+            height: 35px;
+            line-height: 35px;
+            padding: 5px;
+            padding-top: 0;
+            letter-spacing: 1px;
+        }
+            .hche_cartypes ul li a {
+                cursor:pointer;
+            }
+.hche_cartypesoption {
+    margin-top: 0 !important;
+    border-bottom: none !important;
+}
+
+    .hche_cartypesoption ul {
+        border-bottom: none !important;
+    }
+
+.shop_ones {
+    border: 1px solid #C20201;
+    height: 30px;
+    line-height: 30px;
+    width: auto;
+    margin-top: 3px;
+    letter-spacing: 2px;
+    padding: 0px 5px;
+    display: block;
+    text-align: center;
+    margin-right: 12px;
+    float: left;
+    border-radius:4px;
+}
+    .shop_ones a {
+        font-family:SimSun;
+    }
+        .shop_ones a:hover {
+        text-decoration:none;
+        }
+    .shop_ones a em {
+        background: transparent url("../../Images/close-red.png") no-repeat scroll 0% 0%;
+        display: inline-block;
+        float: right !important;
+        *float:none !important;
+        width: 12px;
+        margin-top: 8px;
+        *margin-top: 0px;
+        height:17px;
+    }
+
+.shop_types {
+    padding-top: 5px !important;
+}
+
+.hc_locations {
+    margin-top: 10px;
+}

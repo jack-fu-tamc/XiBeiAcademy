@@ -1,0 +1,51 @@
+
+/*买家中心右侧样式*/
+
+    .buyerright h5 {
+        margin: 17px 0;
+    }
+.cart-rconauto {
+    margin:auto;
+
+}
+.returnpolicys {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.returnpolicynav {
+    width: 100%;
+}
+
+    .returnpolicynav p {
+        font-weight: 700;
+    }
+
+.returnpolicyscontents p {
+    text-indent: 3em;
+}
+
+.cart-rtits {
+    height: 70px;
+    margin-top: 30px;
+    border-top: 1px dashed #CCC;
+}
+
+    .cart-rtits p {
+        float: right;
+        margin-right: 30px;
+        margin-top: 10px;
+    }
+
+.cart-rtitd {
+    height: 70px;
+    margin-top: 30px;
+}
+
+.cart-rtitd p {
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+/*帮助页面中心样式结束*/

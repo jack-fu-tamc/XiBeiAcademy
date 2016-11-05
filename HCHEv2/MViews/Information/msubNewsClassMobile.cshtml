@@ -1,0 +1,56 @@
+﻿@using HC.Service.Section
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+@{
+    ViewBag.title = "电力专科学校";
+    var _ISectionService = EngineContext.Current.Resolve<ISectionService>();
+   
+}
+
+@model List<NewsClass>
+
+@section lanmuName{
+    <span class="header_c">@ViewBag.paentclassName</span>
+}
+<div class="block">
+    <div class="column">
+        <ul>
+            @foreach (var item in Model)
+            {
+                if (item.IsSingle == 1)
+                {
+                    <li><a href="@Url.Action("singlePage", "Information", new { id=item.ClassID})">@item.ClassName</a></li>
+                }
+                else
+                {
+                    var subSections=_ISectionService.GetSubNewClassByParentNewClass(item.ClassID);
+                    if (subSections.Count>0)
+                    {
+                        
+                        <li><a href="javascript:void(0)" onclick="showNext(this)">@item.ClassName</a></li>
+                        <div class="subClass" style="display:none;">
+                            @foreach (var subItem in subSections)
+                            {
+                                <a href="@Url.Action("SectionMobile", "Information", new { id = item.ClassID})">@subItem.ClassName</a>
+                            }
+
+                        </div>
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Action("SectionMobile", "Information", new { id = item.ClassID })">@item.ClassName</a></li>
+                    }
+
+
+                }
+            }
+
+          
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function showNext(e) {       
+        $(e).parent().next().toggle();
+    }
+</script>

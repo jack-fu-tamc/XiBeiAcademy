@@ -1,0 +1,2277 @@
+﻿
+ 
+记录时间：2015-12-03 09:09:18,581 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 09:09:19,060 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 09:09:19,077 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 09:09:19,578 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 10:41:30,891 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 10:41:31,234 
+线程ID:[27] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 10:41:31,265 
+线程ID:[23] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 10:41:31,437 
+线程ID:[28] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:47:06,339 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:47:06,510 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:47:06,671 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:47:06,945 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:14,475 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:14,602 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:14,856 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:14,931 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:14,996 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,006 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,025 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,046 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,063 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,083 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,101 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,120 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAccTypeById”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAccTypeById.cshtml
+~/Themes/Default/Views/Common/mGetAccTypeById.vbhtml
+~/Themes/Default/Views/Shared/mGetAccTypeById.cshtml
+~/Themes/Default/Views/Shared/mGetAccTypeById.vbhtml
+~/Views/Common/mGetAccTypeById.cshtml
+~/Views/Common/mGetAccTypeById.vbhtml
+~/Views/Shared/mGetAccTypeById.cshtml
+~/Views/Shared/mGetAccTypeById.vbhtml
+~/MViews/Common/mGetAccTypeById.cshtml
+~/MViews/Shared/mGetAccTypeById.cshtml
+~/HC.Manage/Views/Common/mGetAccTypeById.cshtml
+~/HC.Manage/Views/Common/mGetAccTypeById.vbhtml
+~/HC.Manage/Views/Shared/mGetAccTypeById.cshtml
+~/HC.Manage/Views/Shared/mGetAccTypeById.vbhtml
+~/HC.Manage/MViews/Common/mGetAccTypeById.cshtml
+~/HC.Manage/MViews/Shared/mGetAccTypeById.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,130 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,144 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 11:50:15,607 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 12:06:01,011 
+线程ID:[25] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 12:06:01,042 
+线程ID:[39] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 12:06:01,136 
+线程ID:[31] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 13:03:11,299 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 13:03:11,754 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 13:03:11,801 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 17:24:03,888 
+线程ID:[68] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 17:24:04,248 
+线程ID:[70] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 17:24:04,373 
+线程ID:[57] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 17:24:04,810 
+线程ID:[55] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:19:18,992 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:19:19,553 
+线程ID:[32] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:19:20,084 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:19:22,190 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:19:51,329 
+线程ID:[17] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:19:52,219 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:19:52,765 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:19:53,279 
+线程ID:[17] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:20:17,210 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:20:18,083 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:20:18,645 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:20:19,144 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:21:40,265 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:21:40,764 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:21:40,795 
+线程ID:[30] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:21:41,279 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:08,589 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:08,683 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:09,135 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:09,666 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:27,311 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:27,405 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:27,873 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:28,388 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:41,963 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:42,057 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:42,525 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:22:43,039 
+线程ID:[35] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:24:20,924 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:24:20,987 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:24:21,470 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:24:22,001 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:25:11,916 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:25:11,948 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:25:12,462 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:26:20,148 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:26:20,194 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:26:20,711 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:27:31,939 
+线程ID:[27] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:27:32,033 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:27:32,548 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:27:33,078 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:28:58,751 
+线程ID:[27] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:28:58,892 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:28:59,313 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:28:59,375 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:31:16,321 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:31:16,383 
+线程ID:[19] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:31:16,867 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:31:17,366 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:31:35,248 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:31:35,326 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:31:35,809 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:31:36,340 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:33:19,785 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:33:19,879 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:33:20,347 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:33:20,862 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:37:06,216 
+线程ID:[22] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetAppsetingValue”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Common/mGetAppsetingValue.vbhtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.cshtml
+~/Themes/Default/Views/Shared/mGetAppsetingValue.vbhtml
+~/Views/Common/mGetAppsetingValue.cshtml
+~/Views/Common/mGetAppsetingValue.vbhtml
+~/Views/Shared/mGetAppsetingValue.cshtml
+~/Views/Shared/mGetAppsetingValue.vbhtml
+~/MViews/Common/mGetAppsetingValue.cshtml
+~/MViews/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Common/mGetAppsetingValue.vbhtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.cshtml
+~/HC.Manage/Views/Shared/mGetAppsetingValue.vbhtml
+~/HC.Manage/MViews/Common/mGetAppsetingValue.cshtml
+~/HC.Manage/MViews/Shared/mGetAppsetingValue.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:37:06,294 
+线程ID:[24] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:37:06,356 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBrand”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBrand.cshtml
+~/Themes/Default/Views/Common/mGetBrand.vbhtml
+~/Themes/Default/Views/Shared/mGetBrand.cshtml
+~/Themes/Default/Views/Shared/mGetBrand.vbhtml
+~/Views/Common/mGetBrand.cshtml
+~/Views/Common/mGetBrand.vbhtml
+~/Views/Shared/mGetBrand.cshtml
+~/Views/Shared/mGetBrand.vbhtml
+~/MViews/Common/mGetBrand.cshtml
+~/MViews/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.cshtml
+~/HC.Manage/Views/Common/mGetBrand.vbhtml
+~/HC.Manage/Views/Shared/mGetBrand.cshtml
+~/HC.Manage/Views/Shared/mGetBrand.vbhtml
+~/HC.Manage/MViews/Common/mGetBrand.cshtml
+~/HC.Manage/MViews/Shared/mGetBrand.cshtml   </br>
+ 
+
+ 
+记录时间：2015-12-03 18:37:06,777 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未找到视图“mGetBaseCity”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Themes/Default/Views/Common/mGetBaseCity.cshtml
+~/Themes/Default/Views/Common/mGetBaseCity.vbhtml
+~/Themes/Default/Views/Shared/mGetBaseCity.cshtml
+~/Themes/Default/Views/Shared/mGetBaseCity.vbhtml
+~/Views/Common/mGetBaseCity.cshtml
+~/Views/Common/mGetBaseCity.vbhtml
+~/Views/Shared/mGetBaseCity.cshtml
+~/Views/Shared/mGetBaseCity.vbhtml
+~/MViews/Common/mGetBaseCity.cshtml
+~/MViews/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.cshtml
+~/HC.Manage/Views/Common/mGetBaseCity.vbhtml
+~/HC.Manage/Views/Shared/mGetBaseCity.cshtml
+~/HC.Manage/Views/Shared/mGetBaseCity.vbhtml
+~/HC.Manage/MViews/Common/mGetBaseCity.cshtml
+~/HC.Manage/MViews/Shared/mGetBaseCity.cshtml   </br>
+ 

@@ -1,0 +1,186 @@
+﻿@using HC.Data.Models
+
+@model News
+@{
+    ViewBag.Title = "图书馆-" + Html.Raw(Model.NewsTitle);
+    Layout = "~/Views/Shared/_LayoutLibrary.cshtml";
+    var curentNewsClass = ViewBag.CurentNewsClass as NewsClass;
+
+}
+
+@section headcss{
+    <link href="~/Scripts/ad-gallery/jquery.ad-gallery.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        #spvoid_wrapper {
+            margin: 0 auto;
+        }
+
+        #spvoid {
+            margin: 0 auto;
+        }
+    </style>
+}
+
+
+<div class="block block_bg">
+    <div class="area_l">
+        <div class="leftnav">
+            <div class="leftnav2">
+                <div class="leftnav_title"><b>@Html.Raw(ViewBag.parentClassName)</b><span>SCHOOL NEWS</span></div>
+                <div class="leftnav_bg">
+                    @{Html.RenderAction("LeftNav", "Information", new { id = curentNewsClass.ParentID, curenId = curentNewsClass.ClassID, viewName = "Library" });}
+                </div>
+            </div>
+        </div>
+        <div class="clr20"></div>
+
+        <div class="column_left_01">
+            <div class="column_t"><p class="column_title">热点新闻</p></div>
+            <div class="column_c">
+                <div class="left_01">
+                    @{Html.RenderAction("leftNewsDelivery", "Information");}
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript" src="/scripts/SpryCollapsiblePanel.js"></script>
+    </div>
+    <div class="area_r">
+        <!--当前位置 -->
+        <div class="crumb">
+            <div class="position">
+                <a href="/" title="首页" class="home"></a>
+                <p>
+                    <a href="/">首页</a>
+                    @Html.Raw(ViewData["nav"].ToString())
+                </p>
+            </div>
+            <div class="title"><p>@Html.Raw(curentNewsClass.ClassName)</p></div>
+            <div class="clr"></div>
+        </div>
+        <!--网站内容 -->
+        <div class="news_show">
+            <div class="title">@Html.Raw(Model.NewsTitle)</div>
+            <div class="title2">时间：@Model.CreatTime.ToString("yyyy-MM-dd HH:mm")&nbsp;&nbsp;&nbsp;&nbsp;发布者：@Html.Raw(Model.Author)&nbsp;&nbsp;&nbsp;&nbsp;浏览量：@Model.ClickNum</div>
+            <div class="content">
+
+
+
+
+                <!--视频显示-->
+                @if (Model.Attachments.Where(x => x.AttaType == 2).Count() > 0)
+                {
+
+                    <div class="spvoid" id="spvoid"></div>
+                    <script src="~/Scripts/smzy_jwplayer/jwplayer.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+
+                        jwplayer('spvoid').setup({
+                            'flashplayer': '/Scripts/smzy_jwplayer/jwplayer.flash.swf',
+                            'image': '@Model.Attachments.FirstOrDefault().AttaDescribe',
+                            'id': 'playerIDspVoid1',
+                            'width': 440,
+                            'height': 250,
+                            //'aspectratio': '10:6',
+                            'file': '@Model.Attachments.FirstOrDefault().AttaUrl'
+                        });
+                    </script>
+                }
+
+
+
+
+
+                <!--相册显示-->
+                @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
+                {
+
+                    <div style="min-height:450px;">
+                        <div class="">
+                            <!--start-->
+
+
+                            <div id="container">
+                                <div class="ad-gallery" id="gallery">
+                                    <div id="descriptions"></div>
+                                    <div class="ad-image-wrapper"></div>
+                                    <div class="ad-controls"></div>
+                                    <div class="ad-nav">
+                                        <div class="ad-thumbs">
+                                            <ul class="ad-thumb-list">
+                                                @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).OrderByDescending(x => x.AttachmentID).ToList())
+                                                {
+                                                    <li>
+                                                        <a href="@item.AttaUrl">
+                                                            <img src="@item.AttaUrl" alt="@item.AttaDescribe">
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end -->
+                            <div class="c_both"></div>
+                        </div>
+                    </div>
+                }
+
+
+
+                @Html.Raw(HttpUtility.HtmlDecode(Model.NewsContent))
+            </div>
+        </div>
+
+        <div class="flip_page">
+            @if (ViewData["prevNews"] != null)
+            {
+                <p class="a1">上一篇：<a href="/Information/newsLibrary/@((ViewData["prevNews"] as News).NewsID)">@(Html.Raw((ViewData["prevNews"] as News).NewsTitle))</a></p>
+            }
+            else
+            {
+                <p class="a1">上一篇：没有了</p>
+            }
+
+            @if (ViewData["nextNews"] != null)
+            {
+                <p class="a2">下一篇：<a href="/Information/newsLibrary/@((ViewData["nextNews"] as News).NewsID)">@(Html.Raw((ViewData["nextNews"] as News).NewsTitle))</a></p>
+            }
+            else
+            {
+                <p class="a2">下一篇：没有了</p>
+            }
+
+
+
+        </div>
+
+
+    </div>
+    <div class="clr"></div>
+</div>
+
+@section footScript{
+    <!--相册功能-->
+    <script src="~/Scripts/ad-gallery/jquery.ad-gallery.js" type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript">
+                           $(function () {
+                               var galleries = $('.ad-gallery').adGallery();
+                               $('#switch-effect').change(
+                           function () {
+                               galleries[0].settings.effect = $(this).val();
+                               return false;
+                           }
+                         );
+                               $('#toggle-slideshow').click(
+                           function () {
+                               galleries[0].slideshow.toggle();
+                               return false;
+                           }
+                         );
+                           });
+    </script>
+}

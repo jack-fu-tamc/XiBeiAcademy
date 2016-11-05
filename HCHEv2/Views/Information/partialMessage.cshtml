@@ -1,0 +1,152 @@
+﻿@using HC.Data.Models
+@{
+    Layout = null;
+    var curentPage = int.Parse(ViewBag.curentPage.ToString());
+    var totalCount = int.Parse(ViewBag.TottalCount.ToString());
+    var totalPage = Math.Ceiling((float)totalCount / 5);
+}
+@model List<LeaveMessage>
+
+
+
+@foreach (var mes in Model)
+{
+    <div class="comment_item">
+        <div class="comment_item_cont clearfix">
+            <div class="J_Comment_Face t_face">
+                <a href="###" title="er13156" target="_blank">
+                    <img src="http://tva3.sinaimg.cn/crop.0.0.1080.1080.50/60de7cd2jw8ezdciks24lj20u00u0q5p.jpg">
+                </a>
+            </div>
+            <div class="t_content">
+                <div class="J_Comment_Info">
+                    <div class="t_info">
+                        <span class="t_username t_mobile"><a href="###" target="_self">@mes.LeaveName</a></span>
+                    </div>
+                </div>
+                <div class="comment_content J_Comment_Txt clearfix">
+                    <div class="t_txt">@mes.LeaveContent</div>
+                    <div class="reply" style="visibility: visible;">
+                        <span class="datetime J_Comment_Time">@mes.createTime.ToString("yyyy-MM-dd h:mm:ss")</span>
+                    </div>
+                </div>
+                <!--官方回复-->
+                @if (!string.IsNullOrEmpty(mes.Answer))
+                {
+                    <div class="J_Comment_Info">
+                        <div class="t_info">
+                            <span class="t_username t_mobile"><a href="###" target="_self">官方回复:</a></span>
+                        </div>
+                    </div>
+                    <div class="comment_content J_Comment_Txt clearfix">
+                        <div class="t_txt">@mes.Answer</div>
+                        <div class="reply" style="visibility: visible;">
+                            <span class="datetime J_Comment_Time">@mes.createTime.ToString("yyyy-MM-dd h:mm:ss")</span>
+                        </div>
+                    </div>
+                }               
+                <!--官方回复END-->
+                
+            </div>
+        </div>
+    </div>
+}
+
+<div class="page">
+    <span class="a1">
+        
+        
+        @if (totalPage > 0)
+        {
+            <b>&lt;&lt;</b><!--第一页-->
+            <b>&lt;</b><!--上一页-->
+            if (totalPage <= 5)
+            {
+                for (int j = 1; j <= totalPage; j++)
+                {
+                    if (curentPage == j)
+                    {
+                        <span>@curentPage</span>
+                    }
+                    else
+                    {
+                        <a href="javascript:void(0)">@j</a>
+                    }
+                }
+
+            }
+            else
+            {
+                if (curentPage <= 3)
+                {
+                    for (int j = 1; j <= 5; j++)
+                    {
+                        if (curentPage == j)
+                        {
+                            <span>@curentPage</span>
+                        }
+                        else
+                        {
+                            <a href="javascript:void(0)">@j</a>
+                        }
+                    }
+                }
+                else
+                {
+                    if (totalPage - curentPage < 2)
+                    {
+                        for (var p = curentPage - 2 + (totalPage - curentPage - 2); p <= totalPage; p++)
+                        {
+                            if (curentPage == p)
+                            {
+                                <span>@curentPage</span>
+                            }
+                            else
+                            {
+                                <a href="javascript:void(0)">@p</a>
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (var k = curentPage - 2; k <= curentPage + 2; k++)
+                        {
+                            if (curentPage == k)
+                            {
+                                <span>@curentPage</span>
+                            }
+                            else
+                            {
+                                <a href="javascript:void(0)">@k</a>
+                            }
+                        }
+                    }
+                }
+            }
+            <b>&gt;</b><!--下一页-->
+            <b>&gt;&gt;</b><!--末页-->
+        }
+
+
+       
+    </span>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".page a").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Information/partialMessage/"+$(this).text().trim(),
+                dataType: "html",
+                success: function (data) {
+                    $(".b_txt").html(data);
+                },
+                error: function (e) {
+                    alert("通信错误");
+                }
+
+
+            })
+        })
+    })
+</script>

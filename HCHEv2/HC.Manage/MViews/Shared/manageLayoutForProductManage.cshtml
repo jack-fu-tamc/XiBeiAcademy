@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    @*<meta http-equiv="X-UA-Compatible" content="IE=edge" />*@
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <title>@ViewBag.title</title>
+    <!-- 底层框架 -->
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/public-1200.css" />
+    <!--网站主样式-->
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/seller.css" />
+    @RenderSection("headCSS", false)
+
+
+    <link rel="stylesheet" href="~/HC.Manage/Content/TelerikCSS/ForProductM/telerik.common.min.css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/TelerikCSS/ForProductM/telerik.office2010blue.min.css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/TelerikCSS/ForProductM/telerik.rtl.min.css" />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("headScript", false)
+
+
+
+
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/public-ie6.css" />无
+    <![endif]-->
+    <!--[if lte IE 7]>
+         <link rel="stylesheet" href="~/HC.Manage/Content/common/css/ie.css" />
+    <![endif]-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://libs.useso.com/js/html5shiv/r29/html5.js"></script>
+    <![endif]-->
+    <!-- 搜索js -->
+    <script type="text/javascript" charset="utf-8" src="~/HC.Manage/Content/common/script/search.js" defer="defer"></script>
+    <script type="text/javascript" charset="utf-8" src="~/HC.Manage/Content/common/script/public.min.js" defer="defer"></script>
+
+    <!-- 附加js模块 -->
+    <script type="text/javascript" charset="utf-8" src="~/HC.Manage/Content/common/script/seller.js" defer="defer"></script>
+</head>
+
+<body>
+    @Html.Partial("commonHeader")
+    <!--页面主题部分开始-->
+    <div class="container">
+        <div class="row">
+            <!--左侧列表-->
+            @Html.Partial("commonLeftNav")
+
+            @RenderBody()
+        </div>
+    </div>
+    <!--页面主题部分结束-->
+    @Html.Partial("commonFooter")
+
+
+
+
+    @(Html.Telerik()
+     .ScriptRegistrar()
+            .jQuery(false)
+    .jQueryValidation(true))
+    <script type="text/javascript" src="~/Scripts/all.telerik.js"></script>
+    @*<script type="text/javascript" src="~/Scripts/telerik.all.min.js"></script>*@
+    @RenderSection("footScript", false)
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+﻿@using HC.Core;
+@using Maticsoft.Model;
+@using HC.Core.CommonMethod;
+@{
+    ViewBag.Title = "Header";
+    var host = Server.UrlEncode(ViewContext.RequestContext.HttpContext.Request.Url.AbsoluteUri);
+    var modelU = (User_Info)ViewBag.curentUser;
+    var modelUserInfo = modelU ?? WorkContext.CurrentCustomer;
+}
+<div class="buyerleft">
+    <div class="hche_leftnav">
+        <ul>
+            <li class="hche_firstmenu">
+                <i class="hche_firstmenuimg"></i>
+                <a href="javascript:void(0)">店铺设置</a>
+                <i class="top_firstmenu"></i>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("shopperCertificationO", "Home")">认证资料</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("manageCategory", "Home")">设置店铺经营类目</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="javascript:void(0)">店铺装修</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="javascript:void(0)">我的车型库</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="javascript:void(0)">我的品牌库</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("chargeDetail","Alipay")">烩车币收支管理</a>
+            </li>
+            <li class="hche_secondmenu delete_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("contact", "home")">联系方式</a>
+            </li>
+            <li class="hche_firstmenu">
+                <i class="hche_firstmenuimg hche_memberinfomimg"></i>
+                <a href="javascript:void(0)">商品管理</a>
+                <i class="top_firstmenu"></i>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("releaseSelect", "Product")">发布商品</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("ManageOnSales", "Product")">已上架商品</a>
+            </li>
+            <li class="hche_secondmenu delete_secondmenu">
+                <i class="hche_secondmenuimg "></i>
+                <a href="@Url.Action("ManageoffSale", "Product")">已下架商品</a>
+            </li>
+
+
+            <li class="hche_firstmenu">
+                <i class="hche_firstmenuimg hche_sericentermimg"></i>
+                <a href="javascript:void(0)">交易管理</a>
+                <i class="top_firstmenu"></i>
+            </li>
+            @if (modelUserInfo.UserName == "15834178725")
+            {
+                <li class="hche_secondmenu">
+                    <i class="hche_secondmenuimg"></i>
+                    <a href="@Url.Action("manageOrdersAccAll", "Order")">主站订单概况</a>
+                </li>
+            }
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("manageOrders","Order")">订单管理</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("delivery", "Order")">发货管理</a>
+            </li>
+            <li class="hche_secondmenu delete_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("Myevaluate", "evaluate")">评价管理</a>
+            </li>
+
+            <li class="hche_firstmenu">
+                <i class="hche_firstmenuimg hche_sericentermimg"></i>
+                <a href="javascript:void(0)">求购管理</a>
+                <i class="top_firstmenu"></i>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("releasePurchase", "Purchase")">发布新求购</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("helpPurchase", "Purchase")">我帮你采购</a>
+            </li>
+        </ul>
+    </div>
+
+</div>

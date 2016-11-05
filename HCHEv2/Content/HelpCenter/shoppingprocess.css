@@ -1,0 +1,27 @@
+/*页面公用样式*/
+.help_navright {
+    position: fixed;
+    right: 10%;
+    height: 210px;
+    width: 100px;
+    background: #fff;
+}
+
+    .help_navright ul li {
+        list-style-type: square;
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+.heig {
+    min-height: 250px;
+    width: 94%;
+    display: block;
+    margin: auto;
+    background: #fff;
+}
+
+.cart-rtits {
+    color: #c20201;
+    margin: 42px 90px 0px 66px;
+}

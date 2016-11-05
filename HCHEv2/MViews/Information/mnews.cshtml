@@ -1,0 +1,135 @@
+﻿@using HC.Data.Models
+@{
+    var curentNewsClass = ViewBag.CurentNewsClass as NewsClass;
+    ViewBag.title = Model.NewsTitle;
+}
+@model News
+
+
+@section headScript{
+
+    <script type="text/javascript" src="~/Scripts/jq-1.7.js"></script>
+    <script type="text/javascript" src="~/Scripts/lightbox.js"></script>
+    <script src="~/Scripts/ad-gallery/jquery.ad-gallery1.js" type="text/javascript" charset="UTF-8"></script>
+}
+@section headcss{
+    <link href="~/Scripts/ad-gallery/jquery.ad-gallery.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        #spvoid_wrapper {
+            margin: 0 auto;
+        }
+
+        #spvoid {
+            margin: 0 auto;
+        }
+
+        .ad-thumb-list{
+            width:1000px !important;
+        }
+    </style>
+}
+
+
+@section lanmuName{
+    <span class="header_c">@curentNewsClass.ClassName</span>
+    }
+
+<div class="block">
+    <!--子栏目 -->
+    <!--有几个栏目就显示几 最大04 -->
+    <!--<div class="submenu submenu04">
+      <ul>
+        <li class="on"><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+      </ul>
+      <div class="clr"></div>
+    </div>
+    <div class="clr10"></div> -->
+    <!--栏目内容 -->
+    <div class="news_show">
+        <div class="title">@Model.NewsTitle</div>
+        <div class="time">作者：@Model.Author&nbsp;&nbsp;&nbsp;&nbsp;时间：@Model.CreatTime.ToString("yyyy-MM-dd")</div>
+        <div class="content">
+
+
+            <!--视频显示-->
+            @if (Model.Attachments.Where(x => x.AttaType == 2).Count() > 0)
+            {
+
+
+
+                <video controls="controls" src="@Model.Attachments.FirstOrDefault().AttaUrl" style=" width: 100%;" id="ckplayer_a1" poster="@Model.Attachments.FirstOrDefault().AttaDescribe"></video>
+                <p><a href="@Model.Attachments.Where(x=>x.AttaType==2).FirstOrDefault().AttaUrl">视频下载</a></p>
+            }
+
+
+
+            <!--相册显示-->
+            @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
+            {
+                <div style="min-height:450px;">
+                    <div class="">
+                        <!--start-->
+                        @*<script src="~/Scripts/ad-gallery/jquery.ad-gallery1.js" type="text/javascript" charset="UTF-8"></script>*@
+                        <script type="text/javascript">
+                            $(function () {
+                                var galleries = $('.ad-gallery').adGallery();
+                                $('#switch-effect').change(
+                            function () {
+                                galleries[0].settings.effect = $(this).val();
+                                return false;
+                            }
+                          );
+                                $('#toggle-slideshow').click(
+                            function () {
+                                galleries[0].slideshow.toggle();
+                                return false;
+                            }
+                          );
+                            });
+                        </script>
+
+                        <div id="container">
+                            <div class="ad-gallery" id="gallery">
+                                <div id="descriptions"></div>
+                                <div class="ad-image-wrapper"></div>
+                                <div class="ad-controls"></div>
+                                <div class="ad-nav">
+                                    <div class="ad-thumbs">
+                                        <ul class="ad-thumb-list">
+                                            @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).ToList())
+                                            {
+                                                <li>
+                                                    <a href="@item.AttaUrl">
+                                                        <img src="@item.AttaUrl" alt="@item.AttaDescribe">
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end -->
+                        <div class="c_both"></div>
+                    </div>
+                </div>
+            }
+
+
+
+
+
+
+           @Html.Raw(Model.NewsContent)
+        </div>
+        <!--<div class="bottom_top clearfix">
+          <p class="fl"><a href="#">【打印】</a>&nbsp;&nbsp;<a href="#">【关闭】</a></p>
+          <p class="fr"><a href="/">&lt; 返回首页</a>&nbsp;&nbsp;&nbsp;<a href="#"><img src="/images/common/ico_top.gif"></a></p>
+        </div> -->
+    </div>
+
+
+</div>

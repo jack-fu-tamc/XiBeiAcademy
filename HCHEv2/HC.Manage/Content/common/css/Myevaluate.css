@@ -1,0 +1,480 @@
+/*评价管理*/
+li {
+    list-style: none;
+}
+
+.hc_maintop {
+    background-color: #F5F5F5;
+    height: 35px;
+    border-top: 2px solid #F0F0F0;
+}
+
+.hc_titletop {
+    color: #C20120;
+    padding: 6px 0px 0px 15px;
+    font-size: 15px;
+}
+
+    .hc_titletop .hc_titleSpan {
+        float: right;
+        color: #CE9D63;
+        margin-right: 30px;
+        *margin-top: -20px;
+        font-size: 14px;
+    }
+
+.hc_evalueLv {
+    color: #c20210;
+    font-size: 16px;
+    margin: 20px 0px 0px 30px;
+}
+
+.hc_evaluetable {
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+    font-family:SimSun;
+}
+
+    .hc_evaluetable td {
+        border: 1px solid #ccc;
+    }
+
+    .hc_evaluetable .tdone {
+        width: 100px;
+        height: 35px;
+    }
+
+    .hc_evaluetable .tdtwo {
+        height: 35px;
+    }
+
+    .hc_evaluetable .tdthree {
+        height: 35px;
+    }
+
+    .hc_evaluetable .tdfour {
+        height: 35px;
+    }
+
+    .hc_evaluetable .tdfove {
+        height: 35px;
+    }
+
+    .hc_evaluetable .hc_evalueimg {
+        margin-left: 15px;
+        *margin-left: -20px;
+    }
+
+    .hc_evaluetable .hc_evaluespan {
+        display: block;
+        float: right;
+        margin-top: 8px;
+        *margin-top: -28px;
+        margin-right: 18px;
+    }
+
+.hc_floorer {
+    margin-top: 0px;
+    height: 30px;
+    margin-bottom: 13px;
+    border-bottom: 1px solid #C20201;
+    margin-top: 25px;
+}
+
+    .hc_floorer .divtabs {
+        width: 723px;
+        position: relative;
+        margin: auto;
+        height: 30px;
+        float: left;
+    }
+
+        .hc_floorer .divtabs .tab_tltle_lists {
+            width: 734px;
+            float: right;
+            background: #FFF none repeat scroll 0% 0%;
+            height: 30px;
+        }
+
+.tab_menus {
+    width: 750px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+}
+
+.hc_floorer .divtabs ul li {
+    list-style: outside none none;
+}
+
+.tab_menus .selects {
+    cursor: pointer;
+    border-width: 4px 1px 2px;
+    border-style: solid;
+    border-color: #C20201 #C20201 #FFF;
+    min-width: 90px;
+    margin-top: -4px;
+    padding: 0px 5px;
+    color: #C20201;
+}
+
+.tab_menus li {
+    float: left;
+    min-width: 92px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: medium medium 0px;
+    border-style: none;
+    border-color: -moz-use-text-color;
+    cursor: pointer;
+    text-align: center;
+    margin: 0px;
+    padding: 0px 5px;
+    list-style: outside none none;
+}
+
+.hc_nav {
+    width: 205px !important;
+    height: 35px;
+    margin: 0px 10px 0px 0px;
+    float: left;
+    font-family:SimSun;
+    text-align:center;
+}
+
+    .hc_nav p {
+        display: block;
+        padding-left: 10px;
+        line-height: 30px;
+        border: 1px solid #CACACA;
+        margin: 0px;
+        font-size: 15px;
+        cursor: pointer;
+        background: transparent url("../images/order_arrow_x.png") no-repeat scroll 85px 8px;
+    }
+
+    .hc_nav .hc_set.hc_setlisrf {
+        background: transparent url("../images/Menu_arrow.png") no-repeat scroll 85px 8px;
+    }
+
+.dpspan {
+    display: inline-block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+
+
+
+.hc_new {
+    width: 103px;
+    position: absolute;
+    border: 1px solid #CACACA;
+    display: none;
+    margin: 0px;
+    z-index: 1000;
+    padding: 0px;
+}
+
+.hc_nav ul li {
+    line-height: 30px;
+    padding-left: 10px;
+    background: #FFF none repeat scroll 0% 0%;
+    display: block;
+    cursor: pointer;
+}
+
+    .hc_nav ul li:hover {
+        background: #EEE none repeat scroll 0% 0%;
+    }
+
+.hc_manevalue {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-family:SimSun;
+}
+
+    .hc_manevalue.manwidth {
+        width: 140px;
+    }
+
+    .hc_manevalue.wareswidth {
+        width: 210px;
+    }
+
+    .hc_manevalue.operatewidth {
+        width: 140px;
+    }
+
+.hc_listenaluediv {
+    float: left;
+    border-top: 1px solid #ccc;
+    font-family:SimSun;
+    font-size:12px;
+}
+
+.hc_evaluelist {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    float: left;
+    width: 918px;
+    border-top: none;
+    font-size:12px;
+}
+
+    .hc_evaluelist .list_ok {
+        width: 100px;
+        float: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+        .hc_evaluelist .list_ok .goodevalue {
+            display: block;
+            color: #c20201;
+            font-size: 15px;
+        }
+
+    .hc_evaluelist .list_content {
+        width: 330px;
+        float: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: left !important;
+    }
+
+        .hc_evaluelist .list_content .timespan {
+            color: #999;
+            font-size: 12px;
+            display: block;
+            height: 25px;
+            line-height: 25px;
+        }
+
+    .hc_evaluelist .list_name {
+        width: 140px;
+        float: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .hc_evaluelist .list_shownews {
+        width: 225px;
+        float: left;
+        text-align: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+        .hc_evaluelist .list_shownews .manyspan {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+        }
+
+            .hc_evaluelist .list_shownews .manyspan .red {
+                color: #c20201;
+            }
+
+    .hc_evaluelist .list_operate {
+        width: 120px;
+        float: left;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+.list_operate .hc_goodevalue {
+    width: 65px;
+    height: 25px;
+    color: #C20201;
+    background: #FFF;
+    border: 1px solid #C20201;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.list_operate .hc_delevalue {
+    width: 65px;
+    height: 25px;
+    color: #000;
+    background: #FFF;
+    border: 1px solid #000;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.list_content .evareply {
+    display: block;
+    font-size: 12px;
+    color: #b48164;
+    border-top: 1px dashed #ccc;
+    margin-top: 10px;
+}
+
+.list_content .evalueplyup {
+    display: block;
+    margin-top: 5px;
+}
+/*弹出回复*/
+.hc_homevalue {
+    z-index: 9999;
+    border: 1px solid #ccc;
+    padding: 5px;
+    outline: 0px none;
+    background: #ccc;
+    position: absolute;
+    width: 665px;
+    display: block;
+    height: auto;
+    margin-top: 20px;
+}
+
+.hc_homevaluerod {
+    background: #FFF;
+    height: auto;
+}
+
+.hc_reply_arrow {
+    position: absolute;
+    border-width: 9px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #ccc;
+    border-image: none;
+    top: -18px;
+    left: 50px;
+}
+
+.hc_reply_arrow, .hc_reply_arrow2 {
+    font-size: 0px;
+    line-height: 0;
+}
+
+.hc_reply_arrow2 {
+    position: absolute;
+    border-width: 9px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #FFF;
+    border-image: none;
+    top: -12px;
+    left: 50px;
+}
+
+.hc_textare {
+    height: auto;
+    display: block;
+    padding: 1px;
+}
+
+    .hc_textare .text_reply {
+        border: 1px solid #CCC;
+        width: 597px;
+        height: 170px;
+        display: block;
+        padding: 5px;
+        margin-top: 20px;
+        margin-left: 25px;
+        resize: none;
+        border-radius: 0px;
+    }
+
+    .hc_textare .hc_fonttextare {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 13px;
+        height: 60px;
+        line-height: 45px;
+    }
+
+    .hc_textare .hc_closdiv {
+        display: block;
+        float: right;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+.hc_fonttextare .hc_textarebut {
+    width: 65px;
+    height: 25px;
+    margin-top: 10px;
+    *margin-top: -30px;
+    font-size: 14px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 0px;
+    border: none;
+    background: #c20201;
+    color: #fff;
+    float: right;
+}
+
+.t-select .t-icon {
+    background: url("../../../Content/pic/Menu_arrow.png") no-repeat  24% 50% !important;
+    *background: url("../../../Content/pic/Menu_arrow.png") no-repeat  34% 10% !important;
+    width: 20px !important;
+}
+
+.t-reset li {
+    line-height: 30px;
+    text-align:center;
+}
+
+.hc_listenaluediv .t-widget {
+    border-top: none;
+    *max-width:904px;
+}
+
+.hc_listenaluediv .t-alt {
+    background: #fff;
+}
+.hc_listenaluediv .t-alt td {
+   *border-top:1px solid #ccc;
+}
+.t-grid-pager {
+    border-right:1px solid #ccc;
+    *border-top:1px solid #ccc;
+    width:919px;
+    *width:100%;
+}
+.t-grid table {
+    border-right:1px solid #ccc;
+    max-width:920px;
+}
+.hc_listenaluediv #beenEvaGrid {
+    max-width:920px;
+}
+#listegooddiv {
+    *width:919px;
+}
+#AllEvaGrid .t-grid-pager {
+    *width:919px;
+}
+.t-grid td {
+    border-left:1px solid #ccc;
+    border-right:none;
+}
+.hc_listenaluediv #AllEvaGrid {
+    border-left:none;
+}
+.hc_listenaluediv #beenEvaGrid tr td{
+    border-left:none;

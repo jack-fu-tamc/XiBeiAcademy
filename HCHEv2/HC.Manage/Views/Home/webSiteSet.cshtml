@@ -1,0 +1,307 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure;
+@using HC.Service.User;
+@using HC.Data.ViewModels;
+@model WebSiteViewModel
+@{
+
+    ViewBag.Title = "站点设置";
+
+
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/authentication.css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/artdialog/ui-dialog.css">
+    <style type="text/css">
+        .hc_textlable {
+            width: 150px !important;
+        }
+
+        #Certication {
+            /*padding-left: 0px !important;*/
+            padding-top: 10px;
+        }
+
+        .hc_chk {
+            padding-left: 103px !important;
+        }
+
+        .hc_item .hc_attestationBtn {
+            margin: 0px 0px 21px 365px !important;
+        }
+
+        .splitSection {
+            margin-top: 15px;
+        }
+
+        .modalPromission {
+            margin-left: 30px;
+        }
+
+            .modalPromission input {
+                margin-top: 0px;
+            }
+
+            .modalPromission label {
+                float: left;
+                margin-right: 15px;
+            }
+
+        .sectionMoudal {
+            float: left;
+            width: 100px;
+            margin-right: 11px;
+        }
+
+        .NewsMenueSubSection {
+            display: block;
+        }
+
+        .NewsThreeMenueSubSection {
+            display: block;
+        }
+
+        .oneLevelName {
+            width: 100%;
+        }
+
+        .sectionMoudal p {
+            padding-right: 0;
+        }
+
+        .sectionMoudal input {
+            margin-top: 0px;
+        }
+
+        .hc_attestationBtn {
+            background-color: #0088cc;
+        }
+
+        .hc_item .hc_fl .spanmsci {
+            display: none;
+        }
+
+        .NewsMenueSubSection {
+            background-color: #ffffff !important;
+        }
+
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+
+}
+@section headScript{
+    <script src="~/HC.Manage/Content/common/artdialog/dialog-plus-min.js"></script>
+}
+
+<div class="buyerright">
+    <!--基本信息-->
+    <div class="hc_maintop">
+        <div class="hc_titletop">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            @ViewBag.Title
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+            <img src="~/HC.Manage/images/ManageImg/xin.png">
+        </div>
+    </div>
+    <div>
+        <div class="hc_item">
+            <span class="hc_textlable"><span class="hc_red"></span>是否开启SSL：</span>
+            <div class="hc_fl">
+
+                @Html.CheckBoxFor(x => x.OpenSSl)
+
+            </div>
+        </div>
+
+        <div class="hc_item">
+            <span class="hc_textlable"><span class="hc_red"></span>是否开启登录验证码：</span>
+            <div class="hc_fl">
+                @Html.CheckBoxFor(x => x.verificationCode)
+            </div>
+        </div>
+
+        <div class="hc_item">
+            <span class="hc_textlable"><span class="hc_red"></span>密码更改周期：</span>
+            <div class="hc_fl">
+                @Html.TextBoxFor(x => x.overdueHoru) <span>(单位天)</span><span class="error">必填且为数字</span>
+
+            </div>
+
+        </div>
+
+        <div class="hc_item">
+            <span class="hc_textlable"><span class="hc_red"></span>登录锁定次数：</span>
+            <div class="hc_fl">
+                @Html.TextBoxFor(x => x.lockLogin)<span class="error">必填且为数字</span>
+            </div>
+        </div>
+
+
+        <div class="hc_item">
+            <span class="hc_textlable"><span class="hc_red"></span>锁定账号时长：</span>
+            <div class="hc_fl">
+                @Html.TextBoxFor(x => x.lcokTimeLenth) <span>(单位小时)</span><span class="error">必填且为数字</span>
+            </div>
+        </div>
+
+        <div class="hc_item">
+            <span class="hc_textlable"><span class="hc_red"></span>用户密码长度：</span>
+            <div class="hc_fl">
+                @Html.TextBoxFor(x => x.passWordLength) <span>(包含数字，字母，特殊字符)</span> <span class="error">必填且为数字</span>
+            </div>
+        </div>
+
+
+    </div>
+    <div style="clear:both;"></div>
+
+
+    <div class="hc_maintop">
+        <div class="hc_titletop" style="text-align: center;">
+            <input class="hc_attestationBtn" id="btnAttestation" value="保存" tabindex="20" type="button">
+        </div>
+    </div>
+
+</div>
+@section footScript{
+    <script type="text/javascript">
+
+    //JS扩展
+    if (!String.prototype.trim) {
+        String.prototype.trim = function () {
+            return this.replace(/(^\s*)|(\s*$)/g, "");
+        }
+    }
+
+    Array.prototype.indexOf = function (val) {
+        for (var i = 0; i < this.length; i++) {
+            if (this[i] == val) return i;
+        }
+        return -1;
+    };
+
+    Array.prototype.remove = function (val) {
+        var index = this.indexOf(val);
+        if (index > -1) {
+            this.splice(index, 1);
+        }
+    };
+    //扩展结束
+
+
+    var viewModel = {
+        overdueHoru:'@Model.overdueHoru',
+        OpenSSl:'@Model.OpenSSl',
+        verificationCode:'@Model.verificationCode',
+        lockLogin:@Model.lockLogin,
+        lcokTimeLenth:@Model.lcokTimeLenth,
+        passWordLength:@Model.passWordLength
+        };
+
+
+
+    var valiateResult = true;
+
+    function reQuireVa(e) {
+        if (e.val().replace(/(^\s+)|(\s+$)/g, "").replace(/\s/g, "").length == 0) {
+            valiateResult = false;
+            e.nextAll(".error").show();
+        }
+    }
+
+    function vaNum(e) {
+        if (e.val().replace(/(^\s+)|(\s+$)/g, "").replace(/\s/g, "").length > 0) {
+            var reg = new RegExp("^[0-9]*$");
+            if (!reg.test(e.val())) {
+                valiateResult = false;
+                e.nextAll(".error").show();
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    $(document).ready(function () {
+        //保存
+        $("#btnAttestation").click(function () {
+
+            $("#btnAttestation").val("正在保存...")
+            $("#btnAttestation").attr("disabled", true);
+
+            viewModel.overdueHoru = $("#overdueHoru").val().trim();
+            viewModel.OpenSSl = $("#OpenSSl").is(":checked");
+            viewModel.verificationCode = $("#verificationCode").is(":checked") ;
+            viewModel.lockLogin = $("#lockLogin").val().trim();
+            viewModel.lcokTimeLenth =$("#lcokTimeLenth").val().trim();
+            viewModel.passWordLength =$("#passWordLength").val().trim();
+            //console.log(viewModel);
+
+            //验证必填
+            reQuireVa($("#overdueHoru"));reQuireVa($("#lockLogin"));reQuireVa($("#lcokTimeLenth"));reQuireVa($("#passWordLength"));
+            vaNum($("#overdueHoru"));vaNum($("#lockLogin"));vaNum($("#lcokTimeLenth"));vaNum($("#passWordLength"));
+
+            if(!valiateResult){
+                $("#btnAttestation").val("保存");
+                $("#btnAttestation").removeAttr("disabled");
+                return false;
+            }
+
+
+            $.ajax({
+                    url: "@(Url.Action("_ChangeWebSite", "Home"))",
+                    data: viewModel,
+                    type: 'POST',
+                    dataType: 'json',
+                    error: function (xhr, status) {
+                        messageTip("发生错误");
+                    },
+                    success: function (Data) {
+                        if (Data == "success") {
+                            messageTip("修改成功");      
+                            $("#btnAttestation").removeAttr("disabled");
+                            $("#btnAttestation").val("保存");
+                        } else {
+                            messageTip("发生错误");
+                            $("#btnAttestation").removeAttr("disabled");
+                            $("#btnAttestation").val("保存");
+                        }
+                    }
+                });
+        })
+
+        $(".buyerright input:text").on('input',function(e){
+            $(this).nextAll(".error").hide();
+            valiateResult = true;
+        });
+
+
+        //成功提示
+        function messageTip(txt){
+            var d = dialog({
+                content: txt
+            });
+            d.showModal();
+            setTimeout(function () {
+                d.close().remove();
+            }, 1000);
+        }
+
+    })
+    </script>
+}

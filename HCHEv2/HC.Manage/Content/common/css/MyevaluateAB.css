@@ -1,0 +1,71 @@
+
+.buyerright .hc_maintop {
+    width: 100%;
+    margin: 0px;
+}
+
+.hc_evaluetable {
+    margin: 0px 9px;
+    width: 902px;
+}
+#listegooddiv {
+     width: 902px;
+     margin-bottom:20px;
+     *padding-bottom:20px;
+}
+.buyerright .hc_floorer , .containerOfEva {
+    margin: 25px 9px;
+    width: 902px;
+}
+.containerOfEva .hc_nav {
+    width:196px !important;
+}
+.containerOfEva .hc_evaluelist {
+    width:899px !important;
+    *width:900px !important;
+    *border-right:1px solid #ccc;
+}
+    .containerOfEva .hc_evaluelist .list_content {
+        width:313px;
+    }
+#AllEvaGrid .t-grid-pager {
+    width:901px;
+}
+#AllEvaGrid .t-grid-bottom {
+    border-left:1px solid #ccc;
+}
+#beenEvaGrid .t-grid-pager {
+     width:901px;
+}
+#beenEvaGrid .t-grid table {
+     width:902px;
+}
+.divtabs .tab_menus {
+    margin:0;
+}
+.hc_floorer .divtabs .tab_tltle_lists {
+    float:left !important;
+}
+#AllEvaGrid table{
+    width:902px;
+}
+.t-grid td{
+width:902px !important;
+*border-right:none !important;
+}
+.hc_listenaluediv {
+    margin-bottom:20px;
+}
+
+ .t-grid-bottom .t-pager .t-link .t-arrow-first,
+ .t-grid-bottom .t-pager .t-link .t-arrow-last,
+ .t-grid-bottom .t-status .t-refresh,
+ .t-grid-bottom .t-pager .t-link .t-arrow-next,
+ .t-grid-bottom .t-pager .t-link .t-arrow-prev{
+    display:none;
+}
+
+
+.t-grid-bottom .t-status-text{
+    display:none;
+}

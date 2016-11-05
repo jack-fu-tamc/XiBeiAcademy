@@ -1,0 +1,41 @@
+﻿
+ 
+记录时间：2015-12-26 14:42:47,384 
+线程ID:[26] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseDetail.cshtml(32): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“ProcurementDesc”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“ProcurementDesc”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-26 17:33:06,913 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseDetailN.cshtml(27): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“CarBrand_Name”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“CarBrand_Name”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-26 17:45:06,041 
+线程ID:[18] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-26 17:45:09,502 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-26 17:45:18,732 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：传入字典的模型项的类型为“Maticsoft.Model.Procurment_InfoMst”，但此字典需要类型“HC.Manage.Models.procurent.procurmentModel”的模型项。   </br>
+ 

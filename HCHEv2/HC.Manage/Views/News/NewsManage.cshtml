@@ -1,0 +1,863 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+@model NewsModelList
+@{
+    var pageSize = 10;
+    ViewBag.Title = "新闻管理";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsell.css" type="text/css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsellAB.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="~/HC.Manage/Content/jedate/skin/jedate.css">
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/artdialog/ui-dialog.css">
+    <style type="text/css">
+        .allSections {
+            /*display: none;*/
+        }
+
+        .checkedbox {
+            height: 50px !important;
+        }
+
+        .goodsdetailed {
+            margin-top: 0px !important;
+        }
+
+        #onsalesM .goodsdetailed p {
+            min-height: auto !important;
+        }
+
+        .curentSectionNews {
+            background-color: #0088CC;
+            color: white;
+        }
+
+        .showNews {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .levelTwo .showNews, .levelThree .showNews {
+            margin-right: 7px;
+        }
+
+        .propertySet span {
+            font-size: 15px;
+            color: #333333;
+            font-family: '微软雅黑';
+            margin-right: 20px;
+        }
+
+        .propertySet {
+            text-align: center;
+        }
+    </style>
+}
+@section headScript{
+    <script type="text/javascript" src="~/HC.Manage/Content/jedate/jedate.js"></script>
+    <script src="~/HC.Manage/Content/common/artdialog/dialog-plus-min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".NewsMenueSubSection,.NewsThreeMenueSubSection").click(function(event){
+                if($(this).find("div").length==0){
+                    searchModel.NewsClassID=$(this).find("span").attr("classid");
+                    var grid = $("#onsalesM").data('tGrid');
+                    grid.currentPage = 1;
+                    grid.ajaxRequest();
+                    event.stopPropagation();
+                    return false;
+                }
+            })
+
+
+            $(".oneLevelName").click(function(){
+                if($(this).parent().children("div").length==0){
+                    searchModel.NewsClassID=$(this).attr("classid");
+                    var grid = $("#onsalesM").data('tGrid');
+                    grid.currentPage = 1;
+                    grid.ajaxRequest();
+                    event.stopPropagation();
+                }
+            })
+
+
+            $("#goSearchOnsale").click(function(){
+
+                searchModel.searchKey=$("#Title").val();
+                //console.log(searchModel);
+                var grid = $("#onsalesM").data('tGrid');
+                grid.currentPage = 1;
+                grid.ajaxRequest();
+            })
+
+        })
+
+    </script>
+}
+
+
+
+
+
+<div class="buyerright">
+    <div class="sellinggoodslist">
+        <div class="sellinggoodsserchnav">
+            <div class="hcmoneynav">
+                <div class="hche_soldgoods">
+                    <i>新闻管理</i>
+                    NEWS MANAGE
+                </div>
+                <div class="hche_soldgoodsimg">
+                </div>
+                <div class="hche_private">
+                    @*特权 ▪ 专享*@
+                </div>
+            </div>
+
+
+
+
+
+            <div class="sellinggoodsserch sellgoodstitsel">
+                <div class="sellingser">
+                    <div class="sellgoodstitsel">
+                        <div class="sellgoodstit">
+                            <span>搜素字段：</span>
+                            <select id="searchType" class="valid" style="float:left;">
+                                <option value="-1">请选择</option>
+                                <option value="1">标题/关键字</option>
+                                <option value="2">作者</option>
+                            </select>
+                            <span style="display:none;">
+                                <span style="margin-left:30px;">关键字：</span>
+                                @Html.TextBox("Title", "", new { @placeholder = "输入搜索关键字", style = "width: 207px;", @autocomplete = "off" })
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="serchcondition">
+                        <div class="hc_CJteach">
+                            <span>发布时间：</span>
+
+                            @Html.TextBox("StartTime", "", new { @class = "mh_date", @readonly = "readonly" })
+                            -
+                            @Html.TextBox("EndTime", "", new { @class = "mh_date", @readonly = "readonly" })
+                        </div>
+                        <div class="hc_JYselest sortbysale">
+                            <span>排序列：</span>
+                            <dl class="hc_ZTselet">
+                                <select id="orderColumn" class="valid">
+                                    <option value="1">发布时间</option>
+                                    <option value="2">点击量</option>
+                                    <option value="3">权重</option>
+                                </select>
+                            </dl>
+
+                        </div>
+
+                        <div class="goodserch">
+                            <input id="goSearchOnsale" type="button" value="搜索" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="salegoodslist">
+            @(Html.Telerik().Grid<NewsWithNotNewsClass>(Model.news.Data).Name("onsalesM")
+            .ToolBar(toolBar => toolBar.Template(
+                @<div style="padding: 10px">
+
+                    <input type="checkbox" id="selectAll" />全选
+                    <a id="deletePro" class="del_show">删除</a>
+                    <a id="addNews" href="javascript:void(0)" onclick="addNews();" class="del_show">添加新闻</a>
+                    <a id="moveNews" href="javascript:void(0)" class="del_show" onclick="transferNews();">新闻转移</a>
+                    <a id="copyNews" href="javascript:void(0)" class="del_show" onclick="CopyNews();">新闻复制</a>
+                    <a id="setProperty" href="javascript:void(0)" class="del_show" onclick="propertySet();">属性设置</a>
+
+                    @*<a id="recommendPro" class="del_show shopchoose">店铺推荐</a>
+                        <a id="OffRecommendPro" class="del_show shopchoose">取消推荐</a>
+                        <a id="OpIsMainOn" class="del_show shopchoose">设为主营</a>
+                        <a id="OpIsMainOff" class="del_show shopchoose">取消主营</a>
+                        <a id="offSale" class="del_show">下架</a>
+                        <a id="importPro" class="del_show">导入商品</a>
+                        <a id="importProTemp" class="del_show" style="width:90px;">导入模板下载</a>*@
+                </div>))
+                       .ClientEvents(events =>
+                       events.OnDataBinding("onsaleBinding")
+                       .OnDataBound("onsaleBound")
+                       .OnRowDataBound("onRowDataBound")
+               )
+           .Columns(columns =>
+                   {
+                       columns.Bound(x => x.NewsTitle).Title("新闻标题").Width(50)
+                           .Template(@<text>
+                            <div class="checkedbox"><input type="checkbox" class="checkboxGroups" name="check" value="@item.NewsID"></div>
+                            @*<div class="listshowimg"><img src="@item.ProImg" /></div>*@
+                            <div class="goodsdetailed">
+                                <p><a href="javascript:;">@item.NewsTitle </a></p>
+                                @*@if (item.IsRecommend == 1)
+                                    {<p class="ctrolheig"><img src="~/HC.Manage/images/publicimg/mc_tj.gif" style=""></p> }//1 推荐 0 普通
+                                    else { }
+                                    @if (item.IsMain == 1)
+                                    {<p class="ctrolheig"><img src="~/HC.Manage/images/publicimg/mc_zy.gif" style=""></p> }//1 推荐 0 普通
+                                    else { }*@
+                                <p class="publishtime"><a href="javascript:;">发布时间：@item.CreatTime</a></p>
+                            </div>
+                        </text>).ClientTemplate("<div class=\"checkedbox\"><input type=\"checkbox\" class=\"checkboxGroups\" name=\"check\" value=\"<#= NewsID #>\"></div><div class=\"goodsdetailed\"> <p><a href=\"javascript:;\"><#= NewsTitle #></a></p><p class=\"publishtime\"><a href=\"javascript:;\">发布时间：<#= CreatTime #></a></p>"
+                    );
+                       //.ClientTemplate("<div class=\"checkedbox\"><input type=\"checkbox\" class=\"checkboxGroups\" name=\"check\" value=\"<#= Id #>\"></div><div class=\"listshowimg\"><img src=\"<#= ProImg #>\"></div><div class=\"goodsdetailed\"> <p><a href=\"javascript:;\"><#= Title #></a></p><p class=\"publishtime\"><a href=\"javascript:;\">发布时间：<#= releaseTime #></a></p>"
+                       //        );
+
+                       columns.Bound(x => x.Author).Title("发布人").Width(63);
+
+
+                       columns.Bound(x => x.NewsType).Title("新闻类型").Width(63).HtmlAttributes(new { @class = "DtdIESeven" })
+                           .Template(@<text> <span> @item.NewsType</span> </text>).ClientTemplate("");
+                       columns.Bound(x => x.IsHot).Title("属性").Width(63).HtmlAttributes(new { @class = "singTotalIESeven" });
+
+
+                       columns.Bound(x => x.ClickNum).Title("点击量").Width(63);
+                       columns.Bound(x => x.NewsID)
+                                       .Width(50)
+                                       .Template(@<text><span>@Html.ActionLink("修改", "AddNews", new { id = item.NewsID })</span><span><a href="/Shop/Shop?userid=@item.NewsID">查看</a></span><span></span></text>)
+                                       .ClientTemplate("<span><a href=\"/manage/News/AddNews/<#= NewsID #>\" >修改</a></span><span><a href=\"/Information/news/<#= NewsID #>\" target=\"_blank\">查看</a></span><span></span>")
+                                       .Title("操作");
+                   }).NoRecordsTemplate("暂无数据")
+.Pageable(seting => seting.Total(Model.news.Total).PageSize(pageSize).Position(GridPagerPosition.Bottom))
+                              .DataBinding(binding => binding.Ajax().Select("NewsAjax", "News")).EnableCustomBinding(true)
+
+            )
+        </div>
+
+
+
+
+
+    </div>
+</div>
+<script type="text/javascript">
+    var selectedIds = [];
+
+    $(document).ready(function () {
+
+
+
+
+        var eleName="onsalesM";
+        var totalH= $("#"+eleName).height();
+        var headH=$("#"+eleName+" .t-grid-header").height();
+        var toolBarH=$("#"+eleName+" .t-toolbar").height();
+        var curnetH=totalH-headH-toolBarH;
+        var paddH=(curnetH-20)/2;
+        $("#"+eleName+" table").prepend("<div class=\"coverWait\" style=\"position: absolute;height:"+curnetH+"px  ;width: 100%;background-color: #E5E5E5;\"><span style=\"text-align: center; display: block; padding-top: "+paddH+"px; color: #777;\">请稍等，数据加载中......</span></div>");
+
+
+
+        //扩展trim 支持ie8
+        if (!String.prototype.trim) { //判断下浏览器是否自带有trim()方法
+            String.prototype.trim = function () {
+                return this.replace(/(^\s*)|(\s*$)/g, "");
+            }
+        }
+        //扩展结束
+
+        //更改成文字
+        $(".t-arrow-next").each(function (i, e) {
+            $(this).text("下一页");
+        });
+        $(".t-arrow-prev").each(function (i, e) {
+            $(this).text("上一页");
+        });
+        //更改成文字结束
+        $(".t-arrow-first").css({ "display": "none" });
+        $(".t-arrow-last").css({ "display": "none" });
+        $(".t-refresh").css({ "display": "none" });
+
+        processGridDsiplay("#onsalesM");
+        $(".t-widget").show();
+
+        ////搜索按钮事件
+        //$("#goSearchOnsale").click(function(){
+        //    var grid = $("#onsalesM").data('tGrid');
+        //    grid.currentPage = 1;
+        //    grid.ajaxRequest();
+        //});
+
+
+        //全选按钮事件
+        $('#selectAll').click(function () {
+            $('.checkboxGroups').attr('checked', $(this).is(':checked')).change();
+        });
+
+        //给grid中checkbox绑定change事件
+        $('.checkboxGroups:input[type=checkbox]').live('change', function (e) {
+            var $check = $(this);
+
+            if ($check.is(":checked") == true) {
+                var checked = jQuery.inArray($check.val(), selectedIds);
+                if (checked == -1) {
+                    //add id to selectedIds.
+                    selectedIds.push($check.val());
+                }
+            }
+            else {
+                var checked = jQuery.inArray($check.val(), selectedIds);
+                if (checked > -1) {
+                    //remove id from selectedIds.
+                    selectedIds = $.grep(selectedIds, function (item, index) {
+                        return item != $check.val();
+                    });
+                }
+            }
+            updateMasterCheckbox();
+        });
+
+
+
+        $("#importexcel-window").css({"display":"none"});
+        $("#importTemp-window").css({"display":"none"});
+        $(".t-close").text("");
+        //导入商品事件
+        //$("#importPro").click(function (e) {
+        //    e.preventDefault();
+        //    $('#importexcel-window').data('tWindow').center().open();
+        //    $("#importexcel-window").css({"display":"block"});
+        //});
+        //模板下载事件
+        //$("#importProTemp").click(function(e){
+        //    e.preventDefault();
+        //    $('#importTemp-window').data('tWindow').center().open();
+        //    $("#importTemp-window").css({"display":"block"});
+        //})
+        //excel导入提交后等待效果
+        //$(".submitExcel").click(function(){
+        //    $(this).css({"display":"none"});
+        //    $(".waitBut").css({"display":"block"});
+        //})
+
+
+
+
+
+    });
+
+    //转为汉字的处理 如果ajax请求返回totalcount是0  则不执行 ondatabind
+    function processGridDsiplay(ele) {
+        var str = $("" + ele + " .t-status-text").text().trim();
+        var indexOF = str.indexOf("f");
+        var totalDate = str.substr(indexOF + 1).trim();
+        var pageSize=@pageSize;
+        var totalPage=Math.ceil(totalDate/pageSize);
+        $(""+ele+" .t-status-text").text("共"+totalPage+"页");
+    }
+
+    function dumps(obj) {
+        var result = [];
+        $.each(obj, function (key, value) { result.push(value); });
+
+        //var results=[];
+        //$.each(obj,function(k,v){results.push( k+"-"+v ) });
+        //console.log(results);
+        return result;
+    }
+
+
+
+
+    var searchModel = {
+        NewsClassID:0,
+        searchType:-1,
+        searchKey:"",
+        startTime:"",
+        endTime:"",
+        sortType:1
+    };
+
+    var transferOrCopy=[];//转移或复制新闻目标栏目标识
+
+
+
+    var addNewsFlag=false;
+    var initAddNewsClassID=0;//记录最后一次添加新闻时的栏目Id
+
+
+    function onsaleBinding(e) {
+        e.data = searchModel;
+    }
+
+    function onsaleBound(e) {
+
+        //处理分页
+        if($(e.currentTarget).find(".t-numeric").children().length>0){
+            var ajaxPageCount= $(e.currentTarget).find(".t-numeric").find("a").length+1;
+            $(e.currentTarget).find(".t-status-text").text("共"+ajaxPageCount+"页");
+        }else{
+            $(e.currentTarget).find(".t-status-text").text("共"+0+"页");
+        }
+        //处理分页
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //移除等待提示层
+        var eleName=$(e.delegateTarget).attr("id");
+        $("#onsalesM table div.coverWait").remove();
+
+
+
+        $('.checkboxGroups:input[type=checkbox]').each(function () {
+            var currentId = $(this).val();
+            var checked = jQuery.inArray(currentId, selectedIds);
+            $(this).attr('checked', checked > -1);
+        });
+        updateMasterCheckbox();
+    }
+
+    function onRowDataBound(e){
+        var s = e.dataItem;
+        var rowItem = e.row;
+        var result = dumps(s);
+        if(!addNewsFlag&&searchModel.NewsClassID==0){
+            initAddNewsClassID=s.ClassID;
+            addNewsFlag=true;
+        }
+
+
+        //if(result[14]==1){//1 主营  0否
+        //    var ssx=$(rowItem.cells[0]).find(".goodsdetailed").find("p:eq(0)");  $(ssx).after("<p class=\"ctrolheig\"><img src=\"/HC.Manage/images/publicimg/mc_zy.gif\" ></p>");
+        //}
+        //if(result[7]==1){//1 推荐  0无
+        //    var ss=$(rowItem.cells[0]).find(".goodsdetailed").find("p:eq(0)");  $(ss).after("<p class=\"ctrolheig\"><img src=\"/HC.Manage/images/publicimg/mc_tj.gif\" ></p>");
+        //}
+        //console.log(s.NewsType);
+        //switch(s.NewsType){
+        //    case 0:
+        //        $(rowItem.cells[2]).text("普通");
+        //        break;
+        //    case 1:
+        //        $(rowItem.cells[2]).text("图文");
+        //        break;
+        //    case 2:
+        //        $(rowItem.cells[2]).text("特效图片");
+        //        break;
+        //    case 3:
+        //        $(rowItem.cells[2]).text("视频");
+        //        break;
+        //}
+
+        var newsShowType=s.PicURL==""?"文字":"图片";
+        $(rowItem.cells[2]).text(newsShowType);
+
+
+        //console.log(s.IsHot);
+        //console.log(s.IsRec);
+
+        var recTxt=s.IsRec==1?"推荐":"";
+        var hotRxt=s.IsHot==1?"热点":"";
+
+        $(rowItem.cells[3]).text(recTxt+"  "+hotRxt);
+
+        var firstTd=$(rowItem.cells[0]).find(".checkedbox");
+        if(s.isDelete=="2"){
+            var origHtml=$(firstTd).html();
+            $(firstTd).html(origHtml+"<img src=\"/HC.Manage/images/publicimg/mc_check.gif\" >");
+        }
+
+
+
+    }
+
+    //更新主checbox
+    function updateMasterCheckbox() {
+        var numChkBoxes = $('.checkboxGroups').length;
+        var numChkBoxesChecked = $('.checkboxGroups:input[checked]').length;
+        $('#selectAll').attr('checked', (numChkBoxes == numChkBoxesChecked) && (numChkBoxes > 0));
+    }
+
+    //新闻添加
+    function addNews(){
+
+        if(searchModel.NewsClassID==0){
+            if ('@ViewBag.DefaultSectionID'==0)
+            {
+                return false;
+            }
+            if(typeof(initAddNewsClassID)=="undefined"||initAddNewsClassID==0){
+                return false;
+            }else{
+                location.href="/manage/News/AddNews"+"?ClassID="+initAddNewsClassID;
+            }
+
+        }else{
+            location.href="/manage/News/AddNews"+"?ClassID="+searchModel.NewsClassID
+        }
+    }
+
+    //新闻转移
+    function transferNews(){
+        var markID='@ViewBag.markID';
+        if(selectedIds.length==0){
+            errorTipe("请先选择要转移的新闻！");
+        }else{
+            initContent(markID);
+        }
+    }
+
+    //新闻复制
+    function CopyNews(){
+        var markID='@ViewBag.markID';
+        if(selectedIds.length==0){
+            errorTipe("请先选择要复制的新闻！");
+        }else{
+            initContentCopy(markID);
+        }
+    }
+
+
+    //初始化 新闻移动栏目选择弹出层
+    function initContent(markId){
+        top.dialog({
+            id: 'test-dialog',
+            title: '选择移动或者复制栏目',
+            width: 1180,
+            //ok: function () {
+            //    this.content('hello world!');
+            //    return false;
+            //},
+            url: '/manage/common/transferOrCopyNews/'+markId,
+            //quickClose: true,
+            onshow: function () {
+                //console.log('onshow');
+            },
+            oniframeload: function () {
+                //console.log('oniframeload');
+            },
+            onclose: function () {
+                if (this.returnValue) {
+                    transferOrCopy=this.returnValue;
+                    transferNewsAjax(transferOrCopy.join(','));
+                }
+                //console.log('onclose');
+            },
+            //onremove: function () {
+            //    //console.log('onremove');
+            //}
+        }).showModal();
+        return false;
+    }
+
+    //新闻复制
+    function initContentCopy(markId){
+        top.dialog({
+            id: 'test-dialog1',
+            title: '选择移动或者复制栏目',
+            width: 1180,
+            //ok: function () {
+            //    this.content('hello world!');
+            //    return false;
+            //},
+            url: '/manage/common/transferOrCopyNews/'+markId,
+            //quickClose: true,
+            onshow: function () {
+                //console.log('onshow');
+            },
+            oniframeload: function () {
+                //console.log('oniframeload');
+            },
+            onclose: function () {
+                if (this.returnValue) {
+                    transferOrCopy=this.returnValue;
+                    copyNewsAjax(transferOrCopy.join(','));
+                }
+                //console.log('onclose');
+            },
+            //onremove: function () {
+            //    //console.log('onremove');
+            //}
+        }).showModal();
+        return false;
+    }
+
+
+    function transferNewsAjax(classids){
+        if(classids.length==0){
+            return false;
+        }
+        $.ajax({
+            url: "@(Url.Action("_transferNews", "News"))",
+            data: { ids: selectedIds.join(','),targetIDs:classids },
+            type: 'GET',
+            dataType: 'json',
+            error: function (xhr, status) {
+                errorTipe("转移出错");
+            },
+            success: function (Data) {
+                if(Data=="success"){
+                    clearSelectIDS();
+                    var grid = $('#onsalesM').data('tGrid');
+                    grid.ajaxRequest();
+                    successTip("转移新闻成功！");
+                }else{
+                    errorTipe("转移出错");
+                }
+            }
+        });
+    }
+
+
+    function copyNewsAjax(classids){
+        if(classids.length==0){
+            return false;
+        }
+        $.ajax({
+            url: "@(Url.Action("_copyNews", "News"))",
+            data: { ids: selectedIds.join(','),targetIDs:classids },
+            type: 'GET',
+            dataType: 'json',
+            error: function (xhr, status) {
+                errorTipe("复制出错");
+            },
+            success: function (Data) {
+                if(Data=="success"){
+                    clearSelectIDS();
+                    var grid = $('#onsalesM').data('tGrid');
+                    grid.ajaxRequest();
+                    successTip("复制新闻成功！");
+                }else{
+                    errorTipe("复制出错");
+                }
+            }
+        });
+    }
+
+
+    //删除新闻
+    $("#deletePro").click(function(){
+        if(selectedIds.length==0){
+            errorTipe("请选择要删除的项");
+        }else{
+
+            if(confirm("确定要删除新闻吗？"))
+            {
+                var proids=selectedIds.join(',');
+                $.ajax({
+                    url: "@(Url.Action("_ajaxNews", "News"))",
+                    data: { ids: proids },
+                    type: 'GET',
+                    dataType: 'json',
+                    error: function (xhr, status) {
+                        errorTipe("删除出错");
+                    },
+                    success: function (Data) {
+                        if(Data=="success"){
+                            clearSelectIDS();
+                            var grid = $('#onsalesM').data('tGrid');
+                            grid.ajaxRequest();
+                        }else{
+                            errorTipe("删除出错");
+                        }
+                    }
+                });
+            }
+        }
+    })
+
+    function clearSelectIDS()
+    {
+        selectedIds=[];
+    }
+
+    jeDate({
+        dateCell: '#StartTime',
+        format: 'YYYY-MM-DD',
+        minDate: '1900-01-01 23:59:59', //设定最小日期为当前日期
+        festival: true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        isTime: true,
+        choosefun: function(datas){
+            searchModel.startTime=datas;
+        },
+        clearfun:function(){
+            searchModel.startTime="";
+        },
+        okfun:function(val){searchModel.startTime=val;}
+    })
+    jeDate({
+        dateCell: '#EndTime',
+        format: 'YYYY-MM-DD',
+        minDate: '1900-01-01 23:59:59', //设定最小日期为当前日期
+        festival: true,
+        maxDate: '2099-06-16 23:59:59', //最大日期
+        isTime: true,
+        choosefun: function(datas){
+            searchModel.endTime=datas;
+        },
+        clearfun:function(){
+            searchModel.endTime="";
+        },
+        okfun:function(val){searchModel.endTime=val; }
+    })
+
+
+    $("#searchType").change(function(){
+        if($(this).val()>0){
+            $(this).next().show();
+        }else{
+            $(this).next().hide();
+        }
+        searchModel.searchType=$(this).val();
+    })
+
+
+    $("#orderColumn").change(function(){
+        searchModel.sortType=$(this).val();
+    })
+
+
+
+    //成功提示
+    function successTip(txt){
+        var d = dialog({
+            content: txt
+        });
+        d.showModal();
+        setTimeout(function () {
+            d.close().remove();
+        }, 2000);
+    }
+    //错误提示
+    function errorTipe(txt){
+        var d = dialog({
+            title: '警告',
+            content: txt
+        });
+        d.showModal();
+    }
+
+    //属性设置数据读取
+    function propertySet(){
+        if(selectedIds.length==0){
+            errorTipe("请选择要操作的新闻！");
+            return false;
+        }
+        if(selectedIds.length>1){
+            errorTipe("不支持批量操作！");
+            return false;
+        }
+
+
+        $.ajax({
+            url: "/manage/News/_getNewsProperty/"+selectedIds[0],
+            type: 'GET',
+            dataType: 'json',
+            error: function (xhr, status) {
+                errorTipe("通信失败");
+            },
+            success: function (Data) {
+                showArtdialog(Data);
+            }
+        });
+    }
+
+    //属性设置 对话框
+    function showArtdialog(e){
+        console.log(e);
+        var strSb="<div class='propertySet'>";
+        if(e.isHot){
+            strSb+='<input type="checkbox" id="isHotInput" value="2" checked="checked"  /><span>热点</span>';
+        }else{
+            strSb+='<input type="checkbox" id="isHotInput" value="2"  /><span>热点</span>';
+        }
+
+
+        if(e.isRec){
+            strSb+='<input type="checkbox" id="isRecInput" value="1" checked="checked" /><span>推荐</span>';
+        }else{
+            strSb+='<input type="checkbox" id="isRecInput" value="1" /><span>推荐</span>';
+        }
+        strSb+="<p><span style='margin-right:10px;'>权重:</span><input id='newOrder' class='hc_nameinput' value='"+e.Order+"' ></p></div>";
+
+
+        var d = dialog({
+            title: '新闻属性设置',
+            content: strSb,
+            width:200,
+            okValue: '确定',
+            ok: function () {
+                var reData={isRec:false,isHot:false,Order:0};
+                reData.isRec=$("#isRecInput").is(":checked");
+                reData.isHot=$("#isHotInput").is(":checked");
+                reData.Order=$("#newOrder").val();
+                propertySetSave(reData);
+                return true;
+            }
+        });
+        d.showModal();
+    }
+
+
+    //属性设置保存
+    function propertySetSave(e){
+        $.ajax({
+            url: "/manage/News/_setNewsProperty/"+selectedIds[0],
+            data:e,
+            type: 'POST',
+            dataType: 'json',
+            error: function (xhr, status) {
+                errorTipe("通信失败");
+            },
+            success: function (Data) {
+                clearSelectIDS();
+                var grid = $('#onsalesM').data('tGrid');
+                grid.ajaxRequest();
+                successTip("设置成功！");
+            }
+        });
+    }
+</script>
+
+@section footScript{
+    @*<script type="text/javascript">
+        //先强制gridajax
+        $(document).ready(function(){
+            var grid = $('#onsalesM').data('tGrid');
+            grid.currentPage = 1;
+            grid.pageSize=1;
+            grid.ajaxRequest();
+        })
+        </script>*@
+    <script type="text/javascript">
+        onerror=handleErr;
+        function handleErr()
+        {
+            return true
+        }
+    </script>
+
+}

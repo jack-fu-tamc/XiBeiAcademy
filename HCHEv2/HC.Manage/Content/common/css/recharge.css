@@ -1,0 +1,172 @@
+﻿/*烩车币充值样式*/
+.hcrecharge {
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.hcrechargenav {
+    height: 40px;
+    line-height: 40px;
+    color: rgb(194, 2, 1);
+    font-size: 16px;
+}
+
+    .hcrechargenav span {
+        margin-left: 10px;
+    }
+
+.selectrecharge {
+    width: 918px;
+    height: auto;
+    border: 1px solid #CCC;
+    font-size: 16px;
+}
+
+.recharge {
+    margin-top: 25px;
+    margin-left: 100px;
+    line-height: 50px;
+}
+
+.rechargesum {
+    height: auto;
+    display: inline-block;
+}
+
+.rechargemone {
+    width: 80px;
+    float: left;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+}
+
+hc_serveradio, .pay_list_c1 {
+    width: 24px;
+    height: 22px;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: -17px 10px;
+    line-height: 0px;
+    margin-right: 10px;
+    background-image: url("../../../images/publicimg/repair_radio.png");
+}
+
+.rabuit {
+    background-position: 3px 10px;
+}
+
+.othersum {
+    width: 120px !important;
+    height: 25px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.hc_serveradio .radioclass {
+    opacity: 0;
+    cursor: pointer;
+    margin-top: 0px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+.hc_telinpt {
+    border-radius: 0px;
+    height: 25px;
+    width: 175px;
+    margin-bottom: 0px;
+}
+
+.hc_serveradio {
+    width: 24px;
+    height: 25px;
+    float: left;
+    cursor: pointer;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: -17px 10px;
+    line-height: 0px;
+    background-image: url("../../../images/publicimg/repair_radio.png");
+}
+
+.hc_fl {
+    padding: 0px 30px 0px 88px;
+    border-radius: 0px;
+}
+
+.hc_heig {
+    height: 35px;
+}
+
+.hc_serveradio {
+    height: 40px;
+    line-height: 40px;
+    width: 80px;
+    float: left;
+}
+
+.hc_serveradios {
+    width: auto !important;
+}
+
+
+.rechargetips {
+    font-size: 14px !important;
+    color: #bbb;
+    height: 20px !important;
+    line-height: 0px !important;
+    *height: 30px !important;
+    *line-height: 24px !important;
+}
+
+.rechargeimmediately {
+    height: 50px;
+    border-top: 1px solid #CCC;
+    margin-top: 20px;
+    text-align: center;
+    width: 819px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+    .rechargeimmediately input {
+        margin-top: 20px;
+        background: #C20201;
+        color: #fff;
+        font-size: 16PX;
+        width: 95px;
+        height: 35px;
+        border: none;
+        border-radius: 3px;
+    }
+/*提示错误样式（为公用）*/
+.errorstip {
+    float: left;
+    margin-top: 5px;
+    height: 20px;
+}
+
+    .errorstip .tip_img {
+        height: 15px;
+        line-height: 15px;
+        width: 15px;
+        display: block;
+        float: left;
+        background: transparent url("../../../images/publicimg/Input_error.png") no-repeat scroll 0% 0%;
+        margin-left: 5px;
+    }
+
+    .errorstip .tip_text {
+        display: block;
+        float: left;
+        height: 15px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-left: 5px;
+        color: #C20201;
+    }

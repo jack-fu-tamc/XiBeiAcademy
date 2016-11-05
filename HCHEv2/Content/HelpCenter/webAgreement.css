@@ -1,0 +1,50 @@
+
+/*买家中心右侧样式*/
+.biaoti {
+    width: 100%;
+    margin: 0px auto;
+    color: #404040;
+    line-height: 2.8;
+}
+
+.jizhong {
+    text-align: center;
+    font-size: 24px;
+}
+
+.xiaobiao {
+    text-align: right;
+    line-height: 2.8;
+}
+
+.juzuo {
+    text-align: left;
+    line-height: 4;
+}
+
+    .juzuo li {
+        list-style: none;
+        list-style-position: outside;
+    }
+.cart-rconauto {
+    margin:auto;
+}
+.spansiz {
+    font-size: 18px;
+}
+
+    .buyerright h5 {
+        margin: 17px 0;
+    }
+.cart-rtits {
+    height: 70px;
+    margin-top: 30px;
+    border-top: 1px dashed #CCC;
+}
+
+    .cart-rtits p {
+        float: right;
+        margin-right: 30px;
+        margin-top: 10px;
+    }
+/*帮助页面中心样式结束*/

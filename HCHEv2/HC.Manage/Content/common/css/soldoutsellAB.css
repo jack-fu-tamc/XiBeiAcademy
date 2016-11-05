@@ -1,0 +1,327 @@
+.sellinggoodsserch {
+    border: 1px solid #CCC;
+    width: 98%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.hc_JYselest {
+    height: 34px;
+    float: left;
+    line-height: 34px;
+    margin-left: 33px;
+}
+
+.sortbysale {
+    margin-left: 11px !important;
+}
+
+.hcmoneynav {
+    width: 98%;
+    display: inline-block;
+    font-family: "宋体";
+    color: #000;
+    margin: 15px 10px;
+}
+
+.hche_soldgoods {
+    font-family: 'Microsoft YaHei';
+    width: 258px;
+    color: #CE9D63;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+    .hche_soldgoods i {
+        font-family: 'Microsoft YaHei';
+        color: #C20201;
+       
+        font-style: normal;
+        margin-right: 10px;
+    }
+
+#searchTitle {
+    width: 403px;
+}
+
+.hche_private {
+    font-family: 'Microsoft YaHei';
+}
+
+#onsalesM {
+    width: 98%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+#offSaleW {
+    width: 98%;
+    margin-left: 10px;
+}
+
+
+.salegoodslist .t-grid .t-toolbar {
+    border-bottom: none;
+}
+.t-grid table {
+    border-right:1px solid #ccc;
+}
+#onsalesM .t-grid-header th {
+    background-color: #EEE;
+    *border-top:1px solid #ccc;
+}
+
+
+#offSaleW .t-grid-header th {
+    background: #EEE;
+    *border-top:1px solid #ccc;
+}
+
+#tabs {
+    width: 98%;
+    margin-left: 10px;
+}
+
+.hcincomestate .hc_floorer {
+    float: left;
+    width: 98%;
+    border-bottom: 1px solid #C20201;
+    margin-left: 10px;
+}
+
+
+.hcincomestate .hche_right {
+    border-top: none;
+}
+
+.tab_boxs .list_cont_ones .t-grid .t-toolbar {
+    border-bottom: none;
+}
+
+.goodsdetailed {
+    width: 250px;
+}
+
+#onsalesM .checkedbox {
+    height: 110px;
+}
+
+#onsalesM .goodsdetailed {
+    height: auto;
+}
+
+    #onsalesM .goodsdetailed p {
+        min-height: 45px;
+        height: auto;
+    }
+
+    #onsalesM .goodsdetailed .ctrolheig {
+        line-height: 20px;
+        min-height: 20px;
+        margin: 0px !important;
+    }
+
+    #onsalesM .goodsdetailed .publishtime {
+        height: 25px;
+        line-height: 25px;
+        min-height: 25px;
+    }
+
+.t-grid tr {
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.t-close {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../TelerikCSS/Office2010Blue/sprite.png');
+}
+
+#importexcel-window {
+    /*height: 200px;*/
+    *width: 424px;
+}
+
+    #importexcel-window .t-window-titlebar {
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        /*text-indent:0.5em;*/
+    }
+
+        #importexcel-window .t-window-titlebar .t-window-title {
+            left: 0.8em;
+            float: left;
+            *padding-top: 0px;
+        }
+
+    #importexcel-window .t-window-content {
+        /*height: 140px !important;*/
+        *float: left;
+    }
+
+        #importexcel-window .t-window-content tr {
+            line-height: 40px;
+        }
+
+            #importexcel-window .t-window-content tr .typefile {
+                display: inline-block;
+                height: 33px;
+                width: 270px;
+                position: relative;
+                line-height: 40px;
+                margin-top: 18px;
+                *margin-top: 15px;
+            }
+
+#importexcelfile {
+    width: 270px;
+    line-height: 30px;
+    height: 30px;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.typefile .span {
+    display: inline-block;
+    float: left;
+}
+
+    .typefile .span #viewfile {
+        width: 185px;
+        float: left;
+    }
+
+.typefile label {
+    line-height: 30px;
+    z-index: 1;
+    width: 66px;
+    height: 28px;
+    cursor: pointer;
+    background: url(../../../images/publicimg/liulan.gif);
+    text-indent: -9999px;
+    float: left;
+    margin-left: 2px;
+}
+
+.indent_in {
+    text-align: center;
+    height: 30px;
+    width: 100px;
+    background: #c20201;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-left: 140px;
+    margin-top: 18px;
+}
+
+#importexcel-window .t-window-titlebar {
+    border-color: #ccc;
+    *float: left;
+    *width: 414px;
+    *height: 33px;
+}
+
+.t-window-titlebar .t-window-actions {
+    *border-bottom: none;
+}
+
+.messageBoxError img {
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
+    height: 45px;
+    width: 45px;
+}
+
+.messageBoxError p {
+    height: 30px;
+    margin: 0;
+    line-height: 30px;
+    width: 855px;
+    float: left;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.messageBoxError span {
+    width: 855px;
+    float: left;
+    color: #c20201;
+    height: auto;
+}
+
+.serchcondition {
+    *padding-bottom: 10px;
+}
+
+.messageBoxError > span {
+    margin-bottom: 10px;
+}
+#importTemp-window {
+    *width:423px;
+}
+#importTemp-window .t-header {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+    #importTemp-window .t-header .t-window-title {
+        padding-left: 10px;
+    }
+
+#importTemp-window div.t-window-content {
+    padding: .4em 0.8em;
+    margin-bottom: 10px;
+}
+
+    #importTemp-window div.t-window-content table td {
+        line-height: 50px;
+    }
+
+        #importTemp-window div.t-window-content table td:first-child {
+            text-indent: 2em;
+        }
+
+        #importTemp-window div.t-window-content table td a {
+            display: inline-block;
+            height: 35px;
+            width: 146px;
+            border-radius: 4px;
+            text-align: center;
+            margin-left: 0px;
+            line-height: 35px;
+            margin-right: 40px;
+            text-indent: 0;
+            *margin-left:25px;
+            *margin-right:25px;
+        }
+
+        #importTemp-window div.t-window-content table td .down_first {
+            background:#808080;
+            color: #fff;
+        }
+        #importTemp-window div.t-window-content table td .down_last {
+            background: #c20201;
+            color:#fff;
+        }
+
+        .listshowimg  img{
+            height:95px;
+            width:100px;
+        }
+
+        .hc_nameinput{
+            border-radius:4px;
+            border: 1px solid #cccccc;
+        }

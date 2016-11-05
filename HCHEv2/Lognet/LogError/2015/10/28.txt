@@ -1,0 +1,19 @@
+﻿
+ 
+记录时间：2015-10-28 17:41:18,729 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：“Maticsoft.DBUtility.MysqlHelper”的类型初始值设定项引发异常。   </br>在 Maticsoft.DAL.IP_TABLES.GetProvinceCode(String strIP) 位置 e:\ProTwoN\DAL\Public\IP_TABLES.cs:行号 24
+在 HCHEv2.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\Controllers\HomeController.cs:行号 65
+
+ 
+
+ 
+记录时间：2015-10-28 17:45:22,671 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：“Maticsoft.DBUtility.MysqlHelper”的类型初始值设定项引发异常。   </br>在 Maticsoft.DAL.Acc_Type.GetListAll() 位置 e:\ProTwoN\DAL\Accessories\Acc_Type.cs:行号 26
+在 BLL.Accessories.Acc_TypeBll.GetListAll() 位置 e:\ProTwoN\BLL\Accessories\Acc_TypeBll.cs:行号 22
+在 HCHEv2.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\Controllers\HomeController.cs:行号 72
+
+ 

@@ -1,0 +1,1980 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47884B29-C920-4A8A-928B-10AF2614186A}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCHEv2</RootNamespace>
+    <AssemblyName>HCHEv2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RouteDebugger, Version=2.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Mvc">
+      <HintPath>..\packages\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.30506.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.30506.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.30506.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\commonController.cs" />
+    <Compile Include="Controllers\HcBaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InformationController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HC.Manage\App_Start\FilterConfig.cs" />
+    <Compile Include="HC.Manage\App_Start\RouteConfig.cs" />
+    <Compile Include="HC.Manage\App_Start\WebApiConfig.cs" />
+    <Compile Include="HC.Manage\Controllers\CommonController.cs" />
+    <Compile Include="HC.Manage\Controllers\EnrolSysController.cs" />
+    <Compile Include="HC.Manage\Controllers\HomeController.cs" />
+    <Compile Include="HC.Manage\Controllers\LeaveMessageController.cs" />
+    <Compile Include="HC.Manage\Controllers\ManageBaseController.cs" />
+    <Compile Include="HC.Manage\Controllers\NewsController.cs" />
+    <Compile Include="HC.Manage\Controllers\SectionController.cs" />
+    <Compile Include="HC.Manage\Controllers\UserController.cs" />
+    <Compile Include="HC.Manage\ManageAreaRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Login\LoginModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\Account\AccountValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AliPayLog\AliPayLogRecord.txt" />
+    <Content Include="Content\Account\forgetpwd.css" />
+    <Content Include="Content\Account\login.css" />
+    <Content Include="Content\Area\Accessories.css" />
+    <Content Include="Content\Area\Brandfittings.css" />
+    <Content Include="Content\Area\carload.css" />
+    <Content Include="Content\Area\Double.css" />
+    <Content Include="Content\Area\favorable.css" />
+    <Content Include="Content\Area\hchezone.css" />
+    <Content Include="Content\Area\Modificationparts.css" />
+    <Content Include="Content\Area\procorement.css" />
+    <Content Include="Content\Area\Repairtool.css" />
+    <Content Include="Content\Area\spdp.css" />
+    <Content Include="Content\Area\Systemparts.css" />
+    <Content Include="Content\captcha\022qh0oejmyxazclr4l4slnc.png" />
+    <Content Include="Content\Common\css.css" />
+    <Content Include="Content\Common\mobang.css" />
+    <Content Include="Content\Common\public-1200.css" />
+    <Content Include="Content\Common\publicv2.css" />
+    <Content Include="Content\css.css" />
+    <Content Include="Content\HelpCenter\alipay.css" />
+    <Content Include="Content\HelpCenter\corporatemembers.css" />
+    <Content Include="Content\HelpCenter\hchehelp.css" />
+    <Content Include="Content\HelpCenter\illegal_processing.css" />
+    <Content Include="Content\HelpCenter\instructions.css" />
+    <Content Include="Content\HelpCenter\memberreg.css" />
+    <Content Include="Content\HelpCenter\ReturnPolicy.css" />
+    <Content Include="Content\HelpCenter\ServiceCenter.css" />
+    <Content Include="Content\HelpCenter\shoppingprocess.css" />
+    <Content Include="Content\HelpCenter\webAgreement.css" />
+    <Content Include="Content\Index\hche-sy.css" />
+    <Content Include="Content\Index\product_list.css" />
+    <Content Include="Content\Index\store_list.css" />
+    <Content Include="Content\jquery.lightbox.css" />
+    <Content Include="Content\leaveMessage.css" />
+    <Content Include="Content\login\login.css" />
+    <Content Include="Content\login\placeHolder.js" />
+    <Content Include="Content\ManageCenter\buyers.css" />
+    <Content Include="Content\ManageCenter\collstoreandgoods.css" />
+    <Content Include="Content\ManageCenter\comnodity.css" />
+    <Content Include="Content\ManageCenter\complaint.css" />
+    <Content Include="Content\ManageCenter\data_hadeimg.css" />
+    <Content Include="Content\ManageCenter\details.css" />
+    <Content Include="Content\ManageCenter\handcomplaint.css" />
+    <Content Include="Content\ManageCenter\handcomplaintone.css" />
+    <Content Include="Content\ManageCenter\myaddress.css" />
+    <Content Include="Content\ManageCenter\opinion.css" />
+    <Content Include="Content\ManageCenter\Opiniondetails.css" />
+    <Content Include="Content\ManageCenter\Perimeter.css" />
+    <Content Include="Content\ManageCenter\replacement.css" />
+    <Content Include="Content\ManageCenter\report.css" />
+    <Content Include="Content\ManageCenter\Reportdetails.css" />
+    <Content Include="Content\ManageCenter\Reportinformation.css" />
+    <Content Include="Content\ManageCenter\servicecar.css" />
+    <Content Include="Content\ManageCenter\valutazione.css" />
+    <Content Include="Content\mobile\colorbox.css" />
+    <Content Include="Content\mobile\cooker.css" />
+    <Content Include="Content\mobile\css.css" />
+    <Content Include="Content\mobile\custom.css" />
+    <Content Include="Content\mobile\docs.css" />
+    <Content Include="Content\mobile\drawer.min.css" />
+    <Content Include="Content\mobile\elements.css" />
+    <Content Include="Content\mobile\framework.css" />
+    <Content Include="Content\mobile\framework_map.css" />
+    <Content Include="Content\mobile\hidpi.css" />
+    <Content Include="Content\mobile\responsive.css" />
+    <Content Include="Content\mobile\skin.css" />
+    <Content Include="Content\mobile\style.css" />
+    <Content Include="Content\module.css" />
+    <Content Include="Content\NewsManage\hchenews.css" />
+    <Content Include="Content\Payment\paysuccess.css" />
+    <Content Include="Content\Shop\chassis_type.css" />
+    <Content Include="Content\Shop\paysuccess.css" />
+    <Content Include="Content\Shopping\carts.css" />
+    <Content Include="Content\Shopping\cartts.css" />
+    <Content Include="Content\Shop\hcsy_index.css" />
+    <Content Include="Content\Shop\index.css" />
+    <Content Include="Content\Shop\Shophot.css" />
+    <Content Include="Content\Shop\ShopList.css" />
+    <Content Include="Content\Shop\ShopRegards.css" />
+    <Content Include="Content\Area\ShopSearchList.css" />
+    <Content Include="Content\Shop\shop_manager.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CssJs\css\Index\home.css" />
+    <Content Include="CssJs\css\Index\idangerous.swiper.css" />
+    <Content Include="CssJs\css\Index\layout.css" />
+    <Content Include="CssJs\css\jquery.mobile.min.css" />
+    <Content Include="CssJs\css\public-1200.css" />
+    <Content Include="CssJs\css\publicv2.css" />
+    <Content Include="CssJs\js\Index\idangerous.swiper.min.js" />
+    <Content Include="CssJs\js\Index\index.js" />
+    <Content Include="CssJs\js\Index\Mbase.js" />
+    <Content Include="CssJs\js\Index\mping.min.js" />
+    <Content Include="CssJs\js\Index\zepto.min.js" />
+    <Content Include="CssJs\js\jquery-1.8.2.min.js" />
+    <Content Include="CssJs\js\jquery.js" />
+    <Content Include="CssJs\js\jquery.mobile.min.js" />
+    <Content Include="CssJs\js\jqueryform.js" />
+    <Content Include="CssJs\js\search.js" />
+    <Content Include="CssJs\js\showMenu.js" />
+    <Content Include="CssJs\js\ZQFtop.js" />
+    <Content Include="CssJs\js\Touch.js" />
+    <Content Include="defaultError.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="HC.Manage\Content\common\artdialog\dialog-min.js" />
+    <Content Include="HC.Manage\Content\common\artdialog\dialog-plus-min.js" />
+    <Content Include="HC.Manage\Content\common\artdialog\jquery-1.10.2.js" />
+    <Content Include="HC.Manage\Content\common\artdialog\ui-dialog.css" />
+    <Content Include="HC.Manage\Content\common\css\AlsoBuying.css" />
+    <Content Include="HC.Manage\Content\common\css\AlsoBuying1.css" />
+    <Content Include="HC.Manage\Content\common\css\chat.css" />
+    <Content Include="HC.Manage\Content\common\css\chatM.css" />
+    <Content Include="HC.Manage\Content\common\css\CtegoryApplication.css" />
+    <Content Include="HC.Manage\Content\common\css\decoration.css" />
+    <Content Include="HC.Manage\Content\common\css\PruchaseRecommend.css" />
+    <Content Include="HC.Manage\Content\common\css\sectionManage.css" />
+    <Content Include="HC.Manage\Content\common\css\singlePage\hche-sy.css" />
+    <Content Include="HC.Manage\Content\common\css\singlePage\public-1200.css" />
+    <Content Include="HC.Manage\Content\common\css\singlePage\single.css" />
+    <Content Include="HC.Manage\Content\common\css\timePick.css" />
+    <Content Include="HC.Manage\Content\common\Echarts\echarts.min.js" />
+    <Content Include="HC.Manage\Content\common\script\AlsoBuying.js" />
+    <Content Include="HC.Manage\Content\common\script\AlsoBuying1.js" />
+    <Content Include="HC.Manage\Content\common\script\coverLayer.js" />
+    <Content Include="HC.Manage\Content\common\script\CtegoryApplication.js" />
+    <Content Include="HC.Manage\Content\common\script\decoration.js" />
+    <Content Include="HC.Manage\Content\common\script\JiaDropDownNav.js" />
+    <Content Include="HC.Manage\Content\common\script\jiaTableInit.js" />
+    <Content Include="HC.Manage\Content\common\script\JiaTableSyntony.js" />
+    <Content Include="HC.Manage\Content\common\script\jquery.signalR-2.2.0.js" />
+    <Content Include="HC.Manage\Content\common\script\json2.js" />
+    <Content Include="HC.Manage\Content\common\script\PruchaseRecommend.js" />
+    <Content Include="HC.Manage\Content\common\script\store.min.js" />
+    <Content Include="HC.Manage\Content\common\script\storeAjson2.min.js" />
+    <Content Include="HC.Manage\Content\common\script\timePick.js" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\Attachment_btn.png" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\cancel.png" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\cancel.png" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\css\default.css" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\css\uploadify.css" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\css\_notes\dwsync.xml" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\scripts\expressInstall.swf" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\scripts\jquery-1.3.2.min.js" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\scripts\jquery.uploadify.v2.1.0.min.js" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\scripts\swfobject.js" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\scripts\uploadify.swf" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\scripts\_notes\dwsync.xml" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\_notes\dwsync.xml" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\expressInstall.swf" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\ji03.png" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\ji03S.png" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\jquery-1.3.2.min.js" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\jquery.uploadify.v2.1.0.js" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\jquery.uploadify.v2.1.0.min.js" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\swfobject.js" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\uploadify.allglyphs.swf" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\uploadify.css" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\uploadify.swf" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\uploadImg_1.png" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\uploadImg_2.png" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\uploadpic_btn.png" />
+    <Content Include="HC.Manage\Content\jedate\jedate.js" />
+    <Content Include="HC.Manage\Content\jedate\jedate.min.js" />
+    <Content Include="HC.Manage\Content\jedate\skin\jedate.css" />
+    <Content Include="HC.Manage\Content\pic\pd_ad_arrow.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\anchor\anchor.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\attachment.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\attachment.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\attachment.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\alignicon.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\bg.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\file-icons.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\icons.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\icons.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\image.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\progress.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\success.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\attachment\images\success.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\background\background.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\background\background.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\background\background.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\background\images\bg.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\background\images\success.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\chart.config.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\charts.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\charts.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\charts.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\images\charts0.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\images\charts1.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\images\charts2.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\images\charts3.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\images\charts4.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\charts\images\charts5.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\emotion.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\gmap\gmap.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\help\help.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\help\help.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\help\help.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\image.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\image.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\image.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\images\alignicon.jpg" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\images\bg.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\images\icons.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\images\icons.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\images\image.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\images\progress.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\images\success.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\image\images\success.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\insertframe\insertframe.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\internal.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\link\link.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\map\map.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\map\show.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\music\music.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\music\music.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\music\music.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\preview\preview.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\addimg.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\brush.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\delimg.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\empty.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\eraser.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\redo.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\redoH.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\scale.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\size.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\undo.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\images\undoH.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\scrawl.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\scrawl.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\scrawl\scrawl.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\spechars\spechars.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\spechars\spechars.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\table\dragicon.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\table\edittable.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\table\edittable.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\table\edittable.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\table\edittd.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\table\edittip.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\config.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\images\bg.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\images\pre0.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\images\pre1.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\images\pre2.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\images\pre3.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\images\pre4.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\template.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\template.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\template\template.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\bg.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\file-icons.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\file-icons.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\icons.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\icons.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\image.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\progress.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\success.gif" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\images\success.png" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\video.css" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\video.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\video\video.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\webapp\webapp.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\wordimage\tangram.js" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\wordimage\wordimage.html" />
+    <Content Include="HC.Manage\Content\ueditor\dialogs\wordimage\wordimage.js" />
+    <Content Include="HC.Manage\Content\ueditor\index.html" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\en.js" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\addimage.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\background.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\button.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\copy.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\listbackground.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\localimage.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\music.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\en\images\upload.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="HC.Manage\Content\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\css\ueditor.css" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\css\ueditor.min.css" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\dialogbase.css" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\anchor.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\arrow.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\arrow_down.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\arrow_up.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\button-bg.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\charts.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\cursor_h.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\cursor_h.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\cursor_v.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\cursor_v.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\filescan.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\highlighted.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\icons-all.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\icons.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\icons.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\loaderror.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\loading.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\lock.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\pagebreak.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\scale.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\sortable.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\sparator_v.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\table-cell-align.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\upload.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\word.gif" />
+    <Content Include="HC.Manage\Content\ueditor\themes\default\images\wordpaste.png" />
+    <Content Include="HC.Manage\Content\ueditor\themes\iframe.css" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\codemirror\codemirror.css" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\codemirror\codemirror.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\highcharts-more.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\highcharts.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\highcharts.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\annotations.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\data.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\data.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\exporting.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\funnel.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\map.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\map.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\themes\gray.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\themes\grid.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\highcharts\themes\skies.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\jquery-1.10.2.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\jquery-1.10.2.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\font\vjs.svg" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\video-js.css" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\video-js.min.css" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\video-js.swf" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\video.dev.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\video.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\Uploader.swf" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.css" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="HC.Manage\Content\ueditor\ueditor.all.js" />
+    <Content Include="HC.Manage\Content\ueditor\ueditor.all.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\ueditor.config.js" />
+    <Content Include="HC.Manage\Content\ueditor\ueditor.parse.js" />
+    <Content Include="HC.Manage\Content\ueditor\ueditor.parse.min.js" />
+    <Content Include="HC.Manage\Content\ueditor\版本信息.txt" />
+    <Content Include="HC.Manage\Content\uploadTemp\7a3f8e96-035b-4ba5-bf22-89210323c746.xls" />
+    <Content Include="HC.Manage\Content\uploadTemp\7a47bfbc-89dc-42d8-852f-0ea2d1e9b7aa.xls" />
+    <Content Include="HC.Manage\Content\uploadTemp\c21b4e55-2e3e-4c50-8bb7-8d7575e94471.xls" />
+    <Content Include="HC.Manage\images\chatImg\chat_bar_bg.jpg" />
+    <Content Include="HC.Manage\images\chatImg\chat_title_bg.jpg" />
+    <Content Include="HC.Manage\images\chatImg\emo_01.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_02.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_03.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_04.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_05.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_06.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_07.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_08.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_09.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_10.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_11.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_12.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_13.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_14.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_15.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_16.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_17.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_18.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_19.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_20.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_21.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_22.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_23.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_24.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_25.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_26.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_27.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_28.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_29.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_30.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_31.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_32.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_33.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_34.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_35.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_36.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_37.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_38.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_39.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_40.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_41.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_42.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_43.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_44.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_45.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_46.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_47.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_48.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_49.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_50.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_51.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_52.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_53.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_54.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_55.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_56.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_57.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_58.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_59.gif" />
+    <Content Include="HC.Manage\images\chatImg\emo_60.gif" />
+    <Content Include="HC.Manage\images\chatImg\head\2013.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2014.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2015.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2016.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2017.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2018.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2019.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2020.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2021.jpg" />
+    <Content Include="HC.Manage\images\chatImg\head\2022.jpg" />
+    <Content Include="HC.Manage\images\chatImg\icon.png" />
+    <Content Include="HC.Manage\images\chatImg\layer_arrow.png" />
+    <Content Include="HC.Manage\images\chatImg\message1.png" />
+    <Content Include="HC.Manage\images\chatImg\message2.png" />
+    <Content Include="HC.Manage\images\chatImg\message3.png" />
+    <Content Include="HC.Manage\images\chatImg\msg_text_bg.png" />
+    <Content Include="HC.Manage\images\chatImg\send_btn.jpg" />
+    <Content Include="HC.Manage\images\chatImg\status.gif" />
+    <Content Include="HC.Manage\images\chatImg\title-bg.png" />
+    <Content Include="HC.Manage\images\chatImg\title_bg.jpg" />
+    <Content Include="HC.Manage\images\chatImg\wlf_bg.png" />
+    <Content Include="HC.Manage\images\chatImg\wlf_title_bg.jpg" />
+    <Content Include="HC.Manage\images\chatImg\wlf_title_btn.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\erwm.gif" />
+    <Content Include="HC.Manage\images\ManageImg\icoo.png" />
+    <Content Include="HC.Manage\images\ManageImg\logoMast.png" />
+    <Content Include="HC.Manage\images\ManageImg\qq.png" />
+    <Content Include="HC.Manage\images\publicimg\app_ewm.png" />
+    <Content Include="HC.Manage\images\publicimg\arrow.png" />
+    <Content Include="HC.Manage\images\publicimg\clock.png" />
+    <Content Include="HC.Manage\images\publicimg\erwm.png" />
+    <Content Include="HC.Manage\images\publicimg\ico_flip.jpg" />
+    <Content Include="HC.Manage\images\publicimg\ico_flip_.gif" />
+    <Content Include="HC.Manage\images\publicimg\left_arrow_down_.png" />
+    <Content Include="HC.Manage\images\publicimg\logo.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_check.gif" />
+    <Content Include="HC.Manage\images\publicimg\mc_icon_.png" />
+    <Content Include="HC.Manage\images\publicimg\mentou_pic.gif" />
+    <Content Include="HC.Manage\images\publicimg\Menu_arrow_.png" />
+    <Content Include="HC.Manage\images\publicimg\mobile.png" />
+    <Content Include="HC.Manage\images\publicimg\pd_ad_arrow.png" />
+    <Content Include="HC.Manage\images\publicimg\suzs_pic.gif" />
+    <Content Include="HC.Manage\images\publicimg\top_arr.png" />
+    <Content Include="HC.Manage\images\publicimg\xin.png" />
+    <Content Include="HC.Manage\packages.config" />
+    <Content Include="HC.Manage\Views\Shared\commonFooterAB.cshtml" />
+    <Content Include="HC.Manage\Views\Shared\commonHeaderAB.cshtml" />
+    <Content Include="HC.Manage\Views\Shared\commonLeftNavAB.cshtml" />
+    <Content Include="HC.Manage\Views\Shared\mLayoutForAb2.cshtml" />
+    <Content Include="HC.Manage\Views\Shared\mLayoutForAbDefault.cshtml" />
+    <Content Include="HC.Manage\Views\Web.config" />
+    <Content Include="HC.Manage\Views\_ViewStart.cshtml" />
+    <Content Include="HC.Manage\Web.config" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\check.php" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\air\logging\FileTarget.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\crypto\HMAC.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\crypto\MD5.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\crypto\MD5Stream.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\crypto\SHA1.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\crypto\SHA224.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\crypto\SHA256.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\crypto\WSSEUsernameToken.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\errors\IllegalStateError.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\fileformats\vcard\Address.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\fileformats\vcard\Email.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\fileformats\vcard\Phone.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\fileformats\vcard\VCard.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\fileformats\vcard\VCardParser.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\images\BitString.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\images\JPGEncoder.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\images\PNGEncoder.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\net\DynamicURLLoader.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\net\IURIResolver.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\net\MimeTypeMap.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\net\proxies\RFC2817Socket.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\net\URI.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\net\URIEncodingBitmap.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\Database.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\Definition.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\Dict.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\DictionaryServer.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\ConnectedEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\DatabaseEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\DefinitionEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\DefinitionHeaderEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\DictionaryServerEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\DisconnectedEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\ErrorEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\MatchEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\MatchStrategiesEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\events\NoMatchEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\MatchStrategy.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\Response.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\util\CompleteResponseEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\protocols\dict\util\SocketHelper.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\serialization\json\JSON.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\serialization\json\JSONDecoder.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\serialization\json\JSONEncoder.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\serialization\json\JSONParseError.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\serialization\json\JSONToken.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\serialization\json\JSONTokenizer.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\serialization\json\JSONTokenType.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\utils\ArrayUtil.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\utils\DateUtil.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\utils\DictionaryUtil.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\utils\IntUtil.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\utils\NumberFormatter.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\utils\StringUtil.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\utils\XMLUtil.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\webapis\events\ServiceEvent.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\webapis\ServiceBase.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\com\adobe\webapis\URLLoaderBase.as" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\index.php" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\scripts\check.php" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\scripts\uploadify.php" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\uploadify.fla" />
+    <Content Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\uploadify.php" />
+    <Content Include="HC.Manage\Views\Shared\_Notifications.cshtml" />
+    <Content Include="HC.Manage\Views\Home\Index.cshtml" />
+    <Content Include="HC.Manage\Views\Section\SectionManage.cshtml" />
+    <Content Include="HC.Manage\Views\Section\AddSection.cshtml" />
+    <Content Include="HC.Manage\Views\News\NewsManage.cshtml" />
+    <Content Include="HC.Manage\Views\News\AddNews.cshtml" />
+    <Content Include="HC.Manage\Content\ueditor\.DS_Store" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\.DS_Store" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\jquery-1.10.2.min.map" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\font\vjs.eot" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\font\vjs.ttf" />
+    <Content Include="HC.Manage\Content\ueditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="HC.Manage\Views\User\Index.cshtml" />
+    <Content Include="HC.Manage\Views\News\analysisNews.cshtml" />
+    <Content Include="HC.Manage\Views\News\recycle.cshtml" />
+    <Content Include="HC.Manage\Views\News\verifyNews.cshtml" />
+    <Content Include="HC.Manage\Views\Common\transferOrCopyNews.cshtml" />
+    <Content Include="HC.Manage\Views\User\AddUserGroup.cshtml" />
+    <Content Include="HC.Manage\Views\User\Roles.cshtml" />
+    <Content Include="HC.Manage\Views\Section\newsManageSectionMenue.cshtml" />
+    <Content Include="HC.Manage\Views\Shared\manageLayout1_.cshtml" />
+    <Content Include="HC.Manage\Views\Home\ChangePassWord.cshtml" />
+    <Content Include="HC.Manage\Views\Home\logRecord.cshtml" />
+    <Content Include="HC.Manage\Views\Home\webSiteSet.cshtml" />
+    <Content Include="HC.Manage\Views\Home\SetPassWord.cshtml" />
+    <Content Include="HC.Manage\Views\EnrolSys\Index.cshtml" />
+    <Content Include="HC.Manage\Views\Shared\BaoMingLayOut.cshtml" />
+    <Content Include="HC.Manage\Views\Section\AddSection_.cshtml" />
+    <None Include="HC.Manage\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="HC.Manage\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Images\banner\banner_top_01.png" />
+    <Content Include="Images\banner\banner_top_02.png" />
+    <Content Include="Images\banner\banner_top_03.png" />
+    <Content Include="Images\banner\banner_top_04.png" />
+    <Content Include="Images\block01_r_dot.png" />
+    <Content Include="Images\button_00.gif" />
+    <Content Include="Images\code.gif" />
+    <Content Include="Images\code.png" />
+    <Content Include="Images\common-\del.jpg" />
+    <Content Include="Images\common-\ico_01.gif" />
+    <Content Include="Images\common-\ico_close.gif" />
+    <Content Include="Images\common-\ico_flip.gif" />
+    <Content Include="Images\common-\ico_home2.gif" />
+    <Content Include="Images\common-\ico_leftnav.gif" />
+    <Content Include="Images\common-\ico_print.gif" />
+    <Content Include="Images\common-\time_bg.gif" />
+    <Content Include="Images\common\404.gif" />
+    <Content Include="Images\common\back_top.gif" />
+    <Content Include="Images\common\back_top.png" />
+    <Content Include="Images\common\bqxx.gif" />
+    <Content Include="Images\common\flip_page.gif" />
+    <Content Include="Images\common\ico_01.gif" />
+    <Content Include="Images\common\ico_add.gif" />
+    <Content Include="Images\common\ico_add_cut.gif" />
+    <Content Include="Images\common\ico_cut.gif" />
+    <Content Include="Images\common\ico_head.gif" />
+    <Content Include="Images\common\ico_home.gif" />
+    <Content Include="Images\common\ico_home2.gif" />
+    <Content Include="Images\common\ico_leftnav.gif" />
+    <Content Include="Images\common\ico_leftnav2.gif" />
+    <Content Include="Images\common\ico_page.gif" />
+    <Content Include="Images\common\ico_point.gif" />
+    <Content Include="Images\common\ico_top.gif" />
+    <Content Include="Images\common\ico_video.gif" />
+    <Content Include="Images\common\nopic.gif" />
+    <Content Include="Images\common\part_bg.gif" />
+    <Content Include="Images\common\rank.gif" />
+    <Content Include="Images\common\time_bg.gif" />
+    <Content Include="Images\down.png" />
+    <Content Include="Images\gab.png" />
+    <Content Include="Images\gif_01.gif" />
+    <Content Include="Images\gif_02.gif" />
+    <Content Include="Images\gif_02b.gif" />
+    <Content Include="Images\gif_02c.gif" />
+    <Content Include="Images\gif_03.gif" />
+    <Content Include="Images\gif_04.gif" />
+    <Content Include="Images\gif_04b.gif" />
+    <Content Include="Images\gif_05.gif" />
+    <Content Include="Images\gif_06a.gif" />
+    <Content Include="Images\gif_06b.gif" />
+    <Content Include="Images\gif_06c.gif" />
+    <Content Include="Images\gif_07.gif" />
+    <Content Include="Images\gif_08.gif" />
+    <Content Include="Images\gwrz.png" />
+    <Content Include="Images\ie6\ie6.gif" />
+    <Content Include="Images\ie6\ie6_bg.gif" />
+    <Content Include="Images\jpg_01a.jpg" />
+    <Content Include="Images\jpg_01b.jpg" />
+    <Content Include="Images\jpg_01c.jpg" />
+    <Content Include="Images\jpg_01d.jpg" />
+    <Content Include="Images\jpg_02a.jpg" />
+    <Content Include="Images\jpg_02b.jpg" />
+    <Content Include="Images\jpg_02c.jpg" />
+    <Content Include="Images\jpg_02d.jpg" />
+    <Content Include="Images\left_01.jpg" />
+    <Content Include="Images\lightbox\blank.gif" />
+    <Content Include="Images\lightbox\loading.gif" />
+    <Content Include="Images\lightbox\next.gif" />
+    <Content Include="Images\lightbox\prev.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\login\Captcha.png" />
+    <Content Include="Images\login\login_ad_Switch.png" />
+    <Content Include="Images\login\login_mainbg.jpg" />
+    <Content Include="Images\login\login_pic1.jpg" />
+    <Content Include="Images\login\login_pic2.jpg" />
+    <Content Include="Images\login\login_user.png" />
+    <Content Include="Images\login_bj1.jpg" />
+    <Content Include="Images\login_bj2.jpg" />
+    <Content Include="Images\login_bj2_.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo_a.png" />
+    <Content Include="Images\logo_b.png" />
+    <Content Include="Images\ls\link1.gif" />
+    <Content Include="Images\ls\link2.gif" />
+    <Content Include="Images\ls\link3.gif" />
+    <Content Include="Images\ls\link4.gif" />
+    <Content Include="Images\ls\link5.gif" />
+    <Content Include="Images\ls\link6.gif" />
+    <Content Include="Images\ls\link7.gif" />
+    <Content Include="Images\ls\ls_01.jpg" />
+    <Content Include="Images\ls\ls_02.jpg" />
+    <Content Include="Images\ls\ls_03.jpg" />
+    <Content Include="Images\ls\ls_04.jpg" />
+    <Content Include="Images\ls\ls_05.gif" />
+    <Content Include="Images\ls\yzm.jpg" />
+    <Content Include="Images\message\message_01.gif" />
+    <Content Include="Images\message\message_02.gif" />
+    <Content Include="Images\message\message_03a.gif" />
+    <Content Include="Images\message\message_03b.gif" />
+    <Content Include="Images\message\message_04.gif" />
+    <Content Include="Images\message\message_05.gif" />
+    <Content Include="Images\mobile\common\alertBoxButtonBg.png" />
+    <Content Include="Images\mobile\common\alertBoxGoBg.png" />
+    <Content Include="Images\mobile\common\alertBoxInfoBg.png" />
+    <Content Include="Images\mobile\common\alertBoxStopBg.png" />
+    <Content Include="Images\mobile\common\alertBoxWarningBg.png" />
+    <Content Include="Images\mobile\common\backToTopButtonBg.png" />
+    <Content Include="Images\mobile\common\commentAvatarBg.png" />
+    <Content Include="Images\mobile\common\focusBg.png" />
+    <Content Include="Images\mobile\common\iconArrowRightBg16.png" />
+    <Content Include="Images\mobile\common\loading.gif" />
+    <Content Include="Images\mobile\common\mainMenuButtonBg.png" />
+    <Content Include="Images\mobile\common\next1.jpg" />
+    <Content Include="Images\mobile\common\next2.jpg" />
+    <Content Include="Images\mobile\common\quoteBg.png" />
+    <Content Include="Images\mobile\common\sliderArrowsBg.png" />
+    <Content Include="Images\mobile\common\up1.jpg" />
+    <Content Include="Images\mobile\common\up2.jpg" />
+    <Content Include="Images\mobile\content\bj1.jpg" />
+    <Content Include="Images\mobile\content\menu_bj.jpg" />
+    <Content Include="Images\mobile\content\mico.jpg" />
+    <Content Include="Images\mobile\content\nico.jpg" />
+    <Content Include="Images\mobile\content\s.jpg" />
+    <Content Include="Images\mobile\content\v.png" />
+    <Content Include="Images\mobile\content\ztcbj.jpg" />
+    <Content Include="Images\picshopArr.gif" />
+    <Content Include="Images\png_01.png" />
+    <Content Include="Images\png_02.png" />
+    <Content Include="Images\rope.png" />
+    <Content Include="Images\scrollPicbg.gif" />
+    <Content Include="Images\top_bg.jpg" />
+    <Content Include="Images\top_bg_a.jpg" />
+    <Content Include="Images\top_bg_b.jpg" />
+    <Content Include="Images\wei_l.png" />
+    <Content Include="mContent\images\common\button_01.gif" />
+    <Content Include="mContent\images\common\ico_list.gif" />
+    <Content Include="mContent\images\common\ico_minus.gif" />
+    <Content Include="mContent\images\common\ico_plus.gif" />
+    <Content Include="mContent\images\common\ico_roll_text.png" />
+    <Content Include="mContent\images\common\ico_top_l.gif" />
+    <Content Include="mContent\images\common\ico_top_r.gif" />
+    <Content Include="mContent\images\common\list_bg.gif" />
+    <Content Include="mContent\images\common\list_bg2.gif" />
+    <Content Include="mContent\images\common\list_bg2.png" />
+    <Content Include="mContent\images\common\user_card.jpg" />
+    <Content Include="mContent\images\common\user_card2.jpg" />
+    <Content Include="mContent\images\gif_01.gif" />
+    <Content Include="mContent\images\gif_02.gif" />
+    <Content Include="mContent\images\gif_03.gif" />
+    <Content Include="mContent\images\gif_04.gif" />
+    <Content Include="mContent\images\gif_05.gif" />
+    <Content Include="mContent\images\gif_06.gif" />
+    <Content Include="mContent\images\gif_07.gif" />
+    <Content Include="mContent\images\gif_08a.gif" />
+    <Content Include="mContent\images\gif_08b.gif" />
+    <Content Include="mContent\images\gif_08c.gif" />
+    <Content Include="mContent\images\gif_08d.gif" />
+    <Content Include="mContent\images\gif_09a.gif" />
+    <Content Include="mContent\images\gif_09b.gif" />
+    <Content Include="mContent\images\gif_12.gif" />
+    <Content Include="mContent\images\jpg_01a.jpg" />
+    <Content Include="mContent\images\jpg_01b.jpg" />
+    <Content Include="mContent\images\jpg_01c.jpg" />
+    <Content Include="mContent\images\jpg_01d.jpg" />
+    <Content Include="mContent\images\logo.png" />
+    <Content Include="mContent\images\ls\ls_01.jpg" />
+    <Content Include="mContent\images\ls\ls_02.jpg" />
+    <Content Include="mContent\images\ls\ls_03.jpg" />
+    <Content Include="mContent\images\ls\ls_04.jpg" />
+    <Content Include="mContent\images\ls\ls_05.jpg" />
+    <Content Include="mContent\images\ls\ls_06.jpg" />
+    <Content Include="mContent\images\ls\yzm.jpg" />
+    <Content Include="mContent\images\nopic.gif" />
+    <Content Include="mContent\images\png_01.png" />
+    <Content Include="mContent\images\png_02.png" />
+    <Content Include="mContent\images\top_bg.jpg" />
+    <Content Include="mContent\scripts\banner\banner1.asp" />
+    <Content Include="mContent\scripts\banner\banner2.asp" />
+    <Content Include="mContent\scripts\banner\css.css" />
+    <Content Include="mContent\scripts\banner\js1.js" />
+    <Content Include="mContent\scripts\banner\js2.js" />
+    <Content Include="mContent\scripts\banner_wap\banner.html" />
+    <Content Include="mContent\scripts\banner_wap\common.css" />
+    <Content Include="mContent\scripts\banner_wap\jQuery.js" />
+    <Content Include="mContent\scripts\banner_wap\swipe.js" />
+    <Content Include="mContent\scripts\huadongmen.js" />
+    <Content Include="mContent\scripts\menu\jquery-1.js" />
+    <Content Include="mContent\scripts\menu\SelectRe.js" />
+    <Content Include="mContent\scripts\roll_text\css.css" />
+    <Content Include="mContent\scripts\roll_text\roll_text.asp" />
+    <Content Include="mContent\scripts\roll_text\roll_text2.asp" />
+    <Content Include="mContent\styles\css.css" />
+    <Content Include="mContent\styles\module.css" />
+    <Content Include="MViews\Web.config" />
+    <Content Include="MViews\_ViewStart.cshtml" />
+    <Content Include="MViews\Home\mIndex.cshtml" />
+    <Content Include="Images\mobile\common\Thumbs.db" />
+    <Content Include="Images\mobile\content\Thumbs.db" />
+    <Content Include="MViews\Shared\_Layout.cshtml" />
+    <Content Include="MViews\Information\msubNewsClassMobile.cshtml" />
+    <Content Include="MViews\Information\mSectionMobile.cshtml" />
+    <Content Include="MViews\Information\mnews.cshtml" />
+    <Content Include="MViews\Information\msinglePage.cshtml" />
+    <Content Include="MViews\Information\mEffectsPicSection.cshtml" />
+    <Content Include="MViews\Information\mPicSection.cshtml" />
+    <Content Include="MViews\Information\mNormalSection.cshtml" />
+    <Content Include="MViews\Home\mHeadNav.cshtml" />
+    <Content Include="MViews\Information\mBorrowGuide.cshtml" />
+    <None Include="Properties\PublishProfiles\hche.pubxml" />
+    <Content Include="HC.Manage\Content\common\css\authentication.css" />
+    <Content Include="HC.Manage\Content\common\css\chargeDetail.css" />
+    <Content Include="HC.Manage\Content\common\css\details.css" />
+    <Content Include="HC.Manage\Content\common\css\detailsAB.css" />
+    <Content Include="HC.Manage\Content\common\css\hche-sy.css" />
+    <Content Include="HC.Manage\Content\common\css\helpPurchase.css" />
+    <Content Include="HC.Manage\Content\common\css\ie.css" />
+    <Content Include="HC.Manage\Content\common\css\manarage.css" />
+    <Content Include="HC.Manage\Content\common\css\myadopt.css" />
+    <Content Include="HC.Manage\Content\common\css\Myevaluate.css" />
+    <Content Include="HC.Manage\Content\common\css\MyevaluateAB.css" />
+    <Content Include="HC.Manage\Content\common\css\next_myrepa.css" />
+    <Content Include="HC.Manage\Content\common\css\next_myrepaAB.css" />
+    <Content Include="HC.Manage\Content\common\css\public-1200.css" />
+    <Content Include="HC.Manage\Content\common\css\publicv2.css" />
+    <Content Include="HC.Manage\Content\common\css\purchaseDetail.css" />
+    <Content Include="HC.Manage\Content\common\css\quotatIn.css" />
+    <Content Include="HC.Manage\Content\common\css\quotationList.css" />
+    <Content Include="HC.Manage\Content\common\css\recharge.css" />
+    <Content Include="HC.Manage\Content\common\css\relaseshop.css" />
+    <Content Include="HC.Manage\Content\common\css\relaseshop_year.css" />
+    <Content Include="HC.Manage\Content\common\css\releasePurchase.css" />
+    <Content Include="HC.Manage\Content\common\css\seller.css" />
+    <Content Include="HC.Manage\Content\common\css\sellerAB.css" />
+    <Content Include="HC.Manage\Content\common\css\shipments.css" />
+    <Content Include="HC.Manage\Content\common\css\soldoutsell.css" />
+    <Content Include="HC.Manage\Content\common\css\soldoutsellAB.css" />
+    <Content Include="HC.Manage\Content\common\css\telphone.css" />
+    <Content Include="HC.Manage\Content\common\css\WelcomeCenter.css" />
+    <Content Include="HC.Manage\Content\common\css\xinbaoxiu.css" />
+    <Content Include="HC.Manage\Content\common\script\authentication.js" />
+    <Content Include="HC.Manage\Content\common\script\helpPurchase.js" />
+    <Content Include="HC.Manage\Content\common\script\IdCardUpload.js" />
+    <Content Include="HC.Manage\Content\common\script\jquery-1.7.2.min.js" />
+    <Content Include="HC.Manage\Content\common\script\jquery.metadata.js" />
+    <Content Include="HC.Manage\Content\common\script\jqueryForm.js" />
+    <Content Include="HC.Manage\Content\common\script\manarage.js" />
+    <Content Include="HC.Manage\Content\common\script\manhuaDate.1.0.js" />
+    <Content Include="HC.Manage\Content\common\script\myadopt_next.js" />
+    <Content Include="HC.Manage\Content\common\script\myadopt_nextRepair.js" />
+    <Content Include="HC.Manage\Content\common\script\Myevaluate.js" />
+    <Content Include="HC.Manage\Content\common\script\MyevaluateRepair.js" />
+    <Content Include="HC.Manage\Content\common\script\public.min.js" />
+    <Content Include="HC.Manage\Content\common\script\recharge.js" />
+    <Content Include="HC.Manage\Content\common\script\relaseshop.js" />
+    <Content Include="HC.Manage\Content\common\script\releaseProductAcc.js" />
+    <Content Include="HC.Manage\Content\common\script\releasePurchase.js" />
+    <Content Include="HC.Manage\Content\common\script\search.js" />
+    <Content Include="HC.Manage\Content\common\script\search_.js" />
+    <Content Include="HC.Manage\Content\common\script\seller.js" />
+    <Content Include="HC.Manage\Content\common\script\service_next.js" />
+    <Content Include="HC.Manage\Content\common\script\shipments.js" />
+    <Content Include="HC.Manage\Content\common\script\submission.js" />
+    <Content Include="HC.Manage\Content\common\script\telphone.js" />
+    <Content Include="HC.Manage\Content\common\script\WelcomeCenter.js" />
+    <Content Include="HC.Manage\Content\kindEditor\kindeditor-all-min.js" />
+    <Content Include="HC.Manage\Content\kindEditor\kindeditor-all.js" />
+    <Content Include="HC.Manage\Content\kindEditor\kindeditor-min.js" />
+    <Content Include="HC.Manage\Content\kindEditor\kindeditor.js" />
+    <Content Include="HC.Manage\Content\kindEditor\lang\ar.js" />
+    <Content Include="HC.Manage\Content\kindEditor\lang\en.js" />
+    <Content Include="HC.Manage\Content\kindEditor\lang\ko.js" />
+    <Content Include="HC.Manage\Content\kindEditor\lang\zh_CN.js" />
+    <Content Include="HC.Manage\Content\kindEditor\lang\zh_TW.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\anchor\anchor.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\autoheight\autoheight.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\baidumap\baidumap.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\baidumap\index.html" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\baidumap\map.html" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\code\code.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\code\prettify.css" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\code\prettify.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\emoticons.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\0.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\1.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\10.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\100.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\101.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\102.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\103.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\104.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\105.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\106.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\107.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\108.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\109.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\11.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\110.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\111.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\112.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\113.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\114.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\115.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\116.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\117.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\118.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\119.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\12.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\120.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\121.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\122.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\123.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\124.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\125.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\126.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\127.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\128.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\129.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\13.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\130.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\131.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\132.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\133.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\134.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\14.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\15.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\16.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\17.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\18.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\19.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\2.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\20.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\21.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\22.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\23.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\24.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\25.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\26.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\27.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\28.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\29.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\3.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\30.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\31.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\32.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\33.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\34.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\35.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\36.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\37.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\38.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\39.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\4.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\40.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\41.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\42.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\43.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\44.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\45.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\46.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\47.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\48.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\49.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\5.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\50.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\51.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\52.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\53.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\54.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\55.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\56.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\57.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\58.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\59.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\6.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\60.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\61.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\62.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\63.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\64.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\65.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\66.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\67.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\68.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\69.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\7.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\70.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\71.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\72.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\73.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\74.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\75.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\76.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\77.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\78.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\79.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\8.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\80.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\81.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\82.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\83.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\84.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\85.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\86.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\87.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\88.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\89.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\9.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\90.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\91.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\92.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\93.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\94.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\95.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\96.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\97.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\98.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\99.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\emoticons\images\static.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\filemanager\filemanager.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\flash\flash.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\image\image.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\image\images\align_left.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\image\images\align_right.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\image\images\align_top.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\image\images\refresh.png" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\insertfile\insertfile.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\lineheight\lineheight.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\link\link.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\map\map.html" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\map\map.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\media\media.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\multiimage\images\image.png" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\multiimage\multiimage.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\preview\preview.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\quickformat\quickformat.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\table\table.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\template\html\1.html" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\template\html\2.html" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\template\html\3.html" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\template\template.js" />
+    <Content Include="HC.Manage\Content\kindEditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\common\anchor.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\common\blank.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\common\flash.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\common\loading.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\common\media.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\common\rm.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\default\background.png" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\default\default.css" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\default\default.png" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\qq\editor.gif" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\qq\qq.css" />
+    <Content Include="HC.Manage\Content\kindEditor\themes\simple\simple.css" />
+    <Content Include="HC.Manage\Content\pic\Input_error.png" />
+    <Content Include="HC.Manage\Content\pic\Input_ok.png" />
+    <Content Include="HC.Manage\Content\pic\logo.png" />
+    <Content Include="HC.Manage\Content\pic\Menu_arrow.png" />
+    <Content Include="HC.Manage\Content\pic\order_arrow_x.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\editor.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\gradient.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\imagebrowser.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\loading.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\select-window-edit.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\select-window.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\slider-h.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\slider-v.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\sprite-vertical.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\Office2010Blue\sprite.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\telerik.common.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\telerik.office2010blue.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForOrderM\telerik.rtl.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\editor.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\gradient.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\imagebrowser.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\loading.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\select-window-edit.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\select-window.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\slider-h.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\slider-v.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\sprite-vertical.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\Office2010Blue\sprite.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\telerik.common.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\telerik.office2010blue.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\ForProductM\telerik.rtl.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\editor.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\gradient.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\imagebrowser.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\loading.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\select-window-edit.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\select-window.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\slider-h.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\slider-v.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\sprite-vertical.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Office2010Blue\sprite.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\telerik.common.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\telerik.office2010blue.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\telerik.rtl.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\telerik.telerik.min.css" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\editor.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\imagebrowser.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\loading.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\slider-h.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\slider-v.gif" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\sprite-vertical.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\sprite.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\treeview-line.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\treeview-nodes-rtl.png" />
+    <Content Include="HC.Manage\Content\TelerikCSS\Telerik\treeview-nodes.png" />
+    <Content Include="HC.Manage\HC.Manage.csproj" />
+    <Content Include="HC.Manage\HC.Manage.csproj.user" />
+    <Content Include="HC.Manage\images\Evaluate\repair_bad.png" />
+    <Content Include="HC.Manage\images\Evaluate\repair_good_ok.png" />
+    <Content Include="HC.Manage\images\Evaluate\repair_soso_ok.png" />
+    <Content Include="HC.Manage\images\ManageImg\alipay.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\jb_ok.png" />
+    <Content Include="HC.Manage\images\ManageImg\mc_yz1.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\mc_yz1_red.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\mc_yz2.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\mc_yz2_red.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\mc_yz3.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\mc_yz3_red.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\mc_yz4.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\mc_yz4_red.jpg" />
+    <Content Include="HC.Manage\images\ManageImg\valid.png" />
+    <Content Include="HC.Manage\images\ManageImg\xin.png" />
+    <Content Include="HC.Manage\images\ManageImg\xla.png" />
+    <Content Include="HC.Manage\images\publicimg\alipay.jpg" />
+    <Content Include="HC.Manage\images\publicimg\alipay_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\arrow_white.png" />
+    <Content Include="HC.Manage\images\publicimg\bg.png" />
+    <Content Include="HC.Manage\images\publicimg\close-red.png" />
+    <Content Include="HC.Manage\images\publicimg\close.png" />
+    <Content Include="HC.Manage\images\publicimg\dp_menu_arrow.png" />
+    <Content Include="HC.Manage\images\publicimg\errorTip.png" />
+    <Content Include="HC.Manage\images\publicimg\erw.png" />
+    <Content Include="HC.Manage\images\publicimg\foot_pic1.jpg" />
+    <Content Include="HC.Manage\images\publicimg\foot_pic2.jpg" />
+    <Content Include="HC.Manage\images\publicimg\hot.png" />
+    <Content Include="HC.Manage\images\publicimg\ico.gif" />
+    <Content Include="HC.Manage\images\publicimg\Input_error.png" />
+    <Content Include="HC.Manage\images\publicimg\Input_ok.png" />
+    <Content Include="HC.Manage\images\publicimg\left_arrow_down.png" />
+    <Content Include="HC.Manage\images\publicimg\left_newshop.jpg" />
+    <Content Include="HC.Manage\images\publicimg\Links.gif" />
+    <Content Include="HC.Manage\images\publicimg\liulan.gif" />
+    <Content Include="HC.Manage\images\publicimg\Location_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\logo.png" />
+    <Content Include="HC.Manage\images\publicimg\logo_bg.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_checkbox-b.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_checkbox.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_coins_add.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_dt_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_email_no.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_email_ok.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_jy_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_list_y.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_money.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_money_bg.gif" />
+    <Content Include="HC.Manage\images\publicimg\mc_money_glowing.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_nt_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_phone_no.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_phone_ok.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_right_img.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_right_img1.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_right_img2.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_rzing_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_rzwt_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_search_btn.gif" />
+    <Content Include="HC.Manage\images\publicimg\mc_search_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_sq.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_sq_white.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_store.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_tj.gif" />
+    <Content Include="HC.Manage\images\publicimg\mc_update_img.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_user.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_wrz_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz.png" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz1.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz1_red.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz2.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz2_red.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz3.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz3_red.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz4.jpg" />
+    <Content Include="HC.Manage\images\publicimg\mc_yz4_red.jpg" />
+    <Content Include="HC.Manage\images\publicimg\Menu_arrow.png" />
+    <Content Include="HC.Manage\images\publicimg\nav_menu_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\order_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\order_notice_bg.png" />
+    <Content Include="HC.Manage\images\publicimg\order_notice_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\order_notice_pic.jpg" />
+    <Content Include="HC.Manage\images\publicimg\page_arrow.jpg" />
+    <Content Include="HC.Manage\images\publicimg\page_arrow.png" />
+    <Content Include="HC.Manage\images\publicimg\pd_bnl_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\pd_Shop_star.png" />
+    <Content Include="HC.Manage\images\publicimg\pfj.jpg" />
+    <Content Include="HC.Manage\images\publicimg\phone_bg.jpg" />
+    <Content Include="HC.Manage\images\publicimg\phone_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\red_lis.png" />
+    <Content Include="HC.Manage\images\publicimg\repair_radio.png" />
+    <Content Include="HC.Manage\images\publicimg\repair_write_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\scypt.gif" />
+    <Content Include="HC.Manage\images\publicimg\seliet.png" />
+    <Content Include="HC.Manage\images\publicimg\spxq_line.gif" />
+    <Content Include="HC.Manage\images\publicimg\successTips.png" />
+    <Content Include="HC.Manage\images\publicimg\tell.png" />
+    <Content Include="HC.Manage\images\publicimg\top_arrow_red.png" />
+    <Content Include="HC.Manage\images\publicimg\top_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\top_qq_btn.png" />
+    <Content Include="HC.Manage\images\publicimg\top_Service_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\top_trolley_icon.png" />
+    <Content Include="HC.Manage\images\publicimg\wait.gif" />
+    <Content Include="Lognet\LogError\2015\10\22.txt" />
+    <Content Include="Scripts\Account\forgetpwd.js" />
+    <Content Include="Scripts\Account\validate-form.js" />
+    <Content Include="Scripts\Account\validate.js" />
+    <Content Include="Scripts\Account\Area.js" />
+    <Content Include="Scripts\Account\AreaData_min.js" />
+    <Content Include="Scripts\Account\jquery.SuperSlide.js" />
+    <Content Include="Scripts\Account\select_jquery.js" />
+    <Content Include="Scripts\Account\Validform_v5.3.2_min.js" />
+    <Content Include="Scripts\ad-gallery\ad_next.png" />
+    <Content Include="Scripts\ad-gallery\ad_prev.png" />
+    <Content Include="Scripts\ad-gallery\ad_scroll_back.png" />
+    <Content Include="Scripts\ad-gallery\ad_scroll_forward.png" />
+    <Content Include="Scripts\ad-gallery\jquery.ad-gallery.css" />
+    <Content Include="Scripts\ad-gallery\jquery.ad-gallery.js" />
+    <Content Include="Scripts\ad-gallery\jquery.ad-gallery.pack.js" />
+    <Content Include="Scripts\ad-gallery\jquery.ad-gallery1.js" />
+    <Content Include="Scripts\ad-gallery\jquery.min.js" />
+    <Content Include="Scripts\ad-gallery\loader.gif" />
+    <Content Include="Scripts\ad-gallery\opa75.png" />
+    <Content Include="Scripts\all.telerik.js" />
+    <Content Include="Scripts\authenticate.js" />
+    <Content Include="Scripts\bannerSpecial.js" />
+    <Content Include="Scripts\banner\banner1.html" />
+    <Content Include="Scripts\banner\banner2.html" />
+    <Content Include="Scripts\banner\banner4.html" />
+    <Content Include="Scripts\banner\css.css" />
+    <Content Include="Scripts\banner\js1.js" />
+    <Content Include="Scripts\banner\js2.js" />
+    <Content Include="Scripts\Common\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\Common\jqueryform.js" />
+    <Content Include="Scripts\Common\showMenu.js" />
+    <Content Include="Scripts\Common\ZQFtop.js" />
+    <Content Include="Scripts\Common\search.js" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\filterXss.js" />
+    <Content Include="Scripts\processStr.js" />
+    <Content Include="Scripts\huadongmen.js" />
+    <Content Include="Scripts\jq-1.7.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.lightbox.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.minJT.js" />
+    <Content Include="Scripts\jquery.spinner.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\leaveMessage.js" />
+    <Content Include="Scripts\lightbox.js" />
+    <Content Include="Scripts\MagicZoom.js" />
+    <Content Include="Scripts\mobile\contact.js" />
+    <Content Include="Scripts\mobile\count.onload.js" />
+    <Content Include="Scripts\mobile\custom.js" />
+    <Content Include="Scripts\mobile\dynamic.map.js" />
+    <Content Include="Scripts\mobile\effects.jquery-ui.min.js" />
+    <Content Include="Scripts\mobile\head.load.min.js" />
+    <Content Include="Scripts\mobile\iscroll.js" />
+    <Content Include="Scripts\mobile\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\mobile\jquery.colorbox.min.js" />
+    <Content Include="Scripts\mobile\jquery.drawer.min.js" />
+    <Content Include="Scripts\mobile\jquery.min.js" />
+    <Content Include="Scripts\mobile\jquery.nivo-slider.min.js" />
+    <Content Include="Scripts\mobile\TouchSlide.1.1.js" />
+    <Content Include="Scripts\mobile\touchslider.js" />
+    <Content Include="Scripts\mobile\Xslider.js" />
+    <Content Include="Scripts\mobile\zepto_min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ShopShow.js" />
+    <Content Include="Content\Common\ie.css" />
+    <Content Include="Content\Common\ie6.css" />
+    <Content Include="Content\Common\public-1020.css" />
+    <Content Include="Scripts\smzy_jwplayer\jwplayer.flash.swf" />
+    <Content Include="Scripts\smzy_jwplayer\jwplayer.html5.js" />
+    <Content Include="Scripts\smzy_jwplayer\jwplayer.js" />
+    <Content Include="Scripts\smzy_jwplayer\player.jpg" />
+    <Content Include="Scripts\SpryCollapsiblePanel.js" />
+    <Content Include="Scripts\telerik.all.min.js" />
+    <Content Include="Scripts\telerik.autocomplete.min.js" />
+    <Content Include="Scripts\telerik.calendar.min.js" />
+    <Content Include="Scripts\telerik.chart.min.js" />
+    <Content Include="Scripts\telerik.combobox.min.js" />
+    <Content Include="Scripts\telerik.common.js" />
+    <Content Include="Scripts\telerik.common.min.js" />
+    <Content Include="Scripts\telerik.datepicker.min.js" />
+    <Content Include="Scripts\telerik.datetimepicker.min.js" />
+    <Content Include="Scripts\telerik.draganddrop.min.js" />
+    <Content Include="Scripts\telerik.editor--.js" />
+    <Content Include="Scripts\telerik.editor.min.js" />
+    <Content Include="Scripts\telerik.grid.editing.min.js" />
+    <Content Include="Scripts\telerik.grid.filtering.min.js" />
+    <Content Include="Scripts\telerik.grid.grouping.min.js" />
+    <Content Include="Scripts\telerik.grid.min.js" />
+    <Content Include="Scripts\telerik.grid.reordering.min.js" />
+    <Content Include="Scripts\telerik.grid.resizing.min.js" />
+    <Content Include="Scripts\telerik.imagebrowser.min.js" />
+    <Content Include="Scripts\telerik.list.min.js" />
+    <Content Include="Scripts\telerik.menu.min.js" />
+    <Content Include="Scripts\telerik.panelbar.min.js" />
+    <Content Include="Scripts\telerik.slider.min.js" />
+    <Content Include="Scripts\telerik.splitter.min.js" />
+    <Content Include="Scripts\telerik.tabstrip.min.js" />
+    <Content Include="Scripts\telerik.textbox.min.js" />
+    <Content Include="Scripts\telerik.timepicker.min.js" />
+    <Content Include="Scripts\telerik.treeview.min.js" />
+    <Content Include="Scripts\telerik.upload.min.js" />
+    <Content Include="Scripts\telerik.window.min-.js" />
+    <Content Include="Scripts\telerik.window.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\topic\common.js" />
+    <Content Include="Scripts\topic\css.css" />
+    <Content Include="Scripts\topic\jQuery.js" />
+    <Content Include="Scripts\topic\topic.asp" />
+    <Content Include="Scripts\topic\topic.gif" />
+    <Content Include="Scripts\topic\topic.png" />
+    <Content Include="Scripts\Xslider.js" />
+    <Content Include="Themes\Default\Content\css\all.css" />
+    <Content Include="Themes\Default\Content\css\animate.min.css" />
+    <Content Include="Themes\Default\Content\css\bootstrap-colorpicker.min.css" />
+    <Content Include="Themes\Default\Content\css\bootstrap-switch.css" />
+    <Content Include="Themes\Default\Content\css\bootstrap-tagsinput.css" />
+    <Content Include="Themes\Default\Content\css\bootstrap-timepicker.min.css" />
+    <Content Include="Themes\Default\Content\css\bootstrap.css" />
+    <Content Include="Themes\Default\Content\css\bootstrap.min.css" />
+    <Content Include="Themes\Default\Content\css\bootstrap3-wysihtml5.min.css" />
+    <Content Include="Themes\Default\Content\css\bootstrapSwitch.css" />
+    <Content Include="Themes\Default\Content\css\bootstrapValidator.min.css" />
+    <Content Include="Themes\Default\Content\css\dataTables.bootstrap.css" />
+    <Content Include="Themes\Default\Content\css\datepicker.css" />
+    <Content Include="Themes\Default\Content\css\docs.css" />
+    <Content Include="Themes\Default\Content\css\dropzone.css" />
+    <Content Include="Themes\Default\Content\css\font-awesome.min.css" />
+    <Content Include="Themes\Default\Content\css\fullcalendar.css" />
+    <Content Include="Themes\Default\Content\css\futurico.css" />
+    <Content Include="Themes\Default\Content\css\graypager.css" />
+    <Content Include="Themes\Default\Content\css\ion.rangeSlider.css" />
+    <Content Include="Themes\Default\Content\css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Themes\Default\Content\css\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Themes\Default\Content\css\jquery.gritter.css" />
+    <Content Include="Themes\Default\Content\css\morris.css" />
+    <Content Include="Themes\Default\Content\css\polaris.css" />
+    <Content Include="Themes\Default\Content\css\signin.css" />
+    <Content Include="Themes\Default\Content\css\slider.css" />
+    <Content Include="Themes\Default\Content\css\style.css" />
+    <Content Include="Themes\Default\Content\css\switchery.min.css" />
+    <Content Include="Themes\Default\Content\css\_all-1.css" />
+    <Content Include="Themes\Default\Content\css\_all-2.css" />
+    <Content Include="Themes\Default\Content\css\_all-3.css" />
+    <Content Include="Themes\Default\Content\css\_all.css" />
+    <Content Include="Themes\Default\Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Themes\Default\Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Themes\Default\Content\img\aero%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\aero%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\aero%402x.png" />
+    <Content Include="Themes\Default\Content\img\aero-1.png" />
+    <Content Include="Themes\Default\Content\img\aero-2.png" />
+    <Content Include="Themes\Default\Content\img\aero.png" />
+    <Content Include="Themes\Default\Content\img\blue%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\blue%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\blue%402x.png" />
+    <Content Include="Themes\Default\Content\img\blue-1.png" />
+    <Content Include="Themes\Default\Content\img\blue-2.png" />
+    <Content Include="Themes\Default\Content\img\blue.png" />
+    <Content Include="Themes\Default\Content\img\bs-docs-masthead-pattern.png" />
+    <Content Include="Themes\Default\Content\img\flat%402x.png" />
+    <Content Include="Themes\Default\Content\img\flat.png" />
+    <Content Include="Themes\Default\Content\img\futurico%402x.png" />
+    <Content Include="Themes\Default\Content\img\futurico.png" />
+    <Content Include="Themes\Default\Content\img\glyphicons-halflings-white.png" />
+    <Content Include="Themes\Default\Content\img\glyphicons-halflings.png" />
+    <Content Include="Themes\Default\Content\img\green%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\green%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\green%402x.png" />
+    <Content Include="Themes\Default\Content\img\green-1.png" />
+    <Content Include="Themes\Default\Content\img\green-2.png" />
+    <Content Include="Themes\Default\Content\img\green.png" />
+    <Content Include="Themes\Default\Content\img\grey%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\grey%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\grey%402x.png" />
+    <Content Include="Themes\Default\Content\img\grey-1.png" />
+    <Content Include="Themes\Default\Content\img\grey-2.png" />
+    <Content Include="Themes\Default\Content\img\grey.png" />
+    <Content Include="Themes\Default\Content\img\gritter-light.png" />
+    <Content Include="Themes\Default\Content\img\gritter.png" />
+    <Content Include="Themes\Default\Content\img\line%402x.png" />
+    <Content Include="Themes\Default\Content\img\line.png" />
+    <Content Include="Themes\Default\Content\img\loginbg.jpg" />
+    <Content Include="Themes\Default\Content\img\logobg.jpg" />
+    <Content Include="Themes\Default\Content\img\minimal%402x.png" />
+    <Content Include="Themes\Default\Content\img\minimal.png" />
+    <Content Include="Themes\Default\Content\img\navbar-inner.jpg" />
+    <Content Include="Themes\Default\Content\img\orange%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\orange%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\orange%402x.png" />
+    <Content Include="Themes\Default\Content\img\orange-1.png" />
+    <Content Include="Themes\Default\Content\img\orange-2.png" />
+    <Content Include="Themes\Default\Content\img\orange.png" />
+    <Content Include="Themes\Default\Content\img\pink%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\pink%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\pink%402x.png" />
+    <Content Include="Themes\Default\Content\img\pink-1.png" />
+    <Content Include="Themes\Default\Content\img\pink-2.png" />
+    <Content Include="Themes\Default\Content\img\pink.png" />
+    <Content Include="Themes\Default\Content\img\polaris%402x.png" />
+    <Content Include="Themes\Default\Content\img\polaris.png" />
+    <Content Include="Themes\Default\Content\img\purple%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\purple%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\purple%402x.png" />
+    <Content Include="Themes\Default\Content\img\purple-1.png" />
+    <Content Include="Themes\Default\Content\img\purple-2.png" />
+    <Content Include="Themes\Default\Content\img\purple.png" />
+    <Content Include="Themes\Default\Content\img\red%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\red%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\red%402x.png" />
+    <Content Include="Themes\Default\Content\img\red-1.png" />
+    <Content Include="Themes\Default\Content\img\red-2.png" />
+    <Content Include="Themes\Default\Content\img\red.png" />
+    <Content Include="Themes\Default\Content\img\sort_asc.png" />
+    <Content Include="Themes\Default\Content\img\sort_asc_disabled.png" />
+    <Content Include="Themes\Default\Content\img\sort_both.png" />
+    <Content Include="Themes\Default\Content\img\sort_desc.png" />
+    <Content Include="Themes\Default\Content\img\sort_desc_disabled.png" />
+    <Content Include="Themes\Default\Content\img\sprite-skin-flat.png" />
+    <Content Include="Themes\Default\Content\img\spritemap%402x.png" />
+    <Content Include="Themes\Default\Content\img\spritemap.png" />
+    <Content Include="Themes\Default\Content\img\square%402x.png" />
+    <Content Include="Themes\Default\Content\img\square.png" />
+    <Content Include="Themes\Default\Content\img\yellow%402x-1.png" />
+    <Content Include="Themes\Default\Content\img\yellow%402x-2.png" />
+    <Content Include="Themes\Default\Content\img\yellow%402x.png" />
+    <Content Include="Themes\Default\Content\img\yellow-1.png" />
+    <Content Include="Themes\Default\Content\img\yellow-2.png" />
+    <Content Include="Themes\Default\Content\img\yellow.png" />
+    <Content Include="Ueditor\net.sln" />
+    <Content Include="Upfiles\uploadimage\201608\20160803145142686.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160803151843297.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160803155202458.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160803155358250.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160803155358272.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160803155358760.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160803155358775.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160822145303187.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160822145319229.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160822145332575.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160822150339503.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160822150627748.png" />
+    <Content Include="Upfiles\uploadimage\201608\20160822151931952.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160822152242728.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160822152855495.png" />
+    <Content Include="Upfiles\uploadimage\201608\20160822152933610.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160822154107904.png" />
+    <Content Include="Upfiles\uploadimage\201608\20160822154204190.jpg" />
+    <Content Include="Upfiles\uploadimage\201608\20160825085149664.png" />
+    <Content Include="Upfiles\uploadimage\201609\20160903113504457.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Themes\Default\Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Themes\Default\Content\fonts\fontawesome-webfont.eot-" />
+    <Content Include="Themes\Default\Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Themes\Default\Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Themes\Default\Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Themes\Default\Content\fonts\glyphicons-halflings-regular.eot-" />
+    <Content Include="Themes\Default\Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Themes\Default\Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Themes\Default\theme.config" />
+    <Content Include="Themes\Default\Views\Shared\Head.cshtml" />
+    <Content Include="Themes\Default\Views\Web.config" />
+    <Content Include="Views\Shared\_Notifications.cshtml" />
+    <Content Include="applicationLog.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\deny.cshtml" />
+    <Content Include="Views\common\commonHeader.cshtml" />
+    <Content Include="Views\common\commonFooter.cshtml" />
+    <Content Include="Views\Shared\cxHeader.cshtml" />
+    <Content Include="Views\Shared\cxFooter.cshtml" />
+    <Content Include="Views\Information\leftNewsDelivery.cshtml" />
+    <Content Include="Views\Information\LeftNav.cshtml" />
+    <Content Include="Views\Information\NormalSection.cshtml" />
+    <Content Include="Views\Information\news.cshtml" />
+    <Content Include="Views\Information\singlePage.cshtml" />
+    <Content Include="Ueditor\config.json" />
+    <Content Include="Ueditor\controller.ashx" />
+    <Content Include="Ueditor\net.v11.suo" />
+    <Content Include="Ueditor\README.md" />
+    <Content Include="Ueditor\Web.config" />
+    <Content Include="Views\Home\HeadNav.cshtml" />
+    <Content Include="Views\Shared\_LayoutLibrary.cshtml" />
+    <Content Include="Views\Shared\_LayOutSectin.cshtml" />
+    <Content Include="Views\Information\PicSection.cshtml" />
+    <Content Include="Views\Shared\cxHeaderLibrary.cshtml" />
+    <Content Include="Views\Home\HeadNavLibrary.cshtml" />
+    <Content Include="Views\Home\Library.cshtml" />
+    <Content Include="Views\Shared\_LayoutEducation.cshtml" />
+    <Content Include="Views\Shared\cxHeaderEducation.cshtml" />
+    <Content Include="Views\Home\HeadNavEducation.cshtml" />
+    <Content Include="Views\Home\Education.cshtml" />
+    <Content Include="Views\Information\NormalLibrarySection.cshtml" />
+    <Content Include="Views\Information\PicLibrarySection.cshtml" />
+    <Content Include="Views\Information\singleLibraryPage.cshtml" />
+    <Content Include="Views\Information\newsLibrary.cshtml" />
+    <Content Include="Views\Information\NormalEducationSection.cshtml" />
+    <Content Include="Views\Information\PicEducationSection.cshtml" />
+    <Content Include="Views\Information\newsEducation.cshtml" />
+    <Content Include="Views\Information\singleEducationPage.cshtml" />
+    <Content Include="Views\Information\BorrowGuide.cshtml" />
+    <Content Include="SiteSet.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="HC.Manage\App_Data\" />
+    <Folder Include="HC.Manage\Content\common\script\uploadify\jquery.uploadify-v2.1.0\example\uploads\" />
+    <Folder Include="HC.Manage\ExcelTempDown\" />
+    <Folder Include="HC.Manage\Models\" />
+    <Folder Include="HC.Manage\Properties\" />
+    <Folder Include="Images\erji\" />
+    <Folder Include="Lognet\LogInfo\" />
+    <Folder Include="Lognet\LogMonitor\" />
+    <Folder Include="Lognet\TempLog\" />
+    <Folder Include="Upfiles\uploadfile\201608\" />
+    <Folder Include="upload\" />
+    <Folder Include="UpProductImg\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EfData\ResposityOfEf.csproj">
+      <Project>{82ebfccf-2bdd-4cb6-b827-ffe69a34b0f0}</Project>
+      <Name>ResposityOfEf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Core\HC.Core.csproj">
+      <Project>{01470267-b092-459d-933e-b3ffd849272e}</Project>
+      <Name>HC.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Data\HC.Data.csproj">
+      <Project>{01fdcfed-35a3-4541-bc5e-2bf448f7fde9}</Project>
+      <Name>HC.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Service\HC.Service.csproj">
+      <Project>{d48be7c8-c382-4a97-8bac-f0c41a336b08}</Project>
+      <Name>HC.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Web.Framework\HC.Web.Framework.csproj">
+      <Project>{cf231132-121a-47a3-922e-bf5c762c13f7}</Project>
+      <Name>HC.Web.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{25d2da13-ea5c-47c3-b7a8-e857f3bd5f34}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14143</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1075/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

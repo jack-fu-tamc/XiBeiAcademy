@@ -1,0 +1,86 @@
+﻿
+ 
+记录时间：2015-12-18 10:54:11,774 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.testTemp() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 607
+ 
+
+ 
+记录时间：2015-12-18 10:55:01,077 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController.testTemp() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 607
+ 
+
+ 
+记录时间：2015-12-18 15:48:44,203 
+线程ID:[78] 
+日志级别：  ERROR 
+错误描述：此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。   </br>
+ 
+
+ 
+记录时间：2015-12-18 16:10:49,017 
+线程ID:[28] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: value   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 624
+ 
+
+ 
+记录时间：2015-12-18 16:10:55,149 
+线程ID:[61] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: value   </br>在 HC.Manage.Controllers.PurchaseController.releasePurchaseSecR(String textJson) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 624
+ 
+
+ 
+记录时间：2015-12-18 17:29:36,006 
+线程ID:[67] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.CommonController.fileUpZs() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\CommonController.cs:行号 499
+ 
+
+ 
+记录时间：2015-12-18 17:32:38,425 
+线程ID:[50] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.CommonController.fileUpZs() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\CommonController.cs:行号 499
+ 
+
+ 
+记录时间：2015-12-18 17:34:09,389 
+线程ID:[32] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.CommonController.fileUpZs() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\CommonController.cs:行号 499
+ 
+
+ 
+记录时间：2015-12-18 17:35:01,472 
+线程ID:[62] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.CommonController.fileUpZs() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\CommonController.cs:行号 499
+ 
+
+ 
+记录时间：2015-12-18 17:35:28,477 
+线程ID:[62] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.CommonController.fileUpZs() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\CommonController.cs:行号 499
+ 
+
+ 
+记录时间：2015-12-18 17:43:34,803 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：输入字符串的格式不正确。   </br>在 HC.Manage.Controllers.CommonController.fileUpZs() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\CommonController.cs:行号 499
+ 
+
+ 
+记录时间：2015-12-18 17:47:32,763 
+线程ID:[18] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.CommonController.fileUpZs() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\CommonController.cs:行号 489
+ 

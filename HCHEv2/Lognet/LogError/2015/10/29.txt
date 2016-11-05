@@ -1,0 +1,9 @@
+﻿
+ 
+记录时间：2015-10-29 15:30:54,167 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_Shared_commonHeader_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Shared\commonHeader.cshtml:行号 16
+在 ASP._Page_HC_Manage_Views_Shared_manageLayout1_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Shared\manageLayout1.cshtml:行号 40
+
+ 

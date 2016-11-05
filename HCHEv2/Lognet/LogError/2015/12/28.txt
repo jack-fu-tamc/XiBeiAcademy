@@ -1,0 +1,237 @@
+﻿
+ 
+记录时间：2015-12-28 10:04:26,486 
+线程ID:[17] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseDetail.cshtml(32): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“ProcurementDesc”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“ProcurementDesc”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-28 10:04:36,854 
+线程ID:[17] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.PurchaseController._ajaxAllOffer(GridCommand cmd) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 1004
+ 
+
+ 
+记录时间：2015-12-28 11:27:51,292 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _purchaseDtls(Int32, Int32, Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 11:27:52,809 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 11:31:31,849 
+线程ID:[20] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 11:38:01,443 
+线程ID:[19] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 11:38:18,231 
+线程ID:[26] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 11:39:21,794 
+线程ID:[23] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 11:39:22,390 
+线程ID:[23] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult _ajaxAllOffer(Telerik.Web.Mvc.GridCommand, Int32)”的不可以为 null 的类型“System.Int32”的参数“dtlID”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:09:24,004 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：e:\ProTwoN\HCHEv2\HC.Manage\Views\Purchase\PruchaseDetail.cshtml(32): error CS1061: “HC.Manage.Models.procurent.procurmentModel”不包含“ProcurementDesc”的定义，并且找不到可接受类型为“HC.Manage.Models.procurent.procurmentModel”的第一个参数的扩展方法“ProcurementDesc”(是否缺少 using 指令或程序集引用?)   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-12-28 13:19:04,479 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:29:00,627 
+线程ID:[85] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:32:39,920 
+线程ID:[80] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:37:42,169 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:37:42,699 
+线程ID:[13] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:40:26,300 
+线程ID:[53] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:40:26,814 
+线程ID:[58] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:40:47,312 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:40:47,837 
+线程ID:[61] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:41:48,776 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:41:49,273 
+线程ID:[58] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:42:06,467 
+线程ID:[53] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:42:06,982 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:42:23,562 
+线程ID:[54] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 13:42:24,078 
+线程ID:[59] 
+日志级别：  ERROR 
+错误描述：对于“HC.Manage.Controllers.PurchaseController”中方法“System.Web.Mvc.ActionResult PruchaseDetailN(Int32)”的不可以为 null 的类型“System.Int32”的参数“id”，参数字典包含一个 null 项。可选参数必须为引用类型、可以为 null 的类型或声明为可选参数。
+参数名: parameters   </br>
+ 
+
+ 
+记录时间：2015-12-28 14:58:55,005 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：Parameter 'p_UserID' not found in the collection.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 177在 Maticsoft.DAL.Procurment_InfoDtl.GetList(Procurment_InfoDtl_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_InfoDtl.cs:行号 25
+在 BLL.Procurment.Procurment_InfoDtlBll.GetList(Procurment_InfoDtl_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoDtlBll.cs:行号 17
+在 HC.Manage.Controllers.PurchaseController._purchaseDtls(Int32 mstid, Int32 psize, Int32 pindex) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 1125
+ 
+
+ 
+记录时间：2015-12-28 14:59:03,630 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：Parameter 'p_UserID' not found in the collection.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 177在 Maticsoft.DAL.Procurment_InfoDtl.GetList(Procurment_InfoDtl_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_InfoDtl.cs:行号 25
+在 BLL.Procurment.Procurment_InfoDtlBll.GetList(Procurment_InfoDtl_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoDtlBll.cs:行号 17
+在 HC.Manage.Controllers.PurchaseController._purchaseDtls(Int32 mstid, Int32 psize, Int32 pindex) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 1125
+ 
+
+ 
+记录时间：2015-12-28 14:59:11,305 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：Parameter 'p_UserID' not found in the collection.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 177在 Maticsoft.DAL.Procurment_InfoDtl.GetList(Procurment_InfoDtl_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_InfoDtl.cs:行号 25
+在 BLL.Procurment.Procurment_InfoDtlBll.GetList(Procurment_InfoDtl_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoDtlBll.cs:行号 17
+在 HC.Manage.Controllers.PurchaseController._purchaseDtls(Int32 mstid, Int32 psize, Int32 pindex) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 1125
+ 
+
+ 
+记录时间：2015-12-28 15:02:30,575 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：Parameter 'p_UserID' not found in the collection.   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 177在 Maticsoft.DAL.Procurment_InfoDtl.GetList(Procurment_InfoDtl_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_InfoDtl.cs:行号 25
+在 BLL.Procurment.Procurment_InfoDtlBll.GetList(Procurment_InfoDtl_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoDtlBll.cs:行号 17
+在 HC.Manage.Controllers.PurchaseController._purchaseDtls(Int32 mstid, Int32 psize, Int32 pindex) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\PurchaseController.cs:行号 1125
+ 

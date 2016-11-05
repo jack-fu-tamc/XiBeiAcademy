@@ -1,0 +1,26 @@
+﻿/*Shophot页面需增加样式请于此样式表中增加*/
+.choosebox_two {
+    padding: 13px 0px 0px;
+    height: 160px;
+}
+
+.go_shop_two {
+    height: 50px;
+    margin: 10px;
+}
+
+.choose .btn-img_two {
+    width: 186px;
+    height: 48px;
+    line-height: 48px;
+    overflow: hidden;
+    background: #C20201 none repeat scroll 0% 0%;
+    border: 1px solid #C20201;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    outline: medium none;
+}

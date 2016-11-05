@@ -1,0 +1,229 @@
+﻿.t-widget .mutilpGrid {
+    width: 100%;
+    height: 100%;
+}
+
+.mutilpGrid .accInfoFirst {
+    width: 513px;
+    border-left:none !important;
+}
+
+    .mutilpGrid .accInfoFirst div {
+        float: left;
+    }
+
+
+
+.list_contain .accImg, .list_contain .singlePrice {
+    width: 100px;
+}
+
+.list_contain .singlePrice {
+    margin-top: 15px;
+    width: 80px;
+    margin-left: 36px;
+}
+
+.list_contain .accImg, .list_contain .accTitle {
+    margin: 15px 0 0 15px;
+}
+
+
+.list_contain .accQt {
+    width: 37px;
+    margin-top: 15px;
+}
+
+.list_contain .accTitle {
+    text-align: left;
+}
+
+.mutilpGrid .accTitle {
+    width: 165px;
+}
+
+.mutilpGrid .unit_operation {
+    width: 100px;
+    border-right:none !important;
+}
+
+.mutilpGrid td {
+    width: 100px;
+}
+
+.table_list table tr ul td {
+    border-right: 1px solid #CCC !important;
+    border-left: 1px solid #CCC !important;
+}
+
+
+.pec_text .mutilpGrid .buyerInfo, .pec_text .mutilpGrid .Orderstatues {
+    width: 100px;
+    height: auto;
+}
+
+.mutilpGrid .Orderstatues a {
+    height: auto;
+    text-align: center;
+}
+
+
+.table_list .t-grid {
+    width: 850px;
+    margin-bottom:20px;
+    *padding-bottom:20px;
+}
+
+.table_list .title_list {
+    width: 848px
+}
+
+.table_list .pec_text {
+    width: 848px;
+    height: auto;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+
+.repair_content .tab_box {
+    margin-left: 35px;
+    width: 848px;
+}
+
+.table_list .t-grid-pager {
+    width: 849px;
+        border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    * width: 848px;
+}
+
+.buyerright .hc_indent {
+    margin-left: 35px;
+    width: 850px;
+}
+
+.top_text .evaluation_show {
+    width: auto;
+    margin-left: 0px;
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.hc_indent .hcfh_teltop {
+    width: 98%;
+    display: inline-block;
+    color: #000;
+    margin: 15px 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.hcfh_teltop span {
+    display: inline-block;
+    float:left;
+}
+.hcfh_teltop .hctl_elishhot_next {
+    font-size:14px;
+}
+.hctl_chinhot {
+    font-size: 16px;
+    color: #c20201;
+    width: 68px;
+}
+
+.hctl_elishhot {
+    font-size: 16px;
+    color: #CE9D63;
+}
+.hctl_striping {
+    width: 473px;
+background: transparent url("../../../images/publicimg/spxq_line.gif") repeat-x scroll 0% 50%;
+height: 40px;
+}
+.hctl_elishhot {
+color: #CE9D63;
+margin-left:10px;
+}
+.hc_XLseek .hc_SJname {
+    width: 202px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+.hc_XLseek .hc_CJteach {
+    width: 304px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+ .hc_XLseek .hc_JYselest {
+    width: 193px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+.hc_XLseek .hc_PJselest {
+    width: 150px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+.t-dropdown-wrap .t-input {
+    min-width:88px;
+    *min-width:86px;
+    padding-left:3px;
+}
+.t-animation-container .t-group {
+    width:107px !important;
+    *width:105px !important;
+}
+#LastMonth .t-grid-header {
+    border:1px solid #ccc;
+}
+.hc_PJselest .hc_PJselet {
+   *width:115px;
+}
+.first_triangle {
+    position: absolute;
+    border-width: 8px;
+    border-color: #CCC transparent transparent;
+    border-style: solid dashed dashed;
+    margin-top: 2px;
+    margin-left: -22px;
+    display: none;
+}
+.cover_triangle {
+    position: absolute;
+    border-width: 8px;
+    border-style: solid dashed dashed;
+    margin-top: 0px;
+    margin-left: -22px;
+    border-color: #FFF transparent transparent;
+    display: none;
+}
+.top_center .name_text a {
+    display:inline-block;
+    padding:0px 15px;
+}
+.top_center .top_text a {
+    display:inline-block;
+    padding:0px 15px;
+}
+.top_center .top_text {
+    margin-top: 15px;
+}
+
+
+
+ .t-grid-bottom .t-pager .t-link .t-arrow-first,
+ .t-grid-bottom .t-pager .t-link .t-arrow-last,
+ .t-grid-bottom .t-status .t-refresh,
+ .t-grid-bottom .t-pager .t-link .t-arrow-next,
+ .t-grid-bottom .t-pager .t-link .t-arrow-prev{
+    display:none;
+}
+
+
+.t-grid-bottom .t-status-text{
+    display:none;
+}

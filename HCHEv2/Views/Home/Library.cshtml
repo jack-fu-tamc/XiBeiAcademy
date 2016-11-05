@@ -1,0 +1,150 @@
+﻿@using HC.Data.ViewModels
+@model libraryIndexModel
+@{
+    ViewBag.Title = "图书馆";
+    Layout = "~/Views/Shared/_LayoutLibrary.cshtml";
+}
+@section headScript{
+    @*<script type="text/javascript" src="~/Scripts/huadongmen.js"></script>*@
+}
+
+
+
+<div class="block_03">
+    <div class="area_l">
+        <div class="silbo-slide_04">
+            <div id="SlidePlayer_04">
+                <ul class="Slides">
+                    @foreach (var picn in Model.bigPicNews)
+                    {
+                        <li title="@picn.NewsTitle"><a href="@Url.Action("newsLibrary", "Information", new { id = picn.NewsID })"><img src="@picn.PicURL" alt="@picn.NewsTitle" /></a></li>
+                    }
+
+                </ul>
+            </div>
+            <script type="text/javascript">
+                TB.widget.SimpleSlide.decorate('SlidePlayer_04', {
+                    eventType: 'mouse', effect: 'fade', onInit: function () {
+                        var lis = $D.getElementsByClassName('Slides', 'ul', $D.get('SlidePlayer_04'))[0].getElementsByTagName('li'),
+                            titles = [], hrefs = [];
+                        for (var i = 0; i < lis.length; i++) {
+                            var el, innerEl;
+                            el = document.createElement('div');
+                            el.className = 'SlideTitle';
+                            el.innerHTML = lis[i].getAttribute('title') + '<b></b>';
+                            lis[i].appendChild(el);
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+    <div class="area_r">
+        <div class="column_02">
+            <div class="column_t"><p class="column_title">资源库链接</p></div>
+            <div class="column_c">
+                <div class="part_06">
+                    <ul>
+                        <li><a href="http://www.wsbgt.com/web/index.aspx" target="_blank">网上报告厅</a></li>
+                        <li><a href="http://www.sslibrary.com" target="_blank">汇雅书世界</a></li>
+                        <li><a href="http://epub.cnki.net/kns/brief/result.aspx?dbPrefix=CJFQ" target="_blank">CNKI学术期刊数据库</a></li>
+                        <li><a href="http://c.g.wanfangdata.com.cn/Thesis.aspx" target="_blank">万方《中国学位论文全文数据库》</a></li>
+                        <li><a href="http://c.g.wanfangdata.com.cn/Conference.aspx" target="_blank">万方《中国学术会议文献数据库》</a></li>
+                        <li><a href="http://c.g.wanfangdata.com.cn/PatentIndex.aspx" target="_blank">万方《中外专利数据库》</a></li>
+                        <li><a href="http://industry.wanfangdata.com.cn/dl" target="_blank">万方《电子在线动态平台》</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr20"></div>
+</div>
+
+<div class="block_04">
+    <div class="area_l">
+        <div class="column_02">
+            <div class="column_t"><span class="column_more"><a href="/Information/singleLibraryPage/2078" target="_blank">更多&gt;&gt;</a></span><p class="column_title">关于图书馆</p></div>
+            <div class="column_c">
+                <div class="part_07">
+                    <div class="sum">
+                        @Model.introduce
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="area_c">
+        <div class="column_02">
+            <div class="column_t"><span class="column_more"><a href="/Information/SectionLibrary/2079" target="_blank">更多&gt;&gt;</a></span><p class="column_title">新闻播报</p></div>
+            <div class="column_c">
+                <div class="part_03 part_03b">
+
+                    @if (Model.reportRec != null)
+                    {
+                        Model.reportRec.NewsContent = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(Model.reportRec.NewsContent, "<[^>]+>", ""), "&[^;]+;", "");
+
+                        if (Model.reportRec.NewsContent.Length > 28)
+                        {
+                            Model.reportRec.NewsContent = Model.reportRec.NewsContent.Substring(0, 28);
+                        }
+
+                        <div class="hot">
+                            <p class="pic"><a href="@Url.Action("newsLibrary", "Information", new { id = Model.reportRec.NewsID })" title="@Model.reportRec.NewsTitle"><img src="@Model.reportRec.PicURL" alt="@Model.reportRec.NewsTitle" /></a></p>
+                            <div class="title_bg">
+                                <p class="title"><a href="@Url.Action("newsLibrary", "Information", new { id = Model.reportRec.NewsID })" title="@Model.reportRec.NewsTitle">@Model.reportRec.NewsTitle</a></p>
+                                <div class="sum">@Model.reportRec.NewsContent</div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    }
+
+
+
+                    <ul class="list">
+                        @foreach (var bo in Model.report)
+                        {
+                            <li><span class="time">@bo.CreatTime.ToString("yyyy-MM-dd")</span><a href="#" title="@bo.NewsTitle">@bo.NewsTitle</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="area_r">
+        <div class="column_02">
+            <div class="column_t"><span class="column_more"><a href="/Information/SectionLibrary/2081" target="_blank">更多&gt;&gt;</a></span><p class="column_title">借阅指南</p></div>
+            <div class="column_c">
+                <div class="part_08">
+                    <ul>
+                        @foreach (var borrow in Model.borrowGuide)
+                        {
+                            borrow.NewsContent = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(borrow.NewsContent, "<[^>]+>", ""), "&[^;]+;", "");
+
+                            if (borrow.NewsContent.Length > 32)
+                            {
+                                borrow.NewsContent = borrow.NewsContent.Substring(0, 32)+"...";
+                            }                            
+                            <li>
+                                <b><a href="@Url.Action("newsLibrary", "Information", new { id = borrow.NewsID })" title="@borrow.NewsTitle">@borrow.NewsTitle</a></b>
+                                <span>@borrow.NewsContent</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clr20"></div>
+</div>
+
+<div class="block">
+    <div class="part_09">
+        <ul class="clearfix">
+            <li class="off"><a href="/Information/singleLibraryPage/2084"><img src="~/Images/jpg_02a.jpg" /></a></li>
+            <li><a href="/Information/singleLibraryPage/2085"><img src="~/Images/jpg_02b.jpg" /></a></li>
+            <li><a href="/Information/singleLibraryPage/2086"><img src="~/Images/jpg_02c.jpg" /></a></li>
+            <li><a href="/Information/singleLibraryPage/2087"><img src="~/Images/jpg_02d.jpg" /></a></li>
+        </ul>
+    </div>
+    <div class="clr20"></div>
+</div>

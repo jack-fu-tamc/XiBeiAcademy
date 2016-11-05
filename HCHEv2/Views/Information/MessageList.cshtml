@@ -1,0 +1,198 @@
+﻿@using HC.Data.Models
+@model List<LeaveMessage>
+@{
+    ViewBag.Title = "留言列表";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+    var curentPage = int.Parse(ViewBag.curentPage.ToString());
+    var totalCount = int.Parse(ViewBag.TottalCount.ToString());
+    var totalPage = Math.Ceiling((float)totalCount / 5);
+}
+
+
+<div class="bj1">
+    <div class="bj2">
+        <div class="bj3">
+            <div class="block">
+                @Html.Action("HeadNav", "Home")
+
+                <div class="neirong_top"></div>
+                <div class="neirong">
+                    <div class="nei">
+                        <div class="nei_left">
+
+
+
+
+
+                            <div class="leftnav">
+                                <div class="leftnav2">
+                                    <div class="leftnav_title">留言 </div>
+                                    <div class="leftnav_bg">
+                                        <ul>
+                                            <li class="on"><a href="/Information/LeaveMessage">留言板</a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="clr15"></div>
+
+                            <div class="column_02">
+                                <div class="column_t"><p class="column_title">戏曲时迅</p></div>
+                                <div class="column_c">
+                                    <div class="left_01">
+                                        @{Html.RenderAction("leftNewsDelivery", "Information");}
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="padding-top:20px;"><a href="/Information/Section/32"><img src="~/images/erji/left_link.jpg"></a></div>
+                        </div>
+                        <div class="nei_right">
+                            <!--当前位置 -->
+                            <div class="crumb">
+                                <div class="position">
+                                    <a href="/" title="首页" class="home"></a>
+                                    <p>
+                                        <a href="/">首页</a>
+                                        @*@Html.Raw(ViewData["nav"].ToString())*@
+                                    </p>
+                                </div>
+
+                                <div class="clr"></div>
+                            </div>
+
+                            <!--当前位置-end-->
+
+                            <div class="show_general">
+                                <!--咨询 -->
+                                <div class="review">
+                                    <div class="review_t">
+                                        <span>总计 <b>@totalCount</b>条咨询</span>
+                                        <p>在线咨询</p>
+                                    </div>
+                                    <div class="review_list">
+                                        <ul>
+                                            @foreach (var item in Model)
+                                            {
+                                                <li>
+                                                    <div class="name">
+                                                        <p class="time">@item.createTime.ToString("yyyy/MM/dd HH:mm:ss")</p>
+                                                        网友：<span>@item.LeaveName</span>
+                                                    </div>
+                                                    <div class="sum open">@item.LeaveContent</div>
+                                                    @if (!string.IsNullOrEmpty(item.Answer))
+                                                    {
+                                                        <div class="reply">
+                                                            <div class="reply_sum reply_open"><span>回复：</span>@item.Answer</div>
+                                                            @*<p class="recom"><a onclick="TuiJian(58)" href="javascript:void(0);">推荐 <b id="tuijian_58"></b></a></p>*@
+                                                            <p class="time">@item.answerTime.ToString("yyyy/MM/dd HH:mm:ss")</p>
+                                                        </div>
+                                                    }
+                                                    
+                                                </li>
+                                            }
+                                           
+
+
+                                        </ul>
+                                        <div class="clr40"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="page">                                
+                                @if (totalPage > 1)
+                                {
+                                    <span class="a1">
+                                        <b>&lt;&lt;</b><!--第一页-->
+                                        <b>&lt;</b><!--上一页-->
+                                        @if (totalPage <= 5)
+                                        {
+                                            for (int j = 1; j <= totalPage; j++)
+                                            {
+                                                if (curentPage == j)
+                                                {
+                                                    <span>@curentPage</span>
+                                                }
+                                                else
+                                                {
+                                                    <a href="/Information/MessageList/@j">@j</a>
+                                                }
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            if (curentPage <= 3)
+                                            {
+                                                for (int j = 1; j <= 5; j++)
+                                                {
+                                                    if (curentPage == j)
+                                                    {
+                                                        <span>@curentPage</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="/Information/MessageList/@j">@j</a>
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (totalPage - curentPage < 2)
+                                                {
+                                                    for (var p = curentPage - 2 + (totalPage - curentPage - 2); p <= totalPage; p++)
+                                                    {
+                                                        if (curentPage == p)
+                                                        {
+                                                            <span>@curentPage</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a href="/Information/MessageList/@p">@p</a>
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    for (var k = curentPage - 2; k <= curentPage + 2; k++)
+                                                    {
+                                                        if (curentPage == k)
+                                                        {
+                                                            <span>@curentPage</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a href="/Information/MessageList/@k">@k</a>
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        <b>&gt;</b><!--下一页-->
+                                        <b>&gt;&gt;</b><!--末页-->
+                                    </span>
+                                }
+                            </div>
+
+
+
+
+                       
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

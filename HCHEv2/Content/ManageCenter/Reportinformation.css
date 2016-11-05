@@ -1,0 +1,364 @@
+.hc_reportNews {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    float: left;
+    border: 1px solid #CCC;
+    background: #FFF;
+}
+
+    .hc_reportNews form {
+        float: left;
+        margin-bottom: 0px;
+    }
+
+    .hc_reportNews .reportnes {
+        max-height: 550px;
+        width: 280px;
+        float: left;
+    }
+
+        .hc_reportNews .reportnes .dashed {
+            height: 45px;
+            line-height: 45px;
+            border-bottom: 1px dashed #ccc;
+            margin: 0px 14px 0px 14px;
+        }
+
+    .hc_reportNews .hc_reporttext {
+        float: left;
+        color: #C20201;
+        font-size: 16px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+li {
+    display: block;
+}
+
+.hc_reportshop {
+    width: 255px;
+    height: 122px;
+    float: left;
+    margin: 7px 0px 3px 10px;
+}
+
+    .hc_reportshop .hc_reportimg {
+        width: 102px;
+        height: 102px;
+        float: left;
+        margin: 10px 8px 0px 7px;
+    }
+
+.hc_reportimg a img {
+    width: 102px;
+    height: 102px;
+}
+
+.hc_reportshop .hc_reportnam {
+    width: 136px;
+    float: left;
+    font-size: 13px;
+    margin: 10px 0px;
+}
+
+    .hc_reportshop .hc_reportnam span {
+        display: block;
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .hc_reportshop .hc_reportnam .hc_red {
+        color: #C20201;
+        font-size: 12px;
+        height: 41px;
+        line-height: 62px;
+    }
+
+.hc_textnamb {
+    height: 20px;
+    float: left;
+    margin-left: 18px;
+    margin-bottom: 12px;
+    color: #000;
+    width: 245px;
+    height: 26px;
+    line-height: 26px;
+}
+
+    .hc_textnamb span {
+        display: inline-block;
+        float: left;
+        line-height: 26px;
+        height: 26px;
+    }
+
+    .hc_textnamb .sizespan {
+        font-size: 13px;
+        width: 170px;
+        display: inline-block;
+        overflow: hidden;
+        float: left;
+        line-height: 26px;
+        height: 26px;
+    }
+
+    .hc_textnamb .andmetel {
+        background: url(/Images/images/Links.gif);
+        width: 70px;
+        height: 20px;
+        float: left;
+        display: block;
+        margin-left: 65px;
+    }
+
+
+.hc_reportright {
+    border-left: 1px solid #ccc;
+    width: 886px;
+    float: left;
+    max-height: 550px;
+}
+
+.reportsum_top {
+    margin-bottom: 20px;
+}
+
+.hc_reportright .dashedsed {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px dashed #ccc;
+    margin: 0px 14px 0px 14px;
+}
+
+.hc_reportsble {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+    .hc_reportsble .blue img {
+        margin-right: 20px;
+    }
+
+    .hc_reportsble .blue {
+        color: #0253A4;
+        font-size: 21px;
+        display: block;
+        height: 35px;
+    }
+
+.hc_reportright .hc_testspan {
+    font-size: 15px;
+    line-height: 30px;
+    text-indent: 2em;
+    padding: 0px 20px 0px 30px;
+    height: 195px;
+}
+
+    .hc_reportright .hc_testspan .redleft a {
+        color: #c20201;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hc_reportright .hc_testspan .redle a {
+        color: #c20201;
+        margin-left: 65px;
+    }
+
+.hc_reportSubmit {
+    border-bottom: 1px dashed #ccc;
+    margin: 0px 14px 0px 14px;
+}
+
+.hc_reportfoot {
+    margin: 25px 0px 0px 40px;
+    color: #999;
+    font-size: 12px;
+    height: 97px;
+}
+
+.hc_state {
+    font-size: 14px;
+    color: #808080;
+}
+/*ÃÓ–¥Õ∂Àﬂ*/
+.hc_reportlable {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.hc_reportlable_next {
+    width: 91%;
+}
+
+.hc_reportlable .reporttype {
+    font-size: 15px;
+    line-height: 35px;
+    text-align: right;
+    width: 105px;
+    float: left;
+    margin-right: 10px;
+}
+
+.hc_reportnav {
+    width: 132px;
+    height: 32px;
+    margin: 0px 10px 0px 0px;
+    float: left;
+}
+
+    .hc_reportnav p {
+        display: block;
+        padding-left: 10px;
+        line-height: 30px;
+        border: 1px solid #CACACA;
+        margin: 0px;
+        color: #999;
+        font-size: 15px;
+        cursor: pointer;
+        background: transparent url("/Images/cart//order_arrow_x.png") no-repeat scroll 110px 8px;
+    }
+
+    .hc_reportnav .hc_set.hc_setlisrf {
+        background: transparent url("/Images/images/cartimg/Menu_arrow.png") no-repeat scroll 110px 8px;
+    }
+
+    .hc_reportnav ul li:hover {
+        background: #EEE none repeat scroll 0% 0%;
+        color: #999;
+    }
+
+.hc_new {
+    width: 130px;
+    position: absolute;
+    border: 1px solid #CACACA;
+    display: none;
+    margin: 0px;
+    z-index: 1000;
+    padding: 0px;
+}
+
+.hc_reportnav ul li {
+    line-height: 30px;
+    padding-left: 10px;
+    background: #FFF none repeat scroll 0% 0%;
+    color: #999;
+    cursor: pointer;
+}
+
+.hc_writereport {
+    margin-top: 30px;
+    min-height: 272px;
+}
+
+.hc_reportbutn {
+    margin-left: 116px;
+    *margin-left: 58px;
+    height: 35px;
+    float: left;
+    *padding-bottom: 10px;
+}
+
+.hc_textareaf {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    width: 670px;
+    height: 60px;
+    resize: none;
+    color: #999;
+}
+
+    .hc_textareaf:focus {
+        border-color: #CACACA;
+        box-shadow: none;
+    }
+
+.reportreg .reportinput {
+    border-radius: 0px;
+    height: 20px;
+    width: 175px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    color: #999;
+    margin-top: 2px;
+}
+
+.try_sex {
+    height: 15px;
+    float: right;
+    width: 770px;
+    margin-top: 5px;
+}
+
+    .try_sex .tip_img {
+        height: 15px;
+        line-height: 15px;
+        width: 15px;
+        display: block;
+        float: left;
+        background: url('/Images/images/buyers/Input_error.png') no-repeat;
+    }
+
+    .try_sex .tip_text {
+        display: block;
+        float: left;
+        height: 15px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-left: 5px;
+        color: #C20201;
+    }
+
+.hc_reportbutn .hc_reportbut {
+    height: 36px;
+    width: 110px;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #C20201;
+    border: none;
+    color: #fff;
+}
+
+.reportreg .hc_reporttian {
+    height: 30px;
+    width: 70px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+}
+
+    .reportreg .hc_reporttian.magtop {
+        margin-top: 92px;
+        *float: right;
+        *margin-right: 100px;
+    }
+
+.why_text em {
+    float: left;
+    font-style: normal;
+}
+
+.hc_patImg {
+    height: 120px;
+    width: 579px;
+    float: left;
+    margin: 0px 15px 0px 0px;
+    border: 1px solid #CCC;
+    display: block;
+}
+
+.hc_imgshow {
+    margin: 5px 0px 5px 9px;
+    border: 1px solid #CCC;
+}

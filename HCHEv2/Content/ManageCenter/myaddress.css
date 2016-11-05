@@ -1,0 +1,587 @@
+.hc_registerCentre {
+    border: 1px solid #CCC;
+    width: 902px;
+    height: 530px;
+    margin: 6px 9px;
+    border-radius: 2px;
+}
+
+.address_title {
+    height: 34px;
+    line-height: 34px;
+    font-size: 15px;
+    border-bottom: 2px solid #c20201;
+    color: #c20201;
+    width: 908px;
+    margin: 15px 5px 0px;
+    text-indent: 1em;
+}
+
+.hc_registerCentre .hc_center {
+    width: 865px;
+    margin: auto;
+}
+
+.add_address {
+    width: 100%;
+    height: 42px;
+    border-bottom: 1px solid #cccccc;
+}
+
+    .add_address .add_content {
+        width: 100%;
+        height: 21px;
+        margin: 22px 0px;
+        *margin: 11px 0px;
+    }
+
+        .add_address .add_content span {
+            float: left;
+        }
+
+.add_img {
+    height: 21px;
+    width: 21px;
+    background: url(/Images/images/buyers/address_add.png);
+    margin-left: 15px;
+}
+
+.add_content em {
+    font-style: normal;
+    color: #c20201;
+    padding: 0px 5px 0px 10px;
+}
+
+.hc_center .add_nextadd {
+    margin-top: 5px;
+}
+
+    .hc_center .add_nextadd .hc_fl input {
+        border-radius: 0px;
+    }
+
+        .hc_center .add_nextadd .hc_fl input:focus {
+            color: #555;
+        }
+
+.hc_item {
+    width: 100%;
+    margin: 14px 0px;
+    min-height: 50px;
+}
+
+    .hc_item .hc_textlable {
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        width: 80px;
+        text-align: right;
+    }
+
+.hc_datareg {
+    float: left;
+}
+
+.hc_item .hc_fl {
+    float: left;
+    width: auto;
+    *max-width: 720px;
+    height: 35px;
+    margin-left: 20px;
+    *margin-left: 10px;
+    /*margin-right: 5px;*/
+}
+
+.try_sex {
+    width: 762px;
+    height: 15px;
+    float: right;
+    margin-top: 5px;
+}
+
+    .try_sex .tip_img {
+        height: 15px;
+        line-height: 15px;
+        width: 15px;
+        display: block;
+        float: left;
+        background: url(/Images/images/buyers/Input_error.png) no-repeat;
+    }
+
+    .try_sex .tip_text {
+        display: block;
+        float: left;
+        height: 15px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-left: 5px;
+        color: #c20201;
+    }
+
+#city_china_val select {
+    height: 35px;
+    width: 130px;
+    margin-right: 5px;
+}
+
+.hc_item .hc_fl input {
+    height: 25px;
+    width: 130px;
+    margin-right: 5px;
+}
+
+.hc_item .hc_fl .hc_sescinput {
+    width: 725px;
+    *width: 690px;
+}
+
+.tip_success {
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    background: url('/Images/Input_ok.png') no-repeat;
+    margin-top: 7px;
+}
+
+.hc_item .hc_fl .hc_nameinput {
+    width: 288px;
+}
+
+.hc_item .hc_fl .hc_telinput {
+    width: 288px;
+}
+
+#city_china_val option {
+    height: 20px;
+    line-height: 20px;
+}
+
+#btnUpdAddressInfo {
+    width: 95px;
+    height: 35px;
+    color: #fff;
+    background: #c20201;
+    border: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.hc_slesesebg {
+    width: 220px;
+    height: 30px;
+    border-width: 1px medium 1px 1px;
+    border-style: solid none solid solid;
+    border-color: #CCC -moz-use-text-color #CCC #CCC;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    background: #FFF url("/Images/publicimg/xla.png") no-repeat scroll 184px 0px;
+    display: block;
+    float: left;
+}
+
+.hc_searchsel {
+    border: 1px solid #CCC;
+    height: 33px;
+    margin: 0px 10px 0px 0px;
+    width: 130px;
+    float: left;
+}
+
+    .hc_searchsel .select_box {
+        font-size: 14px;
+        color: #999;
+        width: 130px;
+        line-height: 33px;
+        position: relative;
+    }
+
+    .hc_searchsel .select_showbox {
+        height: 35px;
+        background: transparent url("/Images/images/order_arrow_x.png") no-repeat scroll 110px center;
+        text-indent: 0.5em;
+    }
+
+    .hc_searchsel .select_option {
+        border-width: medium 1px 1px;
+        border-style: none solid solid;
+        border-color: -moz-use-text-color #CCC #CCC;
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image: none;
+        display: none;
+        left: -11px;
+        top: 34px;
+        position: absolute;
+        z-index: 99;
+        background: #FFF none repeat scroll 0% 0%;
+        padding: 0px;
+    }
+
+        .hc_searchsel .select_option li {
+            text-indent: 0.5em;
+            width: 130px;
+            cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+        }
+
+            .hc_searchsel .select_option li.selected {
+                background-color: #F3F3F3;
+                color: #999;
+            }
+
+    .hc_searchsel select {
+        display: none;
+    }
+
+.hc_Iwantziliao .hc_heig {
+    height: 35px;
+}
+
+.hc_nav {
+    width: 132px;
+    height: 35px;
+    margin: 0px 10px 0px 0px;
+    float: left;
+}
+
+    .hc_nav p {
+        display: block;
+        padding-left: 10px;
+        line-height: 30px;
+        border: 1px solid #CACACA;
+        margin: 0px;
+        color: #999;
+        font-size: 15px;
+        cursor: pointer;
+        background: transparent url("/Images/cart/order_arrow_x.png") no-repeat scroll 110px 8px;
+    }
+
+.hc_new {
+    width: 130px;
+    overflow: auto;
+    position: absolute;
+    border: 1px solid #CACACA;
+    display: none;
+    margin: 0px;
+    z-index: 1000;
+    padding: 0px;
+    max-height: 210px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+    *margin-left:1px;
+}
+
+.hc_nav ul li {
+    line-height: 30px;
+    padding-left: 10px;
+    background: #FFF none repeat scroll 0% 0%;
+    color: #999;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.hc_nav .hc_set.hc_setlisrf {
+    background: transparent url("/HC.Manage/images/publicimg/Menu_arrow.png") no-repeat scroll 110px 8px;
+}
+/**/
+
+form {
+    margin: 0px;
+}
+
+.title_ctrl {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #c20201;
+    margin: 10px 0px;
+    padding-left: 15px;
+}
+
+.ctrl_address {
+    width: 902px;
+    height: auto;
+    margin: 10px 9px 30px 9px;
+    *padding-bottom: 30px;
+}
+
+    .ctrl_address ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .ctrl_address ul li {
+            list-style: none;
+            float: left;
+        }
+
+    .ctrl_address .title_next {
+        width: 100%;
+        height: 36px;
+        border: 1px solid #cccccc;
+        background: #eeeeee;
+    }
+
+        .ctrl_address .title_next li {
+            text-align: center;
+            line-height: 34px;
+        }
+
+.list_name {
+    width: 100px;
+}
+
+.list_address {
+    width: 322px;
+}
+
+.list_code {
+    width: 120px;
+}
+
+.list_phone {
+    width: 145px;
+}
+
+.list_style {
+    width: 100px;
+    text-align: center;
+}
+
+.list_style_hide {
+    width: 115px;
+    line-height: 66px;
+}
+
+.title_next_show {
+    height: 66px;
+    border: 1px solid #cccccc;
+    border-top: 1px solid transparent;
+    /*border-top:none;*/
+}
+
+    .title_next_show li {
+        height: 66px;
+    }
+
+    .title_next_show .list_name,
+    .list_code,
+    .list_phone {
+        text-align: center;
+        line-height: 66px;
+        overflow: hidden;
+    }
+
+.add_one {
+    height: 24px;
+    line-height: 24px;
+    margin: 8px 0px 0px 0px;
+    overflow: hidden;
+}
+
+.add_two {
+    height: 24px;
+    line-height: 24px;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+}
+
+.zon_list {
+    float: left;
+    width: 100px;
+    height: 66px;
+    line-height: 66px;
+}
+
+.ctrl_address .title_next_show {
+    width: 100%;
+}
+
+.ctrl_address .next_week {
+    border: 1px solid #c20201;
+    cursor: pointer;
+}
+
+.list_style_hide .most_show {
+    width: 63px;
+    height: 28px;
+    line-height: 28px;
+    display: block;
+    border: 1px solid #c20201;
+    background: #e6e6e6;
+    margin: 17px 0px 0px 19px;
+    border-radius: 2px;
+    text-align: center;
+    color: #c20201;
+}
+
+.zon_list a {
+    padding: 0px 4px;
+}
+
+.list_style_hide a {
+    display: block;
+}
+
+.list_style_hide .hide_most {
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    display: none;
+    border: 1px solid #C20201;
+    background: #C20201;
+    margin: 17px 0px 0px 0px;
+    border-radius: 2px;
+    text-align: center;
+    color: #fff;
+}
+
+.infolist {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    clear: both;
+    *margin-left: 20px;
+}
+
+    .infolist .liststyle p {
+        line-height: 22px;
+        padding: 8px 0;
+    }
+
+    .infolist .sex a {
+        display: inline-block;
+        height: 34px;
+        line-height: 34px;
+        float: left;
+        margin-right: 15px;
+        padding-left: 20px;
+        background-image: url(/Images/images/sex.png);
+        background-position: 2px 12px;
+        background-repeat: no-repeat;
+        background-size: 13px auto;
+    }
+
+        .infolist .sex a.active {
+            background-image: url(/Images/images/sex_on.png);
+        }
+
+    .infolist .liststyle .m_text {
+        height: 34px;
+        line-height: 34px;
+        border-radius: 5px;
+        padding: 0 10px;
+        background: #F7F7F7;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    .infolist .liststyle .m_age {
+        width: 50%;
+    }
+
+    .infolist .liststyle .m_tel {
+        width: 65%;
+    }
+
+    .infolist .liststyle .m_address {
+        width: 100%;
+        clear: both;
+    }
+
+    .infolist .liststyle .m_password {
+        width: 70%;
+    }
+
+    .infolist .liststyle .nite_next {
+        position: relative;
+        height: 34px;
+        line-height: 34px;
+        display: inline-block;
+        border: 1px solid #cccccc;
+        padding: 0 0 0 8px;
+        cursor: pointer;
+        background: white;
+        float: left;
+        margin-right: 9px;
+        margin-bottom: 10px;
+        width: 110px;
+    }
+
+        .infolist .liststyle .nite_next i {
+            display: inline-block;
+            height: 34px;
+            line-height: 34px;
+            padding-right: 7px;
+            position: relative;
+            font-style: normal;
+            float: left;
+            width: 72px;
+        }
+
+        .infolist .liststyle .nite_next .mas_show {
+            background: transparent url("/Images/images/order_arrow_x.png") no-repeat scroll -2px 11px;
+            width: 16px;
+            height: 30px;
+            display: block;
+            float: left;
+        }
+
+        .infolist .liststyle .nite_next .mas_show_new {
+            background: transparent url("/Images/images/Menu_arrow.png") no-repeat scroll -2px 11px !important;
+            width: 16px;
+            height: 30px;
+            display: block;
+            float: left;
+        }
+
+        .infolist .liststyle .nite_next ul {
+            width: 100%;
+            position: absolute;
+            border: 1px solid #cccccc;
+            background: white;
+            left: -11px;
+            top: 34px;
+            margin-bottom: 10px;
+            display: none;
+            z-index: 10;
+            height: 314px;
+            line-height: 314px;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+
+            .infolist .liststyle .nite_next ul li {
+                width: 100%;
+                float: left;
+                overflow: hidden;
+                border-top: 1px solid #cccccc;
+            }
+
+                .infolist .liststyle .nite_next ul li:hover {
+                    background: #f3f3f3;
+                }
+
+                .infolist .liststyle .nite_next ul li:first-child {
+                    border-top: 0;
+                }
+
+                .infolist .liststyle .nite_next ul li a {
+                    display: block;
+                    height: 34px;
+                    line-height: 34px;
+                    padding: 0 8px;
+                    color: #494949;
+                }

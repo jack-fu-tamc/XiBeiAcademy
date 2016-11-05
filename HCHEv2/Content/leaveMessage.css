@@ -1,0 +1,227 @@
+﻿.post_box {
+    background-color: #efefef;
+    padding: 40px 15px 9px;
+    position: relative;
+    background: url(http://i2.sinaimg.cn/dy/deco/2012/1218/bg.png) no-repeat 19px -988px #F1F1F1;
+    zoom: 1;
+}
+
+textarea {
+    width: 746px;
+    height: 72px;
+    line-height: 24px;
+    float: left;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px #C6C6C6 inset;
+    /* box-shadow: inset 2px 2px 2px rgba(0,0,0,.1); */
+    overflow: auto;
+    margin-top: 6px;
+    padding: 4px 10px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.post_inline_comment {
+    margin: 9px 3px 0 15px;
+    float: left;
+    width: 82px;
+    height: 33px;
+    cursor: pointer;
+    color: #FFF;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    float: right;
+    display: inline;
+    background: url(http://i2.sinaimg.cn/dy/deco/2012/1218/bg.png) no-repeat 0 0px;
+    text-indent: -9999em;
+}
+
+.cmnt_user_cont {
+    height: 45px;
+}
+
+.b_cont2 {
+    border: solid 1px #ccc;
+}
+
+    .b_cont2 .c_title {
+        height: 46px;
+        line-height: 46px;
+        background-color: #f3f3f3;
+        border-top: 1px solid #FCFCFC;
+    }
+
+        .b_cont2 .c_title .cmenu {
+            position: relative;
+            cursor: default;
+            width: 100px;
+            float: left;
+            font-size: 16px;
+            font-family: 微软雅黑, 黑体;
+            font-weight: bold;
+            text-align: center;
+        }
+
+.b_txt {
+    padding: 15px 0 0;
+}
+
+.comment_item {
+    border-bottom: 1px dotted #ccc;
+    _border-bottom: none;
+    _background: url(http://i2.sinaimg.cn/dy/2010/0610/2010610122226.gif) repeat-x 0px -186px;
+    _zoom: 1;
+}
+
+.comment_item_cont {
+    padding: 20px 19px 0 28px;
+}
+
+    .comment_item_cont .t_face {
+        display: inline;
+        float: left;
+        width: 50px;
+        height: 64px;
+        padding: 1px 0;
+    }
+
+    .comment_item_cont .t_content {
+        word-wrap: break-word;
+        /* overflow: hidden; */
+        width: 530px;
+        margin-left: 62px;
+        _margin-left: 56px;
+    }
+
+.t_info {
+    color: #666;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.comment_item .t_username {
+    font-size: 12px;
+}
+
+.t_info .t_username {
+    color: #666;
+    padding: 3px 0;
+    font-size: 14px;
+}
+
+.t_info .t_area {
+    color: #999;
+    padding-left: 15px;
+    width: 96px;
+}
+
+.comment_content {
+    padding: 6px 0 0;
+    font-size: 14px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.t_txt {
+    line-height: 22px;
+    font-size: 14px;
+    color: #333;
+    width: 527px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.t_txt {
+    /*width: 887px !important;*/
+}
+
+.reply {
+    position: relative;
+}
+
+.reply {
+    clear: both;
+    height: 24px;
+    margin: 30px 0 5px 0;
+    vertical-align: middle;
+    text-align: right;
+    position: relative;
+}
+
+.comment_selected {
+    background-color: #FBFAF8;
+}
+
+.comment_item:hover {
+    background-color: #FBFAF8;
+}
+
+.leaverMessage {
+    float: left;
+    margin-top: 9px;
+}
+
+
+.leaveSuccessMes {
+    float: left;
+    margin-top: 8px;
+    background-color: #6CA09A;
+    border-radius: 5px;
+    color: white;
+    padding: 0 5px;
+}
+
+.leaverMessage input {
+    border-radius: 5px;
+    box-shadow: 0 1px 1px #C6C6C6 inset;
+    border: none;
+    padding: 2px 2px 2px 2px;
+    margin-right: 5px;
+}
+
+.leaverMessage div {
+    position: relative;
+    float: left;
+}
+
+.leaverMessage .erroMessage {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+    width: 117px;
+    font-size: 10px;
+    color: #DA6363;
+    line-height: 12px;
+    display: none;
+}
+
+.errorsp {
+    left: -4px !important;
+    top: 9px !important;
+}
+
+.areaVa {
+    font-size: 10px;
+    color: #DA6363;
+    line-height: 12px;
+    display: none;
+    position: absolute;
+    width: 89px;
+    left: 6px;
+    top: -7px;
+}
+
+.leaveMessageIng{
+    background: none !important;
+    color: black;
+    font-size: 12px;
+    text-indent: 0;
+    border: 1px solid #B8B8B8;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 5px;
+    cursor:no-drop;
+}

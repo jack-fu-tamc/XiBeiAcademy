@@ -1,0 +1,137 @@
+﻿@using HC.Data.Models
+@{
+
+    var curentPage = int.Parse(ViewBag.curentPage.ToString());
+    var totalCount = int.Parse(ViewBag.TottalCount.ToString());
+    var totalPage = Math.Ceiling((float)totalCount / 15);
+    var curentNewsClass = ViewData["curentNewsClass"] as NewsClass;
+    ViewBag.title = curentNewsClass.ClassName;
+
+    
+
+}
+
+@model List<News>
+
+@section lanmuName{
+    <span class="header_c">@curentNewsClass.ClassName</span>
+}
+
+<div class="block block2">
+    <!--子栏目 -->
+    <!--有几个栏目就显示几 最大04 -->
+    @*<div class="submenu submenu04">
+          <ul>
+            <li class="on"><a href="#">栏目名称</a></li>
+            <li><a href="#">栏目名称</a></li>
+            <li><a href="#">栏目名称</a></li>
+            <li><a href="#">栏目名称</a></li>
+            <li><a href="#">栏目名称</a></li>
+            <li><a href="#">栏目名称</a></li>
+          </ul>
+          <div class="clr"></div>
+        </div>
+        <div class="clr10"></div>*@
+    <!--栏目内容 -->
+    <div class="news_pic_list">
+        <ul>
+            @foreach (var item in Model)
+            {
+
+                <li class="pic_none">
+                    @*<p class="pic"><a href="#"><img src="/images/ls/ls_01.jpg"></a></p>*@
+                    <div class="title">
+                        <b><a href="javascript:void(0);">@item.NewsTitle</a></b>
+                        <span class="time">@item.CreatTime.ToString("yyyy-MM-dd")</span>
+                        <span class="content">@Html.Raw(item.NewsContent)</span>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="page"><a href="javascript:void(0)" id="loadMore" curentpage="@curentPage">加载更多</a></div>
+
+</div>
+
+
+
+
+@section footScript{
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+
+
+
+        $(document).ready(function () {
+            var totalPage = '@totalPage';
+            $("#loadMore").click(function () {
+                var curentP = $(this).attr("curentPage").trim() * 1;
+
+                if ((curentP + 1) > totalPage) {
+                    $("#loadMore").html("没有更多了");
+                } else {
+                    $.ajax({
+                        type: "GET",
+                        url: "/Information/SectionMobileAjax/@curentNewsClass.ClassID?page=" + (curentP + 1),
+                        dataType: "json",
+                        success: function (data) {
+
+                            var newsPic = "";
+                            var contentSubStr = "";
+                            for (var i = 1; i <= data.length; i++) {
+
+
+
+
+                                if (data[i - 1].PicURL != "") {
+                                    newsPic = data[i - 1].PicURL;
+                                } else {
+                                    newsPic = "";
+                                }
+
+                                if (data[i - 1].NewsContent.length > 0) {
+                                    contentSubStr = data[i - 1].NewsContent.substr(0, 200);
+                                } else {
+                                    contentSubStr = data[i - 1].NewsContent;
+                                }
+
+
+
+
+                                var appHtml = "<li>" +
+            "<div class=\"pic\"><img src=\"" + newsPic + "\"></div>" +
+            "<div class=\"text\">" +
+              "<a href=\"/Information/news/" + data[i - 1].NewsID + "\">" + data[i - 1].NewsTitle + "</a>" +
+              "<p>" + contentSubStr + "</p>" +
+            "</div>" +
+            "<div class=\"clr\"></div>" +
+          "</li>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                $(".b_list ul").append(appHtml);
+                            }
+                            $("#loadMore").attr("curentPage", curentP + 1);
+                        }
+                    });
+                }
+            })
+        })
+    </script>
+}
+
+
+
+

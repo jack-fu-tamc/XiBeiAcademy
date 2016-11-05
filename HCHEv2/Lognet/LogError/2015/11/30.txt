@@ -1,0 +1,107 @@
+﻿
+ 
+记录时间：2015-11-30 09:20:36,150 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 201
+ 
+
+ 
+记录时间：2015-11-30 09:23:02,463 
+线程ID:[5] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 201
+ 
+
+ 
+记录时间：2015-11-30 10:47:08,700 
+线程ID:[36] 
+日志级别：  ERROR 
+错误描述：“@”字符后不应有“if”关键字。在代码内部，不需要在像“if”这样的构造前加上前缀“@”。
+   </br>在 HC.Web.Framework.Themes.ThemeableBuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableBuildManagerViewEngine .cs:行号 13
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String theme, String cacheKey, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 112在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String theme, String cacheKeyPrefix, Boolean useCache, Boolean mobile, String[]& searchedLocations) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 78
+在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindThemeableView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache, Boolean mobile) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 203在 HC.Web.Framework.Themes.ThemeableVirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache) 位置 e:\ProTwoN\HC.Web.Framework\Themes\ThemeableVirtualPathProviderViewEngine.cs:行号 257
+ 
+
+ 
+记录时间：2015-11-30 13:14:27,440 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：Unknown column 'MstID' in 'where clause'   </br>在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataSet(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 182在 Maticsoft.DAL.Procurment_Info.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\DAL\Procurment\Procurment_Info.cs:行号 37
+在 BLL.Procurment.Procurment_InfoBll.GetListForExp(Procurment_Info_Search model, Int32& iAll) 位置 e:\ProTwoN\BLL\Procurment\Procurment_InfoBll.cs:行号 51
+在 HC.Manage.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 201
+ 
+
+ 
+记录时间：2015-11-30 14:11:01,244 
+线程ID:[37] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_Home_decoration_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Home\decoration.cshtml:行号 148
+ 
+
+ 
+记录时间：2015-11-30 14:11:24,101 
+线程ID:[41] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_Home_decoration_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Home\decoration.cshtml:行号 148
+ 
+
+ 
+记录时间：2015-11-30 14:11:43,112 
+线程ID:[53] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_Home_decoration_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Home\decoration.cshtml:行号 148
+ 
+
+ 
+记录时间：2015-11-30 14:11:45,116 
+线程ID:[37] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_Home_decoration_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Home\decoration.cshtml:行号 148
+ 
+
+ 
+记录时间：2015-11-30 14:11:48,397 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_Home_decoration_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Home\decoration.cshtml:行号 148
+ 
+
+ 
+记录时间：2015-11-30 17:01:19,435 
+线程ID:[61] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.HomeController._ajaxDeleteMyBrandImg(String idk) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 374
+ 
+
+ 
+记录时间：2015-11-30 17:01:20,457 
+线程ID:[36] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.HomeController._ajaxDeleteMyBrandImg(String idk) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 374
+ 
+
+ 
+记录时间：2015-11-30 17:01:23,336 
+线程ID:[21] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.HomeController._ajaxDeleteMyBrandImg(String idk) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 374
+ 
+
+ 
+记录时间：2015-11-30 17:04:04,568 
+线程ID:[34] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 HC.Manage.Controllers.HomeController._ajaxDeleteMyBrandImg(String idk) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 374
+ 
+
+ 
+记录时间：2015-11-30 17:26:18,068 
+线程ID:[15] 
+日志级别：  ERROR 
+错误描述：该字符串未被识别为有效的 DateTime。   </br>在 HC.Manage.Controllers.HomeController.decoration(FormCollection forms) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 366
+ 

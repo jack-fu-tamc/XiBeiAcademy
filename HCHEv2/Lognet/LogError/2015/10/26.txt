@@ -1,0 +1,70 @@
+﻿
+ 
+记录时间：2015-10-26 10:33:12,056 
+线程ID:[23] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: String   </br>在 HC.Manage.Controllers.OrderController._ajaxLastThreeOrders(GridCommand cmd, OrderListSearchModel model) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 1242
+ 
+
+ 
+记录时间：2015-10-26 10:33:14,358 
+线程ID:[17] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: String   </br>在 HC.Manage.Controllers.OrderController._ajaxcompleteOrders(GridCommand cmd, OrderListSearchModel model) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 1435
+ 
+
+ 
+记录时间：2015-10-26 10:33:15,974 
+线程ID:[19] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: String   </br>在 HC.Manage.Controllers.OrderController._ajaxwaitConsumptionOrders(GridCommand cmd, OrderListSearchModel model) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 1327
+ 
+
+ 
+记录时间：2015-10-26 10:33:18,060 
+线程ID:[22] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: String   </br>在 HC.Manage.Controllers.OrderController._ajaxclosedOrders(GridCommand cmd, OrderListSearchModel model) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 1475
+ 
+
+ 
+记录时间：2015-10-26 10:33:28,742 
+线程ID:[21] 
+日志级别：  ERROR 
+错误描述：值不能为 null。
+参数名: String   </br>在 HC.Manage.Controllers.OrderController._ajaxWaitPayOrders(GridCommand cmd, OrderListSearchModel model) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\OrderController.cs:行号 1290
+ 
+
+ 
+记录时间：2015-10-26 13:02:09,135 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Manage.Controllers.HomeController.shopperCertificationO() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 331
+ 
+
+ 
+记录时间：2015-10-26 13:08:43,111 
+线程ID:[9] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Manage.Controllers.HomeController.shopperCertificationO() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 332
+ 
+
+ 
+记录时间：2015-10-26 15:19:06,220 
+线程ID:[7] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Manage.Controllers.AlipayController.UidEncrypt(String uid) 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\AlipayController.cs:行号 211在 HC.Manage.Controllers.AlipayController.certificationAlipay() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\AlipayController.cs:行号 254
+ 
+
+ 
+记录时间：2015-10-26 15:22:30,875 
+线程ID:[6] 
+日志级别：  ERROR 
+错误描述：Timeout in IO operation   </br>在 Maticsoft.DBUtility.MysqlHelper.PrepareCommand(MySqlCommand cmd, MySqlConnection conn, CommandType cmdType, String cmdText, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 194在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataTable(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 113在 Maticsoft.DAL.Acc_Type.GetAcc() 位置 e:\ProTwoN\DAL\Accessories\Acc_Type.cs:行号 92
+在 BLL.Accessories.Acc_TypeBll.GetAcc() 位置 e:\ProTwoN\BLL\Accessories\Acc_TypeBll.cs:行号 59
+在 HCHEv2.Controllers.CommonController.AccType() 位置 e:\ProTwoN\HCHEv2\Controllers\CommonController.cs:行号 175
+ 

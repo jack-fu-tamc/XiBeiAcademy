@@ -1,0 +1,1077 @@
+﻿@using HC.Core.Infrastructure
+@using HC.Service.Account
+@using Maticsoft.Model
+@using HC.Data.Models
+@using HC.Service.ArtistType
+@using HC.Service.Section
+
+@model News
+@{
+    ViewBag.Title = "新闻添加";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+    var modelU = (User_Info)ViewBag.curentUser;
+    var modelUserInfo = modelU ?? WorkContext.CurrentCustomer;
+
+
+    var _ISectionService = EngineContext.Current.Resolve<ISectionService>();
+    var CurentNewClass = _ISectionService.getNewsClassByID(Model.ClassID);
+    var parentNewsClass = _ISectionService.getNewsClassByID(CurentNewClass.ParentID);
+    NewsClass topNewsClass=null;
+    
+    
+    var isThreeLevelClass = false;
+    var isOnelevelClass=false;
+
+    if(parentNewsClass==null){
+        isOnelevelClass=true;
+    }
+    
+    if (parentNewsClass != null && parentNewsClass.ParentID != 0)
+    {
+        isThreeLevelClass = true;
+        topNewsClass=_ISectionService.getNewsClassByID(parentNewsClass.ParentID);
+    }
+    var zhiwuClass = "none;";
+    var sectionIDs = ViewBag.sectionIDs as List<int>;
+    
+    
+    var levelOneDrop = new List<SelectListItem>();
+    var levelTwoDrop = new List<SelectListItem>();
+    var levelThreeDrop = new List<SelectListItem>();
+
+
+   
+    
+    var levelOneSection = TempData["MultipleLevelOne"] as List<NewsClass>;
+
+    // 判断TempData是否为空
+    if (levelOneSection == null)
+    {
+
+        var NewsClass = _ISectionService.getAllSection();
+        var levelOne = NewsClass.SectionLists.Where(x => x.ParentID == 0);
+        var MultipleLevelOne = new List<NewsClass>();
+        
+        
+        foreach (var section in levelOne)
+        {
+            if (!sectionIDs.Contains(section.ClassID))
+            {
+                continue;
+            }
+
+            var subsSectins = NewsClass.SectionLists.Where(x => x.ParentID == section.ClassID).Select(x => x.IsSingle);
+
+            if (subsSectins.Count() == 0 && section.IsSingle == 0)//添加 没有子栏目但是 本栏目可以添加新闻的栏目
+            {
+                MultipleLevelOne.Add(section);
+            }
+
+            if (subsSectins.All(a => a == 1))
+            {//1为单页
+
+            }
+            else
+            {
+                MultipleLevelOne.Add(section);
+            }
+        }
+        levelOneSection = MultipleLevelOne;
+    }
+
+
+    // 判断TempData是否为空End
+
+    levelOneDrop.Add(new SelectListItem() { Text = "选择一级栏目", Value = "-1" });
+    levelTwoDrop.Add(new SelectListItem() { Text = "选择二级栏目", Value = "-1" });
+    levelThreeDrop.Add(new SelectListItem() { Text = "选择三级栏目", Value = "-1" });
+
+
+
+    if (isThreeLevelClass)//添加的是三级栏目的新闻
+    {
+        foreach (var level in levelOneSection)
+        {
+            levelOneDrop.Add(new SelectListItem() { Text = level.ClassName, Value = level.ClassID.ToString(),Selected=level.ClassID==topNewsClass.ClassID });
+        }
+
+        var parentAllClass = _ISectionService.GetSiblingNewsClass(parentNewsClass.ParentID).Where(x=>x.IsSingle==0);
+        foreach (var levelTwo in parentAllClass)
+        {
+            if (!sectionIDs.Contains(levelTwo.ClassID))
+            {
+                continue;
+            }
+            levelTwoDrop.Add(new SelectListItem() { Text = levelTwo.ClassName, Value = levelTwo.ClassID.ToString(),Selected=levelTwo.ClassID==parentNewsClass.ClassID });
+        }
+
+        var curentAllClass = _ISectionService.GetSiblingNewsClass(CurentNewClass.ParentID).Where(x=>x.IsSingle==0);
+        foreach (var levelTree in curentAllClass)
+        {
+
+            if (!sectionIDs.Contains(levelTree.ClassID))
+            {
+                continue;
+            }
+            
+            levelThreeDrop.Add(new SelectListItem() { Text = levelTree.ClassName, Value = levelTree.ClassID.ToString() ,Selected=levelTree.ClassID==Model.ClassID});
+        }
+    }
+    else if (isOnelevelClass)//添加的是只有一级栏目的新闻
+    {
+        foreach (var level in levelOneSection)
+        {
+            levelOneDrop.Add(new SelectListItem() { Text = level.ClassName, Value = level.ClassID.ToString(),Selected=level.ClassID==Model.ClassID });
+        }
+    }
+    else//普通 两级栏目的新闻
+    {
+
+        foreach (var level in levelOneSection)
+        {
+            levelOneDrop.Add(new SelectListItem() { Text = level.ClassName, Value = level.ClassID.ToString(), Selected = level.ClassID == parentNewsClass.ClassID });
+        }
+        
+        var curentAllClass = _ISectionService.GetSiblingNewsClass(CurentNewClass.ParentID).Where(x=>x.IsSingle==0);
+        foreach (var levelTwo in curentAllClass)
+        {
+            if (!sectionIDs.Contains(levelTwo.ClassID))
+            {
+                continue;
+            }
+            levelTwoDrop.Add(new SelectListItem() { Text = levelTwo.ClassName, Value = levelTwo.ClassID.ToString(), Selected = levelTwo.ClassID==Model.ClassID });
+        }
+    }
+
+
+
+
+
+
+}
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/authentication.css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/kindEditor/themes/default/default.css" />
+    <link type="text/css" rel="stylesheet" href="~/HC.Manage/Content/jedate/skin/jedate.css">
+<link rel="stylesheet" href="~/HC.Manage/Content/common/artdialog/ui-dialog.css">
+    @*<link rel="stylesheet" href="~/HC.Manage/Content/common/artdialog/ui-dialog.css">*@
+
+    @*<link href="~/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadify.css" rel="stylesheet" type="text/css" />*@
+    <style type="text/css">
+        .editor {
+            width: 901px !important;
+        }
+
+        .hc_textlable {
+            width: 101px !important;
+        }
+
+        #Certication {
+            padding-left: 0px !important;
+        }
+
+        .hc_chk {
+            padding-left: 103px !important;
+        }
+
+        .hc_item .hc_attestationBtn {
+            margin: 0px 0px 21px 365px !important;
+        }
+
+
+
+
+
+        #yingyeiew {
+            margin: 0px !important;
+            /*height:150px !important;*/
+        }
+
+        .hc-fls object {
+            display: block;
+            width: 130px;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 200;
+            margin-left: 127px;
+            margin-top: 58px;
+        }
+
+        .uploadifyQueue {
+            position: absolute;
+            /* left: 489px; */
+            margin-top: 38px;
+            margin-left: 90px;
+            z-index: 500;
+        }
+
+
+
+
+        .closeyy img {
+            width: 20px;
+            height: 20px;
+        }
+
+
+        .TtilePic, .morePic, .void {
+            /*display: none;*/
+        }
+
+        #viodbutUploader {
+            visibility: visible;
+            display: block;
+            width: 130px;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 200;
+            margin-left: 337px;
+            margin-top: -60px;
+        }
+
+        #viodbutFacePicUploader {
+            visibility: visible;
+            display: block;
+            width: 130px;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 200;
+            margin-left: 337px;
+            margin-top: -28px;
+        }
+
+        select{
+          margin-right: 17px;
+          width:205px;
+        }
+    </style>
+}
+@section headScript{
+
+
+
+    @*<script src="~/HC.Manage/Content/common/artdialog/dialog-plus-min.js"></script>*@
+    <script type="text/javascript" src="~/HC.Manage/Content/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="~/HC.Manage/Content/ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" src="~/HC.Manage/Content/jedate/jedate.js"></script>
+    <script src="~/HC.Manage/Content/common/artdialog/dialog-min.js"></script>
+
+
+    @*编辑器初始化*@
+    <script type="text/javascript">
+        var albumPCoverUe;
+        var newsCoverPicUe;
+        //var FileUpUe;
+        var voidPicCover;
+        $(function () {
+            albumPCoverUe = UE.getEditor('albumPCoverJs', {
+                //autoHeightEnabled: true,
+                //autoFloatEnabled: true,
+                //initialFrameHeight: 600,
+                //initialFrameWidth: 1000
+            });
+
+            newsCoverPicUe = UE.getEditor('pictureCoverJs', {
+                //autoHeightEnabled: true,
+                //autoFloatEnabled: true,
+                //initialFrameHeight: 600,
+                //initialFrameWidth: 1000
+            });
+
+            //FileUpUe = UE.getEditor('FileUpUeJs', {
+            //    //autoHeightEnabled: true,
+            //    //autoFloatEnabled: true,
+            //    //initialFrameHeight: 600,
+            //    //initialFrameWidth: 1000
+            //})
+
+            voidPicCover = UE.getEditor('voidPicCoverJs', {
+                //autoHeightEnabled: true,
+                //autoFloatEnabled: true,
+                //initialFrameHeight: 600,
+                //initialFrameWidth: 1000
+            });
+
+            ue = UE.getEditor('txtDescription', {
+                autoHeightEnabled: true,
+                autoFloatEnabled: true,
+                initialFrameHeight: 400,
+                initialFrameWidth: 900
+            });
+
+
+
+            ue.ready(function () {
+                ue.execCommand('serverparam', {
+                    'BusinessID': $("#hidContentID").val(), //业务Id
+                    'BusinessGuid': 1111,  //临时图片的Id
+                    'BusinessFlag': "news", //业务类型
+                    'BTBusinessID': $("#hidClassID").val(),   //根据BTBusinessID和BTBusinessFlag获取缩略图设置
+                    'BTBusinessFlag': "0000"
+                });
+
+                //ue.hide();//隐藏编辑器
+
+                //监听图片上传
+                //ue.addListener('beforeInsertImage', function (t, arg) {
+                //    alert('这是图片地址：' + arg[0].src);
+                //});
+
+                /* 文件上传监听
+                 * 需要在ueditor.all.min.js文件中找到
+                 * d.execCommand("insertHtml",l)
+                 * 之后插入d.fireEvent('afterUpfile',b)
+                 */
+                //ue.addListener('afterUpfile', function (t, arg) {
+                //    alert('这是文件地址：' + arg[0].url);
+                //});
+            });
+
+
+
+            //相册
+            albumPCoverUe.ready(function () {
+                //设置编辑器不可用
+                //albumPCoverUe.setDisabled();  //这个地方要注意 一定要屏蔽
+                //隐藏编辑器，因为不会用到这个编辑器实例，所以要隐藏
+                albumPCoverUe.hide();
+
+                //侦听图片上传
+                albumPCoverUe.addListener('beforeinsertimage', function (t, arg) {
+
+
+
+                    var sbStr = "";
+                    var i = 0;
+                    for (var a in arg) {
+                        //                   sbStr += "<div style=\"display:inline-block; position:relative;\">" +
+                        // "<img  src=\"" + arg[a].src + "\" style=\"height: 150px;width: 150px; display:block;\" />" +
+                        //"<span>说明</span><input class=\"album_input\" type=\"text\" value=\"\"><input style=\"display:none;\" type=\"text\" value=\"" + arg[a].src + "\">" +
+                        // "<a onclick=\"removeAlbm(this)\" class=\"AlbumPicCover_close\" />   </div>";
+                        //                   i++;
+                        //               }
+
+                        sbStr += "<div style=\"display:inline-block; position:relative;\">" +
+         "<img  src=\"" + arg[a].src + "\" style=\"height: 150px;width: 150px; display:block;\" />" +
+        "<input class=\"album_input\" type=\"text\" placeholder=\"在此添加图片说明\" value=\"\">" +
+         "<a onclick=\"removeAlbm(this)\" class=\"AlbumPicCover_close\">X</a></div>";
+                        i++;
+                    }
+
+                    $(".albumPCoverDiv").prepend(sbStr);
+                    $(".AlbumPicCover_close").show();
+
+
+                });
+            });
+
+
+
+            //新闻封面
+            newsCoverPicUe.ready(function () {
+                //设置编辑器不可用
+                //newsCoverPicUe.setDisabled();  //这个地方要注意 一定要屏蔽
+                //隐藏编辑器，因为不会用到这个编辑器实例，所以要隐藏
+                newsCoverPicUe.hide();
+
+                //侦听图片上传
+                newsCoverPicUe.addListener('beforeinsertimage', function (t, arg) {
+
+                    //将地址赋值给相应的input,只去第一张图片的路径
+
+
+                    //for (var a in arg) {
+                    //    imgs += arg[a].src + ',';
+                    //}
+                    //$("#NewsCoverImg").show().attr("src", arg[0].src);
+                    //$("#PicURL").val(arg[0].src);
+
+                    //$(".NewsPicCover_close").show();
+                    //$("#upNewsCoverBt").hide();
+
+
+                    //console.log(arg);
+
+                    $("#NewsCoverImg").attr("src", arg[0].src);
+                    //$("#pictureCover").val(arg[0].src);
+                    $("#NewsCoverDiv").show();
+                    //$(".closeyy").show();
+                    $("#NewsCoveBut").hide();
+
+
+                    //alert(arg[0].src);
+                    //$("#picture").attr("value", arg[0].src);
+                    ////图片预览
+                    //$("#preview").attr("src", arg[0].src);
+                });
+
+                //视频文件上传
+                newsCoverPicUe.addListener('afterUpfile', function (t, arg) {
+                    //console.log(arg);
+
+                    var re = arg.url.replace("/document/ueditor/file/", "");
+                    if (re.indexOf("?") > 0) {
+                        re = re.substring(0, re.indexOf("?"));
+                    }
+
+                    $("#voidURL").attr("urladdress", re);
+                    $("#voidURL").val(arg.title);
+
+                });
+
+
+            });
+
+
+            //视频封面
+            voidPicCover.ready(function () {
+                //设置编辑器不可用
+                //newsCoverPicUe.setDisabled();  //这个地方要注意 一定要屏蔽
+                //隐藏编辑器，因为不会用到这个编辑器实例，所以要隐藏
+                voidPicCover.hide();
+
+                //侦听图片上传
+                voidPicCover.addListener('beforeinsertimage', function (t, arg) {
+
+                    //将地址赋值给相应的input,只去第一张图片的路径
+
+
+                    //for (var a in arg) {
+                    //    imgs += arg[a].src + ',';
+                    //}
+                    //console.log(arg);
+                    //$("#NewsCoverDiv").show();
+                    //$("#NewsCoverImg").attr("src", arg[0].src);
+                    //$("#pictureCover").val(arg[0].src);
+                    //$(".closeyy").show();
+                    //$("#NewsCoveBut").hide();
+                    //console.log(arg[0].title);
+                    if (typeof (arg[0].title) == "undefined") {
+                        $("#vdioPic").val(arg[0].alt);
+                    } else {
+                        $("#vdioPic").val(arg[0].title);
+                    }
+                   
+                    $("#vdioPic").attr("voidPicUrl", arg[0].src);
+
+                    //alert(arg[0].src);
+                    //$("#picture").attr("value", arg[0].src);
+                    ////图片预览
+                    //$("#preview").attr("src", arg[0].src);
+                });
+            });
+
+
+            ////附件上传
+            //FileUpUe.ready(function () {
+            //    //设置编辑器不可用
+            //    //newsCoverPicUe.setDisabled();  //这个地方要注意 一定要屏蔽
+            //    //隐藏编辑器，因为不会用到这个编辑器实例，所以要隐藏
+            //    FileUpUe.hide();
+            //    //FileUpUe.execCommand('serverparam', {
+            //    //    'BusinessFlag': "1" //业务类型
+            //    //});
+            //    //侦听文件上传
+            //    FileUpUe.addListener('afterUpfile', function (t, arg) {
+            //        console.log(arg);
+            //        alert(1);
+            //        var re = arg.url.replace("/document/ueditor/file/", "");
+            //        if (re.indexOf("?") > 0) {
+            //            re = re.substring(0, re.indexOf("?"));
+            //        }
+
+            //        $("#pictureCover").val(re);
+            //        $("#Attachment").val(re);
+            //        alert($("#Attachment").val());
+            //    });
+            //});
+
+
+
+
+            //提交submitProduct
+            var FormModel = {
+                ClassID: "",
+                NewsID: "",
+                NewsTitle: "",
+                NewsOrder: "",
+                Author: "",
+                NewsContent: "",
+                PicURL: "",
+                IsHot: "",
+                IsRec: "",
+                ArtistLevel: "",
+                ArtistTypeID: "",
+                DeputyTitle: "",
+                CreatTime: ""
+            }
+
+
+
+            var attchmentData = {
+                albumList: [],
+
+            }
+
+            function attchment() {
+                this.AttachmentUrl = "";
+                this.AttchmentIllustrate = "";
+            };
+
+            var viodeInfo = {
+                voidURL: "",
+                viodeOriginalName: "",
+                voidpicurl: "",
+                voidpicOriginalName: ""
+            }
+
+
+            var postForm = {
+                //model: JSON.stringify(FormModel),
+                //attchments: JSON.stringify(attchmentData),
+                //viodeInfo: JSON.stringify(viodeInfo)
+            };
+
+
+            function getClassID() {
+                if (!($("#levelThree").is(":hidden"))) {
+                    return $("#levelThree").val();
+                } else if (!($("#levelTwo").is(":hidden"))) {
+                    return $("#levelTwo").val();
+                } else {
+                    return $("#levelOne").val();
+                }
+            }
+
+            function validateFrom() {
+                var selectValidata = true;
+
+                var d = dialog({
+                    content: '请选择栏目',
+                    quickClose: true// 点击空白处快速关闭
+                });
+               
+
+
+                $.each($(".sectionSelectArea select"), function (i, v) {                    
+                    if (!($(v).is(":hidden"))&&$(v).val()=="-1"){
+                        selectValidata = false;
+                        d.show(document.getElementById($(v).attr("id")));
+                        return false;
+                    }
+                })
+                return ($("#formCertifiction").valid() && selectValidata);
+            }
+            
+            function fillFormData() {
+                //form信息
+                //FormModel.ClassID = $("#ClassID").val();
+                FormModel.ClassID = getClassID(); 
+                FormModel.NewsID = $("#NewsID").val();
+                FormModel.NewsTitle = $("#NewsTitle").val();
+                FormModel.NewsOrder = $("#NewsOrder").val();
+                FormModel.Author = $("#Author").val();
+                FormModel.NewsContent = ue.getContent();
+                FormModel.PicURL = $("#NewsCoverImg").attr("src");
+                FormModel.IsHot = $("#IsHot").val();
+                FormModel.IsRec = $("#IsRec").val();
+                FormModel.DeputyTitle = $("#DeputyTitle").val();
+                FormModel.CreatTime = $("#txtBeginDate").val();
+
+
+                //只有部分栏目下才出现
+                //FormModel.ArtistLevel = $("#ArtistLevel").val();
+                //FormModel.ArtistTypeID = $("#ArtistTypeID").val();
+
+                //视频信息
+                viodeInfo.viodeOriginalName = $("#voidURL").val();
+                viodeInfo.voidURL = $("#voidURL").attr("urladdress");
+                viodeInfo.voidpicurl = $("#vdioPic").attr("voidpicurl");
+                viodeInfo.voidpicOriginalName = $("#vdioPic").val();
+
+                //相册信息
+                $.each($(".albumPCoverDiv div"), function (i, v) {
+                    var albumObj = new attchment();
+                    albumObj.AttachmentUrl = $(v).find("img").attr("src");
+                    albumObj.AttchmentIllustrate = $(v).find("input").val();
+                    attchmentData.albumList.push(albumObj);
+                })
+
+                //赋值
+                postForm.model = FormModel;
+                postForm.attchments = attchmentData;
+                postForm.viodeInfo = viodeInfo;
+            }
+
+            $("#btnAttestation").click(function () {
+                //editor.sync();
+                //if ($("#formCertifiction").valid()) {
+                if(validateFrom()){
+                    $("#modifyCover1").show();
+                    $("#authenticationCover1").show();
+
+                    fillFormData();
+                    //console.log(postForm);
+                    jQuery.ajax({
+                        url: "/manage/News/AddNews",
+                        data: { stringfyData: JSON.stringify(postForm) },
+                        type: 'POST',
+                        dataType: 'text',
+                        error: function (xhr, status) {
+                            alert(status);
+                        },
+                        success: function (Data) {
+                            $("#authenticationCover1").html("<p style=\"color:red;\">保存成功！即将转到新闻管理。</p>");
+                            setTimeout('redictionPage()', 1000)
+                        }
+                    });
+                } else {
+                    return false;
+                }
+                //console.log(JSON.stringify($("form").serialize()));
+                //$("form").submit();
+            })
+        })
+
+
+
+
+        //上传相册
+        function upAlbum() {
+            var myAlbum = albumPCoverUe.getDialog("insertimage");
+            myAlbum.open();
+        }
+
+        //上传新闻封面
+        function upNewsConver() {
+            myNewsCoverPic = newsCoverPicUe.getDialog("insertimage");
+            myNewsCoverPic.open();
+        }
+
+        //上传视频封面
+        function upVoidPicConver() {
+            myVoidPic = voidPicCover.getDialog("insertimage");
+            myVoidPic.open();
+        }
+
+        //上传附件的对话框
+        function upFile() {
+            myFileUp = newsCoverPicUe.getDialog("attachment");
+            myFileUp.open();
+        }
+
+        function closeyy(e) {
+
+            $("#NewsCoverDiv").hide();
+            
+            $("#NewsCoverImg").attr("src", "");
+            $("#NewsCoveBut").show();
+        }
+
+        function removeAlbm(e) {
+            $(e).parent().remove();
+        }
+
+        function redictionPage() {
+            location.href = "/Manage/News/NewsManage";
+        }
+    </script>
+
+}
+
+@section coverLayer{
+    <!--用于修改商品成功后的提示层和遮罩层-->
+    <div id="modifyCover1"></div>
+    <div id="authenticationCover1">
+        <p>正在提交资料，请稍等...</p>
+        <img src="~/HC.Manage/images/publicimg/wait.gif" />
+    </div>
+}
+
+
+
+@using (Html.BeginForm("AddNews", "News", FormMethod.Post, new { enctype = "multipart/form-data", id = "formCertifiction" }))
+{
+
+    <!--相册-->
+    <script type="text/plain" id="albumPCoverJs">
+    </script>
+    <!--新闻封面-->
+    <script type="text/plain" id="pictureCoverJs">
+    </script>
+    <!--视频封面-->
+    <script type="text/plain" id="voidPicCoverJs">
+    </script>
+
+
+    <div class="buyerright">
+        <div class="hc_maintop">
+            <div class="hc_titletop">
+                <img src="~/HC.Manage/images/ManageImg/xin.png">
+                <img src="~/HC.Manage/images/ManageImg/xin.png">
+                新闻添加--@CurentNewClass.ClassName
+                <img src="~/HC.Manage/images/ManageImg/xin.png">
+                <img src="~/HC.Manage/images/ManageImg/xin.png">
+                @*<span class="hc_titleSpan">特权 ▪ 专享</span>*@
+            </div>
+        </div>
+
+
+        <div id="Certication">
+
+
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red">*</span>所属栏目：</span>
+                <div class="hc_fl sectionSelectArea">
+                 
+                    @{
+                        if (isThreeLevelClass)
+                        {
+                            @Html.DropDownList("levelOne", levelOneDrop)
+                            @Html.DropDownList("levelTwo", levelTwoDrop)
+                            @Html.DropDownList("levelThree", levelThreeDrop)
+                        }
+                        else if (isOnelevelClass)
+                        {
+                             @Html.DropDownList("levelOne", levelOneDrop)
+                            @Html.DropDownList("levelTwo", levelTwoDrop, new { style="display:none;"})
+                            @Html.DropDownList("levelThree", levelThreeDrop, new { style="display:none;"})
+                        }
+                        else
+                        {
+                            @Html.DropDownList("levelOne", levelOneDrop)
+                            @Html.DropDownList("levelTwo", levelTwoDrop)
+                            @Html.DropDownList("levelThree", levelThreeDrop, new { style="display:none;"})
+                        }
+
+                    }
+                   
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red">*</span>标题：</span>
+                <div class="hc_fl">
+                    @Html.TextBoxFor(x => x.NewsTitle, new { @class = "hc_nameinput", @placeholder = "请输入新闻标题", @autocomplete = "off" })
+                    <span class="spanmsci">@Html.ValidationMessageFor(x => x.NewsTitle)</span>
+                </div>
+            </div>
+
+            @if (CurentNewClass.ClassName == "现任领导")
+            {
+                zhiwuClass = "block;";
+            }
+
+            <div class="hc_item" style="display:@zhiwuClass" id="zhiwu">
+                <span class="hc_textlable"><span class="hc_red"></span>职务：</span>
+                <div class="hc_fl">
+                    @Html.TextBoxFor(x => x.DeputyTitle, new { @class = "hc_nameinput", @placeholder = "职务", @autocomplete = "off" })
+                </div>
+            </div>
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red"></span>作者：</span>
+                <div class="hc_fl">
+                    @Html.TextBoxFor(x => x.Author, new { @class = "hc_nameinput", style = "width:200px;", @placeholder = "新闻作者" })
+                    <span class="spanmsci cellPhoneValidate">@Html.ValidationMessageFor(x => x.Author)</span>
+                </div>
+            </div>
+
+
+            <div class="hc_item TtilePic switchDiv">
+                <span class="hc_textlable"><span class="hc_red"></span>封面图片：</span>
+                <div class="hc-fls">
+                    <!--新闻封面-->
+                    @if (!string.IsNullOrEmpty(Model.PicURL))
+                    {
+                        <div id="NewsCoverDiv" class="hc_shenfenimg">
+                            <img id="NewsCoverImg" src="@Model.PicURL" style="height:150px;width:150px;" />
+                            <a class="closeyy" onclick="closeyy(this)">X</a>
+                        </div>
+                        <input class="hc_businessFile uploadPic" id="NewsCoveBut" value="添加" onclick="upNewsConver()" type="button" style="display:none">
+                    }
+                    else
+                    {
+                        <div id="NewsCoverDiv" class="hc_shenfenimg" style="display:none;">
+                            <img id="NewsCoverImg" src="" style="height:150px;width:150px;" />
+                            <a class="closeyy" onclick="closeyy(this)">X</a>
+                        </div>
+                        <input class="hc_businessFile uploadPic" id="NewsCoveBut" value="添加" onclick="upNewsConver()" type="button">
+                    }
+                </div>
+            </div>
+            @Html.HiddenFor(x => x.PicURL)
+
+            @*添加相册*@
+            <div class="hc_item morePic switchDiv">
+                <span class="hc_textlable"><span class="hc_red"></span>相册图片：</span>
+                <div class="hc-fls albumPCoverDiv">
+                    @foreach (var att in Model.Attachments.Where(x => x.AttaType == 1))
+                    {
+                        <div style="display:inline-block; position:relative;">
+                            <img src="@att.AttaUrl" style="height: 150px;width: 150px; display:block;">
+                            <input class="album_input" placeholder="在此添加图片说明" type="text" value="@Html.Raw(att.AttaDescribe)">
+                            @*<input style="display:none;" type="text" value="@att.AttaUrl">*@
+                            <a onclick="removeAlbm(this)" class="AlbumPicCover_close" style="display: inline;">X</a>
+                        </div>
+                    }
+                    <input class="hc_businessFile uploadPic" id="upalbumBt" value="添加" onclick="upAlbum()" type="button">
+                </div>
+            </div>
+
+            @*添加一个视频*@
+            <div class="hc_item void switchDiv">
+                <span class="hc_textlable"><span class="hc_red"></span>视频文件：</span>
+                <div class="hc-fls" style="float:left;">
+                    @if (Model.Attachments.Where(x => x.AttaType == 2).ToList().Count > 0)
+                    {
+                        <input name="voidAddress" class="disabled" readonly style="margin-bottom:7px;" id="voidURL" urladdress="@Model.Attachments.Where(x => x.AttaType == 2).FirstOrDefault().AttaUrl" value="@Model.Attachments.Where(x => x.AttaType == 2).FirstOrDefault().OriginalName.Split(',')[0]" /> <input class="hc_businessFile uploadVoid" id="viodbut" value="添加视频" type="button" onclick="upFile()">
+                        <br />
+                        <input name="vidoPic" class="disabled" voidpicurl="@Model.Attachments.Where(x => x.AttaType == 2).FirstOrDefault().AttaDescribe" readonly id="vdioPic" value="@Model.Attachments.Where(x => x.AttaType == 2).FirstOrDefault().OriginalName.Split(',')[1]" />
+                        <input class="hc_businessFile uploadVoidPic" id="viodbutFacePic" value="视频封面" onclick="upVoidPicConver()" type="button">
+                    }
+                    else
+                    {
+                        <input name="voidAddress" class="disabled" readonly id="voidURL" urladdress="" style="margin-bottom:7px;" /> <input class="hc_businessFile uploadVoid" id="viodbut" value="添加视频" type="button" onclick="upFile()">
+                        <br />
+                        <input name="vidoPic" voidpicurl="" class="disabled" readonly id="vdioPic" />
+                        <input class="hc_businessFile uploadVoidPic" id="viodbutFacePic" value="视频封面" onclick="upVoidPicConver()" type="button">
+                    }
+                </div>
+            </div>
+
+
+
+
+
+            <div class="hc_item">
+                <span class="hc_textlable"><span class="hc_red"></span>属性：</span>
+                <div class="hc_chk">
+                    @if (Model.IsHot == 1)
+                    {
+
+                        <input class="hc_radioinput" type="checkbox" name="newsProperty" checked="checked" id="newHot" value="2" /><span class="hc_radiospan">热点</span>
+                    }
+                    else
+                    {
+                        <input class="hc_radioinput" type="checkbox" name="newsProperty" id="newHot" value="2" /><span class="hc_radiospan">热点</span>
+                    }
+                    @if (Model.IsRec == 1)
+                    {
+                        <input class="hc_radioinput" type="checkbox" name="newsProperty" checked="checked" id="newRec" value="1" /><span class="hc_radiospan">推荐</span>
+                    }
+                    else
+                    {
+                        <input class="hc_radioinput" type="checkbox" name="newsProperty" id="newRec" value="1" /><span class="hc_radiospan">推荐</span>
+                    }
+                    @Html.TextBox("IsHot", Model.IsHot, new { id = "IsHot", style = "width:0px; height:0px;border:0px;padding: 0;" })
+                    @Html.TextBox("IsRec", Model.IsRec, new { id = "IsRec", style = "width:0px; height:0px;border:0px;padding: 0;" })
+                    <br />
+                </div>
+            </div>
+            <div class="hc_item">
+                <span class="hc_textlable">权重：</span>
+                <div class="hc_fl">
+                    @Html.TextBoxFor(x => x.NewsOrder, new { @class = "hc_nameinput", @placeholder = "排序顺序", @autocomplete = "off",style="width:100px;" })
+                    <span class="spanmsci">@Html.ValidationMessageFor(x => x.NewsOrder)</span>
+                </div>
+            </div>
+            <div class="hc_item">
+                <span class="hc_textlable">时间：</span>
+                <div class="hc-fls">
+                    @*@Html.TextBoxFor(x => x.CreatTime, new { @class = "hc_nameinput", @id = "txtBeginDate", @placeholder = "发布时间", @autocomplete = "off", @readonly = "readonly" })*@
+                    <input type="text" class="hc_nameinput" id="txtBeginDate" placeholder="发布时间" readonly value="@Model.CreatTime" />
+                </div>
+            </div>
+
+
+
+            @*新闻内容*@
+            <div class="hc_item">
+
+                <div class="hc_fl editor">
+                    @Html.TextAreaFor(x => x.NewsContent, new { cols = "100", rows = "5", @class = "hc_textareaf", id = "txtDescription" })
+                    <span class="spanmsci">@Html.ValidationMessageFor(x => x.NewsContent)</span>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="hc_item">
+                <input class="hc_attestationBtn" id="btnAttestation" value="保存新闻" tabindex="20" type="button">
+            </div>
+
+            @*<div class="artdialog">
+                    <input type="button"  id="dialogCover" value="弹框" />
+                </div>*@
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    @Html.HiddenFor(x => x.ClassID)
+    @Html.HiddenFor(x => x.NewsID)
+}
+
+@section footScript{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //操作热点和推荐
+            $("#newRec").click(function () {
+                if ($(this).is(':checked')) {
+                    $("#IsRec").val(1);
+                } else {
+                    $("#IsRec").val(0);
+                }
+            });
+
+            $("#newHot").click(function () {
+                if ($(this).is(':checked')) {
+                    $("#IsHot").val(1);
+                } else {
+                    $("#IsHot").val(0);
+                }
+            });
+
+            //$("#ArtistTypeID").change(function () {
+            //    var selectVal = $("#ArtistTypeID  option:selected").val();
+            //    var selectTxt = $("#ArtistTypeID  option:selected").text();
+
+            //    var str = "<option value=\"-1\">请选择等级</option>";
+            //    if (selectTxt == "研究员") {
+            //        str += "<option value=\"1\">研究员</option><option value=\"2\">副研究员</option>"
+            //    } else if (selectVal == -1) {
+
+            //    } else {
+            //        str += "<option value=\"1\">国家一级" + selectTxt + "</option><option value=\"2\">国家二级" + selectTxt + "</option>"
+            //    }
+            //    $("#ArtistLevel").html(str);
+            //    $("#ArtistLevel").val(-1);
+            //})
+
+
+
+
+            //栏目下拉框选择 控制
+            $(document).on("change", "#levelOne", function () {
+                clearOption("#levelTwo");
+                clearOption("#levelThree");
+                $("#zhiwu").val("");
+                $("#zhiwu").hide();
+                if ($(this).val() > 0) {
+                    $.ajax({
+                        url: "/Manage/Section/getSectionByID/" + $(this).val(),
+                        type: 'GET',
+                        dataType: 'text',
+                        error: function (xhr, status) {
+                            alert(status);
+                        },
+                        success: function (Data) {
+                            if (Data == "") {
+                                $("#levelTwo").hide();
+                                $("#levelThree").hide();
+                            } else {
+                                $("#levelTwo").show();
+                                $("#levelThree").hide();
+                                var htmlAppend = "<option value=\"-1\">选择二级栏目</option>" + Data;
+                                $("#levelTwo").html(htmlAppend);
+                                $("#levelTwo").val(-1);
+                            }
+                           
+                        }
+                    });
+                }
+                else {                    
+                    $("#levelThree").hide();
+                    $("#levelTwo").html("<option value=\"-1\">选择二级栏目</option>");
+                    $("#levelTwo").val(-1);
+                }
+            })
+
+
+
+
+            $(document).on("change", "#levelTwo", function () {
+                clearOption("#levelThree");
+
+                //职务处理
+                if ($(this).val() == 16) {
+                    $("#zhiwu").show();
+                } else {
+                    $("#zhiwu").val("");
+                    $("#zhiwu").hide();
+                }
+                //end
+
+                if ($(this).val() > 0) {
+                    $.ajax({
+                        url: "/Manage/Section/getSectionByID/" + $(this).val(),
+                        type: 'GET',
+                        dataType: 'text',
+                        error: function (xhr, status) {
+                            alert(status);
+                        },
+                        success: function (Data) {
+                            if (Data == "") {
+                                $("#levelThree").hide();
+                            } else {
+                                $("#levelThree").show();
+                                var htmlAppend = "<option value=\"-1\">选择三级栏目</option>" + Data;
+                                $("#levelThree").html(htmlAppend);
+                                $("#levelThree").val(-1);
+                            }
+                        }
+                    });
+                }
+                else {
+                    $("#levelThree").hide();
+                }
+            })
+
+
+         
+
+
+
+
+        });
+
+        function clearOption(ele) {
+            $(ele).empty();
+        }
+
+
+
+        jeDate({
+            dateCell: '#txtBeginDate',
+            format: 'YYYY-MM-DD hh:mm:ss',
+            minDate: '1900-01-01 23:59:59', //设定最小日期为当前日期
+            festival: true,
+            maxDate: '2099-06-16 23:59:59', //最大日期
+            isTime: true
+            //choosefun: function(datas){
+            //    start.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+            //},
+            //okfun:function(val){alert(val)}
+        })
+
+        
+    </script>
+}

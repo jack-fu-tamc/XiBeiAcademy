@@ -1,0 +1,12 @@
+﻿
+ 
+记录时间：2015-12-22 13:59:23,236 
+线程ID:[33] 
+日志级别：  ERROR 
+错误描述：Unable to connect to any of the specified MySQL hosts.   </br>在 Maticsoft.DBUtility.MysqlHelper.PrepareCommand(MySqlCommand cmd, MySqlConnection conn, CommandType cmdType, String cmdText, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 195在 Maticsoft.DBUtility.MysqlHelper.ExecuteDataTable(String SQLString, CommandType type, MySqlParameter[] cmdParms) 位置 e:\ProTwoN\DAL\MySQLHelper.cs:行号 114在 Maticsoft.DAL.User_Info.GetUserInfo(User_Info_Search model) 位置 e:\ProTwoN\DAL\Account\User_Info.cs:行号 45
+在 BLL.Account.User_InfoBll.GetUserInfo(User_Info_Search model) 位置 e:\ProTwoN\BLL\Account\User_InfoBll.cs:行号 35
+在 HC.Service.Authentication.FormsAuthenticationService.GetAuthenticatedCustomerFromUserName(String name) 位置 e:\ProTwoN\HC.Service\Authentication\FormsAuthenticationService.cs:行号 439在 HC.Service.Authentication.FormsAuthenticationService.GetAuthenticatedCustomer() 位置 e:\ProTwoN\HC.Service\Authentication\FormsAuthenticationService.cs:行号 160在 HC.Web.Framework.WebWorkContext.GetCurrentUser() 位置 e:\ProTwoN\HC.Web.Framework\WebWorkContext.cs:行号 47
+在 HC.Web.Framework.WebWorkContext.get_CurrentCustomer() 位置 e:\ProTwoN\HC.Web.Framework\WebWorkContext.cs:行号 80
+在 HC.Web.Framework.ManageStoreAllowNavigationAttributecs.OnActionExecuting(ActionExecutingContext filterContext) 位置 e:\ProTwoN\HC.Web.Framework\ManageStoreAllowNavigationAttributecs.cs:行号 49
+
+ 

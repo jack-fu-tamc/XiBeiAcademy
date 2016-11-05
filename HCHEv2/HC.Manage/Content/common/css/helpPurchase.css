@@ -1,0 +1,368 @@
+.sellinggoodslist {
+    font-family: SimSun;
+    color: #000;
+}
+
+.hcmoneynav {
+    display: inline-block;
+    color: #000;
+    margin: 10px 0px 0px 5px;
+}
+
+.hche_soldgoods {
+    font-family: "Microsoft YaHei";
+    width: 330px;
+    color: #CE9D63;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+    .hche_soldgoods i {
+        font-family: "Microsoft YaHei";
+        color: #C20201;
+        font-style: normal;
+        margin-right: 10px;
+    }
+
+.goOffer {
+    color: rgb(194, 2, 1);
+    border: 1px solid rgb(194, 2, 1);
+    display: block;
+    padding: 5px;
+    width: 65px;
+    border-radius: 2px;
+    margin-left: 14px;
+}
+
+.hche_soldgoodsimg {
+    width: 465px;
+    background: transparent url("../../../images/publicimg/spxq_line.gif") repeat-x scroll 0% 58%;
+    height: 40px;
+}
+
+.hche_private {
+    margin-left: 15px;
+    color: #CE9D63;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+
+.select_type {
+    width: 885px;
+    height: 36px;
+    margin-bottom: 15px;
+}
+
+    .select_type .type_last {
+        border-bottom: 1px solid #C20201;
+    }
+
+    .select_type ul {
+        margin: 0px;
+        padding: 0px;
+        height: 40px;
+    }
+
+        .select_type ul li {
+            list-style: outside none none;
+            float: left;
+            height: 30px;
+            text-align: center;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 0px;
+            padding: 3px 20px;
+        }
+
+.color_next {
+    line-height: 38px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.hc_divimg img {
+    height: 100px;
+    width: 100px;
+}
+
+.hclis_orderhelp {
+    float: left;
+    margin: 0px 0px 15px 20px;
+    width: 887px;
+}
+
+.select_type .but_release {
+    float: right;
+    padding: 0px;
+}
+
+    .select_type .but_release .releasebut {
+        height: 30px;
+        width: 100px;
+        background: #FFF;
+        border: 1px solid #C20201;
+        color: #C20201;
+        border-radius: 3px;
+        display: inline-block;
+        line-height: 30px;
+        outline: none;
+    }
+
+        .select_type .but_release .releasebut:hover {
+            text-decoration: none;
+        }
+
+.type_show {
+    margin: 0px;
+    padding: 0px 10px;
+    border-width: 4px 1px 1px;
+    border-style: solid;
+    border-color: #C20201 #C20201 #FFF;
+    color: #C20201;
+    line-height: 30px;
+}
+
+.table_list {
+    height: auto;
+    border: 0px none;
+    float: left;
+}
+
+.buyerright .table_list ul {
+    float: left;
+    margin: 0px;
+}
+
+.title_list_show {
+    border: 1px solid #D8D8D8;
+    background: #EEE none repeat scroll 0% 0%;
+    width: 883px;
+}
+
+.buyerright .table_list ul .order_product {
+    width: 470px;
+    border-right: medium none;
+}
+
+.buyerright .table_list .title_list li {
+    height: 34px;
+}
+
+.buyerright .table_list ul li {
+    list-style: outside none none;
+    text-align: center;
+    line-height: 34px;
+}
+
+.buyerright .table_list ul li {
+    float: left;
+    margin: 0px;
+    border-top: medium none;
+}
+
+.buyerright .table_list ul .unit_price {
+    width: 103px;
+    border-right: medium none;
+    border-left: medium none;
+}
+
+.buyerright .table_list ul .unit_number {
+    width: 103px;
+    border-left: medium none;
+}
+
+.buyerright .table_list ul .unit_payment {
+    width: 103px;
+    border-right: medium none;
+    border-left: medium none;
+}
+
+.buyerright .table_list ul .unit_Transaction {
+    width: 103px;
+    border-right: medium none;
+}
+
+.hc_helplistorder {
+    float: left;
+    font-size: 12px;
+    font-family: SimSun;
+    width: 887px;
+}
+
+    .hc_helplistorder .helpinlist {
+        float: left;
+        margin-top: 10px;
+        border-left: 1px solid #ccc;
+        margin-left: -1px;
+        border-right: 1px solid #ccc;
+    }
+
+.helpinlist .helplistul {
+    border: 1px solid #D8D8D8;
+    background: #EEE none repeat scroll 0% 0%;
+    width: 883px;
+    float: left;
+    margin: 0px;
+    border-left: none;
+    border-right: none;
+}
+
+    .helpinlist .helplistul li {
+        list-style: outside none none;
+        height: 34px;
+        line-height: 34px;
+        border-right: medium none;
+        float: left;
+        margin-left: 15px;
+        margin-right: 30px;
+    }
+
+.helpinlist .hc_shoplisthelp {
+    float: left;
+    margin: 0px;
+    border: 1px solid #ccc;
+    height: 120px;
+    width: 883px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+    .helpinlist .hc_shoplisthelp li {
+        list-style: outside none none;
+        float: left;
+        height: 120px;
+        border-right: 1px solid #ccc;
+    }
+
+    .helpinlist .hc_shoplisthelp .hc_purchlione {
+        width: 550px;
+    }
+
+        .helpinlist .hc_shoplisthelp .hc_purchlione .hc_divimg {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 10px 8px 0px 15px;
+        }
+
+        .helpinlist .hc_shoplisthelp .hc_purchlione .hc_divimgtext {
+            float: left;
+            width: 330px;
+            margin-top: 15px;
+            text-align: left;
+            text-decoration: underline;
+            height: 97px;
+            overflow: hidden;
+        }
+
+    .helpinlist .hc_shoplisthelp .hc_purchlitwo {
+        width: 113px;
+        text-align: center;
+        line-height: 120px;
+    }
+
+        .helpinlist .hc_shoplisthelp .hc_purchlitwo .NmbHome {
+            color: #c20201;
+        }
+
+    .helpinlist .hc_shoplisthelp .hc_purchlithre {
+        width: 103px;
+        border: none;
+        text-align: center;
+    }
+
+        .helpinlist .hc_shoplisthelp .hc_purchlithre .purchasebut {
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 15px;
+        }
+
+        .helpinlist .hc_shoplisthelp .hc_purchlithre .purchasrOk {
+            color: #c20201;
+        }
+
+        .helpinlist .hc_shoplisthelp .hc_purchlithre .purchast_buttn {
+            border: 1px solid #c20201;
+            background: #fff;
+            color: #c20201;
+            height: 27px;
+            width: 80px;
+            border-radius: 3px;
+        }
+
+        .helpinlist .hc_shoplisthelp .hc_purchlithre .pursuccess {
+            line-height: 120px;
+        }
+
+            .helpinlist .hc_shoplisthelp .hc_purchlithre .pursuccess a:hover {
+                color: #c20201;
+            }
+
+.hc_pageing {
+    float: left;
+    width: 885px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#allPurchase {
+    border-left: none;
+    border-right: none;
+    *border-top: none;
+}
+
+.t-grid td {
+    border-right: none !important;
+}
+
+.t-grid tr {
+    border-bottom: none !important;
+}
+
+.t-grid .t-alt {
+    background: #fff;
+}
+
+.t-grid-header tr {
+    border-bottom: 1px solid #ccc !important;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.t-no-data td {
+    border-right: 1px solid #ccc !important;
+    border-left: 1px solid #ccc;
+}
+
+.t-grid-pager {
+    border-left: 1px solid #ccc !important;
+}
+
+#myPurchase {
+    border-left: none;
+    border-right: none;
+    *border-top: none;
+}
+
+#mySupply {
+    border-left: none;
+    *border-top: none;
+}
+
+
+
+.hc_helplistorder {
+    *padding-bottom: 30px;
+}
+
+.t-grid-header .t-header {
+    border-right: none;
+    /**border-top:1px solid #ccc;
+    *border-bottom:1px solid #ccc;*/
+}
+ 

@@ -1,0 +1,56 @@
+﻿
+ 
+记录时间：2015-11-17 16:57:35,244 
+线程ID:[60] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_Common_clientTest_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Common\clientTest.cshtml:行号 23
+
+ 
+
+ 
+记录时间：2015-11-17 16:58:11,509 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_common_clientTest_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Common\clientTest.cshtml:行号 11
+
+ 
+
+ 
+记录时间：2015-11-17 16:58:18,132 
+线程ID:[81] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_common_clientTest_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Common\clientTest.cshtml:行号 11
+
+ 
+
+ 
+记录时间：2015-11-17 16:59:27,242 
+线程ID:[60] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_common_clientTest_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Common\clientTest.cshtml:行号 11
+
+ 
+
+ 
+记录时间：2015-11-17 16:59:55,734 
+线程ID:[49] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_common_clientTest_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Common\clientTest.cshtml:行号 11
+
+ 
+
+ 
+记录时间：2015-11-17 17:00:10,008 
+线程ID:[8] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_common_clientTest_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Common\clientTest.cshtml:行号 11
+
+ 
+
+ 
+记录时间：2015-11-17 17:00:10,927 
+线程ID:[44] 
+日志级别：  ERROR 
+错误描述：未将对象引用设置到对象的实例。   </br>在 ASP._Page_HC_Manage_Views_common_clientTest_cshtml.Execute() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Views\Common\clientTest.cshtml:行号 11
+
+ 

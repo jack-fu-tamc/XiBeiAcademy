@@ -1,0 +1,22 @@
+﻿<div class="silbo-slide_04">
+	<div id="SlidePlayer_04">
+		<ul class="Slides">
+			<li title="陕西电力职工培训中心第四届春季田径运动会"><a href="#"><img src="/images/ls/ls_04.jpg" alt="陕西电力职工培训中心第四届春季田径运动会" /></a></li>
+			<li title="标题"><a href="#"><img src="/images/ls/ls_05.jpg" alt="标题" /></a></li>
+			<li title="标题"><a href="#"><img src="/images/ls/ls_04.jpg" alt="标题" /></a></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	TB.widget.SimpleSlide.decorate('SlidePlayer_04', {eventType:'mouse', effect:'fade', onInit:function(){
+			var lis = $D.getElementsByClassName('Slides', 'ul', $D.get('SlidePlayer_04'))[0].getElementsByTagName('li'),
+				titles = [], hrefs = [];
+			for (var i=0; i<lis.length; i++) {
+				var el, innerEl;
+				el = document.createElement('div');
+				el.className = 'SlideTitle';
+				el.innerHTML = lis[i].getAttribute('title')+'<b></b>';
+				lis[i].appendChild(el);
+			}
+		}});
+	</script>
+</div>

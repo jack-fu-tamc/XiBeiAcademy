@@ -1,0 +1,186 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+@using HC.Service.User;
+
+
+@{
+    
+    ViewBag.Title = "新闻统计分析";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+
+    var _iuser = EngineContext.Current.Resolve<IUserService>();
+    var Customer = WorkContext.CurrentCustomer;
+    var curentUser = _iuser.getUserByID(Customer.Id);
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsell.css" type="text/css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsellAB.css" type="text/css" />
+    
+    <style type="text/css">
+      
+    </style>
+}
+
+@section headScript{
+    <script src="~/HC.Manage/Content/common/Echarts/echarts.min.js" type="text/javascript"></script>
+    }
+
+
+<div class="buyerright">
+    <div class="sellinggoodslist">
+        <div class="sellinggoodsserchnav">
+            <div class="hcmoneynav">
+                <div class="hche_soldgoods">
+                    <i>新闻统计分析</i>
+                    ANALYSIS
+                </div>
+                <div class="hche_soldgoodsimg" style="background:none;    margin-top: 5px;">
+
+
+
+                    <div class="sellgoodstit">
+                        <span>年份：</span>
+                        <select id="yearSelect" class="valid" style="float:left;">                            
+                        </select>
+                    </div>
+                    <div class="goodserch">
+                        <input id="goSearchOnsale" onclick="searchGo()" type="button" value="搜索">
+                    </div>
+
+
+
+                </div>
+                <div class="hche_private">
+                    @*特权 ▪ 专享*@
+                </div>
+            </div>
+
+
+            @*<div class="sellinggoodsserch sellgoodstitsel">
+                <div class="sellingser">
+                    <div class="sellgoodstitsel">
+                        <div class="sellgoodstit">
+                            <span>年份：</span>
+                            <select id="yearSelect" class="valid" style="float:left;">
+                               
+                            </select>
+                        </div>
+                        <div class="goodserch">
+                            <input id="goSearchOnsale" type="button" value="搜索">
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+
+        </div>
+        <div class="salegoodslist">
+            <div id="main" style="width:1000px;height:600px; margin:0 auto;"></div>
+        </div>
+    </div>
+</div>
+@section footScript{
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: ''
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            legend: {
+                data: ['发布数量']
+            },
+            xAxis: {
+                type: 'category',
+                data: ["一月", "二月", "三月", "四月", "五月", "六月","七月", "八月", "九月", "十月", "十一月", "十二月"]
+            },
+            yAxis: {},
+            series: [{
+                name: '发布数量',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: "#0088CC"
+                    }
+                },
+                data: []//5, 20, 36, 10, 10, 20, 5, 20, 36, 10, 10, 20
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        var reStr = '@ViewBag.model';
+        option
+        option.series[0].data = reStr.split(',');
+        myChart.setOption(option);
+
+
+
+
+        $(document).ready(function () {
+
+            var dd = new Date();
+            $("#yearSelect").html("<option value=\"2016\">2016年</option><option value=\"2015\">2015年</option><option value=\"2014\">2014年</option><option value=\"2013\">2013年</option>");
+            var curentYear = dd.getFullYear();
+            if (curentYear - 2016 > 0) {
+                var abs = curentYear - 2016;
+                var plus = 1;
+                while (abs > 0) {
+                    $("#yearSelect").prepend("<option value=\"" + (2016 + plus) + "\">" + (2016 + plus) + "年</option>");
+                    $("#yearSelect").val((2016 + plus));
+                    plus = plus + 1;
+                    abs = abs - 1;
+                }
+            }
+            $(".hche_soldgoods i").text($("#yearSelect option:selected").text() + "新闻统计");
+        })
+
+
+        function initDataCharts(searchaPara) {//  location.href.substring(0,location.href.indexOf('?'))
+            
+
+            $.ajax({
+                url: "/manage/news/_analysisNews",
+                data: searchaPara,
+                type: 'GET',
+                dataType: 'json',
+                error: function (xhr, status) {
+                    alert("出错");
+                },
+                success: function (Data) {
+                    var selectText = $("#yearSelect option:selected").text();
+                    
+                    option.series[0].data = Data.split(',');
+                    $("#main").empty();
+                    myChart1 = echarts.init(document.getElementById('main'));
+                    myChart1.setOption(option);
+                    $(".hche_soldgoods i").text(selectText + "新闻统计");
+                }
+            });
+        }
+
+
+        function searchGo() {
+            var jsonData = { year: $("#yearSelect").val() };
+           
+
+
+            //initDataCharts(queryParams);
+            initDataCharts(jsonData);
+        }
+
+
+    </script>
+}

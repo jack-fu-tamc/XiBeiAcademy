@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <overdueHoru>30</overdueHoru>
+  <OpenSSl>False</OpenSSl>
+  <verificationCode>True</verificationCode>
+  <lockLogin>5</lockLogin>
+  <lcokTimeLenth>1</lcokTimeLenth>
+  <passWordLength>8</passWordLength>
+  <csrfName>www.abc.com</csrfName>
+  <csrfNameOther>localhost</csrfNameOther>
+</root>

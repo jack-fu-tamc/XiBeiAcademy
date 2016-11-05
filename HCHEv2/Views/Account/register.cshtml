@@ -1,0 +1,173 @@
+﻿@{
+    Layout = null;
+}
+@using HC.Data.ViewModels;
+@model RegisterModel
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript" src="~/Content/login/placeHolder.js"></script>
+    <title>注册</title>
+    <link href='~/Content/Common/css.css' rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .field-validation-error {
+            width: 150px !important;
+            float: left !important;
+            color: red !important;
+            font-size: 10px !important;
+        }
+
+            .field-validation-error span {
+                width: 150px !important;
+                color: red !important;
+                font-size: 10px !important;
+                height: 30px;
+                line-height: 36px;
+            }
+        #fieldRead {
+            float: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 6]>
+    <div class="ie6_bg">
+      <div class="ie6 clearfix">
+        <ul>
+          <li><a href="http://rj.baidu.com/soft/detail/23253.html" title="IE浏览器" target="_blank"></a></li>
+          <li><a href="http://www.firefox.com.cn/" title="火狐浏览器" target="_blank"></a></li>
+          <li><a href="http://rj.baidu.com/soft/detail/14744.html?ald" title="谷歌浏览器" target="_blank"></a></li>
+          <li><a href="http://www.maxthon.cn/" title="遨游浏览器" target="_blank"></a></li>
+          <li><a href="http://chrome.360.cn/" title="360急速浏览器" target="_blank"></a></li>
+          <li><a href="http://se.360.cn/index_main.html" title="360安全浏览器" target="_blank"></a></li>
+        </ul>
+      </div>
+    </div>
+    <![endif]-->
+    <!--<div class="ewm"><img src="~/Images/ewm.jpg" /></div>-->
+    <!--head-->
+    <!--[if lte IE 6]>
+    <div class="ie6_bg">
+      <div class="ie6 clearfix">
+        <ul>
+          <li><a href="http://rj.baidu.com/soft/detail/23253.html" title="IE浏览器" target="_blank"></a></li>
+          <li><a href="http://www.firefox.com.cn/" title="火狐浏览器" target="_blank"></a></li>
+          <li><a href="http://rj.baidu.com/soft/detail/14744.html?ald" title="谷歌浏览器" target="_blank"></a></li>
+          <li><a href="http://www.maxthon.cn/" title="遨游浏览器" target="_blank"></a></li>
+          <li><a href="http://chrome.360.cn/" title="360急速浏览器" target="_blank"></a></li>
+          <li><a href="http://se.360.cn/index_main.html" title="360安全浏览器" target="_blank"></a></li>
+        </ul>
+      </div>
+    </div>
+    <![endif]-->
+    <!--<div class="ewm"><img src="~/Images/ewm.jpg" /></div>-->
+    <!--head-->
+    @Html.Partial("cxHeader")
+    <!--head-end-->
+
+
+
+    <div class="register_bj">
+        <div class="register_bj2">
+            <div class="register">
+                <div class="area_t">注册</div>
+                <div class="area_l">
+
+
+
+
+                    @using (Html.BeginForm("register", "account", FormMethod.Post, new { @autocomplete = "off" }))
+                    {
+                        <div class="colunm01">
+                            <p>1.填写注册信息</p>
+                            <ul>
+                                <li class="clearfix">
+                                    @*<input type="text" value="填写用户名，6-18位字母、数字或下划线*" onclick="this.value=''" onblur="this.value='填写用户名，6-18位字母、数字或下划线*'" placeholder="" name="textfield">*@
+                                    @Html.TextBoxFor(x => x.Uname, new { @placeholder = "填写用户名，6-18位字母、数字或下划线" })
+                                    @Html.ValidationMessageFor(x => x.Uname)
+                                    <span class="field-validation-error"><span class="sameNameValidate" style="display:none;">该用户名已被注册</span></span>
+                                </li>
+                                <li class="clearfix">
+                                    @*<input type="text" value="填写密码*" onclick="this.value=''" onblur="this.value='填写密码*'" placeholder="" name="textfield">*@
+                                    @Html.TextBoxFor(x => x.Pwd, new { @placeholder = "填写密码", type = "password",@id="pPwd" })
+                                    <p> @Html.ValidationMessageFor(x => x.Pwd)</p>
+                                </li>
+                                <li class="clearfix">
+                                    @*<input type="text" value="再次确认密码*" onclick="this.value=''" onblur="this.value='再次确认密码*'" placeholder="" name="textfield">*@
+                                    @Html.TextBoxFor(x => x.PwdConfirm, new { @placeholder = "再次确认密码", type = "password", @id = "pPwdConfirm" })
+                                    <span class="field-validation-error"><span class="eqValidate" style="display:none;">注意2次输入不一致</span></span>
+                                </li>
+                            </ul>
+                            <div class="check"><input type="checkbox" name="gender" value="male">&nbsp;&nbsp;&nbsp;同意<a href="#">《西安崇信生物科技有限公司的协议》</a><span class="field-validation-error" id="fieldRead"><span class="readValidate" style="display:none;">请阅读并同意勾选</span></span></div>
+                            <div class="submit"><input type="button" value="" id="submitBtn"></div>
+                        </div>
+
+                    }
+
+
+                </div>
+                <div class="area_r">
+                    <div class="colunm02">
+                        <p>2.已经有账号？</p>
+                        <a href="/Account/Login"><img src="~/Images/submit.png" /></a>
+                    </div>
+                    <img src="~/Images/register_r.jpg" />
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+    
+    @Html.Partial("cxFooter")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submitBtn").click(function () {
+                if ($("#pPwd").val() != $("#pPwdConfirm").val()) {
+                    $(".eqValidate").show();
+                    return false;
+                }
+                if (!$("input[type='checkbox']").is(':checked')) {
+                    $(".readValidate").show();
+                    return false;
+                }
+               
+                $.ajax({
+                    url: "/Account/isExsitOfUserName",
+                    data: { uName: $("#Uname").val() },
+                type: 'GET',
+                dataType: 'json',
+                error: function (xhr, status) {
+                    alert("通信出错");
+                    return false;
+                },
+                success: function (Data) {
+                    if(Data=="N"){
+                        $("form").submit();
+                    }else{
+                        $(".sameNameValidate").show();
+                        return false;
+                    }
+                }
+            });
+
+
+              
+            })
+
+            $(document).click(function () {
+                $(".eqValidate").hide();
+                $(".readValidate").hide();
+                $(".sameNameValidate").hide();
+            })
+
+        })
+    </script>
+</body>
+</html>

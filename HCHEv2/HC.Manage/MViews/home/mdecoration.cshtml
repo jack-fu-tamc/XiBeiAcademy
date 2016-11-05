@@ -1,0 +1,400 @@
+﻿@using HC.Web.Framework.UI
+@using HC.Core.Infrastructure
+@using HC.Service.Account
+@using HC.Service.Accessories
+@using Maticsoft.Model
+@using HC.Manage.Models.Home
+
+@model decorationListModel
+@{
+   
+    ViewBag.Title = "店铺装修";
+    var modelU = (User_Info)ViewBag.curentUser;
+    var expUserService = EngineContext.Current.Resolve<IUser_ExpService>();
+    //var brandService = EngineContext.Current.Resolve<IMyBrandService>();
+    var UserExp = expUserService.GetShopInfoByUserID(modelU.Id);
+    if (UserExp.ExpType == 3 || UserExp.ExpType == 4)
+    { }
+    else
+    {
+        Layout = "~/HC.Manage/Views/Shared/mLayoutForAbDefault.cshtml";
+    }
+
+
+
+
+
+}
+
+@section headCSS{
+    <!--CSS引用-->
+    <link href="~/HC.Manage/Content/common/css/decoration.css" rel="stylesheet" />
+    <link href="~/HC.Manage/Content/common/css/timePick.css" rel="stylesheet" />
+    <link href="~/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadify.css" rel="stylesheet" type="text/css" />
+}
+@section headScript{
+    <!--JS引用-->
+    @*<script type="text/javascript" src="~/HC.Manage/Content/common/script/decoration.js"></script>*@
+    @*<script type="text/javascript" src="~/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/jquery-1.3.2.min.js"></script>*@
+    @*<script type="text/javascript" src="~/HC.Manage/Content/common/script/jquery-1.7.2.min.js"></script>*@
+    <script type="text/javascript" src="~/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/swfobject.js"></script>
+    <script type="text/javascript" src="~/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/jquery.uploadify.v2.1.0.js"></script>
+    <script type="text/javascript" src="~/HC.Manage/Content/common/script/timePick.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".Etime").timepicki();
+            $(".Btime").timepicki();
+
+            //授权证书
+            //$(".uploadPicZs").uploadify({
+            //    'uploader': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadify.swf',
+            //    'script': '/manage/Common/fileUpZs',
+            //    'cancelImg': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/cancel.png',
+            //    'folder': 'LicenseImg',
+            //    //'queueID': 'fileQueue',
+            //    'auto': true,//选择图片后自动上传
+            //    'multi': false,//是否允许同时选择多个文件
+            //    'wmode': 'transparent',
+            //    'fileExt': '*.jpg;*.png;',
+            //    'buttonImg': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadImg_2.png',
+            //    'width': '130',
+            //    'onComplete': function (event, queueId, fileObj, response, data) {
+            //        var x = response;
+            //        if (x == '0|') alert('上传失败');
+            //        else {
+            //            var ss = event.data.who;
+            //            var content = $(ss).next().next().next();
+            //            //var html = $("#ulBusLicense").html();
+            //            var html = "";
+            //            html += "<li class='rel db lt' style='margin-top: 10px; list-style: none;'>";
+            //            html += "<img src='" + x + "'  style='height:200px; width:200px;' />";
+            //            html += "<a class='abs closeBusLicense' onclick='closeBusLicense(this)'><img src='../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png' /></a></li>";
+            //            //$("#ulBusLicense").html(html);
+            //            $(content).html(html);
+            //        }
+            //    }
+            //});
+
+
+            var isExsitYY= $("#yingyejpgimg").attr("src").indexOf("ImageStore")>-1;  //.length>36; alert(isExsitYY);
+            if(!isExsitYY){
+                //店铺形象
+                $(".uploadPic").uploadify({
+                    'uploader': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadify.swf',
+                    'script': '/manage/Common/fileUp?u='+@UserExp.UserID,
+                    'cancelImg': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/cancel.png',
+                    'folder': 'LicenseImg',
+                    //'queueID': 'fileQueue',
+                    'auto': true,//选择图片后自动上传
+                    'multi': false,//是否允许同时选择多个文件
+                    'wmode': 'transparent',
+                    'fileExt': '*.jpg;*.png;',
+                    'buttonImg': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadImg_1.png',
+                    'width': '130',
+                    'onComplete': function (event, queueId, fileObj, response, data) {
+                        var x = response;
+                        if (x == '0|') alert('上传失败');
+                        else {
+                            var ss = event.data.who;
+                            var content = $(ss).next().next().next();
+
+                            //var html = $("#ulBusLicense").html();
+                            var html = "";
+                            //html += "<li class='rel db lt'>";
+                            html += "<img src='" + x + "'style='height:300px; width:300px;' /> <a class=\"closeyy\" onclick=\"closeyy(this)\"><img src=\"../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png\"></a>";
+                            //$("#ulBusLicense").html(html);
+                            $(content).html(html);
+                            $(ss).next().hide();
+                        }
+                    }
+                });
+            }
+        });
+
+        //删除店铺形象
+        function closeyy(obj){
+            $(obj).prev().attr("src","/HC.Manage/images/publicimg/mentou_pic.gif");
+            var objLeng=$(obj).parent().parent().find("object").length;
+
+            if(objLeng==0)
+            {
+                $(".uploadPic").uploadify({
+                    'uploader': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadify.swf',
+                    'script': '/manage/Common/fileUp?u='+@UserExp.UserID,
+                    'cancelImg': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/cancel.png',
+                    'folder': 'LicenseImg',
+                    //'queueID': 'fileQueue',
+                    'auto': true,//选择图片后自动上传
+                    'multi': false,//是否允许同时选择多个文件
+                    'wmode': 'transparent',
+                    'fileExt': '*.jpg;*.png;',
+                    'buttonImg': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadImg_1.png',
+                    'width': '130',
+                    'onComplete': function (event, queueId, fileObj, response, data) {
+                        var x = response;
+                        if (x == '0|') alert('上传失败');
+                        else {
+                            var ss = event.data.who;
+                            var content = $(ss).next().next().next();
+
+                            //var html = $("#ulBusLicense").html();
+                            var html = "";
+                            //html += "<li class='rel db lt'>";
+                            html += "<img src='" + x + "'style='height:300px; width:300px;' /> <a class=\"closeyy\" onclick=\"closeyy(this)\"><img src=\"../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png\"></a>";
+                            //$("#ulBusLicense").html(html);
+                            $(content).html(html);
+                            $(ss).next().hide();
+                        }
+                    }
+                });
+            }else{
+                $(obj).parent().parent().find("object").show();
+            }
+            $(obj).remove();
+        }
+
+        //删除授权证书并排版
+        function closeBusLicense(obj) {
+            //ajax请求 删除该品牌的图片
+            var brandK=$(obj).parent().parent().find("input").attr("brand");
+            $.ajax({
+                url:"@Url.Action("_ajaxDeleteMyBrandImg","home")",
+                data:{idk:brandK},
+                type:"GET",
+                dataType:"json",
+                error:function(xhr,status){
+                    alert("出错，请稍后重试");
+                },
+                success:function(Data){
+                    //$(obj).parent().html(" <img  class=\"hc_imgshow\" style=\"width:200px;height:200px;margin-Top:10px;\" src=\"/HC.Manage/images/publicimg/suzs_pic.gif\">");//替换为默认提示图片
+                    $(obj).parent().parent().remove();
+                    //给子div重新排序
+                    var subDivs=$(".reportreg").children();
+                    subDivs.each(function(i,v){
+                        $(v).removeClass("alignLeft");
+                        if($(v).index()%3==0){
+                            $(v).addClass("alignLeft");
+                        }
+                    });
+                }
+            })
+        }
+
+
+
+    </script>
+}
+
+<div class="buyerright">
+    <div class="hc-decont">
+        <div class="hctl_teltop">
+            <span class="hctl_chinhot">店铺装修</span><span class="hctl_elishhot">SHOP DECORATION</span>
+            <span class="hctl_striping"></span><span class="hctl_telimg">特权 • 专享</span>
+        </div>
+        <div class="hc-main">
+            <div class="hc-tops">
+                <div class="hc-lfs">
+                    @using (Html.BeginForm("decoration", "Home", FormMethod.Post))
+                    {
+                        <dl>
+                            <dt><span>掌柜昵称：</span></dt>
+                            <dd>
+                                @if (string.IsNullOrEmpty(Model.nickNmae))
+                                {
+                                    <input type="text" name="nickName" value="请输入您的昵称" style="margin-bottom:40px;" />
+                                }
+                                else
+                                {
+                                    <input type="text" name="nickName" value="@Model.nickNmae" style="margin-bottom:40px;" />
+                                }
+                            </dd>
+                            <dt><span>营业时间：</span></dt>
+                            <dd>
+                                <input type="text" class="Btime" name="Btime" value="@Model.bTime" style="width:70px;margin-right:5px; padding-left: 17px;" readonly="readonly" /><span style="display:block;float:left;">--</span><input type="text" class="Etime" name="Etime" value="@Model.eTime" style="width:70px;margin-left:5px; padding-left: 17px;" readonly="readonly" />
+                            </dd>
+
+                            <dd>
+                                <input type="submit" value="确认" class="submitDecoration" />
+                            </dd>
+                        </dl>
+                    }
+                </div>
+
+
+                <div class="hc-fls">
+
+                    <!--默认提示图片-->
+                    <input class="hc_businessFile uploadPic" id="yingyebut" value="浏览" brand="no" type="button" style=" display: none;">
+                    <div id="yingyeiew" class="hc_shenfenimg">
+                        @if (!string.IsNullOrEmpty(Model.corpShow) && Model.corpShow.IndexOf("ImageStore") > -1)
+                        {
+                            <img id="yingyejpgimg" src="@Model.corpShow" style="height:300px;width:300px;" />
+                            <a class="closeyy" onclick="closeyy(this)"><img src="/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png"></a>
+                        }
+                        else
+                        {
+                            <img id="yingyejpgimg" src="~/HC.Manage/images/publicimg/mentou_pic.gif" style="height:300px;width:300px;" />
+                        }
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="hc-sq">
+                <div class="hc-sqtit">
+                    授权证书：
+                </div>
+
+
+                <div class="showSelect">
+                    @if (Model.decorations.Count > 0)
+                    {
+                        <span>品牌：</span> <span class="select-text">--请选择品牌--</span><span class="icon-select"></span><span class="addBrand">添加</span>
+                        <ul class="dropdown-select">
+                            @foreach (var m in Model.decorations)
+                            {
+                                <li key="@m.myBrandID">@m.brandName</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <span>品牌：</span> <span class="select-text">--暂无品牌--</span><span class="icon-select"></span><span class="addBrand">添加</span>
+                    }
+
+                </div>
+                <div style="clear:both"></div>
+                <div class="hc-sqcont">
+                    <div class="hc_fl">
+                        <div class="hc_item">
+                            <div class="hc_fl">
+                                <div class="reportreg" id="imagelist">
+                                    @if (Model.decorations.Count > 0)
+                                    {
+                                        var i = 0;
+                                        var alignClas = "";
+                                        foreach (var m in Model.decorations)
+                                        {
+                                            alignClas = i % 3 == 0 ? "alignLeft" : "";
+                                            if (!string.IsNullOrEmpty(m.BrandFile) && m.BrandFile.IndexOf("certificate") > -1)
+                                            {
+                                                <div class="imgList @alignClas">
+                                                    <span>@m.brandName</span>
+                                                    <input type="button" brand="@m.myBrandID" class="hc_addimg add_why hc_reporttian uploadPicZs" id="@(m.myBrandID.ToString() + "btnpreview")" value="添加" autocomplete="off" style="display:none;">
+                                                    <em class="hc_patImg" style=" display:block">
+                                                        <img class="hc_imgshow" style="width:200px;height:200px;" src="@m.BrandFile">
+                                                        <a class="abs closeBusLicense" onclick="closeBusLicense(this)"><img src="~/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png"></a>
+                                                    </em>
+                                                    <div style="clear:both"></div>
+                                                </div>
+                                                i++;
+                                            }
+
+                                        }
+                                    }
+
+                                    @*<div>
+                                            <input type="button" brand="jack1" class="hc_addimg add_why hc_reporttian uploadPicZs" id="btnpreview1" value="添加" autocomplete="off">
+                                            <em class="hc_patImg" id="preview" style="display:block">
+                                                <img  class="hc_imgshow" style="width:200px;height:200px;margin-Top:10px;" src="~/HC.Manage/images/publicimg/suzs_pic.gif">
+                                            </em>
+                                        </div>*@
+                                        @*<div style="clear:both;"></div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var ulselect=$(".dropdown-select");
+            var showSelect= $(".select-text");
+            var dropdownIcon=$(".icon-select");
+            $(".icon-select,.select-text").click(function(){
+
+                //console.log(ulselect);
+                ulselect.show();
+            })
+
+            $(".dropdown-select li").click(function(){
+                var selectV=$(this).text();
+                showSelect.text(selectV);
+                showSelect.attr("brandK",$(this).attr("key"));
+                ulselect.hide();
+
+            })
+
+            $(".addBrand").click(function(){
+                if(showSelect.attr("brandk")!=undefined&&$("#"+showSelect.attr("brandk")+"btnpreview").length==0){
+
+                    var subDiv=$(".reportreg").children().length;
+                    var alignLeft="";
+                    alignLeft=subDiv%3==0?"alignLeft":"";
+                    var origHtml="<div class=\"imgList "+alignLeft+" \"><span>"+showSelect.text()+"</span><input type=\"button\" style=\"display: none;\" brand=\""+showSelect.attr("brandk")+"\" class=\"hc_addimg add_why hc_reporttian uploadPicZs\" id=\""+showSelect.attr("brandk")+"btnpreview\" value=\"添加\" autocomplete=\"off\"><em class=\"hc_patImg\" style=\" display:block\"><img  class=\"hc_imgshow\" style=\"width:200px;height:200px;\" src=\"/HC.Manage/images/publicimg/suzs_pic.gif\"><a class=\"abs closeBusLicense\" onclick=\"closeBusLicense(this)\"><img src=\"/HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png\"></a></em> <div style=\"clear:both\"></div></div>";
+                    $("#imagelist").append(origHtml);
+
+
+
+                    //动态添加授权证书上传//////////////////////////////////////////////////////////////////////////////////////
+                    $("#"+showSelect.attr("brandk")+"btnpreview").uploadify({
+                        'uploader': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadify.swf',
+                        'script': '/manage/Common/fileUpZs',
+                        'cancelImg': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/cancel.png',
+                        'folder': 'LicenseImg',
+                        //'queueID': 'fileQueue',
+                        'auto': true,//选择图片后自动上传
+                        'multi': false,//是否允许同时选择多个文件
+                        'wmode': 'transparent',
+                        'fileExt': '*.jpg;*.png;',
+                        'buttonImg': '../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/uploadImg_2.png',
+                        'width': '130',
+                        'onComplete': function (event, queueId, fileObj, response, data) {
+                            var x = response;
+                            if (x == '0|') alert('上传失败');
+                            else {
+                                var ss = event.data.who;
+                                var content = $(ss).next().next().next();
+                                //var html = $("#ulBusLicense").html();
+                                var html = "";
+
+                                html += "<img src='" + x + "'  style='height:200px; width:200px;' />";
+                                html += "<a class='abs closeBusLicense' onclick='closeBusLicense(this)'><img src='../../HC.Manage/Content/common/script/uploadify/jquery.uploadify-v2.1.0/ji03.png' /></a>";
+                                //$("#ulBusLicense").html(html);
+                                $(content).html(html);
+                                //console.log($(ss).next());
+                                $(ss).next().hide();
+                            }
+                        }
+                    });
+                    //动态添加授权证书上传 END//////////////////////////////////////////////////////////////////////////////////////
+                }else{
+
+                }
+            })
+
+
+            //$(document).on("click",function(){
+            $(document).click(function(event){
+                var e= event.srcElement ? event.srcElement : event.target;
+                //console.log(e);
+                if($(e).is(dropdownIcon)||$(e).is(showSelect)){
+
+                }else{
+                    ulselect.hide();
+                }
+            })
+            //$(document).click(function(){
+            //    if($(event.target).is(dropdownIcon)||$(event.target).is(showSelect)){
+
+            //    }else{
+            //        ulselect.hide();
+            //    }
+
+            //})
+        })
+    </script>

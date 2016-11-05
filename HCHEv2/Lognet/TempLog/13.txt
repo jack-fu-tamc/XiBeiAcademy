@@ -1,0 +1,8 @@
+﻿
+ 
+记录时间：2015-07-13 09:36:07,162 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Manage.Controllers.HomeController.Index() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\HomeController.cs:行号 18
+
+ 

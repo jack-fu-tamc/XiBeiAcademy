@@ -1,0 +1,7 @@
+﻿dsfdsfsdfdsfsdf
+ 
+记录时间：2015-10-16 16:20:26,961 
+线程ID:[10] 
+日志级别：  ERROR 
+错误描述：索引超出了数组界限。   </br>在 HC.Manage.Controllers.AlipayController.chargeDetail() 位置 e:\ProTwoN\HCHEv2\HC.Manage\Controllers\AlipayController.cs:行号 739
+ 

@@ -1,0 +1,78 @@
+﻿@using HC.Core;
+@using Maticsoft.Model;
+@using HC.Core.Infrastructure;
+@using HC.Service.User;
+@using Hche.Common.Enum;
+@using HC.Core.CommonMethod;
+@{
+    //var Customer = WorkContext.CurrentCustomer;
+    //var _iuser = EngineContext.Current.Resolve<IUserService>();
+    //var curentUser = _iuser.getUserByID(Customer.Id);
+
+    //var managePermissionstr = new List<string>();
+    //var managePermission = new List<int>();
+
+    //var ManagePermission = curentUser.UserGroup.ManagePermission;
+    //var sectionPermission = curentUser.UserGroup.SectionPermission;
+
+
+    //if (ManagePermission != null)
+    //{
+    //    managePermissionstr = new List<string>(ManagePermission.Split(','));
+    //    managePermission = managePermissionstr.Select(x => Convert.ToInt32(x)).ToList();
+    //}
+
+
+
+}
+<div class="buyerleft">
+    <div class="hche_leftnav">
+
+
+        <ul>
+
+
+            <li class="hche_firstmenu">
+                <i class="hche_firstmenuimg"></i>
+                <a href="javascript:void(0)">招生管理</a>
+                @*<i class="top_firstmenu"></i>*@
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("newsmanage", "news")">考生报名信息</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("SectionManage", "Section")">准考证信息</a>
+            </li>
+            <li class="hche_secondmenu">
+                <i class="hche_secondmenuimg"></i>
+                <a href="@Url.Action("SectionManage", "Section")">录取通知书信息</a>
+            </li>
+
+
+
+
+
+        </ul>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //if (location.href.indexOf("newsmanage") > -1) {
+        //    $(".hche_secondmenu:eq(0)").find("a").text("新闻分类");
+        //}
+        //$(".hche_secondmenu:eq(0)").find("a").click(function () {
+        //    if (location.href.indexOf("newsmanage") > -1) {
+
+        //        $(this).parent().parent().slideUp();
+        //        $(".newSectionMenue").slideDown();
+        //        return false;
+        //    }
+        //})
+
+        //$(".newSectionMenue").show();
+    })
+</script>

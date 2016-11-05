@@ -1,0 +1,52 @@
+﻿@using HC.Core.Enum;
+@{
+    //成功消息提示
+    var successMessages = new List<string>();
+    if (TempData[string.Format("HC.notifications.{0}", NotifyType.Success)] != null)
+    {
+        successMessages.AddRange(TempData[string.Format("HC.notifications.{0}", NotifyType.Success)] as IList<string>);
+    }
+    if (ViewData[string.Format("HC.notifications.{0}", NotifyType.Success)] != null)
+    {
+        successMessages.AddRange(ViewData[string.Format("HC.notifications.{0}", NotifyType.Success)] as IList<string>);
+    }
+
+    //错误消息提示
+    var errorMessages = new List<string>();
+    if (TempData[string.Format("HC.notifications.{0}", NotifyType.Error)] != null)
+    {
+        errorMessages.AddRange(TempData[string.Format("HC.notifications.{0}", NotifyType.Error)] as IList<string>);
+    }
+    if (ViewData[string.Format("HC.notifications.{0}", NotifyType.Error)] != null)
+    {
+        errorMessages.AddRange(ViewData[string.Format("HC.notifications.{0}", NotifyType.Error)] as IList<string>);
+    }
+}
+
+@foreach (var message in successMessages)
+{
+    <div class="messageBox messageBoxSuccess">
+        <img src="~/HC.Manage/images/publicimg/successTips.png" width="50" style="margin: 5px 5px 5px 13px;" />
+        <span>@Html.Raw(message)</span>
+    </div>
+}
+@foreach (var message in errorMessages)
+{
+
+    if (ViewData["isDelivery"] != null)
+    {
+        <div class="messageBox messageBoxError" >
+            <img src="~/HC.Manage/images/publicimg/errorTip.png" width="50" />
+            <p> 发货失败。</p>
+            <span>@Html.Raw(message)</span>
+        </div>
+    }
+    else
+    {
+        <div class="messageBox messageBoxError">
+            <img src="~/HC.Manage/images/publicimg/errorTip.png" width="50" />
+            <p> 删除失败。</p>
+            <span>@Html.Raw(message)</span>
+        </div>
+    }
+}

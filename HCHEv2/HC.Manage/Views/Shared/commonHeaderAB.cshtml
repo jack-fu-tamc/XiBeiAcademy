@@ -1,0 +1,78 @@
+﻿@using HC.Core;
+@using Maticsoft.Model;
+@using HC.Service.Account
+@using HC.Service.User;
+@using HC.Core.Infrastructure;
+@using Hche.Common.Enum
+@using HC.Core.CommonMethod;
+@{
+    ViewBag.Title = "Header";
+    var modelU = (User_Info)ViewBag.curentUser;
+    var modelUserInfo = modelU ?? WorkContext.CurrentCustomer;
+    
+    var _iuserService = EngineContext.Current.Resolve<IUserService>();
+    var curentUser = _iuserService.getUserByID(modelUserInfo.Id);
+    var ManagePermission = curentUser.UserGroup.ManagePermission;
+    
+    bool AcademyPermission=false;
+    if (ManagePermission != null)
+            {
+                List<string> managePermissionstr = new List<string>(ManagePermission.Split(','));
+                var managePermission = managePermissionstr.Select(x => Convert.ToInt32(x)).ToList();
+                if (managePermission.Contains((int)SortEnum.sortClass.AcademySys) || (curentUser.UserGroupID == 1))
+                {
+                    AcademyPermission = true;
+                }
+            }
+}
+<!-- 顶部导航开始 -->
+
+<div id="header" class="hc_topNav">
+    <div class="container">
+        <div class="hc_topWelcome">
+            <ul>
+                <li style="padding-left:0;margin-left:10px">您好, <a href="javascript:void(0);">@modelUserInfo.RealName</a></li>
+                <li><a href="/Account/LogOff">退出</a></li>
+                @*<li class="infornation" style="width:84px;margin-left:-10px;">
+                   
+                </li>*@
+
+                
+
+                <li class="hc_topleftHom"><i class="hc_topHom"></i><a href="/" target="_blank">首页</a></li>
+                @if (AcademyPermission)
+                {
+                    <li class="hc_topleftHom"><i class="hc_topHom"></i><a href="/manage/EnrolSys">报名系统</a></li>
+                }
+                
+                <li class="hc_topleftHom" style="float: right; margin-right: -32px;"><img style="height:27px;" src="~/HC.Manage/images/publicimg/logo.jpg" /><a href="/manage">电力专科学校后台管理</a></li>
+            </ul>
+           
+        </div>
+    </div>
+    <!--滑下搜索-->
+    <!--[if IE 8]>
+    <style type="text/css" />
+    .search input.inp_srh {
+         *width:383px;
+        *height:24px;
+    }
+    </style>
+    <![endif]-->
+</div>
+<div class="none"></div>
+
+
+    <!-- logo,搜索部分-->
+    @*@{Html.RenderAction("centerSerchAB", "Common");}*@
+    <!--logo,搜索部分end-->
+    <!--后台横向导航-->
+    @*@{Html.RenderAction("centerNavMenuAB", "Common");}*@
+    <!--后台横向导航end-->
+
+
+
+
+
+
+  

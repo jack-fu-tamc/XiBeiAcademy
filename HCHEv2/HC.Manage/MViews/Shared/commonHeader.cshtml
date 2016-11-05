@@ -1,0 +1,128 @@
+﻿@using HC.Core;
+@using Maticsoft.Model;
+@using HC.Service.Account
+@using HC.Core.Infrastructure;
+@using HC.Core.CommonMethod;
+@{
+    ViewBag.Title = "Header";
+    var modelU = (User_Info)ViewBag.curentUser;
+    var modelUserInfo = modelU ?? WorkContext.CurrentCustomer;
+
+
+    var expUserService = EngineContext.Current.Resolve<IUser_ExpService>();
+    var compName = expUserService.GetShopInfoByUserID(WorkContext.CurrentCustomer.Id).Corpcomp;
+}
+<!-- 顶部导航开始 -->
+<div id="header" class="hc_topnav">
+    <div class="container">
+        <div class="hc_topWelcome">
+            <ul>
+                <li style="padding-left:0;">您好,<a href="@UntilMethod.appsetingValue("runCarAdress")/ManageCenter/PersonalData">@modelUserInfo.UserName</a></li>
+                <li><a href="@Url.Action("LogOff", "Home")">退出</a></li>
+                <li class="infornation" style="width:102px;">
+                    @{Html.RenderAction("msg", "Common");}
+                </li>
+
+                <li class="hc_topLi" style="margin-left:0px;width:67px;">
+                    <a href="#" class="hc_ddr"></a>
+                    <i class="hc_la"></i>
+                    <div class="hc_addrs" style="display:none">
+
+                    </div>
+                </li>
+
+                <li class="hc_topleftHom"><i class="hc_topHom"></i><a href="@UntilMethod.appsetingValue("runCarAdress")">首页</a></li>
+            </ul>
+
+            <!--header右-->
+            <ul class="hc_topright">
+                <li style="width: 80px; text-align: center; padding-left: 0px; " class="buyerNav">
+                    @*<i class="hc_toptle"></i>*@
+                    <a href="@UntilMethod.appsetingValue("runCarAdress")/ManageCenter/OrderManage">我的交易</a>
+                    <i class="hc_la"></i>
+                    <div class="subNav" style="display:none;">
+                        <ul>
+                            <li style="padding-left: 0px;"><a href="@UntilMethod.appsetingValue("runCarAdress")/ManageCenter/OrderManage">我的订单</a></li>
+                            <li style="padding-left: 0px;"><a href="@UntilMethod.appsetingValue("runCarAdress")/Guarantee/MyGuarantee">我的报修</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li style="width:100px;" class="buyCar">
+                    <i class="hc_cart"></i>
+                    <a href="@UntilMethod.appsetingValue("runCarAdress")/Shopping/ShoppingCart">购物车</a>
+                </li>
+                <li style="width: 76px; background: rgb(0, 0, 0);">
+                    <a href="javascript:void(0);">卖家中心</a>
+                    <i class="hc_la"></i>
+                </li>
+                <li class="hc_topwidth " style="width:76px;">
+
+                    <a href="#">客服中心</a>
+                    <i class="hc_la"></i>
+                    <div class="hc_kff" style="display:none">
+                        <p>
+                            <img src="~/HC.manage/images/publicimg/top_Service_icon.png" /><span>客服咨询热线</span><span style="margin-top:-17px;">029-68215588</span>
+                        </p>
+                        <p>
+                            <a href="#">
+                                <img src="~/HC.manage/images/publicimg/top_qq_btn.png" />
+                            </a>
+                        </p>
+                    </div>
+                </li>
+                <li style="width:80px; text-align:center;">
+                    <a href="http://www.autobobo.com">去烩车网</a>
+                </li>
+
+                <li class="hc_topleftphone" style="width: 70px; background: rgb(0, 0, 0);">
+                    <i class="hc_topPhone"></i>
+                    <a href="#">APP</a>
+
+                    <div class="hc_slidePhone" style="display: none; width: auto; height:auto;background:#FFF;">
+                        <p style="width: auto;margin:0; height:auto"><a href="/ManageCenter/OrderManage?menuimg=1"><img src="~/HC.Manage/images/publicimg/erw.png" style="margin: 19px 15px;" /></a></p>
+                    </div>
+
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /顶部导航结束 -->
+
+<div class="clearfix hc_clear">
+</div>
+
+<!-- logo,搜索部分-->
+@{Html.RenderAction("centerSerch", "Common");}
+<!--logo,搜索部分end-->
+<!--商品导航部分-->
+@{Html.RenderAction("centerNavMenu", "Common");}
+<!--商品导航部分end-->
+
+<script type="text/javascript">
+    $.getJSON("/Common/GetBaseCity?nodetype=1&unid=0", function (data) {
+        $(".hc_addrs").html("");
+        $.each(data, function (i, item) {
+            $(".hc_addrs").append("<p value=\"" + item["unid"] + "\">" + item["city"] + "</p>");
+        });
+    })
+
+
+    //获取中文地址
+    $(function () {
+        var provinceCoe;
+
+        $.getJSON("/common/getProvinceByIP", function (data) {
+            provinceCoe = data;
+            $('.hc_addrs p').each(function (i, v) {
+                if (provinceCoe == $(v).attr("value")) {
+                    $(".hc_ddr").html($(v).text());
+                    $(v).addClass("hc_hot");
+                }
+            });
+        });
+    })
+
+
+</script>

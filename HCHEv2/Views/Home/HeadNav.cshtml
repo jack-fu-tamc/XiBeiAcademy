@@ -1,0 +1,105 @@
+﻿@using HC.Data.Models
+@using HC.Service.Section
+@using HC.Core.Infrastructure
+@{
+    Layout = null;
+}
+@model List<NewsClass>
+
+
+@*新头部*@
+
+
+<div class="mainnav">
+    <ul class="clearfix">
+        <li class="pull_li"><a href="/" class="pull_a on">首页</a></li>
+
+        @foreach (var item in Model)
+        {
+          
+
+            <li class="pull_li" onmouseout="this.className='pull_li'" onmouseover="this.className='pull_li pull_li_hover'">
+
+                @if (item.ClassName.Trim() == "教育教学")
+                {
+                    <a class="pull_a" href="@Url.Action("Education", "Home")">@Html.Raw(item.ClassName)</a>
+                    continue;
+                }
+
+                @if (item.ClassName.Trim() == "图书馆")
+                {
+                    <a class="pull_a" href="@Url.Action("Library", "Home")">@Html.Raw(item.ClassName)</a>
+                    continue;
+                }
+
+
+
+                @if (item.IsSingle == 0)//列表
+                {
+                    var _InewsSectionService = EngineContext.Current.Resolve<ISectionService>();
+                    var subNewsClass = _InewsSectionService.GetSubNewClassByParentNewClass(item.ClassID).Where(x => x.IsShowInNav == 1).OrderBy(x => x.ClassOrder);
+
+
+                    if (subNewsClass.Count() > 0)
+                    {
+                        if (subNewsClass.FirstOrDefault().IsSingle == 1)
+                        {
+                            <a class="pull_a" href="@Url.Action("singlePage", "Information", new { id = subNewsClass.FirstOrDefault().ClassID })">@Html.Raw(item.ClassName)</a>
+                        }
+                        else
+                        {
+                            <a class="pull_a" href="@Url.Action("Section", "Information", new {id=subNewsClass.FirstOrDefault().ClassID })">@Html.Raw(item.ClassName)</a>
+                        }
+
+                     <!--二级子栏目-->
+                        <div class="subnav">
+                            @foreach (var subItem in subNewsClass)
+                            {
+                                if (subItem.IsSingle == 1)
+                                {
+                                    <span><a href="@Url.Action("singlePage", "Information", new { id = subItem.ClassID })">@Html.Raw(subItem.ClassName)</a></span>
+                                }
+                                else if(subItem.IsSingle==0)
+                                {
+                                    <span><a href="@Url.Action("Section", "Information", new { id = subItem.ClassID })">@Html.Raw(subItem.ClassName)</a></span>
+                                }
+                                else
+                                {
+                                    <span><a href="@Html.Raw(subItem.linkAddress)">@Html.Raw(subItem.ClassName)</a></span>
+                                }
+                            }
+                        </div>
+                    <!--二级子栏目End-->
+                    }
+                    else
+                    {
+                         <a class="pull_a" href="@Url.Action("Section", "Information", new {id=item.ClassID })">@Html.Raw(item.ClassName)</a>
+                    }
+
+                }
+                else if (item.IsSingle == 1)//单页
+                {
+                      <a class="pull_a" href="@Url.Action("singlePage", "Information", new { id = item.ClassID })">@Html.Raw(item.ClassName)</a>
+                }
+                else if (item.IsSingle == 2)//外链
+                {
+                     <a class="pull_a" href="@Html.Raw(item.linkAddress)">@Html.Raw(item.ClassName)</a>
+                }
+                else
+                {
+
+                } 
+            </li>
+
+      
+
+        }
+
+    </ul>
+</div>
+
+
+
+
+
+

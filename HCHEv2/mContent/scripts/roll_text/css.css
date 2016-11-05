@@ -1,0 +1,93 @@
+﻿@charset "utf-8";
+/* 滚动信息1 */
+.notice {
+	/*padding:20px 0 0 40px;*/
+	background:#FFF;
+	border-bottom:1px solid #D7D7D7;
+}
+.roll_text {
+	height:45px;
+	line-height:45px;
+}
+.roll_text .roll_text_list {
+	padding:0 0 0 15px;
+	font-size:14px;
+}
+.roll_text .roll_text_list .title {
+	float:left;
+	color:#416DA3;
+	padding-right:10px;
+	padding-left: 20px;
+	background:url(../../images/gif_08a.gif) no-repeat 0 13px; background-size:15px auto;
+	
+}
+/*.roll_text .roll_text_list ul {
+	margin-left:75px;
+}*/
+.roll_text .roll_text_list ul li {
+	height:45px;
+	line-height:45px;
+	overflow:hidden;
+	padding-right:10px;
+}
+.roll_text .roll_text_list span {
+	padding-left:15px;
+	color:#999999;
+}
+.roll_text .roll_text_number {
+	float:right;
+	display:none;
+}
+.roll_text .roll_text_button {
+	float:right;
+	padding:13px 15px 0;
+}
+.roll_text .roll_text_button a {
+	display:block;
+	width:11px;
+	height:6px;
+	margin-bottom:8px;
+	background:url(../../images/common/ico_roll_text.png) no-repeat;
+}
+.roll_text .roll_text_button .a2 {
+	background-position: 0 -50px;
+}
+.roll_text .roll_text_button .a1:hover {
+	background-position: right 0;
+}
+.roll_text .roll_text_button .a2:hover {
+	background-position: right bottom;
+}
+
+/* 滚动信息2 */
+/*.roll_text_b .roll_text_list {
+	padding:1px 0 0 130px;
+}*/
+.roll_text_b .roll_text_list span {
+	padding-left:12px;
+	color:#999999;
+}
+.roll_text_b .roll_text_number {
+	float:right;
+	display:none;
+}
+.roll_text_b .roll_text_button {
+	float:right;
+	padding:11px 10px 0 0;
+}
+.roll_text_b .roll_text_button a {
+	background:url(../../images/gif_05.gif) no-repeat;
+	display:inline-block; *display:inline; zoom:1;
+	width:12px;
+	height:13px;
+	margin-left:4px;
+}
+.roll_text_b .roll_text_button a.a2 {
+	background-position:right 0;
+}
+.roll_text_b .roll_text_button .a1:hover {
+	background-position:0 bottom;
+}
+.roll_text_b .roll_text_button .a2:hover {
+	background-position:right bottom;
+}

@@ -1,0 +1,483 @@
+﻿@using HC.Data.ViewModels;
+@using HC.Web.Framework.UI.Captcha;
+@using HC.Service.Section;
+@using HC.Core.CommonMethod;
+@using HC.Core.Infrastructure
+@using HC.Data.Models
+@model LeaveMesModelList
+@{
+    var pageSize = 10;
+    ViewBag.Title = "咨询管理";
+    Layout = "~/HC.Manage/Views/Shared/mLayoutForAb2.cshtml";
+
+
+}
+
+@section headCSS{
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsell.css" type="text/css" />
+    <link rel="stylesheet" href="~/HC.Manage/Content/common/css/soldoutsellAB.css" type="text/css" />
+
+<link rel="stylesheet" href="~/HC.Manage/Content/common/css/Myevaluate.css" type="text/css" />
+<link rel="stylesheet" href="~/HC.Manage/Content/common/css/MyevaluateAB.css" type="text/css" />
+    <style type="text/css">
+        .allSections {
+            display: none;
+        }
+
+        .checkedbox {
+            height: 50px !important;
+        }
+
+        .goodsdetailed {
+            margin-top: 0px !important;
+        }
+
+        #onsalesM .goodsdetailed p {
+            min-height: auto !important;
+        }
+        .breakP{
+            word-break: break-word;
+                overflow: initial !important;
+        }
+        .publishtime{
+            height:auto !important;
+        }
+        .hche_soldgoods{
+            width:276px !important;
+        }
+    </style>
+}
+
+@section headScript{
+    <script type="text/javascript" src="~/HC.Manage/Content/common/script/Myevaluate.js"></script>
+}
+
+
+
+
+<div class="buyerright">
+    <div class="sellinggoodslist">
+        <div class="sellinggoodsserchnav">
+            <div class="hcmoneynav">
+                <div class="hche_soldgoods">
+                    <i>咨询管理</i>MESSAGE MANAGEMENT
+                </div>
+                <div class="hche_soldgoodsimg">
+                </div>
+                <div class="hche_private">
+                    @*特权 ▪ 专享*@
+                </div>
+            </div>
+
+        </div>
+
+        <div class="salegoodslist">
+            @(Html.Telerik().Grid<LeaveMessaeModel>(Model.LeaveMesModels.Data).Name("onsalesM")
+            .ToolBar(toolBar => toolBar.Template(
+                @<div style="padding: 10px">
+
+                    @*<input type="checkbox" id="selectAll" />全选*@
+                    @*<a id="deletePro" class="del_show">删除</a>*@
+                    <a id="recommendPro" class="del_show shopchoose">显示</a>
+                        <a id="OffRecommendPro" class="del_show shopchoose">取消显示</a>
+                       @* <a id="OpIsMainOn" class="del_show shopchoose">设为主营</a>
+    <a id="OpIsMainOff" class="del_show shopchoose">取消主营</a>
+    <a id="offSale" class="del_show">下架</a>
+    <a id="importPro" class="del_show">导入商品</a>
+    <a id="importProTemp" class="del_show" style="width:90px;">导入模板下载</a>*@
+                </div>))
+                       .ClientEvents(events =>
+                       events.OnDataBinding("onsaleBinding")
+                       .OnDataBound("onsaleBound")
+                       .OnRowDataBound("onRowDataBound")
+               )
+           .Columns(columns =>
+                   {
+                       columns.Bound(x => x.LeaveContent).Title("咨询内容").Width(50)
+                           .Template(@<text>
+                            @*<div class="checkedbox"><input type="checkbox" class="checkboxGroups" name="check" value="@item.MessageID"></div>*@
+                            
+                            @*<div class="goodsdetailed">*@                              
+                                @*<p class="publishtime breakP"><a href="javascript:;">@item.LeaveContent</a></p>*@
+                                <p class="publishtime breakP">@item.LeaveContent</p>
+                            @*</div>*@
+                        </text>).ClientTemplate("<div class=\"checkedbox\"><input type=\"checkbox\" class=\"checkboxGroups\" name=\"check\" value=\"<#= MessageID #>\"></div> <p class=\"publishtime breakP\"><#= LeaveContent #></p>"
+                    );
+                    
+                    //ClientTemplate("<div class=\"checkedbox\"><input type=\"checkbox\" class=\"checkboxGroups\" name=\"check\" value=\"<#= MessageID #>\"></div> <p class=\"publishtime breakP\"><#= LeaveContent #></p>"
+                    //)
+                    
+                    
+                    //<div class=\"checkedbox\"><input type=\"checkbox\" class=\"checkboxGroups\" name=\"check\" value=\"<#= MessageID #>\"></div><div class=\"goodsdetailed\"> <p class=\"publishtime breakP\"><a href=\"javascript:;\"><#= LeaveContent #></a></p>"
+                    
+                       //.ClientTemplate("<div class=\"checkedbox\"><input type=\"checkbox\" class=\"checkboxGroups\" name=\"check\" value=\"<#= Id #>\"></div><div class=\"listshowimg\"><img src=\"<#= ProImg #>\"></div><div class=\"goodsdetailed\"> <p><a href=\"javascript:;\"><#= Title #></a></p><p class=\"publishtime\"><a href=\"javascript:;\">发布时间：<#= releaseTime #></a></p>"
+                       //        );
+
+                       columns.Bound(x => x.LeaveName).Title("咨询人").Width(63);
+
+
+                       columns.Bound(x => x.QQ).Title("电话").Width(63).HtmlAttributes(new { @class = "DtdIESeven" })
+                           .Template(@<text>  <span>@item.Phone</span> </text>).ClientTemplate("<span> <#= Phone #></span>");
+
+
+                       columns.Bound(x => x.QQ).Title("邮箱").Width(63).HtmlAttributes(new { @class = "DtdIESeven" })
+                           .Template(@<text> <span>@item.QQ</span> </text>).ClientTemplate("<span> <#= QQ #></span> ");
+                
+                
+                       columns.Bound(x => x.createTime).Title("咨询时间").Width(63).HtmlAttributes(new { @class = "singTotalIESeven" });
+
+
+                       columns.Bound(x => x.Answer).Title("回复内容").Width(63).Template(@<text><p> @item.Answer</p> </text>)
+                                       .ClientTemplate("<p class=\"breakP\"><#= Answer #></p>");
+                       columns.Bound(x => x.MessageID)
+                                       .Width(50)
+                                       .Template(@<text></text>)
+                                       .ClientTemplate("<span><a href=\"javascript:void(0);\" class=\"rowOffSale\" mst=\"<#= MessageID #>\">删除</a></span>")
+                                       .Title("操作");
+                   }).NoRecordsTemplate("暂无数据")
+                       .Pageable(seting => seting.Total(Model.LeaveMesModels.Total).PageSize(pageSize).Position(GridPagerPosition.Bottom))
+                                                                                                                           .DataBinding(binding => binding.Ajax().Select("MessageAjax", "LeaveMessage")).EnableCustomBinding(true)
+
+            )
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+<!--回复框-->
+<div class="hc_homevalue" id="hc_replydiv" style="display:none;">
+    <div class="hc_homevaluerod">
+        <div class="hc_textare">
+            <span class="hc_closdiv">X</span>
+            <textarea class="text_reply" maxlength="500" id="hc_textreply"></textarea>
+            <div class="hc_fonttextare"><span id="hc_textNmb">0</span>/500字<input class="hc_textarebut" type="button" value="发表回复" /></div>
+        </div>
+        <b class="hc_reply_arrow"></b>
+        <b class="hc_reply_arrow2"></b>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var selectedIds = [];
+
+    $(document).ready(function () {
+
+
+
+
+        var eleName="onsalesM";
+        var totalH= $("#"+eleName).height();
+        var headH=$("#"+eleName+" .t-grid-header").height();
+        var toolBarH=$("#"+eleName+" .t-toolbar").height();
+        var curnetH=totalH-headH-toolBarH;
+        var paddH=(curnetH-20)/2;
+        $("#"+eleName+" table").prepend("<div class=\"coverWait\" style=\"position: absolute;height:"+curnetH+"px  ;width: 100%;background-color: #E5E5E5;\"><span style=\"text-align: center; display: block; padding-top: "+paddH+"px; color: #777;\">请稍等，数据加载中......</span></div>");
+
+
+
+        //扩展trim 支持ie8
+        if (!String.prototype.trim) { //判断下浏览器是否自带有trim()方法
+            String.prototype.trim = function () {
+                return this.replace(/(^\s*)|(\s*$)/g, "");
+            }
+        }
+        //扩展结束
+
+        //更改成文字
+        $(".t-arrow-next").each(function (i, e) {
+            $(this).text("下一页");
+        });
+        $(".t-arrow-prev").each(function (i, e) {
+            $(this).text("上一页");
+        });
+        //更改成文字结束
+        $(".t-arrow-first").css({ "display": "none" });
+        $(".t-arrow-last").css({ "display": "none" });
+        $(".t-refresh").css({ "display": "none" });
+
+        processGridDsiplay("#onsalesM");
+        $(".t-widget").show();
+
+        //搜索按钮事件
+        $("#goSearchOnsale").click(function(){
+            var grid = $("#onsalesM").data('tGrid');
+            grid.currentPage = 1;
+            grid.ajaxRequest();
+        });
+
+
+        //全选按钮事件
+        $('#selectAll').click(function () {
+            $('.checkboxGroups').attr('checked', $(this).is(':checked')).change();
+        });
+
+        //给grid中checkbox绑定change事件
+        $('.checkboxGroups:input[type=checkbox]').live('change', function (e) {
+            var $check = $(this);
+
+            if ($check.is(":checked") == true) {
+                var checked = jQuery.inArray($check.val(), selectedIds);
+                if (checked == -1) {
+                    //add id to selectedIds.
+                    selectedIds.push($check.val());
+                }
+            }
+            else {
+                var checked = jQuery.inArray($check.val(), selectedIds);
+                if (checked > -1) {
+                    //remove id from selectedIds.
+                    selectedIds = $.grep(selectedIds, function (item, index) {
+                        return item != $check.val();
+                    });
+                }
+            }
+            updateMasterCheckbox();
+        });
+
+
+
+        $("#importexcel-window").css({"display":"none"});
+        $("#importTemp-window").css({"display":"none"});
+        $(".t-close").text("");
+
+    });
+
+    //转为汉字的处理 如果ajax请求返回totalcount是0  则不执行 ondatabind
+    function processGridDsiplay(ele) {
+        var str = $("" + ele + " .t-status-text").text().trim();
+        var indexOF = str.indexOf("f");
+        var totalDate = str.substr(indexOF + 1).trim();
+        var pageSize=@pageSize;
+        var totalPage=Math.ceil(totalDate/pageSize);
+        $(""+ele+" .t-status-text").text("共"+totalPage+"页");
+    }
+
+    function dumps(obj) {
+        var result = [];
+        $.each(obj, function (key, value) { result.push(value); });
+
+        //var results=[];
+        //$.each(obj,function(k,v){results.push( k+"-"+v ) });
+        //console.log(results);
+        return result;
+    }
+
+
+
+
+
+
+
+
+    function onsaleBinding(e) {
+        var searchModel = {
+            @*proSearchType: $('#@Html.FieldIdFor(model => model.proSearchType)').val(),*@
+            NewsClassID: $("#searchClassID").val()
+
+        };
+
+        e.data = searchModel;
+    }
+
+    function onsaleBound(e) {
+
+        //处理分页
+        if($(e.currentTarget).find(".t-numeric").children().length>0){
+            var ajaxPageCount= $(e.currentTarget).find(".t-numeric").find("a").length+1;
+            $(e.currentTarget).find(".t-status-text").text("共"+ajaxPageCount+"页");
+        }else{
+            $(e.currentTarget).find(".t-status-text").text("共"+0+"页");
+        }
+        //处理分页
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //移除等待提示层
+        var eleName=$(e.delegateTarget).attr("id");
+        $("#onsalesM table div.coverWait").remove();
+
+
+
+        $('.checkboxGroups:input[type=checkbox]').each(function () {
+            var currentId = $(this).val();
+            var checked = jQuery.inArray(currentId, selectedIds);
+            $(this).attr('checked', checked > -1);
+        });
+        updateMasterCheckbox();
+    }
+
+    function onRowDataBound(e){
+        var s = e.dataItem;
+        var rowItem = e.row;
+        var result = dumps(s);
+
+
+
+        //if(result[14]==1){//1 主营  0否
+        //    var ssx=$(rowItem.cells[0]).find(".goodsdetailed").find("p:eq(0)");  $(ssx).after("<p class=\"ctrolheig\"><img src=\"/HC.Manage/images/publicimg/mc_zy.gif\" ></p>");
+        //}
+        //if(result[7]==1){//1 推荐  0无
+        //    var ss=$(rowItem.cells[0]).find(".goodsdetailed").find("p:eq(0)");  $(ss).after("<p class=\"ctrolheig\"><img src=\"/HC.Manage/images/publicimg/mc_tj.gif\" ></p>");
+        //}
+
+
+        //<span><a href=\"###\">回复</a></span>
+        //"<input type=\"button\" value=\"回复\" class=\"hc_goodevalue\" name=\"revertbut\" mst='"+mst+"' />"
+
+        var lastTd=$(rowItem.cells[6]);
+        var origHtml=lastTd.html();
+        if(s.Answer==null){
+            lastTd.html(origHtml+"<a href=\"###\"  name=\"revertbut\" mst='"+s.MessageID+"'>回复 </a>")
+        }else{
+            lastTd.html(origHtml+"<a href=\"###\"  name=\"revertbut\" mst='"+s.MessageID+"' >编辑回复</a>")
+        }
+        //console.log(s);
+
+        var firstTd=$(rowItem.cells[0]).find(".checkedbox");
+        if(s.IsShow){
+            var origHtml=$(firstTd).html();
+            $(firstTd).html(origHtml+"<img src=\"/HC.Manage/images/publicimg/mc_tj.gif\" >");
+        }
+
+
+
+
+    }
+
+    //更新主checbox
+    function updateMasterCheckbox() {
+        var numChkBoxes = $('.checkboxGroups').length;
+        var numChkBoxesChecked = $('.checkboxGroups:input[checked]').length;
+        $('#selectAll').attr('checked', (numChkBoxes == numChkBoxesChecked) && (numChkBoxes > 0));
+    }
+
+
+
+
+
+
+    //删除
+    $(document).on("click",".rowOffSale",function(){
+        var proID=$(this).attr("mst");
+
+        if(confirm("确定要删除咨询吗?")){
+            $.ajax({
+                url: "/manage/LeaveMessage/delMessage/"+proID,
+                type: 'GET',
+                dataType: 'json',
+                error: function (xhr, status) {
+                    alert("删除出错");
+                },
+                success: function (Data) {
+                    if(Data=="success"){
+                        var grid = $('#onsalesM').data('tGrid');
+                        grid.ajaxRequest();
+                        alert("删除成功");
+                    }else{
+                        alert("删除出错");
+                    }
+                }
+            });
+        }
+    })
+
+    function clearSelectIDS()
+    {
+        selectedIds=[];
+    }
+
+
+    //显示
+    $("#recommendPro").click(function(){
+        if(selectedIds.length==0){
+            alert("请选择要显示的项");
+            return;
+        }
+        var proID=selectedIds.join(',');
+        $.ajax({
+            url: "/manage/LeaveMessage/showMes",
+            data: { ids: proID },
+            type: 'GET',
+            dataType: 'json',
+            error: function (xhr, status) {
+                alert("显示出错");
+            },
+            success: function (Data) {
+                if(Data=="success"){
+                    var grid = $('#onsalesM').data('tGrid');
+                    clearSelectIDS();
+                    grid.ajaxRequest();
+                   
+                    alert("显示成功");
+                }else{
+                    alert("显示出错");
+                }
+            }
+        });
+       
+    })
+
+
+    //取消显示
+    $("#OffRecommendPro").click(function(){
+        if(selectedIds.length==0){
+            alert("请选择要取消的项");
+            return;
+        }
+        var proID=selectedIds.join(',');
+        $.ajax({
+            url: "/manage/LeaveMessage/offshowMes",
+            data: { ids: proID },
+            type: 'GET',
+            dataType: 'json',
+            error: function (xhr, status) {
+                alert("取消出错");
+            },
+            success: function (Data) {
+                if(Data=="success"){
+                    var grid = $('#onsalesM').data('tGrid');
+                    clearSelectIDS();
+                    grid.ajaxRequest();
+
+                    alert("取消成功");
+                }else{
+                    alert("取消出错");
+                }
+            }
+        });
+       
+    })
+
+
+
+
+</script>
+
+@section footScript{
+    @*<script type="text/javascript">
+        //先强制gridajax
+        $(document).ready(function(){
+            var grid = $('#onsalesM').data('tGrid');
+            grid.currentPage = 1;
+            grid.pageSize=1;
+            grid.ajaxRequest();
+        })
+        </script>*@
+
+}

@@ -1,0 +1,85 @@
+﻿@using HC.Data.Models
+@{
+
+    var curentPage = int.Parse(ViewBag.curentPage.ToString());
+    var totalCount = int.Parse(ViewBag.TottalCount.ToString());
+    var totalPage = Math.Ceiling((float)totalCount / 15);
+    var curentNewsClass = ViewData["curentNewsClass"] as NewsClass;
+    ViewBag.title = curentNewsClass.ClassName;
+}
+
+@model List<News>
+
+@section lanmuName{
+    <span class="header_c">@curentNewsClass.ClassName</span>
+}
+
+
+
+
+
+<div class="block">
+    <!--子栏目 -->
+    <!--有几个栏目就显示几 最大04 -->
+    <!--<div class="submenu submenu04">
+      <ul>
+        <li class="on"><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+      </ul>
+      <div class="clr"></div>
+    </div>
+    <div class="clr10"></div> -->
+    <!--栏目内容 -->
+    <div class="wap_01">
+
+        <!--列表 -->
+        <div class="news_list">
+            <ul>
+
+                @foreach (var item in Model)
+                {
+                    <li><a href="@Url.Action("news", "Information", new { id = item.NewsID })"><span class="title">@item.NewsTitle</span><span class="time">@item.CreatTime.ToString("yyyy-MM-dd")</span></a></li>
+                }
+            </ul>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div class="page"><a href="javascript:void(0)" id="loadMore" curentpage="@curentPage">加载更多</a></div>
+</div>
+
+@section footScript{
+
+    <script type="text/javascript">
+
+        
+
+        $(document).ready(function () {
+            var totalPage = '@totalPage';
+            $("#loadMore").click(function () {
+                var curentP = $(this).attr("curentPage").trim() * 1;
+
+                if ((curentP + 1) > totalPage) {
+                    $("#loadMore").html("没有更多了");
+                } else {
+                    $.ajax({
+                        type: "GET",
+                        url: "/Information/SectionMobileAjax/@curentNewsClass.ClassID?page=" + (curentP + 1),
+                        dataType: "json",
+                        success: function (data) {
+
+                            var newsPic = "";
+                            var contentSubStr = "";
+                            for (var i = 1; i <= data.length; i++) {
+                                var appHtml = "<li><a href=\"/Information/news/" + data[i - 1].NewsID + "\"><span class=\"title\">" + data[i - 1].NewsTitle + "</span><span class=\"time\">" + data[i - 1].CreatTime + "</span></a></li>"
+                                $(".b_list ul").append(appHtml);
+                            }
+                            $("#loadMore").attr("curentPage", curentP + 1);
+                        }
+                    });
+                }
+            })
+        })
+    </script>
+}

@@ -1,0 +1,115 @@
+﻿@using HC.Data.Models
+
+@{
+    ViewBag.Title = "留言板";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+@section headCss{
+    <style type="text/css">
+        .error{
+            display:none;
+            color:red;
+        }
+    </style>
+    }
+@section headScript{
+    <script src="~/Scripts/leaveMessage.js" type="text/javascript" charset="UTF-8"></script>
+}
+
+<div class="bj1">
+    <div class="bj2">
+        <div class="bj3">
+            <div class="block">
+                @Html.Action("HeadNav", "Home")
+
+                <div class="neirong_top"></div>
+                <div class="neirong">
+                    <div class="nei">
+                        <div class="nei_left">
+                    
+                            <div class="leftnav">
+                                <div class="leftnav2">
+                                    <div class="leftnav_title">留言 </div>
+                                    <div class="leftnav_bg">
+                                        <ul>
+                                            <li class="on"><a href="/Information/MessageList">留言内容</a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clr15"></div>
+
+                            <div class="column_02">
+                                <div class="column_t"><!--<span class="column_more"><a href="#" target="_blank">更多&gt;&gt;</a></span> --><p class="column_title">戏曲时讯</p></div>
+                                <div class="column_c">
+                                    <div class="left_01">
+                                        @{Html.RenderAction("leftNewsDelivery", "Information");}
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="padding-top:20px;"><a href="/Information/Section/32"><img src="~/images/erji/left_link.jpg"></a></div>
+
+                            <script type="text/javascript" src="/scripts/SpryCollapsiblePanel.js"></script>
+                        </div>
+                        <div class="nei_right">
+                            <!--当前位置 -->
+                            <div class="crumb">
+                                <div class="position">
+                                    <a href="/" title="首页" class="home"></a>
+                                    <p>
+                                        <a href="/">首页</a>
+                                        @*@Html.Raw(ViewData["nav"].ToString())*@
+                                    </p>
+                                </div>
+
+                                <div class="clr"></div>
+                            </div>
+
+                            <div class="right_title">
+                                <p>留言板</p>
+                            </div>
+
+
+
+                            <!--当前位置-end-->
+                            <div class="message">
+                                <form action="/Information/LeaveMessage"  method="post">
+                                    <ul>
+                                        <li class="first">
+                                            <a href="#" class=" icon user"></a><input type="text" id="leaveName" name="leaveName" class="text" placeholder="您的姓名" />
+                                            <p class="error">请输入姓名</p>
+                                            <div class="clear"></div>
+                                        </li>
+                                        <li class="first">
+                                            <a href="#" class=" icon phone"></a><input id="leavePhone" type="text" name="leavePhone" class="text" placeholder="手机号码" />
+                                            <p class="error">输入有误</p>
+                                            <div class="clear"></div>
+                                        </li>
+                                        <li class="first">
+                                            <a href="#" class=" icon email"></a><input id="leaveEmail" name="leaveEmail" type="text" class="text" placeholder="您的邮箱" />
+                                            <p class="error">输入有误</p>
+                                            <div class="clear"></div>
+                                        </li>
+                                        <li class="second">
+                                            <a href="#" class=" icon msg"></a><textarea id="leaveContent" name="leaveContent" placeholder="留言内容"></textarea>
+                                            <p class="error" style=" margin-left: 54px;">请输入留言内容</p>
+                                            <div class="clear"></div>
+                                        </li>
+                                    </ul>
+                                    <input type="submit" value="提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交" id="submitMessage">
+                                    <div class="clear"></div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
