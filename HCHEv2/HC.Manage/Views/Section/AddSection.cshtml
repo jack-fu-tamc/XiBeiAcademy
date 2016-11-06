@@ -469,16 +469,21 @@
 
 
             @*展示方式*@
-            <div class="hc_item">
+            @{
+                  var showWayDis = (Model.IsSingle == 0) ? "bolck" : "none";
+            }
+            <div class="hc_item" id="SectionShowWay" style="display:@showWayDis">
                 <span class="hc_textlable"><span class="hc_red"></span>展示方式：</span>
                 <div class="hc_chk">
-                     
+                    @Html.RadioButtonFor(x => x.ShowWay, 0, new { @class = "hc_radiospan" })<span class="hc_radiospan">文字列表</span>
+                    @Html.RadioButtonFor(x => x.ShowWay, 1, new { @class = "hc_radiospan" })<span class="hc_radiospan">图文列表</span>
+                    @Html.RadioButtonFor(x => x.ShowWay, 2, new { @class = "hc_radiospan" })<span class="hc_radiospan">图片展示</span>
+                    @Html.RadioButtonFor(x => x.ShowWay, 3, new { @class = "hc_radiospan" })<span class="hc_radiospan">图片特效</span>
                 </div>
             </div>
-
-
-
-
+           
+            
+            
 
             @*单页内容*@
             <div class="hc_item editorOut">
@@ -539,13 +544,16 @@
                 if (checkedVal == 1) {//单页
                     $(".editorOut").show();
                     $(".linkAddressInput").hide();
+                    $("#SectionShowWay").hide();
                 } else if (checkedVal == 0) {//列表
                     $(".editorOut").hide();
                     $(".linkAddressInput").hide();
+                    $("#SectionShowWay").show();
                     //KindEditor.instances[0].html("");
                 } else if (checkedVal == 2) {//外链
                     $(".editorOut").hide();
                     $(".linkAddressInput").show();
+                    $("#SectionShowWay").hide();
                 } else {
 
                 }
