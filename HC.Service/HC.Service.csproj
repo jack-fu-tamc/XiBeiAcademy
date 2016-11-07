@@ -76,6 +76,8 @@
     <Compile Include="Authentication\IAuthenticationService.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EnrolSys\EnrolSysService.cs" />
+    <Compile Include="EnrolSys\IEnrolSysService.cs" />
     <Compile Include="FileRecord\FileRecorderService.cs" />
     <Compile Include="FileRecord\IFileRecordService.cs" />
     <Compile Include="LeaveMessage\ILeaveMessageService.cs" />

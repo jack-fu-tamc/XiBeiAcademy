@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VMEJsonResult .cs" />
     <Compile Include="DependencyRegistrar.cs" />
     <Compile Include="ManageStoreAllowNavigationAttributecs.cs" />
     <Compile Include="mobileProcessAttribute.cs" />

@@ -30,6 +30,7 @@ using HC.Service.SqlQuery;
 using HC.Service.UserGroup;
 using HC.Service.FileRecord;
 using HC.Service.OpLog;
+using HC.Service.EnrolSys;
 using ResposityOfEf;
 
 
@@ -97,6 +98,7 @@ namespace HC.Web.Framework
             builder.RegisterType<UserGroupService>().As<IuserGroupService>().InstancePerHttpRequest();
             builder.RegisterType<FileRecorderService>().As<IFileRecordService>().InstancePerHttpRequest();
             builder.RegisterType<OpLogService>().As<IopLogService>().InstancePerHttpRequest();
+            builder.RegisterType<EnrolSysService>().As<IEnrolSysService>().InstancePerHttpRequest();
             //builder.RegisterType<User_InfoBll>().As<IUser_InfoService>().InstancePerHttpRequest();
             //builder.RegisterType<User_ExpBll>().As<IUser_ExpService>().InstancePerHttpRequest();
             //builder.RegisterType<User_PhoneBll>().As<IUser_PhoneService>().InstancePerHttpRequest();
