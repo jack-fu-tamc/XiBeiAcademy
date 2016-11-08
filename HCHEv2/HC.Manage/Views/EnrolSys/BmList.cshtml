@@ -378,6 +378,13 @@
 
 
 
+        $("#exportStudent").click(function () {
+                window.open("/manage/EnrolSys/ExportStudent?StFrom=" + searchModel.StFrom + "&startTime=" + searchModel.startTime + "&endTime=" + searchModel.endTime + "&StCardNo=" + searchModel.StCardNo + "&StudentName=" + searchModel.StudentName);          
+        })
+
+
+
+
     });
 
     //转为汉字的处理 如果ajax请求返回totalcount是0  则不执行 ondatabind
@@ -679,12 +686,7 @@
         });
     }
 
-    function exportStudent() {
-        searchModel
-        //href="/manage/EnrolSys/ExportStudent"
-        //window.open(controllerDirectory + "ExportExcel/" + typeId + "/" + "?" + $("#Form1").serialize());
-        window.open("/manage/EnrolSys/ExportStudent?StFrom=" + searchModel.StFrom + "&startTime=" + searchModel.startTime + "&endTime=" + searchModel.endTime + "&StCardNo=" + searchModel.StCardNo + "&StudentName=" + searchModel.StudentName);
-    }
+   
 
 
     

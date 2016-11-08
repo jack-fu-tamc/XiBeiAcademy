@@ -937,6 +937,8 @@
     <Content Include="HC.Manage\Views\Section\AddSection_.cshtml" />
     <Content Include="HC.Manage\Views\EnrolSys\BmList.cshtml" />
     <Content Include="HC.Manage\Views\EnrolSys\StudentDetail.cshtml" />
+    <Content Include="Excel\TempStudentInfo.xlsx" />
+    <Content Include="Excel\StudentInfo.xlsx" />
     <None Include="HC.Manage\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

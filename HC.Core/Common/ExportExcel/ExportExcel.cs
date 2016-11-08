@@ -21,7 +21,7 @@ namespace HC.Core.Common.ExportExcel
         /// <param name="info"></param>
         /// <param name="temp"></param>
         /// <param name="dt"></param>
-        public void ExportExcel(FileInfo info, FileInfo temp, DataTable dt)
+        public void ExportExcelStudentInfo(FileInfo info, FileInfo temp, DataTable dt)
         {
             using (var xlPackage = new ExcelPackage(info, temp))
             {
@@ -31,8 +31,8 @@ namespace HC.Core.Common.ExportExcel
                 worksheet.Column(4).Width = 21.25;//设置列宽
                 worksheet.Column(5).Width = 20.75;//设置列宽
                 worksheet.Column(6).Width = 13.75;//设置列宽
-                worksheet.Column(18).Width = 15;//设置列宽
-                for (var i = 1; i <= 20; i++)
+                worksheet.Column(17).Width = 15;//设置列宽
+                for (var i = 1; i <= 17; i++)
                 {
                     worksheet.Column(i).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;//设置列宽
                 }
@@ -58,7 +58,7 @@ namespace HC.Core.Common.ExportExcel
                    "收件人电话"
               };
                 //worksheet.Cells[1, 5].Value = starttime + "--" + endtime + "工资" + sumerizingBy + "汇总表" + "(" + attibute.Alias + ")";
-                worksheet.Cells[1, 6].Value = "人口统计表(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                worksheet.Cells[1, 6].Value = "报名学生信息(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";
                 //worksheet.Cells[1, 5].Style.Fill.PatternType = ExcelFillStyle.Solid;
                 //worksheet.Cells[1, 5].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(184, 204, 228));
                 //worksheet.Cells[1, 5].Style.Font.Bold = true;
@@ -75,27 +75,27 @@ namespace HC.Core.Common.ExportExcel
                 foreach (DataRow sumer in dt.Rows)
                 {
                     int col = 1;
-                    worksheet.Cells[row, col].Value = sumer["FamilyRelationName"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["FullName"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["SexName"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["IdentityNo"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["FamilyRegisterNo"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["Birthday"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["NationText"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["StudentName"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["Sex"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["SelfCardNo"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["registerNo"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["Stype"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["Scategory"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["Sfrom"].ToString(); col++;
 
-                    worksheet.Cells[row, col].Value = sumer["EducationalLevelText"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["PropertyText"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["PoliticalLandscapeText"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["MaritalStatusText"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["FirstMarriageDate"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["NativePlace"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["DomicilePlace"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["HomeAddress"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["CauseSeparation"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["ResidentialStatus"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["Mobile"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["EscuageStatusText"].ToString(); col++;
-                    worksheet.Cells[row, col].Value = sumer["AccountStatusName"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["SchoolName"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["SeflPhone"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["FatherPhone"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["MotherPhone"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["TelNum"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["major"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["SendAddress"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["ZipCode"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["ReceiveName"].ToString(); col++;
+                    worksheet.Cells[row, col].Value = sumer["ReceivePhone"].ToString(); col++;
+                    //worksheet.Cells[row, col].Value = sumer["Mobile"].ToString(); col++;
+                    //worksheet.Cells[row, col].Value = sumer["EscuageStatusText"].ToString(); col++;
+                    //worksheet.Cells[row, col].Value = sumer["AccountStatusName"].ToString(); col++;
                     row++;
                 }
                 xlPackage.Save();

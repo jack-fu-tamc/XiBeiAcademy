@@ -47,6 +47,9 @@
     <Reference Include="Autofac.Integration.Mvc">
       <HintPath>..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>

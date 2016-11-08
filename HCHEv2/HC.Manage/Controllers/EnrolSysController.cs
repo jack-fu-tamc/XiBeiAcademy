@@ -166,14 +166,14 @@ namespace HC.Manage.Controllers
 
             var studentList = _iEnrolSysService.ExportStudentInfos(sModel);
 
-          
-            string path = System.Web.HttpContext.Current.Server.MapPath("~/Excel/expStudent.xlsx");
-            string templetPath = System.Web.HttpContext.Current.Server.MapPath("~/Excel/tempExpStudent.xlsx");
+
+            string path = System.Web.HttpContext.Current.Server.MapPath("~/Excel/StudentInfo.xlsx");
+            string templetPath = System.Web.HttpContext.Current.Server.MapPath("~/Excel/TempStudentInfo.xlsx");
             FileInfo info = new FileInfo(path);
             FileInfo temp = new FileInfo(templetPath);
             var exp = new HC.Core.Common.ExportExcel.ExportExcel();
-            exp.ExportExcel(info, temp, ToDataTable<StudentInfo>(studentList.ToList()));
-            return File(path, "application/octet-stream", "人口信息导出.xlsx");
+            exp.ExportExcelStudentInfo(info, temp, ToDataTable<StudentInfo>(studentList.ToList()));
+            return File(path, "application/octet-stream", "报名学生信息导出.xlsx");
         }
 
     }
