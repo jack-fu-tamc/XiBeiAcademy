@@ -194,6 +194,7 @@
     <Content Include="Content\common\css\singlePage\public-1200.css" />
     <Content Include="Content\common\css\soldoutsell.css" />
     <Content Include="Content\common\css\soldoutsellAB.css" />
+    <Content Include="Content\common\css\Style.css" />
     <Content Include="Content\common\css\telphone.css" />
     <Content Include="Content\common\css\timePick.css" />
     <Content Include="Content\common\css\WelcomeCenter.css" />
@@ -1350,6 +1351,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\EnrolSys\BmList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EnrolSys\StudentDetail.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

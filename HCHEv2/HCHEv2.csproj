@@ -936,6 +936,7 @@
     <Content Include="HC.Manage\Views\Shared\BaoMingLayOut.cshtml" />
     <Content Include="HC.Manage\Views\Section\AddSection_.cshtml" />
     <Content Include="HC.Manage\Views\EnrolSys\BmList.cshtml" />
+    <Content Include="HC.Manage\Views\EnrolSys\StudentDetail.cshtml" />
     <None Include="HC.Manage\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

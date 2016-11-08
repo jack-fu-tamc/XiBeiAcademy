@@ -13,5 +13,7 @@ namespace HC.Service.EnrolSys
     {
         IPagedList<StudentInfo> getStudentInfoBySearch(SerchStudentModel sModel,int pageSize,int pageIndex);
         StudentInfo GetStudentInfoById(int studentID);
+
+        IList<StudentInfo> ExportStudentInfos(SerchStudentModel sModel);
     }
 }

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonHelper.cs" />
+    <Compile Include="Common\ExportExcel\ExportExcel.cs" />
     <Compile Include="Common\FileUpload\imgUpload.cs" />
     <Compile Include="Common\logHelper\fileRWhelper.cs" />
     <Compile Include="Common\logHelper\LoggerHelper.cs" />

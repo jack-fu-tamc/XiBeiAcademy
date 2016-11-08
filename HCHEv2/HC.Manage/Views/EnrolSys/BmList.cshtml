@@ -179,7 +179,7 @@
             .ToolBar(toolBar => toolBar.Template(
                 @<div style="padding: 10px">
                     <input type="checkbox" id="selectAll" />全选
-                    <a id="deletePro" class="del_show">导出到EXCEL</a>
+                    <a id="exportStudent" class="del_show" >导出到EXCEL</a>
                     @*<a id="addNews" href="javascript:void(0)" onclick="addNews();" class="del_show">添加新闻</a>
                         <a id="moveNews" href="javascript:void(0)" class="del_show" onclick="transferNews();">新闻转移</a>
                         <a id="copyNews" href="javascript:void(0)" class="del_show" onclick="CopyNews();">新闻复制</a>
@@ -228,7 +228,8 @@
                        columns.Bound(x => x.StudentID)
                                        .Width(50)
                                        .Template(@<text><span>@Html.ActionLink("查看", "StudentInfoDetails", new { id = item.StudentID })</span><span><a href="/EnrolSys/StudentInfoDetails/@item.StudentID">查看</a></span><span></span></text>)
-                                       .ClientTemplate("<span><a href=\"/manage/EnrolSys/StudentInfoDetails/<#= StudentID #>\" >查看</a></span><span><a href=\"/EnrolSys/StudentInfoDetails/<#= StudentID #>\" target=\"_blank\">查看</a></span><span></span>")
+                                       //.ClientTemplate("<span><a href=\"/manage/EnrolSys/StudentInfoDetails/<#= StudentID #>\" >查看</a></span><span><a href=\"/EnrolSys/StudentInfoDetails/<#= StudentID #>\" target=\"_blank\">查看</a></span><span></span>")
+                                       .ClientTemplate("<span><a href=\"javascript:void(0);\" studentId=\"<#= StudentID #>\">查看</a></span><span></span>")
                                        .Title("操作");
                    }).NoRecordsTemplate("暂无数据")
                            .Pageable(seting => seting.Total(Model.students.Total).PageSize(pageSize).Position(GridPagerPosition.Bottom))
@@ -245,7 +246,7 @@
 
 <script type="text/javascript">
     var selectedIds = [];
-
+  
     $(document).ready(function () {
 
 
@@ -339,6 +340,41 @@
         //})
 
 
+
+        function initContentCopy(markId) {
+            top.dialog({
+                id: 'test-dialog1',
+                title: '考生详细信息',
+                width: 800,
+                //ok: function () {
+                //    this.content('hello world!');
+                //    return false;
+                //},
+                url: '/manage/EnrolSys/StudentDetail/' + markId,
+                //quickClose: true,
+                onshow: function () {
+                    //console.log('onshow');
+                },
+                oniframeload: function () {
+                    //console.log('oniframeload');
+                },
+                onclose: function () {
+                    this.remove();                    
+                },
+                onremove: function () {                                     
+                }
+            }).showModal();
+            return false;
+        }
+
+
+
+
+        //操作按钮事件绑定
+        $(document).on("click", ".t-last a", function () {            
+            var markId = $(this).attr("studentid");
+            initContentCopy(markId);
+        })
 
 
 
@@ -642,6 +678,16 @@
             }
         });
     }
+
+    function exportStudent() {
+        searchModel
+        //href="/manage/EnrolSys/ExportStudent"
+        //window.open(controllerDirectory + "ExportExcel/" + typeId + "/" + "?" + $("#Form1").serialize());
+        window.open("/manage/EnrolSys/ExportStudent?StFrom=" + searchModel.StFrom + "&startTime=" + searchModel.startTime + "&endTime=" + searchModel.endTime + "&StCardNo=" + searchModel.StCardNo + "&StudentName=" + searchModel.StudentName);
+    }
+
+
+    
 </script>
 
 @section footScript{
