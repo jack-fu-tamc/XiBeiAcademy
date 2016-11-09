@@ -48,8 +48,8 @@ namespace HC.Web.Framework
 
                 //var ccc = filterContext.ActionDescriptor.GetParameters();
                 // var bb=filterContext.Controller.ValueProvider.GetValue();
-
-                if ((filterContext.HttpContext.Request.Browser.IsMobileDevice || filterContext.HttpContext.Request.UserAgent.ToLower().Contains("micromessenger")) && (reType != "JsonResult" && reType != "ContentResult"))
+                var userAgent = filterContext.HttpContext.Request.UserAgent ?? "pc";
+                if ((filterContext.HttpContext.Request.Browser.IsMobileDevice || userAgent.ToLower().Contains("micromessenger")) && (reType != "JsonResult" && reType != "ContentResult"))
                 {
                     //var originActionName = filterContext.RouteData.Values["action"];
 

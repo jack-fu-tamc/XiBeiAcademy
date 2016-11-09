@@ -1,0 +1,15 @@
+﻿@{
+    Layout = null;
+    string url = string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"));
+    var picPath = url + "zhunkaozheng/" + ViewBag.id;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <img src="@picPath" width="690" height="950" /><!--这里调整准考证大小-->
+</body>
+</html>
