@@ -157,5 +157,24 @@ namespace HCHEv2.Controllers
             ViewBag.id = "aa12.png";
             return View();
         }
+
+
+
+
+
+        #region  报名入口
+        [HttpGet]
+        public ActionResult StuRegister()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult StuRegister(FormCollection from)
+        {
+            return new EmptyResult();
+        }
+        #endregion
     }
 }

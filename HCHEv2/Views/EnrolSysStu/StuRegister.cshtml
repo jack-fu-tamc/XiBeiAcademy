@@ -1,0 +1,132 @@
+﻿@{
+    Layout = null;
+    var StypeSelects = new List<SelectListItem>();
+    StypeSelects.Add(new SelectListItem() { Text = "请选择类型", Value = "", Selected = true });
+    StypeSelects.Add(new SelectListItem() { Text = "普通高中生", Value = "普通高中生" });
+    StypeSelects.Add(new SelectListItem() { Text = "三校生", Value = "三校生" });
+
+
+    var scategorySelect = new List<SelectListItem>();
+    scategorySelect.Add(new SelectListItem() { Text = "请选择类科别", Value = "", Selected = true });
+    scategorySelect.Add(new SelectListItem() { Text = "理科", Value = "理科", Selected = true });
+    scategorySelect.Add(new SelectListItem() { Text = "文科", Value = "文科", Selected = true });
+    scategorySelect.Add(new SelectListItem() { Text = "艺术", Value = "艺术", Selected = true });
+
+
+
+    var sfromSelect = new List<SelectListItem>();
+    sfromSelect.Add(new SelectListItem() { Text = "请选择生源地", Value = "", Selected = true });
+    sfromSelect.Add(new SelectListItem() { Text = "西安市", Value = "西安市" });
+    sfromSelect.Add(new SelectListItem() { Text = "铜川市", Value = "铜川市" });
+    sfromSelect.Add(new SelectListItem() { Text = "宝鸡市", Value = "宝鸡市" });
+    sfromSelect.Add(new SelectListItem() { Text = "咸阳市", Value = "咸阳市" });
+    sfromSelect.Add(new SelectListItem() { Text = "渭南市", Value = "渭南市" });
+    sfromSelect.Add(new SelectListItem() { Text = "榆林市", Value = "榆林市" });
+    sfromSelect.Add(new SelectListItem() { Text = "延安市", Value = "延安市" });
+    sfromSelect.Add(new SelectListItem() { Text = "汉中市", Value = "汉中市" });
+    sfromSelect.Add(new SelectListItem() { Text = "安康市", Value = "安康市" });
+    sfromSelect.Add(new SelectListItem() { Text = "商洛市", Value = "商洛市" });
+    sfromSelect.Add(new SelectListItem() { Text = "杨凌示范区", Value = "杨凌示范区" });
+
+
+
+    var majorSelect = new List<SelectListItem>();
+    majorSelect.Add(new SelectListItem() { Text = "请选择专业", Value = "", Selected = true });
+    majorSelect.Add(new SelectListItem() { Text = "汽车技术服务与营销", Value = "汽车技术服务与营销" });
+    majorSelect.Add(new SelectListItem() { Text = "金融管理与实务", Value = "金融管理与实务" });
+    majorSelect.Add(new SelectListItem() { Text = "会计与审计", Value = "会计与审计" });
+    majorSelect.Add(new SelectListItem() { Text = "电子商务", Value = "电子商务" });
+}
+@using HCHEv2.Models.stuRegist
+@model StuRegistInfo
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StuRegister</title>
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("StuRegister", "EnrolSysStu", FormMethod.Post, new { @autocomplete = "off", @class = "registerform" }))
+        {
+            @Html.AntiForgeryToken()
+
+
+            @Html.TextBoxFor(x => x.StudentName)
+            @Html.ValidationMessageFor(x => x.StudentName)
+
+
+            @Html.RadioButtonFor(x => x.Sex, "男")
+            @Html.RadioButtonFor(x => x.Sex, "女")
+            @Html.ValidationMessageFor(x => x.Sex)
+
+
+            @Html.DropDownListFor(x => x.Stype, StypeSelects)
+            @Html.ValidationMessageFor(x => x.Stype)
+
+            @Html.DropDownListFor(x => x.Scategory, scategorySelect)
+            @Html.ValidationMessageFor(x => x.Scategory)
+
+            @Html.DropDownListFor(x => x.Sfrom, sfromSelect)
+            @Html.ValidationMessageFor(x => x.Sfrom)
+
+
+            @Html.TextBoxFor(x => x.SchoolName)
+            @Html.ValidationMessageFor(x => x.SchoolName)
+
+
+            @Html.TextBoxFor(x => x.SelfCardNo)
+            @Html.ValidationMessageFor(x => x.SelfCardNo)
+
+            @Html.TextBoxFor(x => x.registerNo)
+            @Html.ValidationMessageFor(x => x.registerNo)
+
+
+            @Html.TextBoxFor(x => x.SeflPhone)
+            @Html.ValidationMessageFor(x => x.SeflPhone)
+
+
+            @Html.TextBoxFor(x => x.FatherPhone)
+            @Html.ValidationMessageFor(x => x.FatherPhone)
+
+
+            @Html.TextBoxFor(x => x.MotherPhone)
+            @Html.ValidationMessageFor(x => x.MotherPhone)
+
+
+            @Html.TextBoxFor(x => x.TelNum)
+            @Html.ValidationMessageFor(x => x.TelNum)
+
+
+            @Html.DropDownListFor(x => x.major, majorSelect)
+            @Html.ValidationMessageFor(x => x.major)
+
+
+
+
+
+            @Html.TextBoxFor(x => x.SendAddress)
+            @Html.ValidationMessageFor(x => x.FatherPhone)
+
+            @Html.TextBoxFor(x => x.ZipCode)
+            @Html.ValidationMessageFor(x => x.StudentName)
+
+
+            @Html.TextBoxFor(x => x.ReceiveName)
+            @Html.ValidationMessageFor(x => x.FatherPhone)
+
+            @Html.TextBoxFor(x => x.ReceivePhone)
+            @Html.ValidationMessageFor(x => x.StudentName)
+
+
+            <input name="Sphoto" type="file" />
+
+            <input type="submit" value="提交" />
+        }
+    </div>
+</body>
+</html>

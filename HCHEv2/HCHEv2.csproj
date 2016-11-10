@@ -245,6 +245,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Login\LoginModel.cs" />
+    <Compile Include="Models\stuRegist\StuRegistInfo.cs" />
     <Compile Include="pdfHelp\htmlToPic.cs" />
     <Compile Include="pdfHelp\UnicodeFontFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1919,6 +1920,7 @@
     </Content>
     <Content Include="Views\EnrolSysStu\GenerateZkzPng.cshtml" />
     <Content Include="Views\EnrolSysStu\PrintZkzInPic.cshtml" />
+    <Content Include="Views\EnrolSysStu\StuRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
