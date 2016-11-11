@@ -199,7 +199,7 @@
                )
            .Columns(columns =>
                    {
-                       columns.Bound(x => x.StudentName).Title("学生姓名").Width(198)
+                       columns.Bound(x => x.StudentName).Title("学生姓名").Width(178)
                            .Template(@<text>
                             <div class="checkedbox"><input type="checkbox" class="checkboxGroups" name="check" value="@item.StudentID"></div>
                             <div class="listshowimg"><img src="@item.Sphoto" /></div>
@@ -216,7 +216,7 @@
 
                        columns.Bound(x => x.Stype).Title("学生类型").Width(43)
                            .Template(@<text> <span> @item.Stype</span> </text>).ClientTemplate("");
-                       columns.Bound(x => x.Sfrom).Title("生源地").Width(33);
+                       columns.Bound(x => x.Sfrom).Title("生源地").Width(53);
 
                        columns.Bound(x => x.SchoolName).Title("中学名称").Width(63);
                        columns.Bound(x => x.SelfCardNo).Title("身份证号码").Width(43);

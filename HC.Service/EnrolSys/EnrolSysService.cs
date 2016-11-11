@@ -86,5 +86,26 @@ namespace HC.Service.EnrolSys
         {
             this._StudentInfoRepository.Insert(entity);
         }
+
+
+        public bool isExsit(StudentInfo entity)
+        {
+            var query = _StudentInfoRepository.Table;
+            var result = query.Where(x => x.SelfCardNo == entity.SelfCardNo && x.StudentName == entity.StudentName).FirstOrDefault();
+            if (result == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public StudentInfo getStudentInfoByCardID(string cardOrRegisterID)
+        {
+            var query = _StudentInfoRepository.Table;
+            return query.Where(x => x.SelfCardNo == cardOrRegisterID || x.registerNo == cardOrRegisterID).FirstOrDefault();
+        }
     }
 }

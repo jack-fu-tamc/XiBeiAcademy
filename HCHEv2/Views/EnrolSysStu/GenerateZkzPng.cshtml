@@ -1,10 +1,8 @@
 ﻿@{
     Layout = null;
 }
-
-@{
-    Layout = null;
-}
+@using HC.Data.Models;
+@model StudentInfo
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -89,24 +87,24 @@
             </tr>
             <tr>
                 <td width="160" class="title"><strong>高考报名号</strong></td>
-                <td colspan="3"><b>61080502030012</b></td>
+                <td colspan="3"><b>@Model.registerNo</b></td>
 
             </tr>
             <tr>
                 <td class="title"><strong>姓   名</strong></td>
-                <td width="170"><b>张宇</b></td>
+                <td width="170"><b>@Model.StudentName</b></td>
                 <td width="87" class="title"><strong>性别</strong></td>
-                <td width="86"><b>女</b></td>
+                <td width="86"><b>@Model.Sex</b></td>
             </tr>
             <tr>
                 <td class="title"><strong>考生科类</strong></td>
-                <td><b>文史</b></td>
+                <td><b>@Model.Scategory</b></td>
 
                 <td colspan="2"><b>注：体育（理）和艺术（理）均视为理科，艺术（文）视为文科。</b></td>
             </tr>
             <tr>
                 <td class="title"><strong>身份证号</strong></td>
-                <td colspan="3"><b>612324199709060320</b></td>
+                <td colspan="3"><b>@Model.SelfCardNo</b></td>
             </tr>
             <tr>
                 <td class="title"><strong>考点名称</strong></td>

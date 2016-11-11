@@ -39,8 +39,16 @@ namespace HCHEv2.Controllers
         /// 先生成图片 再组装网页在生成PDF
         /// </summary>
         /// <returns></returns>
-        public ActionResult PrintDemoInPic()
+        public ActionResult PrintDemoInPic(string id)
         {
+            #region 判断是否存在
+            if (_iEnrolsysService.getStudentInfoByCardID(id) == null)
+            {
+                return new EmptyResult();
+            }
+            #endregion
+
+
             string pngPath = getSavePicPathH();//生成图片
             WebClient wc = new WebClient();
             wc.Encoding = System.Text.Encoding.UTF8;
@@ -159,10 +167,21 @@ namespace HCHEv2.Controllers
         /// 生成准考证图片页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult GenerateZkzPng()
+        public ActionResult GenerateZkzPng(string id)
         {
-            return View();
+            var model= _iEnrolsysService.getStudentInfoByCardID(id);
+            
+                return View(model);                        
         }
+
+
+
+
+        public ActionResult previewZkz(string id)
+        {
+            return null;
+        }
+
 
         /// <summary>
         /// 准考证打印html输出页面
@@ -228,6 +247,7 @@ namespace HCHEv2.Controllers
                    
                     #endregion
 
+
                     #region 保存报名学生
                     var student = new HC.Data.Models.StudentInfo()
                     {
@@ -251,6 +271,17 @@ namespace HCHEv2.Controllers
                         TelNum = model.TelNum,
                         ZipCode = model.ZipCode
                     };
+
+
+                    #region 重复校验
+                    if (_iEnrolsysService.isExsit(student))
+                    {
+                        ModelState.AddModelError("noPhoto", "您的信息已存在，请勿重复提交！");
+                        return View(model);
+                    }
+                    #endregion
+
+
                     _iEnrolsysService.AddStudentInfo(student);
                     #endregion
 

@@ -17,5 +17,9 @@ namespace HC.Service.EnrolSys
         IList<StudentInfo> ExportStudentInfos(SerchStudentModel sModel);
 
         void AddStudentInfo(StudentInfo entity);
+
+        bool isExsit(StudentInfo entity);
+
+        StudentInfo getStudentInfoByCardID(string cardOrRegisterID);
     }
 }
