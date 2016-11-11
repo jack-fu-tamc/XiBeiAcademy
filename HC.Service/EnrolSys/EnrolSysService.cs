@@ -81,5 +81,10 @@ namespace HC.Service.EnrolSys
         }
 
 
+
+        public void AddStudentInfo(StudentInfo entity)
+        {
+            this._StudentInfoRepository.Insert(entity);
+        }
     }
 }

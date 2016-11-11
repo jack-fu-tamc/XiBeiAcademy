@@ -221,20 +221,20 @@ namespace HC.Core.Common.FileUpload
         {
             
             #region 设置本地临时路径和允许允许上传的文件格式与大小
-            string fileTypes = "jpg,jpeg,png,bmp,flv,mp4,doc,docx";
-            int maxSize = 5120000;//大小限制4M 和web.config中一致
+            string fileTypes = "jpg,jpeg,png,bmp";
+            int maxSize = 1050000;//大小限制1M 
             #endregion
 
             #region 临时路径是否存在
-            var TempfolderPath = HttpRuntime.AppDomainAppPath.ToString() + "\\Upfiles\\"+folderName;
+            var TempfolderPath = HttpRuntime.AppDomainAppPath.ToString() + folderName;//"\\Upfiles\\"+folderName;
             if (!Directory.Exists(TempfolderPath))
             {
                 fileRWhelper.CreateDirectory(TempfolderPath);//创建路径
             }
             #endregion
 
-            #region 图片验证
-            string fileExt = Path.GetExtension(file.FileName).ToLower();
+            #region 图片格式验证
+            string fileExt = Path.GetExtension(file.FileName).ToLower();            
             #endregion
 
             #region 是否符合格式与大小
@@ -242,7 +242,7 @@ namespace HC.Core.Common.FileUpload
             if (file.InputStream == null || file.InputStream.Length > maxSize)
             {
                 //大小限制
-                return "0";
+                return "1";
 
             }
 
@@ -259,7 +259,9 @@ namespace HC.Core.Common.FileUpload
             string TempfilePaths = TempfolderPath +"\\"+ newFileName;
             file.SaveAs(TempfilePaths);
             #endregion
-            var subSta = TempfilePaths.IndexOf("Upfiles");
+
+            //var sbuStr = TempfilePaths.Replace('\\', '/');
+            var subSta = TempfilePaths.IndexOf(folderName);
             var sbuStr = TempfilePaths.Substring(subSta).Replace('\\', '/');
 
             //var subSta=TempfilePaths.IndexOf("HCHEv2")+8;

@@ -15,5 +15,7 @@ namespace HC.Service.EnrolSys
         StudentInfo GetStudentInfoById(int studentID);
 
         IList<StudentInfo> ExportStudentInfos(SerchStudentModel sModel);
+
+        void AddStudentInfo(StudentInfo entity);
     }
 }

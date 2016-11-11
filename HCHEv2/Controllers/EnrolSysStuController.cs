@@ -11,13 +11,30 @@ using System.Web;
 using System.Web.Mvc;
 using System.Drawing;
 using System.Drawing.Imaging;
+using HC.Core.Common.FileUpload;
 using HCHEv2.pdfHelp;
+using HC.Service.EnrolSys;
 
 namespace HCHEv2.Controllers
 {
     public class EnrolSysStuController : Controller
     {
-       
+
+
+
+        #region fild
+        private IEnrolSysService _iEnrolsysService;
+        #endregion
+
+
+        #region cto
+        public EnrolSysStuController(IEnrolSysService ienrosysSercie)
+        {
+            this._iEnrolsysService = ienrosysSercie;
+        }
+        #endregion
+
+
         /// <summary>
         /// 先生成图片 再组装网页在生成PDF
         /// </summary>
@@ -143,7 +160,7 @@ namespace HCHEv2.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult GenerateZkzPng()
-        {           
+        {
             return View();
         }
 
@@ -175,26 +192,81 @@ namespace HCHEv2.Controllers
         public ActionResult StuRegister(HCHEv2.Models.stuRegist.StuRegistInfo model)
         {
             ViewBag.AddResult = false;
+            string upPhotePath = "";
             if (ModelState.IsValid)
             {
                 try
                 {
+                    var file = Request.Files["Sphoto"];
+
+                    #region 图片上传和验证
+                    if (file != null)
+                    {
+                        imgUpload imgUpLoad = new imgUpload();//上传图片的类   
+                        upPhotePath = imgUpLoad.picUpLoad(file, "BmStuPic");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("noPhoto", "请上传1寸免冠照片");
+                        return View(model);
+                    }
+                    if (upPhotePath == "0" || upPhotePath == "1")
+                    {
+                        string errorMsg = "";
+                        switch (upPhotePath)
+                        {
+                            case "0":
+                                errorMsg = "图片格式错误，请重新上传";
+                                break;
+                            case "1":
+                                errorMsg = "图片大小超出1M，请重新上传";
+                                break;
+                        }
+                        ModelState.AddModelError("noPhoto", errorMsg);
+                        return View(model);
+                    }
+                   
+                    #endregion
+
+                    #region 保存报名学生
+                    var student = new HC.Data.Models.StudentInfo()
+                    {
+                        FatherPhone = model.FatherPhone,
+                        major = model.major,
+                        MotherPhone = model.MotherPhone,
+                        ReceiveName = model.ReceiveName,
+                        ReceivePhone = model.ReceivePhone,
+                        registerNo = model.registerNo,
+                        RegisterTime = DateTime.Now,
+                        Scategory = model.Scategory,
+                        SchoolName = model.SchoolName,
+                        SeflPhone = model.SeflPhone,
+                        SelfCardNo = model.SelfCardNo,
+                        SendAddress = model.SendAddress,
+                        Sex = model.Sex,
+                        Sfrom = model.Sfrom,
+                        Sphoto = upPhotePath,
+                        StudentName = model.StudentName,
+                        Stype = model.Stype,
+                        TelNum = model.TelNum,
+                        ZipCode = model.ZipCode
+                    };
+                    _iEnrolsysService.AddStudentInfo(student);
+                    #endregion
 
                     ViewBag.AddResult = true;
                 }
                 catch
                 {
-                   
+
                 }
-                //ModelState.AddModelError("success", "提交成功，请在指指定日期后下载准考证");
                 return View();
             }
             else
             {
-                //ModelState.AddModelError("", "");
                 return View(model);
             }
-            
+
         }
         #endregion
     }

@@ -36,6 +36,17 @@
     majorSelect.Add(new SelectListItem() { Text = "金融管理与实务", Value = "金融管理与实务" });
     majorSelect.Add(new SelectListItem() { Text = "会计与审计", Value = "会计与审计" });
     majorSelect.Add(new SelectListItem() { Text = "电子商务", Value = "电子商务" });
+    
+    //对于未上传图片的验证
+    var errorKeys = ViewData.ModelState.Keys.ToList();
+    bool noPhote = false;
+    
+    if (errorKeys.Contains("noPhoto"))
+    {
+        noPhote = true;
+    }
+    
+    
 }
 @using HCHEv2.Models.stuRegist
 @model StuRegistInfo
@@ -75,7 +86,12 @@
     }
     else
     {
-        using (Html.BeginForm("StuRegister", "EnrolSysStu", FormMethod.Post, new { @autocomplete = "off", @class = "registerform" }))
+        if (noPhote)
+        {
+            <div>@ViewData.ModelState["noPhoto"].Errors.FirstOrDefault().ErrorMessage</div>
+        }
+
+        using (Html.BeginForm("StuRegister", "EnrolSysStu", FormMethod.Post, new { @autocomplete = "off", @class = "registerform", @enctype = "multipart/form-data" }))
         {
             <div>
                 @Html.AntiForgeryToken()
@@ -211,6 +227,31 @@
     }
 
 
+    <script type="text/javascript">
 
+        document.onkeydown = function (e) {
+            e = window.event || e;
+            var keycode = e.keyCode || e.which;
+            if (e.ctrlKey || e.altKey || e.shiftKey
+            || keycode >= 112 && keycode <= 123) {
+                if (window.event) {// ie
+                    try { e.keyCode = 0; } catch (e) { }                 
+                    e.returnValue = false;
+                    e.preventDefault();
+                } else {// ff
+
+                    e.preventDefault();
+                }
+            }
+        }
+
+        
+
+
+
+        document.oncontextmenu = function (e) {
+            return false;
+        }
+    </script>
 </body>
 </html>
