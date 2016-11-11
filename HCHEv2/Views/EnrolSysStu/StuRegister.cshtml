@@ -8,9 +8,9 @@
 
     var scategorySelect = new List<SelectListItem>();
     scategorySelect.Add(new SelectListItem() { Text = "请选择类科别", Value = "", Selected = true });
-    scategorySelect.Add(new SelectListItem() { Text = "理科", Value = "理科", Selected = true });
-    scategorySelect.Add(new SelectListItem() { Text = "文科", Value = "文科", Selected = true });
-    scategorySelect.Add(new SelectListItem() { Text = "艺术", Value = "艺术", Selected = true });
+    scategorySelect.Add(new SelectListItem() { Text = "理科", Value = "理科" });
+    scategorySelect.Add(new SelectListItem() { Text = "文科", Value = "文科" });
+    scategorySelect.Add(new SelectListItem() { Text = "艺术", Value = "艺术" });
 
 
 
@@ -50,83 +50,167 @@
     <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 </head>
 <body>
-    <div>
-        @using (Html.BeginForm("StuRegister", "EnrolSysStu", FormMethod.Post, new { @autocomplete = "off", @class = "registerform" }))
+
+
+
+    @*@{
+            var keys = ViewData.ModelState.Keys.ToList();
+            foreach (var key in keys)
+            {
+                var errors = ViewData.ModelState[key].Errors.ToList();
+                if (errors.Count > 0)
+                {
+                    foreach (var error in errors)
+                    {
+                        <span> @error.ErrorMessage </span>
+                    }
+                }
+            }
+        }*@
+
+
+    @if (ViewBag.AddResult)
+    {
+        <div style="width:1024px; margin:0 auto; text-align:center;">您已成功申请,请与指定日期在本站下载和打印准考证。</div>
+    }
+    else
+    {
+        using (Html.BeginForm("StuRegister", "EnrolSysStu", FormMethod.Post, new { @autocomplete = "off", @class = "registerform" }))
         {
-            @Html.AntiForgeryToken()
+            <div>
+                @Html.AntiForgeryToken()
 
 
-            @Html.TextBoxFor(x => x.StudentName)
-            @Html.ValidationMessageFor(x => x.StudentName)
+                <p>
+                    <span>学生姓名：</span> @Html.TextBoxFor(x => x.StudentName)
+                    @Html.ValidationMessageFor(x => x.StudentName)
+                </p>
 
 
-            @Html.RadioButtonFor(x => x.Sex, "男")
-            @Html.RadioButtonFor(x => x.Sex, "女")
-            @Html.ValidationMessageFor(x => x.Sex)
-
-
-            @Html.DropDownListFor(x => x.Stype, StypeSelects)
-            @Html.ValidationMessageFor(x => x.Stype)
-
-            @Html.DropDownListFor(x => x.Scategory, scategorySelect)
-            @Html.ValidationMessageFor(x => x.Scategory)
-
-            @Html.DropDownListFor(x => x.Sfrom, sfromSelect)
-            @Html.ValidationMessageFor(x => x.Sfrom)
-
-
-            @Html.TextBoxFor(x => x.SchoolName)
-            @Html.ValidationMessageFor(x => x.SchoolName)
-
-
-            @Html.TextBoxFor(x => x.SelfCardNo)
-            @Html.ValidationMessageFor(x => x.SelfCardNo)
-
-            @Html.TextBoxFor(x => x.registerNo)
-            @Html.ValidationMessageFor(x => x.registerNo)
-
-
-            @Html.TextBoxFor(x => x.SeflPhone)
-            @Html.ValidationMessageFor(x => x.SeflPhone)
-
-
-            @Html.TextBoxFor(x => x.FatherPhone)
-            @Html.ValidationMessageFor(x => x.FatherPhone)
-
-
-            @Html.TextBoxFor(x => x.MotherPhone)
-            @Html.ValidationMessageFor(x => x.MotherPhone)
-
-
-            @Html.TextBoxFor(x => x.TelNum)
-            @Html.ValidationMessageFor(x => x.TelNum)
-
-
-            @Html.DropDownListFor(x => x.major, majorSelect)
-            @Html.ValidationMessageFor(x => x.major)
+                <p>
+                    <span>学生性别：</span>
+                    @Html.RadioButtonFor(x => x.Sex, "男")<span>男</span>
+                    @Html.RadioButtonFor(x => x.Sex, "女")<span>女</span>
+                    @Html.ValidationMessageFor(x => x.Sex)
+                </p>
 
 
 
+                <p>
+                    <span>学生类型：</span>@Html.DropDownListFor(x => x.Stype, StypeSelects)
+                    @Html.ValidationMessageFor(x => x.Stype)
+                </p>
 
 
-            @Html.TextBoxFor(x => x.SendAddress)
-            @Html.ValidationMessageFor(x => x.FatherPhone)
 
-            @Html.TextBoxFor(x => x.ZipCode)
-            @Html.ValidationMessageFor(x => x.StudentName)
-
-
-            @Html.TextBoxFor(x => x.ReceiveName)
-            @Html.ValidationMessageFor(x => x.FatherPhone)
-
-            @Html.TextBoxFor(x => x.ReceivePhone)
-            @Html.ValidationMessageFor(x => x.StudentName)
+                <p>
+                    <span>科别：</span>@Html.DropDownListFor(x => x.Scategory, scategorySelect)
+                    @Html.ValidationMessageFor(x => x.Scategory)
+                </p>
 
 
-            <input name="Sphoto" type="file" />
 
-            <input type="submit" value="提交" />
+                <p>
+                    <span>生源地：</span>@Html.DropDownListFor(x => x.Sfrom, sfromSelect)
+                    @Html.ValidationMessageFor(x => x.Sfrom)
+                </p>
+
+
+
+                <p>
+                    <span>学校名称：</span>@Html.TextBoxFor(x => x.SchoolName)
+                    @Html.ValidationMessageFor(x => x.SchoolName)
+                </p>
+
+
+
+                <p>
+                    <span>身份证号：</span> @Html.TextBoxFor(x => x.SelfCardNo)
+                    @Html.ValidationMessageFor(x => x.SelfCardNo)
+                </p>
+
+
+
+                <p>
+                    <span>高考证号：</span> @Html.TextBoxFor(x => x.registerNo)
+                    @Html.ValidationMessageFor(x => x.registerNo)
+                </p>
+
+
+
+
+                <p>
+                    <span>手机号：</span>@Html.TextBoxFor(x => x.SeflPhone)
+                    @Html.ValidationMessageFor(x => x.SeflPhone)
+                </p>
+
+
+
+                <p>
+                    <span>父亲手机号：</span>@Html.TextBoxFor(x => x.FatherPhone)
+                    @Html.ValidationMessageFor(x => x.FatherPhone)
+                </p>
+
+
+
+                <p>
+                    <span>母亲手机号：</span>@Html.TextBoxFor(x => x.MotherPhone)
+                    @Html.ValidationMessageFor(x => x.MotherPhone)
+                </p>
+
+
+
+                <p>
+                    <span>固话号：</span>@Html.TextBoxFor(x => x.TelNum)
+                    @Html.ValidationMessageFor(x => x.TelNum)
+                </p>
+
+
+
+                <p>
+                    <span>专业：</span>@Html.DropDownListFor(x => x.major, majorSelect)
+                    @Html.ValidationMessageFor(x => x.major)
+                </p>
+
+
+
+                <p>
+                    <span>邮寄地址：</span>@Html.TextBoxFor(x => x.SendAddress)
+                    @Html.ValidationMessageFor(x => x.SendAddress)
+                </p>
+
+
+
+                <p>
+                    <span>邮编：</span>@Html.TextBoxFor(x => x.ZipCode)
+                    @Html.ValidationMessageFor(x => x.ZipCode)
+                </p>
+
+
+
+
+                <p>
+                    <span>收件人姓名：</span>@Html.TextBoxFor(x => x.ReceiveName)
+                    @Html.ValidationMessageFor(x => x.ReceiveName)
+                </p>
+
+
+
+                <p>
+                    <span>收件人手机号：</span>@Html.TextBoxFor(x => x.ReceivePhone)
+                    @Html.ValidationMessageFor(x => x.ReceivePhone)
+                </p>
+
+
+
+                <p><span>本人1寸照片：</span><input name="Sphoto" type="file" /></p>
+
+                <input type="submit" value="提交" />
+            </div>
         }
-    </div>
+    }
+
+
+
 </body>
 </html>

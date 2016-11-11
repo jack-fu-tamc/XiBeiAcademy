@@ -166,14 +166,35 @@ namespace HCHEv2.Controllers
         [HttpGet]
         public ActionResult StuRegister()
         {
+            ViewBag.AddResult = false;
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult StuRegister(FormCollection from)
+        public ActionResult StuRegister(HCHEv2.Models.stuRegist.StuRegistInfo model)
         {
-            return new EmptyResult();
+            ViewBag.AddResult = false;
+            if (ModelState.IsValid)
+            {
+                try
+                {
+
+                    ViewBag.AddResult = true;
+                }
+                catch
+                {
+                   
+                }
+                //ModelState.AddModelError("success", "提交成功，请在指指定日期后下载准考证");
+                return View();
+            }
+            else
+            {
+                //ModelState.AddModelError("", "");
+                return View(model);
+            }
+            
         }
         #endregion
     }
