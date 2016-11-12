@@ -27,14 +27,23 @@
             MultipleLevelOne.Add(section);
         }
 
-        if (subsSectins.All(a => a == 1))
-        {//1为单页
+        //if (subsSectins.All(a => a == 1))
+        //{//1为单页
 
-        }
-        else
-        {
+        //}
+        //else
+        //{
+        //    MultipleLevelOne.Add(section);
+        //}
+
+
+
+        if (subsSectins.Any(a => a == 0))
+        {//1为单页
             MultipleLevelOne.Add(section);
         }
+        
+        
     }
     TempData["MultipleLevelOne"] = MultipleLevelOne;
     //ViewBag.MultipleLevelOne = MultipleLevelOne;

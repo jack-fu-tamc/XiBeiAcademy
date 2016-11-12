@@ -50,12 +50,12 @@ namespace HCHEv2.Controllers
             #endregion
 
 
-            string pngPath = getSavePicPathH();//生成图片
+            string pngPath = getSavePicPathH(id);//生成图片
             WebClient wc = new WebClient();
             wc.Encoding = System.Text.Encoding.UTF8;
             //從網址下載Html字串
             string url = string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"));
-            string htmlText = wc.DownloadString(url + "/EnrolSysStu/PrintZkzInPic/1");
+            string htmlText = wc.DownloadString(url + "/EnrolSysStu/PrintZkzInPic/" + pngPath);
             byte[] pdfFile = this.ConvertHtmlTextToPDF(htmlText);
 
             return File(pdfFile, "application/pdf", "1111.pdf");
@@ -102,13 +102,13 @@ namespace HCHEv2.Controllers
 
 
         /// <summary>
-        /// 高质量存图
+        /// 高质量存图 
         /// </summary>
-        /// <returns></returns>
-        public string getSavePicPathH()
+        /// <returns>生成准考证图片地址</returns>
+        public string getSavePicPathH(string id)
         {
             string url = string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"));
-            Bitmap m_Bitmap = WebSiteThumbnail.GetWebSiteThumbnail(url + "/EnrolSysStu/GenerateZkzPng", 690, 955, 690, 955);
+            Bitmap m_Bitmap = WebSiteThumbnail.GetWebSiteThumbnail(url + "/EnrolSysStu/GenerateZkzPng/"+id, 690, 955, 690, 955);
 
             ImageCodecInfo myImageCodecInfo;
             System.Drawing.Imaging.Encoder myEncoder;
@@ -126,11 +126,11 @@ namespace HCHEv2.Controllers
             //var ZkzPath = HttpRuntime.AppDomainAppPath.ToString() + "ZhunKaoZheng";
             var ZkzPath = "ZhunKaoZheng";
             CreateDir(ZkzPath);
-
+            var picName = Guid.NewGuid()+".png";
             //m_Bitmap.Save(HttpRuntime.AppDomainAppPath.ToString() + ZkzPath + "\\aa.png", System.Drawing.Imaging.ImageFormat.Png);
-            m_Bitmap.Save(HttpRuntime.AppDomainAppPath.ToString() + ZkzPath + "\\aa12.png", myImageCodecInfo, myEncoderParameters);
+            m_Bitmap.Save(HttpRuntime.AppDomainAppPath.ToString() + ZkzPath + "\\" + picName, myImageCodecInfo, myEncoderParameters);
             m_Bitmap.Dispose();
-            return "aa.png";
+            return picName;
         }
 
 
@@ -165,14 +165,22 @@ namespace HCHEv2.Controllers
 
 
         /// <summary>
-        /// 生成准考证图片页面
+        /// 准考证图片原型页面
         /// </summary>
         /// <returns></returns>
         public ActionResult GenerateZkzPng(string id)
         {
-            var model= _iEnrolsysService.getStudentInfoByCardID(id);
-            
-                return View(model);                        
+            var StuModel= _iEnrolsysService.getStudentInfoByCardID(id);
+            var model = new ZkzInfo();
+            model.stuInfo = StuModel;
+            model.ZkzNo = "10697WS273";
+            model.ExamNo = "25";
+            model.RoomNo = "3308";
+            model.SiteNo = "3";
+            model.ExamPlace = "西北大学桃园校区（高新四路15号）";
+            model.ExamTime = "2016年 3月20日 9：00-12：00";
+            model.SubjectAndTime = "其中：9：00-10：00 语文； 10：00-11：00 数学； 11：00-12：00 英语；";
+            return View(model);                        
         }
 
 
@@ -228,7 +236,7 @@ namespace HCHEv2.Controllers
 
 
         /// <summary>
-        /// 准考证预览页面
+        /// 准考证预览页面 包含下载准考证
         /// </summary>
         /// <returns></returns>
         public ActionResult PreviewZkz()
@@ -242,13 +250,13 @@ namespace HCHEv2.Controllers
 
 
         /// <summary>
-        /// 准考证打印html输出页面
+        /// 准考证打印html输出页面 嵌入一张生成的准考证图片的html
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public ActionResult PrintZkzInPic(string id)
         {
-            ViewBag.id = "aa12.png";
+            ViewBag.id = id;
             return View();
         }
 

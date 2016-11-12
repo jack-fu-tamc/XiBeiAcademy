@@ -1,0 +1,350 @@
+.bar-clearance{
+    height: 30px;
+    background: #0d7eb5;
+}
+.welocm-text{
+    line-height: 10px;
+    margin-top: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+.clearance-hinge{
+    text-align: right;
+}
+.navView-title {
+background:  url("../images/college/school-title.png") no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    height: 161px;
+}
+.recruit-student img{
+    width: auto;
+}
+.subsid-bg{
+    position: relative;
+}
+.menu-contain-bto{
+    border-top: 2px solid #1b89cd;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,159,222,0.8);
+}
+.nav-menu ul{
+    width: 635px;
+    margin-left: 245px;
+}
+.nav-menu li{
+    line-height: 40px;
+}
+.back-home{
+    color:#ff9600
+}
+.recruit-inform div{
+    font-weight: normal;
+    font-size: 14px;
+}
+.recruit-inform .light-active{
+    font-weight: bold;
+}
+/*焦点图start*/
+.out{
+    width:100%;
+    height:654px;
+    margin:0px auto;
+    position:relative;
+}
+.out .img li{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+}
+
+.out .num{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-size: 0px;
+    text-align: left;
+    padding-left: 445px;
+}
+
+.out .num li{
+    width:16px;
+    height:16px;
+    background:#00a8e2;
+    color:#fff;
+    text-align:center;
+    line-height:20px;
+    border-radius:50%;
+    display:inline-block;
+    font-size:16px;
+    margin:0 8px;
+    cursor:pointer;
+}
+.out .num li.active{
+    background:#025499
+}
+
+.out .img li a{
+    position: relative;
+    display: inline-block;
+}
+.out .img li a>div{
+    position: absolute;
+    right: 100px;
+    bottom: 25px;
+}
+.out .btn{
+    position:absolute;
+    top:50%;
+    margin-top:-30px;
+    width:30px;
+    height:60px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    text-align:center;
+    line-height:60px;
+    font-size:40px;
+    display:none;
+    cursor:pointer;
+}
+.out:hover .btn{
+    display:block;
+}
+.out .left{
+    left:50px
+}
+.out .right{
+    right:50px;
+}
+/*焦点图end*/
+/*通知公告*/
+.notices-bulle{
+   margin-top:40px
+}
+.left-notice{
+    float: left;
+    width: 675px;
+}
+.right-notice{
+    float: left;
+    width: 280px;
+    margin-left: 45px;
+}
+.notice-title{
+    line-height: 40px;
+    border-bottom: 1px solid #cccccc;
+    text-align: right;
+    color:#000000;
+    font-size:12px;
+}
+.notice-title a{
+    color:#000000;
+}
+.notice-title em{
+    text-align: left;
+    float: left;
+    font-size:20px;
+    font-weight: bold;
+}
+.nodice-details>span{
+    display: inline-block;
+    float: left;
+}
+.left-details{
+    width: 160px;
+}
+.left-details img{
+    width: 160px;
+    height: 104px;
+    margin-top: 10px;
+}
+.right-details{
+    font-size: 12px;
+    width: 475px;
+    margin-left: 30px;
+    line-height: 24px;
+}
+.details-titeles{
+    font-size:14px;
+    color:#222222;
+    font-weight:bold;
+    line-height:40px
+}
+.right-details a{
+    color: #555555;
+}
+.clauses{
+    margin-top: 10px;
+    font-size:14px;
+    color:#666666;
+}
+.clauses>span{
+    display: inline-block;
+    float: left;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 30px;
+}
+.left-clauses{
+    width: 300px;
+}
+.right-clauses{
+    margin-left: 66px;
+}
+.clauses span em{
+    float: left;
+    padding-right: 10px;
+    margin-top: -2px;
+}
+.time-inform{
+    width: 100%;
+    height: 35px;
+    border:1px solid #cccccc;
+    margin-top: 20px;
+}
+.time-inform>img{
+    float: left;
+    padding: 10px 0px 0px 30px;
+}
+.message-shower{
+    position: relative;
+    overflow: hidden;
+    height: 35px;
+}
+.message-shower ul{
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    top:0
+}
+.message-shower .slide-list{
+    right: 0;
+    height: 35px;
+}
+.message-list li{
+    width: 510px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 35px;
+    padding: 0 5px;
+}
+.slide-list{
+    width: 90px;
+}
+.slide-list li{
+    float: left;
+    padding: 7px 11px;
+}
+.slide-list li a{
+     display: inline-block;
+     background: url("../images/recruit/small.png") center;
+     width: 5px;
+     height: 5px;
+ }
+.slide-list .active a{
+    display: inline-block;
+    background: url("../images/recruit/big.png") center;
+    width: 5px;
+    height: 5px;
+}
+.message-shower{
+    width: 600px;
+    float: left;
+    margin-left: 25px;
+}
+.right-notice{
+    margin-top: 15px;
+}
+.right-notice img{
+    margin-top: 16px;
+}
+.downside{
+   margin-top:40px;
+    padding-bottom: 40px;
+}
+.downside ul li{
+    float: left;
+    margin-left: 46px;
+}
+.downside ul .first-tab{
+    margin-left: 0;
+}
+.downsideTitle01{
+    color:#00a8e2;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccccc;
+    line-height: 40px;
+}
+.downsideTitle02{
+    color:#33cccc;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccccc;
+    line-height: 40px;
+}
+.downsideTitle03{
+    color:#fc5474;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccccc;
+    line-height: 40px;
+}
+.downsideTitle03 span{
+    font-size: 14px;
+    color:#0a0002;
+    font-weight: normal;
+    float: right;
+    padding-right: 10px;
+}
+.downsidePic01{
+    width: 294px;
+    height:117px;
+    background: url("../images/college/tab1.gif");
+    margin-top: 30px;
+}
+.downsidePic02{
+    width: 330px;
+    height:117px;
+    background: url("../images/college/tab2.gif");
+    margin-top: 30px;
+}
+.downsidePic03{
+    width: 284px;
+    height:117px;
+    background: url("../images/college/tab3.gif");
+    margin-top: 30px;
+}
+.details-text{
+    font-size: 14px;
+    color: #ffffff;
+    width: 300px;
+    padding: 21px 0px 0px 110px;
+    line-height: 24px;
+    font-weight: bold;
+}
+.details-text a{
+    color:#ffffff;
+    padding: 0 10px;
+}
+.right-plan li{
+    cursor: pointer;
+}
+/*footer*/
+.footer-message{
+    background:url("../images/college/footer.png") no-repeat 100% 100%;
+    height: 124px;
+}
+.share-show {
+    text-align: right;
+    margin-top: -25px;
+}
+.footer-contain{
+    color:#ffffff;
+}

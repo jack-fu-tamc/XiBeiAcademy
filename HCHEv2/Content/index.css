@@ -1,0 +1,293 @@
+@charset 'utf-8';
+html{
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+    margin: 0;
+    padding: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+em {
+    font-style: normal;
+}
+ul,ol{ list-style:none;}
+
+body{
+    margin:0;
+    padding:0;
+    font-size: 12px;
+    font-family: "微软雅黑","宋体",STHeiti,Verdana,Arial,Helvetica,sans-serif;
+    color:#444444;
+}
+a {
+    cursor:pointer;
+    text-decoration: none;
+    border: none;
+}
+a:focus {
+    outline: none;
+}
+img {
+    border: none;
+}
+button {
+    border:0;
+}
+textarea,td{
+    word-wrap:break-word;word-break:break-all; word-wrap:break-word;
+}
+.clear{
+    clear:both;
+}
+*:focus {outline: none;}
+/* 解决ie6下fix模块闪动问题 */
+*html{
+    background-image:url(about:blank);
+    background-attachment:fixed;
+}
+
+
+/* 解决firefox下按扭文字不能垂直居中的问题 start*/
+button::-moz-focus-inner{
+    border:none ;
+    padding:0;
+}
+/*最大宽度*/
+.container{
+    max-width: 1900px;
+    margin: auto;
+    font-family: "Microsoft YaHei",微软雅黑;
+    overflow-x: hidden;
+}
+.container-fluid{
+    width: 1002px;
+    margin: auto;
+}
+/*顶部导航栏*/
+.nav-bar{
+    width: 100%;
+    height: 51px;
+    background: #0a334f;
+}
+.nav-img{
+    width: 550px;
+    float: left;
+}
+.nav-img>img{
+    padding-top: 15px;
+}
+.nav-hinge{
+    width: 450px;
+    float: left;
+}
+.nav-search{
+    width: 110px;
+    height: 24px;
+    background: url("../images/home/search.png");
+    margin-top: 13px;
+    display: inline-block;
+}
+.nav-search>input{
+    width: 77px;
+    height: 22px;
+    color: #ffffff;
+    margin-left: 26px;
+    background: transparent;
+    border: none;
+    font-size: 12px;
+}
+.hinge-text{
+    padding-left: 15px;
+}
+.hinge-text>a{
+    display: inline-block;
+    line-height: 10px;
+    padding: 0 10px;
+    margin-top: 10px;
+    border-left: 1px solid #ffffff;
+    color:#ffffff;
+    text-align: center;
+}
+.hinge-text >.clear-border{
+    border-left: none;
+}
+.nav-title{
+    width: 100%;
+    height: 166px;
+    background: url("../images/home/navigation-bg.png");
+}
+.school-title{
+    border-bottom: 1px solid #0d558c;
+    padding-bottom: 10px;
+}
+.title-log{
+    text-align: center;
+}
+.title-log>img{
+    margin-top: 20px;
+}
+.menu-contain{
+    border-top: 1px solid #1674c1;
+}
+.nav-menu{
+    color:#ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+.nav-menu li{
+    text-align: center;
+    display: inline-block;
+    line-height: 46px;
+    width: 118px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}
+.nav-menu li i{
+    font-style: normal;
+    font-size: 10px;
+    padding-left: 5px;
+    line-height: 46px;
+    font-weight: normal;
+}
+.recruit-student{
+    position: absolute;
+    background: #ffffff;
+    width: 118px;
+    box-shadow: 1px 3px 4px #dddddd;
+    padding-bottom: 10px;
+    display: none;
+}
+.nav-menu li:hover span{
+    color:#d6cf08
+}
+.nav-menu li:hover .recruit-student{
+    display: block;
+}
+.recruit-inform{
+    text-align: center;
+    color:#08395c;
+    font-size: 14px;
+}
+.recruit-inform div{
+    height: 35px;
+    line-height: 35px;
+}
+.recruit-inform img{
+    margin-top: 10px;
+}
+/*底部导航*/
+.chaining{
+    background: #e5e5e5;
+    opacity: 0.8;
+    filter:alpha(opacity=80);
+    height: 121px;
+}
+.chain-left{
+    width: 530px;
+    float: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.chain-left a{
+    display: inline-block;
+    line-height: 50px;
+}
+.chain-left a img{
+    padding-right: 50px;
+}
+.chain-right{
+    float: right;
+    width: 277px;
+    margin-right: 30px;
+}
+.message-img{
+    margin-top: 10px;
+    width: 277px;
+    height: 71px;
+    color:#ffffff;
+    background: url("../images/home/message.gif");
+}
+.message-img span{
+    margin-top: 37px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+}
+.footer-message{
+    background: #0e4062;
+    padding: 30px 0;
+}
+.footer-logo{
+    float: left;
+    width: 81px;
+}
+.fooder-line{
+    border-bottom: 1px solid #ffffff;
+    color:#ffffff;
+}
+.footer-contain{
+    padding-left: 40px;
+    float: left;
+    width: 914px;
+}
+.footer-contain>div{
+    line-height: 35px;
+}
+.share-show{
+    text-align: right;
+}
+.share-show img{
+    padding-left: 10px;
+}
+.home-bg{
+    position: relative;
+}
+.home-bg>img{
+    width: 100%;
+}
+.navView-title{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+/*fenye*/
+.page-contnet{
+    width: 100%;
+    float: right;
+    text-align: right;
+    line-height: 30px;
+    margin: 20px;
+    padding-bottom: 40px;
+}
+.count-page span{
+    display: inline-block;
+    padding:0 5px;
+    font-size: 14px;
+}
+.page-contnet em,.page-contnet i{
+    font-style: normal;
+    padding: 0px 2px;
+}
+.count{
+    color:#ff5a00;
+}
+.count-page span a{
+    color:#333333;
+    font-size: 12px;
+    display: inline-block;
+    padding: 0 5px;
+    line-height: 24px;
+    background: #e1e1e1;
+}
+.count-page span .active {
+    color: #ff5a00;
+}

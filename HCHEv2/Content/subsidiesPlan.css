@@ -1,0 +1,247 @@
+
+.sub-bg .notices-bulle{
+    margin-top: 0;
+}
+.sub-bg .navView-title{
+    margin-top: 30px;
+}
+/*content start*/
+.content-college{
+    color:#333333;
+    padding-bottom: 40px;
+}
+.college-left>div{
+    margin-left: 10px;
+}
+.college-left{
+    float: left;
+    width: 212px;
+    background: #1880dc;
+}
+.college-right{
+    float: left;
+    width: 755px;
+    margin-left: 35px;
+}
+.college-left .college-title{
+    color:#ffffff;
+}
+.college-title{
+    color:#025492;
+    font-size: 24px;
+    line-height: 50px;
+}
+.college-titleRed{
+    color:#df2f31;
+    font-size: 24px;
+    line-height: 50px;
+}
+.college-titleRed span{
+    float: right;
+    font-size: 12px;
+    color:#333333
+}
+.college-downLine{
+    border-bottom: 1px solid #cccccc;
+}
+.collegeMenu{
+    color:#333333;
+    font-size: 14px;
+}
+.collegeMenu li{
+    line-height: 40px;
+    cursor: pointer;
+    border-left:2px solid transparent;
+}
+.collegeMenu li>div{
+    border-top: 1px solid #cccccc;
+    background: #ffffff;
+
+}
+.collegeMenu .removeLine{
+    border-bottom: none;
+}
+.collegeMenu li ul li img{
+    margin-left: 40px;
+}
+.collegeMenu li img{
+    float: left;
+    margin-top: 18px;
+    margin-left: 20px;
+}
+.collegeMenu li span{
+    padding-left: 10px;
+}
+.college-title span{
+    float: right;
+    font-size: 12px;
+    color:#333333
+}
+.college-right p,.image-text{
+    padding: 10px 0;
+    line-height: 30px;
+}
+.image-text span{
+    display: inline-block;
+    float: left;
+}
+.text-description{
+    width: 598px;
+}
+.imageShow{
+    width: 150px;
+}
+.text-description{
+    padding-left: 25px;
+}
+.text-description p{
+    line-height: 30px;
+    padding: 0;
+}
+.text-description .category{
+    font-size:14px;
+    color:#333333;
+    font-weight:bold;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.imageShow img{
+    padding-top: 10px;
+}
+.category-details{
+    font-size:12px;
+    color:#666666;
+}
+.date-time{
+    font-size:12px;
+    color:#999999;
+    text-align: right;
+}
+.menuShow{
+    display: none;
+}
+.active-changeColor{
+    background:#1880dc;
+    color: #ffffff;
+}
+.active-changeRedColor{
+    background:#df2f31;
+    color: #ffffff;
+}
+.Red_chain{
+    color:#df2f31
+}
+.subsidies>span{
+    display: inline-block;
+    float: left;
+    line-height: 30px;
+    padding: 10px 0;
+    height: 50px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.listText{
+    width: 645px;
+}
+.timeList{
+    width:100px;
+    text-align: right;
+}
+.listText em{
+    float: left;
+    margin-top: -2px;
+    padding-right: 10px;
+}
+/**/
+.plan-inform{
+
+}
+.plan-inform .left-plan{
+    float: left;
+    width: 522px;
+}
+.plan-inform .right-plan{
+    float: left;
+    width: 185px;
+    margin-left: 45px;
+    margin-top: 30px;
+}
+.related-links{
+    line-height: 40px;
+    background: #e1e1e1;
+    padding-left: 20px;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.right-plan li{
+    line-height: 35px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+.right-plan li a{
+    color:#444444
+}
+.right-plan .chain-btn{
+    float: right;
+    font-size: 12px;
+    color:#999999
+}
+.left-plan p{
+    text-indent: 30px;
+    font-size:14px;
+    color:#444444;
+}
+.collegeMenu .active{
+    border-left: 2px solid #ff9600;
+    color:#025492
+}
+/*通知公告*/
+.college-right p,.image-text{
+    padding: 10px 0;
+    line-height: 30px;
+}
+.image-text span{
+    display: inline-block;
+    float: left;
+}
+.text-description{
+    width: 371px;
+    padding-top:5px;
+}
+.imageShow{
+    width: 150px;
+}
+.text-description{
+    padding-left: 25px;
+}
+.text-description p{
+    line-height: 24px;
+    padding: 0;
+    font-size: 12px;
+}
+.text-description .category{
+    font-size:14px;
+    color:#333333;
+    font-weight:bold;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.imageShow img{
+    padding-top: 10px;
+    width: 150px;
+    height: 100px;
+}
+.category-details{
+    font-size:12px;
+    color:#666666;
+}
+.date-time{
+    font-size:12px;
+    color:#999999;
+    text-align: right;
+}

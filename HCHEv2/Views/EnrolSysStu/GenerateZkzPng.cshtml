@@ -1,8 +1,8 @@
 ﻿@{
     Layout = null;
 }
-@using HC.Data.Models;
-@model StudentInfo
+@using HCHEv2.Models.Zkz
+@model ZkzInfo
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -82,51 +82,51 @@
         <table width="655" class="center table" cellspacing="0" cellpadding="0">
             <tr>
                 <td width="160" class="title"><strong>准考证号</strong></td>
-                <td colspan="3"><b>10697WS273</b></td>
+                <td colspan="3"><b>@Model.ZkzNo</b></td>
                 <td width="140" rowspan="6" class="witdh140"><img src="/Images/oc.jpg" width="140" height="180"></td>
             </tr>
             <tr>
                 <td width="160" class="title"><strong>高考报名号</strong></td>
-                <td colspan="3"><b>@Model.registerNo</b></td>
+                <td colspan="3"><b>@Model.stuInfo.registerNo</b></td>
 
             </tr>
             <tr>
                 <td class="title"><strong>姓   名</strong></td>
-                <td width="170"><b>@Model.StudentName</b></td>
+                <td width="170"><b>@Model.stuInfo.StudentName</b></td>
                 <td width="87" class="title"><strong>性别</strong></td>
-                <td width="86"><b>@Model.Sex</b></td>
+                <td width="86"><b>@Model.stuInfo.Sex</b></td>
             </tr>
             <tr>
                 <td class="title"><strong>考生科类</strong></td>
-                <td><b>@Model.Scategory</b></td>
+                <td><b>@Model.stuInfo.Scategory</b></td>
 
                 <td colspan="2"><b>注：体育（理）和艺术（理）均视为理科，艺术（文）视为文科。</b></td>
             </tr>
             <tr>
                 <td class="title"><strong>身份证号</strong></td>
-                <td colspan="3"><b>@Model.SelfCardNo</b></td>
+                <td colspan="3"><b>@Model.stuInfo.SelfCardNo</b></td>
             </tr>
             <tr>
                 <td class="title"><strong>考点名称</strong></td>
-                <td colspan="3"><b>西北大学桃园校区（高新四路15号)</b></td>
+                <td colspan="3"><b>@Model.ExamPlace</b></td>
             </tr>
             <tr>
                 <td class="title"><strong>考 场 号</strong></td>
-                <td colspan="4"><b>25</b></td>
+                <td colspan="4"><b>@Model.ExamNo</b></td>
             </tr>
             <tr>
                 <td class="title"><strong>教室号</strong></td>
-                <td><b>3308</b></td>
+                <td><b>@Model.RoomNo</b></td>
                 <td class="title"><strong>座位号</strong></td>
-                <td colspan="2"><b>3</b></td>
+                <td colspan="2"><b>@Model.SiteNo</b></td>
             </tr>
             <tr>
                 <td class="title">
                     <strong>考试时间及科目</strong>
                 </td>
                 <td colspan="4">
-                    <h3><b>2016 年 3 月 20 日  9：00--12：00</b></h3>
-                    <p style="font-size:14px;"><b>（其中：9：00—10：00  语文；10：00—11：00  数学；11：00-12：00  英语）</b></p>
+                    <h3><b>@Model.ExamTime</b></h3>
+                    <p style="font-size:14px;"><b>（@Model.SubjectAndTime）</b></p>
                 </td>
             <tr>
                 <td colspan="5" style="text-align:inherit;" class="tdp">

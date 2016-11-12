@@ -1,0 +1,32 @@
+.home-bg{
+    max-width: 1900px;
+    height: 1265px;
+    background: url("../images/home/home-bg.jpg");
+}
+.chain-group{
+    width: 990px;
+    height:163px;
+    position: relative;
+    font-size: 0;
+    margin: 80px auto;
+}
+.chain-group a{
+    display: inline-block;
+}
+.chain-group a img{
+    vertical-align: top;
+    text-align: left;
+}
+.groupFirst{
+    text-align: right;
+}
+.groupFirst img{
+    padding-right: 166px;
+}
+.groupThree .views{
+    padding-left: 166px;
+}
+.message-option{
+    margin-top: -121px;
+    position: relative;
+}

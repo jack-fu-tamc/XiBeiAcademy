@@ -1,5 +1,6 @@
 ﻿@{
     Layout = null;
+    
 }
 @using HCHEv2.Models.Zkz
 @model ZkzInfo
@@ -78,7 +79,9 @@
     <h1 class="h"> 2016年综合评价招生 </h1>
     <h1 class="h"> 准 考 证 </h1>
     <div class="center">
-        <p class="daima"><input type="button" value="下载准考证" class="down" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;报考院校代码：8101</p>
+        <p class="daima">
+        @*<input type="button" value="下载准考证" class="down" />*@
+            <a href="/EnrolSysStu/PrintDemoInPic/@Model.stuInfo.SelfCardNo" class="down">下载准考证</a>报考院校代码：8101</p>
         <table width="655" class="center table" cellspacing="0" cellpadding="0">
             <tr>
                 <td width="160" class="title"><strong>准考证号</strong></td>

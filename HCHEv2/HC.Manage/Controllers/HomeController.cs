@@ -62,7 +62,8 @@ namespace HC.Manage.Controllers
             ViewBag.newsTotalCount = _isqlQueryService.GetNewsCount().FirstOrDefault();
             ViewBag.notCheckMessage = _isqlQueryService.GetNotCheckedMessage().FirstOrDefault();
             ViewBag.newsMonthCount = _isqlQueryService.GetMonthNewsCount().FirstOrDefault();
-            ViewBag.totalClick = _isqlQueryService.GetTotalClick().FirstOrDefault();
+            var clickNum = _isqlQueryService.GetTotalClick();
+            ViewBag.totalClick = clickNum == null ? "0" : clickNum.FirstOrDefault();
             return View();
         }
 

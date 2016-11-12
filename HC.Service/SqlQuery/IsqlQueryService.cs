@@ -13,7 +13,7 @@ namespace HC.Service.SqlQuery
         DbRawSqlQuery<int> GetNewsCount();//string sqlStr, params object[] sqlParameters
         DbRawSqlQuery<int> GetNotCheckedMessage();
         DbRawSqlQuery<int> GetMonthNewsCount();
-        DbRawSqlQuery<int> GetTotalClick();
+        DbRawSqlQuery<string> GetTotalClick();
         DbRawSqlQuery<AnalyslsNewsByMonth> getNewsAnalsysMonth(string year);
 
         DbRawSqlQuery<int> GetNextOrPreNewsID(int classID, int newsID, int getType);

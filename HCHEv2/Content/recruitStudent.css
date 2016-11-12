@@ -1,0 +1,164 @@
+.college-bg{
+    background: url("../images/college/student.jpg");
+    height: 428px;
+}
+.active-bg{
+    background: url("../images/college/active-bg.jpg");
+    height: 399px;
+}
+.collegeview-bg{
+    background: url("../images/college/view-bg.jpg");
+    height: 428px;
+}
+/*content start*/
+.content-college{
+   margin-top: 40px;
+    color:#333333;
+}
+.college-left{
+    float: left;
+    width: 170px;
+}
+.college-right{
+    float: left;
+    width: 755px;
+    margin-left: 75px;
+}
+.college-title{
+    color:#025492;
+    font-size: 24px;
+    line-height: 50px;
+}
+.college-titleRed{
+    color:#df2f31;
+    font-size: 24px;
+    line-height: 50px;
+}
+.college-titleRed span{
+    float: right;
+    font-size: 12px;
+    color:#333333
+}
+.college-downLine{
+    border-bottom: 1px solid #cccccc;
+}
+.collegeMenu{
+    color:#333333;
+    font-size: 14px;
+}
+.collegeMenu li{
+    line-height: 40px;
+    border-top: 1px solid #cccccc;
+    cursor: pointer;
+}
+.collegeMenu .removeLine{
+    border-bottom: none;
+}
+.collegeMenu li ul li img{
+    margin-left: 40px;
+}
+.collegeMenu li img{
+    float: left;
+    margin-top: 18px;
+    margin-left: 20px;
+}
+.collegeMenu li span{
+    padding-left: 10px;
+}
+.college-title span{
+    float: right;
+    font-size: 12px;
+    color:#333333
+}
+.college-right p,.image-text{
+    padding: 10px 0;
+    line-height: 30px;
+}
+.image-text span{
+    display: inline-block;
+    float: left;
+}
+.text-description{
+    width: 598px;
+    padding-top:5px;
+}
+.imageShow{
+    width: 150px;
+}
+.text-description{
+    padding-left: 25px;
+}
+.text-description p{
+    line-height: 30px;
+    padding: 0;
+}
+.text-description .category{
+    font-size:14px;
+    color:#333333;
+    font-weight:bold;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.imageShow img{
+    padding-top: 10px;
+}
+.category-details{
+    font-size:12px;
+    color:#666666;
+}
+.date-time{
+    font-size:12px;
+    color:#999999;
+    text-align: right;
+}
+.menuShow{
+    display: none;
+}
+.active-changeColor{
+   background:#1880dc;
+    color: #ffffff;
+}
+.active-changeRedColor{
+    background:#df2f31;
+    color: #ffffff;
+}
+.Red_chain{
+    color:#df2f31
+}
+/*content end*/
+/*学院动态start*/
+
+/*学院动态end*/
+.imageList{
+    padding-bottom: 50px;
+}
+.imageList ul{
+    float: left;
+}
+.imageList li{
+    width: 222px;
+    margin: 36px 0px 0px 44px;
+    float: left;
+    line-height: 24px;
+    display: inline-block;
+    float:none\9;
+    width:218px\9;
+}
+.imageList li img{
+    width: 222px;
+    width:218px\9;
+    height:168px;
+}
+.imageList .image-clearance{
+    margin-left: 0;
+}
+.image-clearance>.view-title{
+    color:#333333;
+}
+.imageList .down-view{
+    color:#1880dc;
+    font-size:14px;
+    font-weight: bold;
+}
