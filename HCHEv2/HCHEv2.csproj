@@ -246,6 +246,7 @@
     </Compile>
     <Compile Include="Models\Login\LoginModel.cs" />
     <Compile Include="Models\stuRegist\StuRegistInfo.cs" />
+    <Compile Include="Models\Zkz\ZkzInfo.cs" />
     <Compile Include="pdfHelp\htmlToPic.cs" />
     <Compile Include="pdfHelp\UnicodeFontFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1921,6 +1922,8 @@
     <Content Include="Views\EnrolSysStu\GenerateZkzPng.cshtml" />
     <Content Include="Views\EnrolSysStu\PrintZkzInPic.cshtml" />
     <Content Include="Views\EnrolSysStu\StuRegister.cshtml" />
+    <Content Include="Views\EnrolSysStu\PreviewZkz.cshtml" />
+    <Content Include="Views\EnrolSysStu\InquirieZkz.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

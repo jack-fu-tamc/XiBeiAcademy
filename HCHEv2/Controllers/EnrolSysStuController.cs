@@ -14,6 +14,7 @@ using System.Drawing.Imaging;
 using HC.Core.Common.FileUpload;
 using HCHEv2.pdfHelp;
 using HC.Service.EnrolSys;
+using HCHEv2.Models.Zkz;
 
 namespace HCHEv2.Controllers
 {
@@ -176,11 +177,68 @@ namespace HCHEv2.Controllers
 
 
 
-
-        public ActionResult previewZkz(string id)
+        /// <summary>
+        /// 准考查询入口页面
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public ActionResult InquirieZkz()
         {
-            return null;
+            return View();
         }
+
+        /// <summary>
+        /// 准考证查询POST页面
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult InquirieZkz(FormCollection form)
+        {
+            var queryStr = form["CardIdOrRegistNo"];
+            //var queryStr = Request["CardIdOrRegistNo"];
+
+            #region 判断是否存在
+            var stuModel = _iEnrolsysService.getStudentInfoByCardID(queryStr);
+            #endregion
+
+            if (stuModel == null)
+            {
+                ViewBag.mes = "查无此信息";
+                return View();
+            }
+            else
+            {
+                var model = new ZkzInfo();
+                model.stuInfo = stuModel;
+                model.ZkzNo = "10697WS273";
+                model.ExamNo = "25";
+                model.RoomNo = "3308";
+                model.SiteNo = "3";
+                model.ExamPlace = "西北大学桃园校区（高新四路15号）";
+                model.ExamTime = "2016年 3月20日 9：00-12：00";
+                model.SubjectAndTime = "其中：9：00-10：00 语文； 10：00-11：00 数学； 11：00-12：00 英语；";
+                return View("PreviewZkz", model);
+            }
+          
+
+        }
+
+
+
+        /// <summary>
+        /// 准考证预览页面
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult PreviewZkz()
+        {
+            return View();
+        }
+
+
+
+
 
 
         /// <summary>

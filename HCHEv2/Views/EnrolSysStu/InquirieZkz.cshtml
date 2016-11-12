@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+@*准考证查询入口*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>准考证预览</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("InquirieZkz", "EnrolSysStu", FormMethod.Post, new { }))
+        {
+            @Html.AntiForgeryToken()
+            <span>输入高考证号或身份证号：</span><input name="CardIdOrRegistNo" width="150" height="50" />
+            <input type="submit" value="查询" />
+        }
+    </div>
+</body>
+</html>
