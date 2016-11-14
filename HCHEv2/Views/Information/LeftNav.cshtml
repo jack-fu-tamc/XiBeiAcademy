@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
     var i = 0;
-    
+
 }
 @using HC.Service.Section
 @using HC.Core.Infrastructure
@@ -26,10 +26,10 @@
                 <li>
                     <div><img src="~/images/recruit/big.png"><a href="@Url.Action("singlePage", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
                 </li>
-                
+
             }
         }
-        else if(nClass.IsSingle==0)//列表
+        else if (nClass.IsSingle == 0)//列表
         {
             var _IsectionService = EngineContext.Current.Resolve<ISectionService>();
             var subSection = _IsectionService.GetSubNewClassByParentNewClass(nClass.ClassID);
@@ -38,35 +38,25 @@
             if (subSection.Count > 0)//有子栏目
             {
                 i++;
-                @*<li>
-                    <div id="CollapsiblePanel_@i" name="CollapsiblePanels" class="CollapsiblePanel CollapsiblePanelClosed">
-                        <div class="CollapsiblePanel_bt">@Html.Raw(nClass.ClassName)</div>
-                        <div class="CollapsiblePanelContent">
-                            <div class="CollapsiblePanelContent_bj">
-                                @foreach (var sub in subSection)
-                                {
-                                    <a href="@Url.Action("Section", "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                </li>*@
 
 
-    <li>
-        <div><img src="~/images/recruit/big.png"><span>招生信息</span></div>
-        <ul class="menuShow">
-            @foreach (var sub in subSection)
-            {
-                <li class="removeLine"><img src="~/images/recruit/small.png"><a href="@Url.Action("Section", "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a></li>
-              
-            }
-            @*<li class="removeLine"><img src="~/images/recruit/small.png"><span>软件系</span></li>
-            <li><img src="~/images/recruit/small.png"><span>艺术系</span></li>
-            <li><img src="~/images/recruit/small.png"><span>经管系</span></li>
-            <li><img src="~/images/recruit/small.png"><span>汽车系</span></li>*@
-        </ul>
-    </li>
+
+                <li>
+                    <div><img src="~/images/recruit/big.png"><span>@Html.Raw(nClass.ClassName)</span></div>
+                    <ul class="menuShow">
+                        @foreach (var sub in subSection)
+                        {
+                            if (sub.IsSingle == 0)
+                            {
+                                <li class="removeLine"><img src="~/images/recruit/small.png"><a href="@Url.Action("Section", "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a></li>
+                            }
+                            else
+                            {
+                                <li class="removeLine"><img src="~/images/recruit/small.png"><a href="@Url.Action("singlePage", "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a></li>
+                            }
+                        }
+                    </ul>
+                </li>
 
 
 
@@ -95,7 +85,7 @@
         {
             <li>
                 <div><img src="~/images/recruit/big.png"><a @nClass.linkAddress>@Html.Raw(nClass.ClassName)</a></div>
-            </li>            
+            </li>
         }
         else
         {
@@ -104,5 +94,3 @@
 
     }
 </ul>
-
-
