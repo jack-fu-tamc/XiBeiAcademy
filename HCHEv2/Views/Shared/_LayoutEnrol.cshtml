@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
 }
-<!--教育教学模板页-->
+<!--招生专题-->
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -16,10 +16,14 @@
 <body>
     <div class="container">
         <div class="row">
-            @Html.Partial("cxHeader")
+            @Html.Partial("cxHeaderEnrol")
             @*@RenderSection("bannerDiv", false)*@
             @RenderBody()
-            @Html.Partial("cxFooter") 
+
+
+
+
+            @Html.Partial("cxFooterEnrol") 
         </div>
     </div>
 

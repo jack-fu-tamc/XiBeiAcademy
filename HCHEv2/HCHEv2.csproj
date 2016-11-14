@@ -1882,7 +1882,7 @@
     <Content Include="Ueditor\Web.config" />
     <Content Include="Views\Home\HeadNav.cshtml" />
     <Content Include="Views\Information\PicSection.cshtml" />
-    <Content Include="Views\Home\Library.cshtml" />
+    <Content Include="Views\Home\Enrol.cshtml" />
     <Content Include="Views\Shared\_LayoutEnrol.cshtml" />
     <Content Include="Views\Shared\cxHeaderEducation.cshtml" />
     <Content Include="Views\Home\HeadNavEducation.cshtml" />
@@ -1901,6 +1901,8 @@
     <Content Include="Views\EnrolSysStu\InquirieZkz.cshtml" />
     <Content Include="Views\Information\EffectsPicSection.cshtml" />
     <Content Include="Views\Information\PicShowSection.cshtml" />
+    <Content Include="Views\Shared\cxHeaderEnrol.cshtml" />
+    <Content Include="Views\Shared\cxFooterEnrol.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
