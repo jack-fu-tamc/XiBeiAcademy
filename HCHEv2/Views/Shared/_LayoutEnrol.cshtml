@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+<!--教育教学模板页-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/index.css" rel="stylesheet" type="text/css" />
+
+    @RenderSection("headCSS", false)
+    @RenderSection("headScript", false)
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            @Html.Partial("cxHeader")
+            @*@RenderSection("bannerDiv", false)*@
+            @RenderBody()
+            @Html.Partial("cxFooter") 
+        </div>
+    </div>
+
+    @RenderSection("footScript", false)
+</body>
+</html>
