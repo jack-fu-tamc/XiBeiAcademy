@@ -1882,21 +1882,15 @@
     <Content Include="Ueditor\Web.config" />
     <Content Include="Views\Home\HeadNav.cshtml" />
     <Content Include="Views\Information\PicSection.cshtml" />
-    <Content Include="Views\Home\HeadNavLibrary.cshtml" />
     <Content Include="Views\Home\Library.cshtml" />
     <Content Include="Views\Shared\_LayoutEducation.cshtml" />
     <Content Include="Views\Shared\cxHeaderEducation.cshtml" />
     <Content Include="Views\Home\HeadNavEducation.cshtml" />
     <Content Include="Views\Home\Education.cshtml" />
-    <Content Include="Views\Information\NormalLibrarySection.cshtml" />
-    <Content Include="Views\Information\PicLibrarySection.cshtml" />
-    <Content Include="Views\Information\singleLibraryPage.cshtml" />
-    <Content Include="Views\Information\newsLibrary.cshtml" />
     <Content Include="Views\Information\NormalEducationSection.cshtml" />
     <Content Include="Views\Information\PicEducationSection.cshtml" />
     <Content Include="Views\Information\newsEducation.cshtml" />
     <Content Include="Views\Information\singleEducationPage.cshtml" />
-    <Content Include="Views\Information\BorrowGuide.cshtml" />
     <Content Include="SiteSet.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1905,6 +1899,8 @@
     <Content Include="Views\EnrolSysStu\StuRegister.cshtml" />
     <Content Include="Views\EnrolSysStu\PreviewZkz.cshtml" />
     <Content Include="Views\EnrolSysStu\InquirieZkz.cshtml" />
+    <Content Include="Views\Information\EffectsPicSection.cshtml" />
+    <Content Include="Views\Information\PicShowSection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

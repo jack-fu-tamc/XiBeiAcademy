@@ -103,6 +103,8 @@
 }
 .imageShow img{
     padding-top: 10px;
+    width:150px;
+    height:110px;
 }
 .category-details{
     font-size:12px;

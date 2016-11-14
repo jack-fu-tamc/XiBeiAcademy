@@ -1,39 +1,21 @@
 ﻿@{
     Layout = null;   
 }
-<div class="header">
-    <div class="header_bg">
-        <div class="logo"><a href="/"><img src="~/Images/logo.png" alt="logo"></a></div>
-        <div class="banner">
-            <div class="silbo-slide_03">
-                <div id="SlidePlayer_03">
-                    <ul class="Slides">
-                        <li title="标题" style="display: none; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;"><img src="~/Images/banner/banner_top_01.png" alt="标题"><div class="SlideTitle">标题<b></b></div></li>
-                        <li title="标题" style="display: none; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;"><img src="~/Images/banner/banner_top_02.png" alt="标题"><div class="SlideTitle">标题<b></b></div></li>
-                        <li title="标题" style="display: none; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;"><img src="~/Images/banner/banner_top_03.png" alt="标题"><div class="SlideTitle">标题<b></b></div></li>
-                        <li title="标题" style="display: block; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 1;"><img src="~/Images/banner/banner_top_04.png" alt="标题"><div class="SlideTitle">标题<b></b></div></li>
-                    </ul>
-                    <ul class="SlideTriggers"><li class="">1</li><li class="">2</li><li class="">3</li><li class="Current">4</li></ul>
-                </div>
-                <script type="text/javascript">
-                    TB.widget.SimpleSlide.decorate('SlidePlayer_03', {
-                        eventType: 'mouse', effect: 'fade', onInit: function () {
-                            var lis = $D.getElementsByClassName('Slides', 'ul', $D.get('SlidePlayer_03'))[0].getElementsByTagName('li'),
-                                titles = [], hrefs = [];
-                            for (var i = 0; i < lis.length; i++) {
-                                var el, innerEl;
-                                el = document.createElement('div');
-                                el.className = 'SlideTitle';
-                                el.innerHTML = lis[i].getAttribute('title') + '<b></b>';
-                                lis[i].appendChild(el);
-                            }
-                        }
-                    });
-                </script>
-            </div>
+
+
+<div class="nav-bar">
+    <div class="container-fluid">
+        <div class="nav-img"><img src="~/images/home/natigation-img.png"></div>
+        <div class="nav-hinge">
+            <div class="nav-search"><input type="text" value="请输入关键字" onfocus="if(this.value == '请输入关键字') this.value = ''" onblur="if(this.value =='') this.value = '请输入关键字'"></div>
+            <span class="hinge-text">
+                <a href="#" class="clear-border">学&nbsp;生</a>
+                <a href="#">教职工</a>
+                <a href="#">校&nbsp;友</a>
+                <a href="#">考生及家长</a>
+            </span>
         </div>
-        <div class="code"><img src="~/Images/code.png" alt="二维码"></div>
-        <div class="clr"></div>
+        <div class="clear"></div>
     </div>
 </div>
-@Html.Action("HeadNav", "Home")
+

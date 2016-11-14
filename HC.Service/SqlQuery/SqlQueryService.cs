@@ -42,10 +42,10 @@ namespace HC.Service.SqlQuery
             return this._idbcontext.SqlQuery<int>("select count(1) from News where DATEPART(MONTH,CreatTime)=DATEPART(month, GETDATE())", parameters);
         }
 
-        public DbRawSqlQuery<string> GetTotalClick()
+        public DbRawSqlQuery<int> GetTotalClick()
         {
             SqlParameter[] parameters = { };
-            return this._idbcontext.SqlQuery<string>("select sum(ClickNum) from News", parameters);
+            return this._idbcontext.SqlQuery<int>("select sum(ClickNum) from News", parameters);
         }
 
         public DbRawSqlQuery<AnalyslsNewsByMonth> getNewsAnalsysMonth(string year)

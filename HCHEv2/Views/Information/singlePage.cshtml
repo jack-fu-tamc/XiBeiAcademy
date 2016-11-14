@@ -5,6 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section headCSS{
+<link href="~/Content/newTrend.css" rel="stylesheet" type="text/css" />
+
     <link href="~/Scripts/ad-gallery/jquery.ad-gallery.css" type="text/css" rel="stylesheet">
 }
 
@@ -15,61 +17,30 @@
 
 
 
-
-
-
-
-
-
-<div class="block block_bg">
-    <div class="area_l">
-        <div class="leftnav">
-            <div class="leftnav2">
-                <div class="leftnav_title"><b>@ViewBag.parentName</b><span>SCHOOL NEWS</span></div>
-                <div class="leftnav_bg">
-                    @{Html.RenderAction("LeftNav", "Information", new { id = Model.ParentID, curenId = Model.ClassID });}
-                </div>
-            </div>
+<div class="new-bg">
+    @Html.Action("HeadNav", "Home")
+</div>
+<div class="new-trend">
+    <div class="container-fluid">
+        <div class="title"><p>@Html.Raw(Model.ClassName)</p></div>
+        <div class="new-titles">
+            <span><a href="/">首页</a></span>
+            @*<span>></span>
+                <span>新闻动态</span>
+                <span>></span>
+                <span>两学一做</span>
+                <span>></span>*@
+            @Html.Raw(ViewData["nav"].ToString())
         </div>
-        <div class="clr20"></div>
-
-        <div class="column_left_01">
-            <div class="column_t"><p class="column_title">热点新闻</p></div>
-            <div class="column_c">
-                <div class="left_01">
-                    @{Html.RenderAction("leftNewsDelivery", "Information");}
-                </div>
-            </div>
-        </div>
-
-        
-
-        <script type="text/javascript" src="/scripts/SpryCollapsiblePanel.js"></script>
-    </div>
-    <div class="area_r">
-        <!--当前位置 -->
-        <div class="crumb">
-            <div class="position">
-                <a href="/" title="首页" class="home"></a>
-                <p>
-                    <a href="/">首页</a>
-                    @Html.Raw(ViewData["nav"].ToString())
-                </p>
-            </div>
-            <div class="title"><p>@Html.Raw(Model.ClassName)</p></div>
-            <div class="clr"></div>
-        </div>
-
-
-        <!--网站内容 -->
-        <div class="about_content">
+        <div class="text-new">
+ 
             <!--相册显示-->
             @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
             {
+
                 <div style="min-height:450px;">
                     <div class="">
                         <!--start-->
-                        
 
                         <div id="container">
                             <div class="ad-gallery" id="gallery">
@@ -79,7 +50,7 @@
                                 <div class="ad-nav">
                                     <div class="ad-thumbs">
                                         <ul class="ad-thumb-list">
-                                            @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).ToList())
+                                            @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).OrderByDescending(x => x.AttachmentID).ToList())
                                             {
                                                 <li>
                                                     <a href="@item.AttaUrl">
@@ -98,20 +69,37 @@
                 </div>
             }
 
-            @*@Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))*@
+
             @Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))
 
         </div>
-
-        <div class="bottom_top clearfix">
-           
-            <p class="fr"><a href="/">&lt; 返回首页</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><img src="/images/common/ico_top.gif"></a></p>
+        <div class="share-other">
+            <span>
+                <em>分享到：</em>
+                <a href="#" target="_blank" title=""><img src="~/images/new/shareqq.png" /></a>
+                <a href="#" target="_blank" title=""><img src="~/images/new/sharebo.png" /></a>
+                <a href="#" target="_blank" title=""><img src="~/images/new/sharezqone.png" /></a>
+                <a href="#" target="_blank" title=""><img src="~/images/new/sharemen.png" /></a>
+                <a href="#" target="_blank" title=""><img src="~/images/new/shareadd.png" /></a>
+            </span>
         </div>
+      
     </div>
-    <div class="clr"></div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 @section footScript{
-    
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
     <script src="~/Scripts/ad-gallery/jquery.ad-gallery.js" type="text/javascript" charset="UTF-8"></script>
     
     <script type="text/javascript">
@@ -131,5 +119,4 @@
       );
         });
 </script>
-
     }

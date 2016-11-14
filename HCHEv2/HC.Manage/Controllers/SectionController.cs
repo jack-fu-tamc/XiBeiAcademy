@@ -163,6 +163,7 @@ namespace HC.Manage.Controllers
                 entity.ClassOrder = model.ClassOrder;
                 entity.IsSingle = model.IsSingle;
                 entity.IsShowInNav = model.IsShowInNav;
+                entity.ShowWay = model.ShowWay;
                 entity.PageContent = HttpUtility.HtmlEncode(model.PageContent);
                 entity.linkAddress = HttpUtility.HtmlEncode(model.linkAddress);
                 entity.SmallPic = model.SmallPic;
@@ -312,6 +313,18 @@ namespace HC.Manage.Controllers
                 }
                 if (nclass.IsSingle == 0)
                 {
+
+                    var threeLevelIsSingle = _isectionService.GetSubNewClassByParentNewClass(nclass.ClassID);
+                    if (threeLevelIsSingle.Count > 0)
+                    {
+                        if (threeLevelIsSingle.All(x => x.IsSingle == 1))
+                        {
+                            continue;
+                        }
+                    }
+
+
+
                     //str += "<a classid=\"" + nclass.ClassID + "\" class=\"showNews\">" + nclass.ClassName + "</a>";
                     str += "<option value=\"" + nclass.ClassID.ToString() + "\">" + nclass.ClassName + "</option>";
                 }

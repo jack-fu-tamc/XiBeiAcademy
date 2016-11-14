@@ -2,27 +2,27 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-   
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@ViewBag.Title</title>
     <link href="~/Content/index.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/home.css" rel="stylesheet" type="text/css" />
-
-  
-
+ 
     @RenderSection("headCSS", false)
     @RenderSection("headScript", false)
 </head>
 <body>
-    @Html.Partial("cxHeader")
-    @*@RenderSection("bannerDiv", false)*@
+    <div class="container">
+        <div class="row">
+            @Html.Partial("cxHeader")
+            @*@RenderSection("bannerDiv", false)*@
+            @RenderBody()
 
-    @RenderBody()
-
-
-    @Html.Partial("cxFooter")
-    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+            @Html.Partial("cxFooter")
+        </div>
+    </div>
+   
     @RenderSection("footScript", false)
+
 </body>
 </html>

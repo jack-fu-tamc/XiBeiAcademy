@@ -1,42 +1,41 @@
 ﻿@using HC.Data.Models;
 @{
-    ViewBag.Title = "西北大学软件职业学院-" + ViewBag.paentclassName;
+   
     Layout = "~/Views/Shared/_Layout.cshtml";
 
     var curentPage = int.Parse(ViewBag.curentPage.ToString());
     var totalCount = int.Parse(ViewBag.TottalCount.ToString());
-    var totalPage = int.Parse(Math.Ceiling((float)totalCount / 15).ToString());
+    var totalPage = int.Parse(Math.Ceiling((float)totalCount / 15).ToString()); ;
     var curentNewsClass = ViewData["curentNewsClass"] as NewsClass;
+    ViewBag.Title = "西北大学软件职业学院-" + Html.Raw(curentNewsClass.ClassName);
     var i = 0;
-    }
+}
 @model List<HC.Data.Models.News>
 
-@section headScript{
-    <script type="text/javascript" src="~/Scripts/jq-1.7.js"></script>
-    <script type="text/javascript" src="~/Scripts/lightbox.js"></script>
-}
 @section headCSS{
-<link href="~/Content/recruitStudent.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/jquery.lightbox.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-        .singleContent a img {
-            width: 220px;
-            height: 150px;
-        }
-    </style>
+    <link href="~/Content/recruitStudent.css" rel="stylesheet" type="text/css" />
+}
+@section headScript{
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/recruitStudent.js"></script>
 }
 
 
 
 
 
+
+
+
+
+
+
+ <!--正文-->
 <div class="collegeview-bg">
-    @Html.Action("HeadNav", "Home")
+   @Html.Action("HeadNav", "Home")
 
 </div>
-
-
-
+      
 <div class="content-college">
     <div class="container-fluid">
         <!--左侧-->
@@ -57,27 +56,32 @@
 
                     @foreach (var nes in Model)
                     {
+                        @*<li>
+                            <p class="pic"><a href="@Url.Action("news", "Information", new { id=nes.NewsID})"><img src="@nes.PicURL" /></a></p>
+                            <p class="title"><a href="@Url.Action("news", "Information", new { id=nes.NewsID})">@nes.NewsTitle</a></p>
+                        </li>*@
+                        
                         var className = "";
 
                         if (i % 3 == 0)
                         {
                             className = "image-clearance";
                         }
-                        <li class="@className">
-                            <div> <a title="@nes.NewsTitle" href="@nes.PicURL" rel="lightbox-tour" class="lightbox-enabled">
-    <img src="@nes.PicURL">
-</a>  </div>
-                            <div class="view-title"><a href="@Url.Action("news", "Information", new { id=nes.NewsID})">@nes.NewsTitle</a></div>
-                        </li>
-
+                        
+                        
+                         <li class="@className">
+                        <div><img src="@nes.PicURL" /></div>
+                        <div class="view-title"><a href="@Url.Action("news", "Information", new { id=nes.NewsID})">@nes.NewsTitle</a></div>                       
+                    </li>
+                        
                         i++;
                     }
 
+                   
 
+                     
 
-
-
-
+                   
                 </ul>
                 <div class="clear"></div>
                 <!--分页-->
@@ -132,13 +136,7 @@
         <div class="clear"></div>
     </div>
 </div>
-
-
-
-
-
-
-
+       
 
 
 

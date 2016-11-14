@@ -1,20 +1,6 @@
 ﻿@{
     Layout = null;
-    var singleName = "singlePage";
-    var sectionNmae = "Section";
     var i = 0;
-    switch (ViewBag.toView as string)
-    {
-        case "Library":
-            singleName = "singleLibraryPage";
-            sectionNmae = "SectionLibrary";
-            break;
-        case "Education":
-            singleName = "singleEducationPage";
-            sectionNmae = "SectionEducation";
-            break;
-    }
-    
     
 }
 @using HC.Service.Section
@@ -30,11 +16,17 @@
         {
             if (ViewBag.curentClassId == nClass.ClassID)//当前栏目
             {
-                <li class="on"><a href="@Url.Action(singleName, "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></li>
+                <li class="active-changeColor">
+                    <div><img src="~/images/recruit/big.png"><a href="@Url.Action("singlePage", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+                </li>
+
             }
             else
             {
-                <li><a href="@Url.Action(singleName, "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></li>
+                <li>
+                    <div><img src="~/images/recruit/big.png"><a href="@Url.Action("singlePage", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+                </li>
+                
             }
         }
         else if(nClass.IsSingle==0)//列表
@@ -53,7 +45,7 @@
                             <div class="CollapsiblePanelContent_bj">
                                 @foreach (var sub in subSection)
                                 {
-                                    <a href="@Url.Action(sectionNmae, "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a>
+                                    <a href="@Url.Action("Section", "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a>
                                 }
                             </div>
                         </div>
@@ -65,17 +57,24 @@
             {
                 if (ViewBag.curentClassId == nClass.ClassID)//当前栏目
                 {
-                    <li class="on"><a href="@Url.Action(sectionNmae, "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></li>
+                    <li class="active-changeColor">
+                        <div><img src="~/images/recruit/big.png"><a href="@Url.Action("Section", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+                    </li>
+
                 }
                 else
                 {
-                    <li><a href="@Url.Action(sectionNmae, "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></li>
+                    <li>
+                        <div><img src="~/images/recruit/big.png"><a href="@Url.Action("Section", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+                    </li>
                 }
             }
         }
         else if (nClass.IsSingle == 2)//外链
         {
-            <li><a href="@nClass.linkAddress">@Html.Raw(nClass.ClassName)</a></li>
+            <li>
+                <div><img src="~/images/recruit/big.png"><a @nClass.linkAddress>@Html.Raw(nClass.ClassName)</a></div>
+            </li>            
         }
         else
         {
@@ -84,3 +83,5 @@
 
     }
 </ul>
+
+

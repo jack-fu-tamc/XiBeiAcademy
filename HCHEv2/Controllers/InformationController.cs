@@ -131,9 +131,9 @@ namespace HCHEv2.Controllers
         }
 
 
-        public List<News> GetModel(int page, ICollection<News> collectionNews)
+        public List<News> GetModel(int page, ICollection<News> collectionNews,int pagesize)
         {
-            return collectionNews.OrderByDescending(x => x.NewsOrder).ThenByDescending(x => x.CreatTime).Skip((page - 1) * 15).Take(15).ToList();
+            return collectionNews.OrderByDescending(x => x.NewsOrder).ThenByDescending(x => x.CreatTime).Skip((page - 1) * pagesize).Take(pagesize).ToList();
             //return collectionNews.OrderByDescending(x => x.CreatTime).Skip((page - 1) * 15).Take(15).ToList();
         }
 
@@ -175,7 +175,7 @@ namespace HCHEv2.Controllers
             var model = new List<News>();
             News hotNews = null;
 
-            #region 位置导航
+            #region 位置导航 -学院动态-学院新闻
             NewsClass curentSectionParent = null;
             if (curenSection.ParentID != 0)
             {
@@ -186,13 +186,13 @@ namespace HCHEv2.Controllers
             {
                 ViewBag.navPic = curentSectionParent.NaviPIC;
                 ViewBag.paentclassName = curentSectionParent.ClassName;
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + curenSection.ClassName + "";
+                nav += "-" + curentSectionParent.ClassName + "-" + curenSection.ClassName + "";
             }
             else
             {
                 ViewBag.navPic = curenSection.NaviPIC;
                 ViewBag.paentclassName = curenSection.ClassName;
-                nav += "<span>></span>" + curenSection.ClassName + "";
+                nav += "-" + curenSection.ClassName + "";
             }
             ViewData["nav"] = nav;
 
@@ -218,13 +218,17 @@ namespace HCHEv2.Controllers
                     model = GetNormalModel(page, CurentSectionNews, hotNews);
                     toView = "NormalSection";
                     break;
-                case 1://大图文(单行单条大)
+                case 1://图文列表新闻(可点击进详细页)
                     toView = "PicSection";
-                    model = GetModel(page, CurentSectionNews);
+                    model = GetModel(page, CurentSectionNews,5);
                     break;
-                case 3://单行多图无连接 带特效
+                case 2://图文列表 领导 （有详细页 ）
+                    toView = "PicShowSection";
+                    model = GetModel(page, CurentSectionNews, 15);
+                    break;
+                case 3://图文列表 风景展示（没有详细页 特效展示）
                     toView = "EffectsPicSection";
-                    model = GetModel(page, CurentSectionNews);
+                    model = GetModel(page, CurentSectionNews,15);
                     break;
 
 
@@ -238,78 +242,7 @@ namespace HCHEv2.Controllers
         }
 
 
-        /// <summary>
-        /// 图书馆新闻列表页
-        /// </summary>
-        /// <param name="id">栏目id</param>
-        /// <param name="page">页码</param>
-        /// <returns></returns>
-        public ActionResult SectionLibrary(int id, int page = 1) 
-        {
-            var curenSection = _isectionService.getNewsClassByID(id);
-            var CurentSectionNews = _isectionService.getNewsClassByID(id).News.Where(x=>x.isDelete==0).ToList();
-            var model = new List<News>();
-            News hotNews = null;
-
-            #region 位置导航
-            NewsClass curentSectionParent = null;
-            if (curenSection.ParentID != 0)
-            {
-                curentSectionParent = _isectionService.getNewsClassByID(curenSection.ParentID);
-            }
-            var nav = "";
-            if (curentSectionParent != null)
-            {
-                ViewBag.navPic = curentSectionParent.NaviPIC;
-                ViewBag.paentclassName = curentSectionParent.ClassName;
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + curenSection.ClassName + "";
-            }
-            else
-            {
-                ViewBag.navPic = curenSection.NaviPIC;
-                ViewBag.paentclassName = curenSection.ClassName;
-                nav += "<span>></span>" + curenSection.ClassName + "";
-            }
-            ViewData["nav"] = nav;
-
-            #endregion
-
-
-
-            ViewData["curentNewsClass"] = curenSection;
-            ViewBag.curentPage = page;
-            ViewBag.TottalCount = CurentSectionNews.Count;
-
-            var toView = "";
-            switch (curenSection.ShowWay)
-            {
-                case 0://普通文字
-                    #region 普通文字列表第一页热点图文新闻
-                    if (page == 1)//第一页显示热点图文
-                    {
-                        hotNews = CurentSectionNews.Where(x => x.IsHot == 1).OrderByDescending(x => x.NewsID).FirstOrDefault();
-                        ViewData["hotNews"] = hotNews;
-                    }
-                    #endregion
-                    model = GetNormalModel(page, CurentSectionNews, hotNews);
-                    toView = "NormalLibrarySection";
-                    break;
-                case 1://大图文(单行单条大)
-                    toView = "PicLibrarySection";
-                    model = GetModel(page, CurentSectionNews);
-                    break;
-                case 20://借阅指南
-                    toView = "BorrowGuide";
-                    model = GetModel(page, CurentSectionNews);
-                    break;
-                case 3://单行多图无连接 带特效
-                    toView = "EffectsPicLibrarySection";
-                    model = GetModel(page, CurentSectionNews);
-                    break;
-            }
-
-            return View(toView, model);
-        }
+        
 
         /// <summary>
         /// 教育教学新闻列表
@@ -369,11 +302,11 @@ namespace HCHEv2.Controllers
                     break;
                 case 1://大图文(单行单条大)
                     toView = "PicEducationSection";
-                    model = GetModel(page, CurentSectionNews);
+                    model = GetModel(page, CurentSectionNews,5);
                     break;
                 case 3://单行多图无连接 带特效
                     toView = "EffectsPicEducationSection";
-                    model = GetModel(page, CurentSectionNews);
+                    model = GetModel(page, CurentSectionNews,15);
                     break;
             }
 
@@ -858,17 +791,17 @@ namespace HCHEv2.Controllers
             {
                 toView = "EffectsPicSection";
                 ViewBag.MViewName = "EffectsPicSection";
-                model = GetModel(page, CurentSectionNews);
+                model = GetModel(page, CurentSectionNews,15);
             }
             else if (curenSection.ShowWay == 0)
             {
-                model = GetModel(page, CurentSectionNews);
+                model = GetModel(page, CurentSectionNews,15);
                 ViewBag.MViewName = "NormalSection";
                 toView = "NormalSection";
             }
             else if (curenSection.ShowWay == 20)//借阅指南
             {
-                model = GetModel(page, CurentSectionNews);
+                model = GetModel(page, CurentSectionNews,15);
                 ViewBag.MViewName = "BorrowGuide";
                 toView = "BorrowGuide";
             }
@@ -876,7 +809,7 @@ namespace HCHEv2.Controllers
             {
                 toView = "PicSection";
                 ViewBag.MViewName = "PicSection";
-                    model = GetModel(page, CurentSectionNews);
+                    model = GetModel(page, CurentSectionNews,15);
             }
 
 

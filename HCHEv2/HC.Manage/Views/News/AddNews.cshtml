@@ -102,6 +102,18 @@
             {
                 continue;
             }
+
+            //是否显示该二级栏目
+            var threeLevelIsSingle = _ISectionService.GetSubNewClassByParentNewClass(levelTwo.ClassID);
+            if (threeLevelIsSingle.Count > 0)
+            {
+                if (threeLevelIsSingle.All(x => x.IsSingle == 1))
+                {
+                    continue;
+                }
+            }
+            
+            
             levelTwoDrop.Add(new SelectListItem() { Text = levelTwo.ClassName, Value = levelTwo.ClassID.ToString(),Selected=levelTwo.ClassID==parentNewsClass.ClassID });
         }
 
@@ -139,6 +151,19 @@
             {
                 continue;
             }
+            
+            //是否显示该二级栏目
+            var threeLevelIsSingle = _ISectionService.GetSubNewClassByParentNewClass(levelTwo.ClassID);
+            if (threeLevelIsSingle.Count > 0)
+            {               
+                if (threeLevelIsSingle.All(x => x.IsSingle == 1))
+                {
+                    continue;
+                }
+            }
+            
+            
+            
             levelTwoDrop.Add(new SelectListItem() { Text = levelTwo.ClassName, Value = levelTwo.ClassID.ToString(), Selected = levelTwo.ClassID==Model.ClassID });
         }
     }

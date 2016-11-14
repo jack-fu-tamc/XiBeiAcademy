@@ -20,28 +20,28 @@
             continue;
         }
         
-        var subsSectins = NewsClass.SectionLists.Where(x => x.ParentID == section.ClassID).Select(x => x.IsSingle);
+        var subsSectins = NewsClass.SectionLists.Where(x => x.ParentID == section.ClassID).Select(x => x.IsSingle);//二级栏目
 
         if (subsSectins.Count() == 0 && section.IsSingle == 0)//添加 没有子栏目但是 本栏目可以添加新闻的栏目
         {
             MultipleLevelOne.Add(section);
         }
 
-        //if (subsSectins.All(a => a == 1))
-        //{//1为单页
-
-        //}
-        //else
-        //{
-        //    MultipleLevelOne.Add(section);
-        //}
-
-
-
-        if (subsSectins.Any(a => a == 0))
+        if (subsSectins.All(a => a == 1))
         {//1为单页
+
+        }
+        else
+        {
             MultipleLevelOne.Add(section);
         }
+
+
+
+        //if (subsSectins.Any(a => a == 0))
+        //{//1为单页
+        //    MultipleLevelOne.Add(section);
+        //}
         
         
     }
@@ -68,8 +68,14 @@
                     
                     
                     var threeLevel = _InewsSectionService.GetSubNewClassByParentNewClass(subS.ClassID);
-                    if (threeLevel.Count > 0)//有三级栏目
+
+
+                    var threeLevelIsSings = threeLevel.Select(x => x.IsSingle).ToList();
+                    var showSubLevel = !threeLevelIsSings.All(x => x == 1);
+
+                    if (threeLevel.Count > 0 && showSubLevel)//有三级栏目  并且三级栏目中包含列表
                     {
+                        
                         <div class="NewsMenueSubSection menueSubSectionSpecial">
                             <div class="threeParent">
                                 <span classid="@subS.ClassID">@subS.ClassName</span><span class="threeParentIoc threeParentIocOff"></span>
@@ -94,7 +100,7 @@
                     }
                     else//无三级栏目
                     {
-                        if (subS.IsSingle == 0)
+                        if (subS.IsSingle == 0 && threeLevel.Count()==0)//二级栏目是列表而且当前二级栏目没有子栏目
                         {
                             <div class="NewsMenueSubSection">
                                 <span classid="@subS.ClassID">@subS.ClassName</span>

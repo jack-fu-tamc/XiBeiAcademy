@@ -8,7 +8,7 @@
     var totalPage =int.Parse(Math.Ceiling((float)totalCount / 15).ToString());
     var curentNewsClass = ViewData["curentNewsClass"] as NewsClass;
 
-    ViewBag.Title = "电力专科学校-" + Html.Raw(curentNewsClass.ClassName);
+    ViewBag.Title = "西北大学软件职业学院-" + Html.Raw(curentNewsClass.ClassName);
     
     News hotNews = null;
     if (ViewData["hotNews"] != null)
@@ -16,187 +16,109 @@
         hotNews = ViewData["hotNews"] as News;
     }
 
-    int i = 1;
+  
         
 }
 @model List<HC.Data.Models.News>
 
 
-<div class="block block_bg">
-    <div class="area_l">
-        <div class="leftnav">
-            <div class="leftnav2">
+@section headCSS{
+    
+<link href="~/Content/recruitStudent.css" rel="stylesheet" />
+<link href="~/Content/student-subside.css" rel="stylesheet" />
+}
+@section headScript{
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/recruitStudent.js"></script>
+}
+
+
+
+
+<div class="college-bg">
+    @Html.Action("HeadNav", "Home")
+</div>
+
+<div class="content-college">
+    <div class="container-fluid">
+        <!--左侧-->
+        <div class="college-left  college-downLine">
+            <div class="college-title">
+                @Html.Raw(ViewBag.paentclassName)
+            </div>
+            <div class="collegeMenu">
+             @{Html.RenderAction("LeftNav", "Information", new { id = curentNewsClass.ParentID, curenId = curentNewsClass.ClassID });}
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="college-right">
+            <div class="college-title college-downLine">@Html.Raw(curentNewsClass.ClassName)<span><a href="/">>首页-</a>@Html.Raw(ViewData["nav"].ToString()) </span></div>
+
+
+
+            @foreach (var nes in Model)
+            {
+                 <div class="college-downLine subsidies">
+                <span class="listText">
+                    <em>
+                        <img src="~/images/recruit/small.png" alt="" />
+                    </em>
+                    <a href="@Url.Action("news", "Information", new { id=nes.NewsID})">@nes.NewsTitle</a>
+                </span>
+                <span class="timeList">@nes.CreatTime.ToString("yyyy-MM-dd")</span>
+                <div class="clear"></div>
+            </div>
                 
-                <div class="leftnav_title"><b>@Html.Raw(ViewBag.paentclassName)</b><span>SCHOOL NEWS</span> </div>
-                <div class="leftnav_bg">
-                    @{Html.RenderAction("LeftNav", "Information", new { id = curentNewsClass.ParentID, curenId = curentNewsClass.ClassID });}
-                </div>
-            </div>
-        </div>
-        <div class="clr20"></div>
-        <script type="text/javascript" src="/scripts/SpryCollapsiblePanel.js"></script>
-        <div class="column_left_01">
-            <div class="column_t"><p class="column_title">热点新闻</p></div>
-            <div class="column_c">
-                <div class="left_01">
-                    @{Html.RenderAction("leftNewsDelivery", "Information");}
-                </div>
-            </div>
-        </div> 
-    </div>
-
-
-    <div class="area_r">
-        <!--当前位置 -->
-        <div class="crumb">
-            <div class="position">
-                <a href="/" title="首页" class="home"></a>
-                <p>
-                    <a href="/">首页</a>
-                    @Html.Raw(ViewData["nav"].ToString())
-                </p>
-            </div>
-            <div class="title"><p>@Html.Raw(curentNewsClass.ClassName)</p></div>
-            <div class="clr"></div>
-        </div>
-
-       
-        <!--热点新闻-->
-        @if (hotNews != null)
-        {
-            <div class="news_pic clearfix">
-                <div class="pic"><a href="@Url.Action("news", "Information", new { id = hotNews.NewsID })"><img src="@hotNews.PicURL"></a></div>
-                <div class="title_bg">
-                    <div class="time">@hotNews.CreatTime.ToString("yyyy-MM-dd")</div>
-                    <div class="title"><a href="@Url.Action("news", "Information", new { id = hotNews.NewsID })">@Html.Raw(hotNews.NewsTitle) </a></div>
-
-                    @{
-            var finallText = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(HttpUtility.HtmlDecode(hotNews.NewsContent), "<[^>]+>", ""), "&[^;]+;", "");
-
-            if (finallText.Length > 201)
-            {
-                <div class="sum">@Html.Raw(finallText.Substring(0, 200))</div>
-
             }
-            else
-            {
-                <div class="sum">@Html.Raw(finallText)</div>
-            }
-                    }
-
-                </div>
-            </div>
-        }
-        <!--热点新闻End-->
-
-
-
-        <!--网站内容 -->
-        <div class="news_list">
-            <ul>
-
-                @foreach (var nes in Model)
-                {
-                    <li><span class="time">@nes.CreatTime.ToString("yyyy-MM-dd")</span><a href="@Url.Action("news", "Information", new { id=nes.NewsID})">@nes.NewsTitle</a></li>
-                    if (i % 5 == 0)
-                    {
-                        <li class="x"></li>
-                    }
-                    i++;
-                }
-            </ul>
-            <!--分页 -->
-            <div class="page">
+            <!--分页-->
+            <div class="page-contnet">
 
                 @if (totalPage > 1)
                 {
-                    int prePage=1;
+                    int prePage = 1;
                     int nextPage = totalPage;
-                    if (curentPage>1)
+                    if (curentPage > 1)
                     {
-                         prePage = curentPage - 1;
+                        prePage = curentPage - 1;
                     }
 
                     if (curentPage < totalPage)
                     {
                         nextPage = curentPage + 1;
                     }
-                    
-                    
-                    
-                    <span class="a1">
-                        <a href="/Information/Section/@curentNewsClass.ClassID"> &lt;&lt;</a><!--第一页-->                       
-                        <a href="/Information/Section/@curentNewsClass.ClassID/@prePage"> &lt;</a><!--上一页-->
-                        @if (totalPage <= 5)
-                        {
-                            for (int j = 1; j <= totalPage; j++)
-                            {
-                                if (curentPage == j)
-                                {
-                                    <span>@curentPage</span>
-                                }
-                                else
-                                {
-                                    <a href="/Information/Section/@curentNewsClass.ClassID/@j">@j</a>
-                                }
-                            }
 
-                        }
-                        else
-                        {
-                            if (curentPage <= 3)
-                            {
-                                for (int j = 1; j <= 5; j++)
-                                {
-                                    if (curentPage == j)
-                                    {
-                                        <span>@curentPage</span>
-                                    }
-                                    else
-                                    {
-                                        <a href="/Information/Section/@curentNewsClass.ClassID/@j">@j</a>
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                if (totalPage - curentPage < 2)
-                                {
-                                    for (var p = curentPage - 2 + (totalPage - curentPage - 2); p <= totalPage; p++)
-                                    {
-                                        if (curentPage == p)
-                                        {
-                                            <span>@curentPage</span>
-                                        }
-                                        else
-                                        {
-                                            <a href="/Information/Section/@curentNewsClass.ClassID/@p">@p</a>
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    for (var k = curentPage - 2; k <= curentPage + 2; k++)
-                                    {
-                                        if (curentPage == k)
-                                        {
-                                            <span>@curentPage</span>
-                                        }
-                                        else
-                                        {
-                                            <a href="/Information/Section/@curentNewsClass.ClassID/@k">@k</a>
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        <a href="/Information/Section/@curentNewsClass.ClassID/@nextPage">&gt;</a><!--下一页-->
-                        <a href="/Information/Section/@curentNewsClass.ClassID/@totalPage">&gt;&gt;</a><!--末页-->
-                    </span>
+
+                    <div class="count-page">
+                        <span>总共<em class="count">@totalPage</em>页</span>
+                        <span>
+                            当前显示
+                            <em class="count">
+                                <i class="num_prev">@curentPage</i>/<i class="num_last">@totalPage</i>
+                            </em>
+                            页
+                        </span>
+
+                        <span><a href="/Information/Section/@curentNewsClass.ClassID"> 首页</a></span>
+                        <span><a href="/Information/Section/@curentNewsClass.ClassID/@prePage">上一页</a></span>
+
+
+                        <span> <a href="/Information/Section/@curentNewsClass.ClassID/@nextPage">下一页</a></span>
+                        <span><a href="/Information/Section/@curentNewsClass.ClassID/@totalPage">尾页</a></span>
+
+                        <span>
+                            <select name="" id="">
+                                <option>跳转至</option>
+                            </select>
+                        </span>
+                    </div>
+
+
+
                 }
             </div>
-
+            <!--fenye over-->
         </div>
+        <div class="clear"></div>
     </div>
-    <div class="clr"></div>
 </div>
+      
