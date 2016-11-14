@@ -38,7 +38,7 @@
             if (subSection.Count > 0)//有子栏目
             {
                 i++;
-                <li>
+                @*<li>
                     <div id="CollapsiblePanel_@i" name="CollapsiblePanels" class="CollapsiblePanel CollapsiblePanelClosed">
                         <div class="CollapsiblePanel_bt">@Html.Raw(nClass.ClassName)</div>
                         <div class="CollapsiblePanelContent">
@@ -50,7 +50,28 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li>*@
+
+
+    <li>
+        <div><img src="~/images/recruit/big.png"><span>招生信息</span></div>
+        <ul class="menuShow">
+            @foreach (var sub in subSection)
+            {
+                <li class="removeLine"><img src="~/images/recruit/small.png"><a href="@Url.Action("Section", "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a></li>
+              
+            }
+            @*<li class="removeLine"><img src="~/images/recruit/small.png"><span>软件系</span></li>
+            <li><img src="~/images/recruit/small.png"><span>艺术系</span></li>
+            <li><img src="~/images/recruit/small.png"><span>经管系</span></li>
+            <li><img src="~/images/recruit/small.png"><span>汽车系</span></li>*@
+        </ul>
+    </li>
+
+
+
+
+
 
             }
             else//无子栏目

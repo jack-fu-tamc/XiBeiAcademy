@@ -70,7 +70,7 @@
                         
                         
                          <li class="@className">
-                        <div><img src="@nes.PicURL" /></div>
+                        <div><a href="@Url.Action("news", "Information", new { id=nes.NewsID})"><img src="@nes.PicURL" /></a></div>
                         <div class="view-title"><a href="@Url.Action("news", "Information", new { id=nes.NewsID})">@nes.NewsTitle</a></div>                       
                     </li>
                         
