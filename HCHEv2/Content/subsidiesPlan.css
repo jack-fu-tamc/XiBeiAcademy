@@ -9,6 +9,7 @@
 .content-college{
     color:#333333;
     padding-bottom: 40px;
+    margin-top:40px;
 }
 .college-left>div{
     margin-left: 10px;
@@ -56,6 +57,7 @@
 .collegeMenu li>div{
     border-top: 1px solid #cccccc;
     background: #ffffff;
+    padding-left:23px;
 
 }
 .collegeMenu .removeLine{

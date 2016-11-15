@@ -76,13 +76,14 @@
                         </div>
                     </div>
                 }
-                <div class="left-plan">
+                @*<div class="left-plan">
                     @Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))
 
-                </div>
-                <div class="right-plan">
+                </div>*@
+                @Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))
+                @*<div class="right-plan">
                     @Html.Partial("EnrolLink")
-                </div>
+                </div>*@
                 <div class="clear"></div>
             </div>
         </div>

@@ -371,12 +371,12 @@ namespace HCHEv2.Controllers
             var nav = "";
             if (curentSectionParent != null)
             {
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + newEntiy.NewsClass.ClassName + "";
+                nav +=  curentSectionParent.ClassName + "-" + newEntiy.NewsClass.ClassName + "";
                 ViewBag.parentClassName = curentSectionParent.ClassName;
             }
             else
             {
-                nav += "<span>></span>" + newEntiy.NewsClass.ClassName + "";
+                nav +=  newEntiy.NewsClass.ClassName + "";
                 ViewBag.parentClassName = CurentNewsClass.ClassName;
             }
             ViewData["nav"] = nav;
@@ -512,12 +512,12 @@ namespace HCHEv2.Controllers
             ViewBag.parentName = "";
             if (curentSectionParent != null)
             {
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + singlePageClass.ClassName + "";
+                nav +=  curentSectionParent.ClassName + "-" + singlePageClass.ClassName + "";
                 ViewBag.parentName = curentSectionParent.ClassName;
             }
             else
             {
-                nav += "<span>></span>" + singlePageClass.ClassName + "";
+                nav +=  singlePageClass.ClassName + "";
                 ViewBag.parentName = singlePageClass.ClassName;
             }
             ViewData["nav"] = nav;

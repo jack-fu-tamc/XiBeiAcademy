@@ -36,17 +36,17 @@
     majorSelect.Add(new SelectListItem() { Text = "金融管理与实务", Value = "金融管理与实务" });
     majorSelect.Add(new SelectListItem() { Text = "会计与审计", Value = "会计与审计" });
     majorSelect.Add(new SelectListItem() { Text = "电子商务", Value = "电子商务" });
-    
+
     //对于未上传图片的验证
     var errorKeys = ViewData.ModelState.Keys.ToList();
     bool noPhote = false;
-    
+
     if (errorKeys.Contains("noPhoto"))
     {
         noPhote = true;
     }
-    
-    
+
+
 }
 @using HCHEv2.Models.stuRegist
 @model StuRegistInfo
@@ -59,6 +59,117 @@
     <script type="text/javascript" src="~/Scripts/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <style>
+        body {
+            height: 100%;
+            height: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .contains-from {
+            background: url("../../Images/regbg.jpg") no-repeat top center;
+            height: 141px;
+        }
+
+        .register-from {
+            width: 884px;
+            margin: auto;
+            background: url(../../Images/reg_contbg.jpg) repeat-y;
+            padding: 0 0px 76px;
+            position: relative;
+        }
+
+        .footer-from {
+            width: 884px;
+            margin: auto;
+            background: url("../../Images/reg_botline.jpg") no-repeat bottom center;
+            height: 18px;
+        }
+
+        .register-from form p {
+            line-height: 28px;
+            padding-top: 20px;
+        }
+
+            .register-from form p .form-name {
+                width: 300px;
+                display: inline-block;
+                text-align: right;
+                padding-right: 10px;
+            }
+
+            .register-from form p input[type='text'] {
+                line-height: 22px;
+                width: 275px;
+            }
+
+            .register-from form p select {
+                height: 30px;
+                width: 275px;
+            }
+
+        .select-pic {
+            display: inline-block;
+            position: relative;
+        }
+
+            .select-pic label {
+                display: inline-block;
+                width: 120px;
+                height: 28px;
+                background: #0e4062;
+                color: #ffffff;
+                text-align: center;
+                font-size: 12px;
+                position: absolute;
+                top: -20px;
+            }
+
+            .select-pic input {
+                opacity: 0;
+                width: 120px;
+                height: 28px;
+                position: absolute;
+                z-index: 10;
+                top: -20px;
+            }
+
+        .sub-from {
+            text-align: center;
+        }
+
+            .sub-from input {
+                text-align: center;
+                border: 1px solid #025492;
+                background: #025492;
+                padding: 8px 40px;
+                color: #ffffff;
+                border-radius: 4px;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+
+        .logos {
+            position: absolute;
+            top: -132px;
+            left: 507px;
+        }
+
+            .logos img {
+                width: 370px;
+            }
+
+        .field-validation-error {
+            display: inline-block;
+            font-size: 12px;
+            color: #ff0000;
+        }
+    </style>
 </head>
 <body>
 
@@ -78,180 +189,191 @@
                 }
             }
         }*@
+    <div class="contains-from"></div>
 
-
-    @if (ViewBag.AddResult)
-    {
-        <div style="width:1024px; margin:0 auto; text-align:center;">您已成功申请,请与指定日期在本站下载和打印准考证。</div>
-    }
-    else
-    {
-        if (noPhote)
+    <div class="register-from">
+        <div class="logos"><img src="~/images/logoReg.png" alt=""></div>
+        @if (ViewBag.AddResult)
         {
-            <div>@ViewData.ModelState["noPhoto"].Errors.FirstOrDefault().ErrorMessage</div>
+            <div style="width:1024px; margin:0 auto; text-align:center;">您已成功申请,请与指定日期在本站下载和打印准考证。</div>
+        }
+        else
+        {
+            if (noPhote)
+            {
+                <div>@ViewData.ModelState["noPhoto"].Errors.FirstOrDefault().ErrorMessage</div>
+            }
+
+            using (Html.BeginForm("StuRegister", "EnrolSysStu", FormMethod.Post, new { @autocomplete = "off", @class = "registerform", @enctype = "multipart/form-data" }))
+            {
+                <div>
+                    @Html.AntiForgeryToken()
+
+
+                    <p>
+                        <span class="form-name">学生姓名：</span>@Html.TextBoxFor(x => x.StudentName)
+                        @Html.ValidationMessageFor(x => x.StudentName)
+                    </p>
+
+
+                    <p>
+                        <span class="form-name">学生性别：</span>
+                        @Html.RadioButtonFor(x => x.Sex, "男")<span>男</span>
+                        @Html.RadioButtonFor(x => x.Sex, "女")<span>女</span>
+                        @Html.ValidationMessageFor(x => x.Sex)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">学生类型：</span>@Html.DropDownListFor(x => x.Stype, StypeSelects)
+                        @Html.ValidationMessageFor(x => x.Stype)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">科别：</span>@Html.DropDownListFor(x => x.Scategory, scategorySelect)
+                        @Html.ValidationMessageFor(x => x.Scategory)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">生源地：</span>@Html.DropDownListFor(x => x.Sfrom, sfromSelect)
+                        @Html.ValidationMessageFor(x => x.Sfrom)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">学校名称：</span>@Html.TextBoxFor(x => x.SchoolName)
+                        @Html.ValidationMessageFor(x => x.SchoolName)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">身份证号：</span>@Html.TextBoxFor(x => x.SelfCardNo)
+                        @Html.ValidationMessageFor(x => x.SelfCardNo)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">高考证号：</span>@Html.TextBoxFor(x => x.registerNo)
+                        @Html.ValidationMessageFor(x => x.registerNo)
+                    </p>
+
+
+
+
+                    <p>
+                        <span class="form-name">手机号：</span>@Html.TextBoxFor(x => x.SeflPhone)
+                        @Html.ValidationMessageFor(x => x.SeflPhone)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">父亲手机号：</span>@Html.TextBoxFor(x => x.FatherPhone)
+                        @Html.ValidationMessageFor(x => x.FatherPhone)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">母亲手机号：</span>@Html.TextBoxFor(x => x.MotherPhone)
+                        @Html.ValidationMessageFor(x => x.MotherPhone)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">固话号：</span>@Html.TextBoxFor(x => x.TelNum)
+                        @Html.ValidationMessageFor(x => x.TelNum)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">专业：</span>@Html.DropDownListFor(x => x.major, majorSelect)
+                        @Html.ValidationMessageFor(x => x.major)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">邮寄地址：</span>@Html.TextBoxFor(x => x.SendAddress)
+                        @Html.ValidationMessageFor(x => x.SendAddress)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">邮编：</span>@Html.TextBoxFor(x => x.ZipCode)
+                        @Html.ValidationMessageFor(x => x.ZipCode)
+                    </p>
+
+
+
+
+                    <p>
+                        <span class="form-name">收件人姓名：</span>@Html.TextBoxFor(x => x.ReceiveName)
+                        @Html.ValidationMessageFor(x => x.ReceiveName)
+                    </p>
+
+
+
+                    <p>
+                        <span class="form-name">收件人手机号：</span>@Html.TextBoxFor(x => x.ReceivePhone)
+                        @Html.ValidationMessageFor(x => x.ReceivePhone)
+                    </p>
+
+
+
+                    <p>
+                    <span class="form-name">本人1寸照片：</span> 
+                        <span class="select-pic">
+                            <input name="Sphoto" type="file" /><label>请选择照片</label>
+                        </span>
+                    </p>
+
+                    
+                    <p class="sub-from"><input type="submit" value="提交"></p>
+                </div>
+            }
         }
 
-        using (Html.BeginForm("StuRegister", "EnrolSysStu", FormMethod.Post, new { @autocomplete = "off", @class = "registerform", @enctype = "multipart/form-data" }))
-        {
-            <div>
-                @Html.AntiForgeryToken()
 
-
-                <p>
-                    <span>学生姓名：</span> @Html.TextBoxFor(x => x.StudentName)
-                    @Html.ValidationMessageFor(x => x.StudentName)
-                </p>
-
-
-                <p>
-                    <span>学生性别：</span>
-                    @Html.RadioButtonFor(x => x.Sex, "男")<span>男</span>
-                    @Html.RadioButtonFor(x => x.Sex, "女")<span>女</span>
-                    @Html.ValidationMessageFor(x => x.Sex)
-                </p>
-
-
-
-                <p>
-                    <span>学生类型：</span>@Html.DropDownListFor(x => x.Stype, StypeSelects)
-                    @Html.ValidationMessageFor(x => x.Stype)
-                </p>
-
-
-
-                <p>
-                    <span>科别：</span>@Html.DropDownListFor(x => x.Scategory, scategorySelect)
-                    @Html.ValidationMessageFor(x => x.Scategory)
-                </p>
-
-
-
-                <p>
-                    <span>生源地：</span>@Html.DropDownListFor(x => x.Sfrom, sfromSelect)
-                    @Html.ValidationMessageFor(x => x.Sfrom)
-                </p>
-
-
-
-                <p>
-                    <span>学校名称：</span>@Html.TextBoxFor(x => x.SchoolName)
-                    @Html.ValidationMessageFor(x => x.SchoolName)
-                </p>
-
-
-
-                <p>
-                    <span>身份证号：</span> @Html.TextBoxFor(x => x.SelfCardNo)
-                    @Html.ValidationMessageFor(x => x.SelfCardNo)
-                </p>
-
-
-
-                <p>
-                    <span>高考证号：</span> @Html.TextBoxFor(x => x.registerNo)
-                    @Html.ValidationMessageFor(x => x.registerNo)
-                </p>
-
-
-
-
-                <p>
-                    <span>手机号：</span>@Html.TextBoxFor(x => x.SeflPhone)
-                    @Html.ValidationMessageFor(x => x.SeflPhone)
-                </p>
-
-
-
-                <p>
-                    <span>父亲手机号：</span>@Html.TextBoxFor(x => x.FatherPhone)
-                    @Html.ValidationMessageFor(x => x.FatherPhone)
-                </p>
-
-
-
-                <p>
-                    <span>母亲手机号：</span>@Html.TextBoxFor(x => x.MotherPhone)
-                    @Html.ValidationMessageFor(x => x.MotherPhone)
-                </p>
-
-
-
-                <p>
-                    <span>固话号：</span>@Html.TextBoxFor(x => x.TelNum)
-                    @Html.ValidationMessageFor(x => x.TelNum)
-                </p>
-
-
-
-                <p>
-                    <span>专业：</span>@Html.DropDownListFor(x => x.major, majorSelect)
-                    @Html.ValidationMessageFor(x => x.major)
-                </p>
-
-
-
-                <p>
-                    <span>邮寄地址：</span>@Html.TextBoxFor(x => x.SendAddress)
-                    @Html.ValidationMessageFor(x => x.SendAddress)
-                </p>
-
-
-
-                <p>
-                    <span>邮编：</span>@Html.TextBoxFor(x => x.ZipCode)
-                    @Html.ValidationMessageFor(x => x.ZipCode)
-                </p>
-
-
-
-
-                <p>
-                    <span>收件人姓名：</span>@Html.TextBoxFor(x => x.ReceiveName)
-                    @Html.ValidationMessageFor(x => x.ReceiveName)
-                </p>
-
-
-
-                <p>
-                    <span>收件人手机号：</span>@Html.TextBoxFor(x => x.ReceivePhone)
-                    @Html.ValidationMessageFor(x => x.ReceivePhone)
-                </p>
-
-
-
-                <p><span>本人1寸照片：</span><input name="Sphoto" type="file" /></p>
-
-                <input type="submit" value="提交" />
-            </div>
-        }
-    }
+    </div>
 
 
     <script type="text/javascript">
 
-        document.onkeydown = function (e) {
-            e = window.event || e;
-            var keycode = e.keyCode || e.which;
-            if (e.ctrlKey || e.altKey || e.shiftKey
-            || keycode >= 112 && keycode <= 123) {
-                if (window.event) {// ie
-                    try { e.keyCode = 0; } catch (e) { }                 
-                    e.returnValue = false;
-                    e.preventDefault();
-                } else {// ff
+            document.onkeydown = function (e) {
+                e = window.event || e;
+                var keycode = e.keyCode || e.which;
+                if (e.ctrlKey || e.altKey || e.shiftKey
+                || keycode >= 112 && keycode <= 123) {
+                    if (window.event) {// ie
+                        try { e.keyCode = 0; } catch (e) { }
+                        e.returnValue = false;
+                        e.preventDefault();
+                    } else {// ff
 
-                    e.preventDefault();
+                        e.preventDefault();
+                    }
                 }
             }
-        }
-
-        
 
 
 
-        document.oncontextmenu = function (e) {
-            return false;
-        }
+
+
+            document.oncontextmenu = function (e) {
+                return false;
+            }
     </script>
 </body>
 </html>

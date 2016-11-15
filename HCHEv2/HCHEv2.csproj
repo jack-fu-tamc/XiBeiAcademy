@@ -1006,6 +1006,7 @@
     <Content Include="Images\common\part_bg.gif" />
     <Content Include="Images\common\rank.gif" />
     <Content Include="Images\common\time_bg.gif" />
+    <Content Include="Images\footer-logo.png" />
     <Content Include="Images\home\chain1.gif" />
     <Content Include="Images\home\chain2.gif" />
     <Content Include="Images\home\chain3.gif" />
@@ -1063,6 +1064,7 @@
     <Content Include="Images\login_bj2.jpg" />
     <Content Include="Images\login_bj2_.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\logoReg.png" />
     <Content Include="Images\logo_a.png" />
     <Content Include="Images\logo_b.png" />
     <Content Include="Images\new\new-img1.png" />
@@ -1085,6 +1087,9 @@
     <Content Include="Images\recruit\tie5.png" />
     <Content Include="Images\recruit\whiteBig.png" />
     <Content Include="Images\recruit\whiteSmall.png" />
+    <Content Include="Images\regbg.jpg" />
+    <Content Include="Images\reg_botline.jpg" />
+    <Content Include="Images\reg_contbg.jpg" />
     <Content Include="Images\top_bg.jpg" />
     <Content Include="mContent\images\common\button_01.gif" />
     <Content Include="mContent\images\common\ico_list.gif" />
