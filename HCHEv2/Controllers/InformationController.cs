@@ -420,11 +420,11 @@ namespace HCHEv2.Controllers
         }
 
         /// <summary>
-        /// 图书馆新闻浏览
+        /// 招生新闻
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult newsLibrary(int id)
+        public ActionResult EnrolNews(int id)
         {
             var newEntiy = _inewsSevice.GetNewsByID(id);
             if (newEntiy.isDelete != 0)
@@ -450,12 +450,12 @@ namespace HCHEv2.Controllers
             var nav = "";
             if (curentSectionParent != null)
             {
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + newEntiy.NewsClass.ClassName + "";
+                nav +=  curentSectionParent.ClassName + "-" + newEntiy.NewsClass.ClassName + "";
                 ViewBag.parentClassName = curentSectionParent.ClassName;
             }
             else
             {
-                nav += "<span>></span>" + newEntiy.NewsClass.ClassName + "";
+                nav +=  newEntiy.NewsClass.ClassName + "";
                 ViewBag.parentClassName = CurentNewsClass.ClassName;
             }
             ViewData["nav"] = nav;
@@ -485,70 +485,7 @@ namespace HCHEv2.Controllers
             return View(newEntiy);
         }
 
-        /// <summary>
-        /// 教育教学新闻浏览
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public ActionResult newsEducation(int id)
-        {
-            var newEntiy = _inewsSevice.GetNewsByID(id);
-            if (newEntiy.isDelete != 0)
-            {
-                return Redirect("/");
-            }
-            newEntiy.ClickNum = newEntiy.ClickNum + 1;
-            _inewsSevice.UpdateNews(newEntiy);
-
-            //当前根栏目名称
-            var CurentNewsClass = _isectionService.getNewsClassByID(newEntiy.NewsClass.ClassID);
-            //var parentClass = _isectionService.getNewsClassByID(newEntiy.NewsClass.ParentID);
-            ViewBag.CurentNewsClass = CurentNewsClass;
-
-            //ViewBag.parentClassName = parentClass.ClassName;
-
-            #region 位置导航
-            NewsClass curentSectionParent = null;
-            if (newEntiy.NewsClass.ParentID != 0)
-            {
-                curentSectionParent = _isectionService.getNewsClassByID(newEntiy.NewsClass.ParentID);
-            }
-            var nav = "";
-            if (curentSectionParent != null)
-            {
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + newEntiy.NewsClass.ClassName + "";
-                ViewBag.parentClassName = curentSectionParent.ClassName;
-            }
-            else
-            {
-                nav += "<span>></span>" + newEntiy.NewsClass.ClassName + "";
-                ViewBag.parentClassName = CurentNewsClass.ClassName;
-            }
-            ViewData["nav"] = nav;
-            #endregion
-
-            News newsNextQuery = null;
-            News newsPrevQuery = null;
-
-
-
-            //newsNextQuery = _inewsSevice.GetAllNews().Where(x => x.CreatTime < newEntiy.CreatTime && x.ClassID == newEntiy.ClassID&&x.isDelete==0).OrderByDescending(x => x.CreatTime).FirstOrDefault();
-            //newsPrevQuery = _inewsSevice.GetAllNews().Where(x => x.CreatTime > newEntiy.CreatTime && x.ClassID == newEntiy.ClassID&&x.isDelete==0).OrderBy(x => x.CreatTime).FirstOrDefault();
-
-            newsPrevQuery = getNextOrPrevNewsID(newEntiy.ClassID, newEntiy.NewsID, 1);
-            newsNextQuery = getNextOrPrevNewsID(newEntiy.ClassID, newEntiy.NewsID, 2);
-
-
-            if (newsNextQuery != null)
-            {
-                ViewData["nextNews"] = newsNextQuery;
-            }
-            if (newsPrevQuery != null)
-            {
-                ViewData["prevNews"] = newsPrevQuery;
-            }
-            return View(newEntiy);
-        }
+        
 
         #endregion
 

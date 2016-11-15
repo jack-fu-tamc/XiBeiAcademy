@@ -9,6 +9,8 @@
 
 @model List<HC.Data.Models.NewsClass>
 
+
+
 <ul>
     @foreach (var nClass in Model)
     {
@@ -16,15 +18,15 @@
         {
             if (ViewBag.curentClassId == nClass.ClassID)//当前栏目
             {
-                <li class="active-changeColor">
-                    <div><img src="~/images/recruit/big.png"><a href="@Url.Action("singlePage", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+                <li class="big-change">
+                    <div><a href="@Url.Action("singlePage", "Information", new { id = nClass.ClassID })"><i class="big-imgs"></i><span>@Html.Raw(nClass.ClassName)</span></a></div>
                 </li>
 
             }
             else
             {
                 <li>
-                    <div><img src="~/images/recruit/big.png"><a href="@Url.Action("singlePage", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+                    <div><a href="@Url.Action("singlePage", "Information", new { id = nClass.ClassID })"><i class="big-imgs"></i><span>@Html.Raw(nClass.ClassName)</span></a></div>
                 </li>
 
             }
@@ -42,17 +44,23 @@
 
 
                 <li>
-                    <div><img src="~/images/recruit/big.png"><span>@Html.Raw(nClass.ClassName)</span></div>
+                    
+                    <div><a href="javascript:;"><i class="big-imgs"></i><span>@Html.Raw(nClass.ClassName)</span></a></div>
                     <ul class="menuShow">
                         @foreach (var sub in subSection)
                         {
                             if (sub.IsSingle == 0)
                             {
-                                <li class="removeLine"><img src="~/images/recruit/small.png"><a href="@Url.Action("Section", "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a></li>
+
+                                @*<li class="removeLine small-change"><a href="javascript:;"><em class="small-imgs"></em><span>软件系</span></a></li>*@
+
+
+
+                                <li class="removeLine"><a href="@Url.Action("Section", "Information", new { id = sub.ClassID })"><em class="small-imgs"></em><span>@Html.Raw(sub.ClassName)</span></a></li>
                             }
                             else
                             {
-                                <li class="removeLine"><img src="~/images/recruit/small.png"><a href="@Url.Action("singlePage", "Information", new { id = sub.ClassID })">@Html.Raw(sub.ClassName)</a></li>
+                                <li class="removeLine"><a href="@Url.Action("singlePage", "Information", new { id = sub.ClassID })"><em class="small-imgs"></em><span>@Html.Raw(sub.ClassName)</span></a></li>
                             }
                         }
                     </ul>
@@ -68,15 +76,15 @@
             {
                 if (ViewBag.curentClassId == nClass.ClassID)//当前栏目
                 {
-                    <li class="active-changeColor">
-                        <div><img src="~/images/recruit/big.png"><a href="@Url.Action("Section", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+                    <li class="big-change">
+                        <div><a href="@Url.Action("Section", "Information", new { id = nClass.ClassID })"><i class="big-imgs"></i><span>@Html.Raw(nClass.ClassName)</span></a></div>
                     </li>
 
                 }
                 else
                 {
                     <li>
-                        <div><img src="~/images/recruit/big.png"><a href="@Url.Action("Section", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+                        <div><a href="@Url.Action("Section", "Information", new { id = nClass.ClassID })"><i class="big-imgs"></i><span>@Html.Raw(nClass.ClassName)</span></a></div>
                     </li>
                 }
             }
@@ -84,7 +92,7 @@
         else if (nClass.IsSingle == 2)//外链
         {
             <li>
-                <div><img src="~/images/recruit/big.png"><a @nClass.linkAddress>@Html.Raw(nClass.ClassName)</a></div>
+                <div><a @nClass.linkAddress><i class="big-imgs"></i><span>@Html.Raw(nClass.ClassName)</span></a></div>
             </li>
         }
         else

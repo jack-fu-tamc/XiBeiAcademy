@@ -10,6 +10,7 @@
 @section headcss{
 
 <link href="~/Content/newTrend.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/recruitStudent.css" rel="stylesheet" type="text/css" />
 
     <link href="~/Scripts/ad-gallery/jquery.ad-gallery.css" type="text/css" rel="stylesheet">
     <style type="text/css">
@@ -37,28 +38,45 @@
 
 <div class="new-trend">
     <div class="container-fluid">
-        <div class="new-titles">
-            <span><a href="/">首页</a></span>
-            @*<span>></span>
-            <span>新闻动态</span>
-            <span>></span>
-            <span>两学一做</span>
-            <span>></span>*@
-            @Html.Raw(ViewData["nav"].ToString())
+
+
+
+        <div class="college-left  college-downLine">
+
+            <div class="college-title">
+                @ViewBag.parentClassName
+            </div>
+            <div class="collegeMenu">
+                @{Html.RenderAction("LeftNav", "Information", new { id = curentNewsClass.ParentID, curenId = curentNewsClass.ClassID });}
+            </div>
         </div>
-        <div class="text-new">
-            <p class="first-title title-align">@Html.Raw(Model.NewsTitle)</p>
-            <p class="small-title title-align">日期：@Model.CreatTime.ToString("yyyy-MM-dd HH:mm")  本站原创   来源：@Html.Raw(Model.Author)  人气：@Model.ClickNum</p>
-            
 
 
-            <!--视频显示-->
-            @if (Model.Attachments.Where(x => x.AttaType == 2).Count() > 0)
+
+
+
+
+        <div class="college-right">
+
+            @*<div class="new-titles">
+                <span><a href="/">首页</a></span>
+                
+                @Html.Raw(ViewData["nav"].ToString())
+            </div>*@
+            <div class="college-title college-downLine">@Html.Raw(Model.NewsClass.ClassName)<span><a href="/">首页</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>
+
+            <div class="text-new">
+                <p class="first-title title-align">@Html.Raw(Model.NewsTitle)</p>
+                <p class="small-title title-align">日期：@Model.CreatTime.ToString("yyyy-MM-dd HH:mm")  本站原创   来源：@Html.Raw(Model.Author)  人气：@Model.ClickNum</p>
+
+
+                <!--视频显示-->
+                @if (Model.Attachments.Where(x => x.AttaType == 2).Count() > 0)
             {
 
-                <div class="spvoid" id="spvoid"></div> 
-                <script src="~/Scripts/smzy_jwplayer/jwplayer.js" type="text/javascript"></script>
-                <script type="text/javascript">
+                    <div class="spvoid" id="spvoid"></div>
+                    <script src="~/Scripts/smzy_jwplayer/jwplayer.js" type="text/javascript"></script>
+                    <script type="text/javascript">
 
                     jwplayer('spvoid').setup({
                         'flashplayer': '/Scripts/smzy_jwplayer/jwplayer.flash.swf',
@@ -69,86 +87,85 @@
                         //'aspectratio': '10:6',
                         'file': '@Model.Attachments.FirstOrDefault().AttaUrl'
                     });
-                </script>
+                    </script>
             }
 
-
-            <!--相册显示-->
-            @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
+                <!--相册显示-->
+                @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
             {
 
-                <div style="min-height:450px;">
-                    <div class="">
-                        <!--start-->
-
-                        <div id="container">
-                            <div class="ad-gallery" id="gallery">
-                                <div id="descriptions"></div>
-                                <div class="ad-image-wrapper"></div>
-                                <div class="ad-controls"></div>
-                                <div class="ad-nav">
-                                    <div class="ad-thumbs">
-                                        <ul class="ad-thumb-list">
-                                            @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).OrderByDescending(x => x.AttachmentID).ToList())
+                    <div style="min-height:450px;">
+                        <div class="">
+                            <!--start-->
+                            <div id="container">
+                                <div class="ad-gallery" id="gallery">
+                                    <div id="descriptions"></div>
+                                    <div class="ad-image-wrapper"></div>
+                                    <div class="ad-controls"></div>
+                                    <div class="ad-nav">
+                                        <div class="ad-thumbs">
+                                            <ul class="ad-thumb-list">
+                                                @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).OrderByDescending(x => x.AttachmentID).ToList())
                                             {
-                                                <li>
-                                                    <a href="@item.AttaUrl">
-                                                        <img src="@item.AttaUrl" alt="@item.AttaDescribe">
-                                                    </a>
-                                                </li>
+                                                    <li>
+                                                        <a href="@item.AttaUrl">
+                                                            <img src="@item.AttaUrl" alt="@item.AttaDescribe">
+                                                        </a>
+                                                    </li>
                                             }
-                                        </ul>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!--end -->
+                            <div class="c_both"></div>
                         </div>
-                        <!--end -->
-                        <div class="c_both"></div>
                     </div>
-                </div>
             }
 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.NewsContent))
 
-            @Html.Raw(HttpUtility.HtmlDecode(Model.NewsContent))
-            
-        </div>
-        <div class="share-other">
-            <span>
-                <em>分享到：</em>
-                <a href="#" target="_blank" title=""><img src="~/images/new/shareqq.png" /></a>
-                <a href="#" target="_blank" title=""><img src="~/images/new/sharebo.png" /></a>
-                <a href="#" target="_blank" title=""><img src="~/images/new/sharezqone.png" /></a>
-                <a href="#" target="_blank" title=""><img src="~/images/new/sharemen.png" /></a>
-                <a href="#" target="_blank" title=""><img src="~/images/new/shareadd.png" /></a>
-            </span>
-        </div>
-        <div class="correlation">
-            <p>相关阅读：</p>
-            <div class="piece-skip">
-
-                @if (ViewData["prevNews"] != null)
-                {
-                   
-                     <div class="left-piece" title=""><span>上一篇：</span><a href="/Information/news/@((ViewData["prevNews"] as News).NewsID)">@(Html.Raw((ViewData["prevNews"] as News).NewsTitle))</a></div>
-                }
-                else
-                {
-                     <div class="left-piece" title=""><span>上一篇：</span>没有了</div>
-                  
-                }
-                @if (ViewData["nextNews"] != null)
-                {
-                    <div class="right-piece" title=""><span>下一篇：</span><a href="/Information/news/@((ViewData["nextNews"] as News).NewsID)">@(Html.Raw((ViewData["nextNews"] as News).NewsTitle))</a></div>
-                    
-                }
-                else
-                {
-                     <div class="right-piece" title=""><span>下一篇：</span>没有了</div>
-                   
-                }
-                <div class="clear"></div>
             </div>
+            <div class="share-other">
+                <span>
+                    <em>分享到：</em>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/shareqq.png" /></a>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/sharebo.png" /></a>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/sharezqone.png" /></a>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/sharemen.png" /></a>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/shareadd.png" /></a>
+                </span>
+            </div>
+            <div class="correlation">
+                <p>相关阅读：</p>
+                <div class="piece-skip">
+                    @if (ViewData["prevNews"] != null)
+                {
+
+                        <div class="left-piece" title=""><span>上一篇：</span><a href="/Information/news/@((ViewData["prevNews"] as News).NewsID)">@(Html.Raw((ViewData["prevNews"] as News).NewsTitle))</a></div>
+                }
+                else
+                {
+                        <div class="left-piece" title=""><span>上一篇：</span>没有了</div>
+
+                }
+                    @if (ViewData["nextNews"] != null)
+                {
+                        <div class="right-piece" title=""><span>下一篇：</span><a href="/Information/news/@((ViewData["nextNews"] as News).NewsID)">@(Html.Raw((ViewData["nextNews"] as News).NewsTitle))</a></div>
+
+                }
+                else
+                {
+                        <div class="right-piece" title=""><span>下一篇：</span>没有了</div>
+
+                }
+                    <div class="clear"></div>
+                </div>
+            </div>
+
         </div>
+        <div class="clear"></div>
     </div>
 </div>
 

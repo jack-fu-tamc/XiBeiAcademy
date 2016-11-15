@@ -6,7 +6,7 @@
 }
 @section headCSS{
 <link href="~/Content/newTrend.css" rel="stylesheet" type="text/css" />
-
+<link href="~/Content/recruitStudent.css" rel="stylesheet" type="text/css" />
     <link href="~/Scripts/ad-gallery/jquery.ad-gallery.css" type="text/css" rel="stylesheet">
 }
 
@@ -22,68 +22,81 @@
 </div>
 <div class="new-trend">
     <div class="container-fluid">
-        <div class="title"><p>@Html.Raw(Model.ClassName)</p></div>
-        <div class="new-titles">
-            <span><a href="/">首页</a></span>
-            @*<span>></span>
-                <span>新闻动态</span>
-                <span>></span>
-                <span>两学一做</span>
-                <span>></span>*@
-            @Html.Raw(ViewData["nav"].ToString())
+
+
+        <!--左侧-->
+        <div class="college-left  college-downLine">
+            <div class="college-title">
+                @ViewBag.parentName
+            </div>
+            <div class="collegeMenu">
+               @{Html.RenderAction("LeftNav", "Information", new { id = Model.ParentID, curenId = Model.ClassID });}
+            </div>
         </div>
-        <div class="text-new">
- 
-            <!--相册显示-->
-            @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
+
+        <div class="college-right">
+            @*<div class="title"><p>@Html.Raw(Model.ClassName)</p></div>*@
+            @*<div class="new-titles">
+                <span><a href="/">首页</a></span>                
+                @Html.Raw(ViewData["nav"].ToString())
+            </div>*@
+
+            <div class="college-title college-downLine">@Html.Raw(Model.ClassName)<span><a href="/">首页</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>
+
+            <div class="text-new">
+
+                <!--相册显示-->
+                @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
             {
 
-                <div style="min-height:450px;">
-                    <div class="">
-                        <!--start-->
+            <div style="min-height:450px;">
+                <div class="">
+                    <!--start-->
 
-                        <div id="container">
-                            <div class="ad-gallery" id="gallery">
-                                <div id="descriptions"></div>
-                                <div class="ad-image-wrapper"></div>
-                                <div class="ad-controls"></div>
-                                <div class="ad-nav">
-                                    <div class="ad-thumbs">
-                                        <ul class="ad-thumb-list">
-                                            @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).OrderByDescending(x => x.AttachmentID).ToList())
+                    <div id="container">
+                        <div class="ad-gallery" id="gallery">
+                            <div id="descriptions"></div>
+                            <div class="ad-image-wrapper"></div>
+                            <div class="ad-controls"></div>
+                            <div class="ad-nav">
+                                <div class="ad-thumbs">
+                                    <ul class="ad-thumb-list">
+                                        @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).OrderByDescending(x => x.AttachmentID).ToList())
                                             {
-                                                <li>
-                                                    <a href="@item.AttaUrl">
-                                                        <img src="@item.AttaUrl" alt="@item.AttaDescribe">
-                                                    </a>
-                                                </li>
+                                            <li>
+                                                <a href="@item.AttaUrl">
+                                                    <img src="@item.AttaUrl" alt="@item.AttaDescribe">
+                                                </a>
+                                            </li>
                                             }
-                                        </ul>
-                                    </div>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <!--end -->
-                        <div class="c_both"></div>
                     </div>
+                    <!--end -->
+                    <div class="c_both"></div>
                 </div>
+            </div>
             }
 
 
-            @Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))
+                @Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))
 
+            </div>
+            <div class="share-other">
+                <span>
+                    <em>分享到：</em>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/shareqq.png" /></a>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/sharebo.png" /></a>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/sharezqone.png" /></a>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/sharemen.png" /></a>
+                    <a href="#" target="_blank" title=""><img src="~/images/new/shareadd.png" /></a>
+                </span>
+            </div>
         </div>
-        <div class="share-other">
-            <span>
-                <em>分享到：</em>
-                <a href="#" target="_blank" title=""><img src="~/images/new/shareqq.png" /></a>
-                <a href="#" target="_blank" title=""><img src="~/images/new/sharebo.png" /></a>
-                <a href="#" target="_blank" title=""><img src="~/images/new/sharezqone.png" /></a>
-                <a href="#" target="_blank" title=""><img src="~/images/new/sharemen.png" /></a>
-                <a href="#" target="_blank" title=""><img src="~/images/new/shareadd.png" /></a>
-            </span>
-        </div>
-      
+
+        <div class="clear"></div>
     </div>
 </div>
 

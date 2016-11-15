@@ -107,32 +107,26 @@
             </ul>
             @{
         var actionName = "Section";
-        //switch (sec.ClassID)
-        //{
-        //    case 1:
-        //        actionName = "SectionEducation";
-        //        break;
-        //    case 2077:
-        //        actionName = "SectionLibrary";
-        //        break;
-        //    default:
-        //        actionName = "Section";
-        //        break;                
-        //}
+        switch (sec.ClassID)
+        {
+            case 29:
+                actionName = "SectionEnrol";
+                break;           
+            default:
+                actionName = "Section";
+                break;
+        }
 
         var sigleName = "singlePage";
-        //switch (sec.ClassID)
-        //{
-        //    case 1:
-        //        sigleName = "singleEducationPage";
-        //        break;
-        //    case 2077:
-        //        sigleName = "singleLibraryPage";
-        //        break;
-        //    default:
-        //        sigleName = "singlePage";
-        //        break;
-        //}
+        switch (sec.ClassID)
+        {
+            case 29:
+                sigleName = "singleEnrol";
+                break;            
+            default:
+                sigleName = "singlePage";
+                break;
+        }
                 
 
                     //二级栏目

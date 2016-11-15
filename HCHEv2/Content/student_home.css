@@ -344,7 +344,9 @@ background:  url("../images/college/school-title.png") no-repeat;
 .share-show {
     text-align: right;
     margin-top: -25px;
+    padding-top: 0;
 }
-.footer-contain{
+.footer-message .footer-contain{
     color:#ffffff;
+    width: 900px;
 }

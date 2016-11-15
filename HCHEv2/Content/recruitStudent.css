@@ -15,14 +15,14 @@
    margin-top: 40px;
     color:#333333;
 }
-.college-left{
+.container-fluid .college-left{
     float: left;
-    width: 170px;
+    width: 220px;
 }
-.college-right{
+.container-fluid .college-right{
     float: left;
-    width: 755px;
-    margin-left: 75px;
+    width: 732px;
+    margin-left: 50px;
 }
 .college-title{
     color:#025492;
@@ -54,13 +54,81 @@
 .collegeMenu .removeLine{
     border-bottom: none;
 }
-.collegeMenu li ul li img{
-    margin-left: 40px;
+.collegeMenu>ul>li:hover>div{
+    background: #025492;
 }
-.collegeMenu li img{
+.collegeMenu>ul>li:hover>div>a{
+    color:#ffffff;
+}
+.collegeMenu>ul>.big-change>div{
+    background: #025492;
+}
+.collegeMenu>ul>.big-change>div>a{
+    color:#ffffff;
+}
+.menuShow li:hover{
+    background: #025492;
+}
+.menuShow li:hover a{
+    color:#ffffff;
+}
+.stud-menu>ul>li:hover>div{
+    background: #df2f31;
+}
+.stud-menu>ul>li:hover>div>a{
+    color: #ffffff;
+}
+.stud-menu>ul>.active-changeRedColor>div{
+    background: #df2f31;
+}
+.stud-menu>ul>.active-changeRedColor>div>a{
+    color: #ffffff;
+}
+.menuShow .small-change{
+    background: #025492;
+    color:#ffffff;
+}
+.menuShow .small-change a{
+    color:#ffffff;
+}
+.menuShow .small-change em{
+    background: url("../images/recruit/whiteSmall.png");
+}
+.collegeMenu li ul li em{
+    margin-left: 40px;
+    width: 3px;
+    height:3px;
+    background: url("../images/recruit/small.png");
+    display: inline-block;
+}
+.collegeMenu li ul li:hover em{
+    margin-left: 40px;
+    width: 3px;
+    height:3px;
+    background: url("../images/recruit/whiteSmall.png");
+    display: inline-block;
+}
+.collegeMenu li i{
     float: left;
     margin-top: 18px;
     margin-left: 20px;
+    width: 5px;
+    height: 5px;
+    background: url("../images/recruit/big.png");
+}
+.collegeMenu li:hover i{
+    float: left;
+    margin-top: 18px;
+    margin-left: 20px;
+    width: 5px;
+    height: 5px;
+    background: url("../images/recruit/whiteBig.png");
+}
+.collegeMenu .big-change i{
+    background: url("../images/recruit/whiteBig.png");
+}
+.collegeMenu li.active-changeRedColor i{
+    background: url("../images/recruit/whiteBig.png");
 }
 .collegeMenu li span{
     padding-left: 10px;
@@ -79,7 +147,7 @@
     float: left;
 }
 .text-description{
-    width: 598px;
+    width: 578px;
     padding-top:5px;
 }
 .imageShow{
@@ -141,7 +209,7 @@
 }
 .imageList li{
     width: 222px;
-    margin: 36px 0px 0px 44px;
+    margin: 36px 0px 0px 33px;
     float: left;
     line-height: 24px;
     display: inline-block;

@@ -1017,6 +1017,13 @@
     <Content Include="Images\home\footer-logo.png" />
     <Content Include="Images\home\home-bg.jpg" />
     <Content Include="Images\home\images\navigation-bg_02.png" />
+    <Content Include="Images\home\index03_03.jpg" />
+    <Content Include="Images\home\index03_05.jpg" />
+    <Content Include="Images\home\index03_07.jpg" />
+    <Content Include="Images\home\index03_09.jpg" />
+    <Content Include="Images\home\index03_15.jpg" />
+    <Content Include="Images\home\index03_17.jpg" />
+    <Content Include="Images\home\index03_19.jpg" />
     <Content Include="Images\home\link1.gif" />
     <Content Include="Images\home\link2.gif" />
     <Content Include="Images\home\link3.gif" />
@@ -1907,6 +1914,7 @@
     <Content Include="Views\Shared\HeadNavEnrol.cshtml" />
     <Content Include="Views\Shared\EnrolLink.cshtml" />
     <Content Include="Views\Information\LeftNavEnrol.cshtml" />
+    <Content Include="Views\Information\EnrolNews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

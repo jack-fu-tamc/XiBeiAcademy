@@ -1,0 +1,178 @@
+﻿@using HC.Data.Models
+@model News
+@{
+    ViewBag.Title = "学院招生-" + Html.Raw(Model.NewsClass.ClassName);
+    Layout = "~/Views/Shared/_LayoutEnrol.cshtml";
+
+}
+@section headCSS{
+<link href="~/Content/student_home.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/subsidiesPlan.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/ad-gallery/jquery.ad-gallery.css" type="text/css" rel="stylesheet">
+}
+
+@section headScript{
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/recruitStudent.js"></script>
+}
+
+
+
+
+
+<div class="home-bg">
+    <img src="~/images/college/recruit-bg.jpg" alt="" />
+
+<!--招生信息start-->
+           
+<div class="content-college">
+    <div class="container-fluid">
+        <!--左侧-->
+        <div class="college-left  college-downLine">
+            <div class="college-title">
+                @ViewBag.parentName
+            </div>
+            <div class="collegeMenu">
+                @{Html.RenderAction("LeftNavEnrol", "Information", new { id = Model.NewsClass.ParentID, curenId = Model.ClassID });}
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="college-right">
+            <div class="college-title college-downLine"><span><a href="/Enrol">首页-</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>
+            <p class="first-title title-align">@Model.NewsTitle</p>
+            <p class="small-title title-align">日期：@Model.CreatTime.ToString("yyyy-MM-dd HH-mm")  本站原创   来源：@Model.Author  人气：@Model.ClickNum</p>
+            <div class="plan-inform">
+
+
+
+
+                <!--视频显示-->
+                @if (Model.Attachments.Where(x => x.AttaType == 2).Count() > 0)
+                {
+
+                    <div class="spvoid" id="spvoid"></div>
+                    <script src="~/Scripts/smzy_jwplayer/jwplayer.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+
+                        jwplayer('spvoid').setup({
+                            'flashplayer': '/Scripts/smzy_jwplayer/jwplayer.flash.swf',
+                            'image': '@Model.Attachments.FirstOrDefault().AttaDescribe',
+                            'id': 'playerIDspVoid1',
+                            'width': 440,
+                            'height': 250,
+                            //'aspectratio': '10:6',
+                            'file': '@Model.Attachments.FirstOrDefault().AttaUrl'
+                        });
+                    </script>
+                }
+
+
+                <!--相册显示-->
+                @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
+                {
+                    <div style="min-height:450px;">
+                        <div class="">
+                            <!--start-->
+
+                            <div id="container">
+                                <div class="ad-gallery" id="gallery">
+                                    <div id="descriptions"></div>
+                                    <div class="ad-image-wrapper"></div>
+                                    <div class="ad-controls"></div>
+                                    <div class="ad-nav">
+                                        <div class="ad-thumbs">
+                                            <ul class="ad-thumb-list">
+                                                @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).ToList())
+                                                {
+                                                    <li>
+                                                        <a href="@item.AttaUrl">
+                                                            <img src="@item.AttaUrl" alt="@item.AttaDescribe">
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end -->
+                            <div class="c_both"></div>
+                        </div>
+                    </div>
+                }
+                <div class="left-plan">
+                    @Html.Raw(HttpUtility.HtmlDecode(Model.NewsContent))
+
+                </div>
+                <div class="right-plan">
+                    @Html.Partial("EnrolLink")
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+
+
+            <div class="correlation">
+                <p>相关阅读：</p>
+                <div class="piece-skip">
+                    @if (ViewData["prevNews"] != null)
+                    {
+
+                        <div class="left-piece" title=""><span>上一篇：</span><a href="/Information/news/@((ViewData["prevNews"] as News).NewsID)">@(Html.Raw((ViewData["prevNews"] as News).NewsTitle))</a></div>
+                    }
+                    else
+                    {
+                        <div class="left-piece" title=""><span>上一篇：</span>没有了</div>
+
+                    }
+                    @if (ViewData["nextNews"] != null)
+                    {
+                        <div class="right-piece" title=""><span>下一篇：</span><a href="/Information/news/@((ViewData["nextNews"] as News).NewsID)">@(Html.Raw((ViewData["nextNews"] as News).NewsTitle))</a></div>
+
+                    }
+                    else
+                    {
+                        <div class="right-piece" title=""><span>下一篇：</span>没有了</div>
+
+                    }
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+        </div>
+    </div>
+    <!--导航菜单-->
+    @Html.Partial("HeadNavEnrol")
+</div>
+        
+
+
+
+
+
+@section footScript{
+
+    <script src="~/Scripts/ad-gallery/jquery.ad-gallery.js" type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            var galleries = $('.ad-gallery').adGallery();
+            $('#switch-effect').change(
+        function () {
+            galleries[0].settings.effect = $(this).val();
+            return false;
+        }
+      );
+            $('#toggle-slideshow').click(
+        function () {
+            galleries[0].slideshow.toggle();
+            return false;
+        }
+      );
+        });
+    </script>
+
+}

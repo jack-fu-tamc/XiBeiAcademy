@@ -1,4 +1,4 @@
-@charset 'utf-8';
+﻿@charset 'utf-8';
 html{
     overflow-x:hidden;
     overflow-y:scroll;
@@ -29,6 +29,13 @@ a {
     text-decoration: none;
     border: none;
 }
+a:link {color:#444444;}/* 未被访问的链接 */
+
+a:visited {color:#444444;}/* 已被访问的链接 */
+
+a:hover {color:#444444;}/* 鼠标指针移动到链接上 */
+
+a:active {color:#444444;}/* 正在被点击的链接 */
 a:focus {
     outline: none;
 }
@@ -91,6 +98,7 @@ button::-moz-focus-inner{
     background: url("../images/home/search.png");
     margin-top: 13px;
     display: inline-block;
+    *float:left;
 }
 .nav-search>input{
     width: 77px;
@@ -100,6 +108,7 @@ button::-moz-focus-inner{
     background: transparent;
     border: none;
     font-size: 12px;
+    line-height:26px\9;
 }
 .hinge-text{
     padding-left: 15px;
@@ -142,11 +151,20 @@ button::-moz-focus-inner{
 .nav-menu li{
     text-align: center;
     display: inline-block;
-    line-height: 46px;
+    line-height: 47px;
     width: 118px;
     position: relative;
     cursor: pointer;
     z-index: 10;
+    *float:left;
+}
+.nav-menu li:hover{
+    background: #ffffff;
+    color:#08395c
+}
+.nav-menu .bav-native:hover{
+    *background: #ffffff;
+    *color:#08395c
 }
 .nav-menu li i{
     font-style: normal;
@@ -163,8 +181,28 @@ button::-moz-focus-inner{
     padding-bottom: 10px;
     display: none;
 }
-.nav-menu li:hover span{
-    color:#d6cf08
+.bav-native{
+    height: 46px;
+}
+.bav-native span{
+    float: left;
+    display: inline-block;
+    padding-left: 25px;
+}
+
+
+.bav-native i{
+    float: left;
+}
+.nav-menu li i.right{
+    display: none;
+}
+
+.nav-menu li:hover .right{
+    display: block;
+}
+.nav-menu li:hover .down{
+    display: none;
 }
 .nav-menu li:hover .recruit-student{
     display: block;
@@ -172,15 +210,22 @@ button::-moz-focus-inner{
 .recruit-inform{
     text-align: center;
     color:#08395c;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: normal;
 }
+
 .recruit-inform div{
-    height: 35px;
-    line-height: 35px;
+    height: 24px;
+    line-height: 24px;
 }
-.recruit-inform img{
-    margin-top: 10px;
+.recruit-inform .nav-type:hover{
+    font-weight: bold;
 }
+.recruit-inform .nav-type{
+    height: auto;
+    margin-top: 4px;
+}
+
 /*底部导航*/
 .chaining{
     background: #e5e5e5;
@@ -189,22 +234,21 @@ button::-moz-focus-inner{
     height: 121px;
 }
 .chain-left{
-    width: 530px;
+    width: 430px;
     float: left;
     margin-top: 10px;
-    padding-left: 20px;
 }
 .chain-left a{
     display: inline-block;
-    line-height: 50px;
+    line-height: 35px;
 }
 .chain-left a img{
-    padding-right: 50px;
+    padding-right: 0px;
 }
 .chain-right{
     float: right;
-    width: 277px;
-    margin-right: 30px;
+    width: 540px;
+    margin-right: 0px;
 }
 .message-img{
     margin-top: 10px;
@@ -232,17 +276,22 @@ button::-moz-focus-inner{
 .fooder-line{
     border-bottom: 1px solid #ffffff;
     color:#ffffff;
+    padding-bottom: 20px;
 }
 .footer-contain{
-    padding-left: 40px;
+    padding-left: 30px;
     float: left;
-    width: 914px;
+    width: 452px;
 }
 .footer-contain>div{
     line-height: 35px;
 }
+.footer-contain>div>span{
+    padding-left: 15px;
+}
 .share-show{
-    text-align: right;
+    text-align: center;
+    padding-top: 20px;
 }
 .share-show img{
     padding-left: 10px;

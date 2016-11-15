@@ -23,7 +23,7 @@
 
 
 
-     <!--正文-->
+     
 <div class="subsid-bg">
     <img src="~/images/college/gg.jpg" alt="" />
 
@@ -43,10 +43,16 @@
         <!--右侧-->
         <div class="college-right">
             <div class="college-title college-downLine">@Html.Raw(curentNewsClass.ClassName)<span><a href="">首页-</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>
-            <div class="plan-inform">
+            @if (!string.IsNullOrEmpty(curentNewsClass.NaviContent))
+            {
+                <p class="college-downLine">
+                    @Html.Raw(curentNewsClass.NaviContent)
+                </p>
+            }
+           
+
+            <div class="plan-inform">                
                 <div class="left-plan">
-
-
                     @foreach (var nes in Model)
                     {
 
@@ -55,9 +61,9 @@
 
                         var finallText = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(HttpUtility.HtmlDecode(nes.NewsContent), "<[^>]+>", ""), "&[^;]+;", "");
 
-                        if (finallText.Length > 201)
+                        if (finallText.Length > 51)
                         {
-                            finallText = finallText.Substring(0, 200);
+                            finallText = finallText.Substring(0, 50);
                         }
 
                         
@@ -68,7 +74,7 @@
             <a href="@Url.Action("EnrolNews", "Information", new { id=nes.NewsID})"><img src="@nes.PicURL" alt=""></a>
         </span>
         <span class="text-description">
-            <p class="category"><a href="@Url.Action("news", "Information", new { id=nes.NewsID})"> @nes.NewsTitle</a></p>
+            <p class="category"><a href="@Url.Action("EnrolNews", "Information", new { id = nes.NewsID })"> @nes.NewsTitle</a></p>
             <p class="">@nes.CreatTime.ToString("yyyy-MM-dd") </p>
             <p class="category-details">
                 @Html.Raw(finallText)

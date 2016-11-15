@@ -80,6 +80,13 @@ namespace HCHEv2.Controllers
 
         public ActionResult Enrol()
         {
+
+            ViewBag.tzggLast = _InewsService.getRecNewsByClassID(3088, 1, true).ToList().FirstOrDefault();//招生首页通知公告 推荐
+            ViewBag.tzgg = _InewsService.getNewsByClassID(3088, 6, false, 1).ToList();//招生首页 通知公告 最新6条 除过推荐
+            ViewBag.rollNews = _InewsService.getNewsByClassID(3089, 5, false, 0).ToList();//招生首页 滚动新闻
+            ViewBag.bkbd = _InewsService.getNewsByClassID(3095, 3, false, 0).ToList();//招生首页 报考必读
+
+
             return View();
         }
 

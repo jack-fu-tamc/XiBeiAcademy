@@ -18,17 +18,10 @@
     <!--焦点图start-->
     <div class="out">
         <ul class="img">
-            <li>
-                <a href="#">
-                    <img src="images/college/focus-img1.jpg" alt="">
-                    <div class="codes"><img src="images/recruit/school-code.png" alt="" /></div>
-                </a>
-            </li>
-            <li><a href="#"><img src="images/college/active-bg.jpg" alt=""></a></li>
-            <li><a href="#"><img src="images/college/view-bg.jpg" alt=""></a></li>
-            <li><a href="#"><img src="images/college/active-bg.jpg" alt=""></a></li>
             <li><a href="#"><img src="images/college/focus-img1.jpg" alt=""></a></li>
-            <li><a href="#"><img src="images/college/view-bg.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/college/focus-img1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/college/focus-img1.jpg" alt=""></a></li>
+            @*<li><a href="#"><img src="images/college/view-bg.jpg" alt=""></a></li>*@
         </ul>
         <ul class="num"></ul>
         <div class="left btn"><</div>
@@ -43,61 +36,85 @@
         <div class="left-notice">
             <div class="notice-title">
                 <em>通知公告</em>
-                <a href="#">+&nbsp;更多</a>
+                <a href="/Information/SectionEnrol/3088">+&nbsp;更多</a>
             </div>
+            @if (ViewBag.tzggLast != null)
+               {
+                   var tzggLast = ViewBag.tzggLast as HC.Data.Models.News;
+                   var finallText = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(HttpUtility.HtmlDecode(tzggLast.NewsContent), "<[^>]+>", ""), "&[^;]+;", "");
+
+                   if (finallText.Length > 111)
+                   {
+                       finallText = finallText.Substring(0, 100);
+                   }
             <div class="nodice-details">
                 <span class="left-details">
-                    <img src="images/college/focus-img1.jpg" alt="p" />
+                    <img src="@tzggLast.PicURL" alt="p" />
                 </span>
                 <span class="right-details">
-                    <p class="details-titeles">
-                        关于2016届各专业毕业生提交实习报告的通知
-                    </p>
-                    <p>
-                        <a href="#">根据我院各专业教学计划安排，2016届毕业生须按照学院要求参加实践教学并提交实习报告。实习报告务必按照要求与《西北大学软件职业技术学院学生实习鉴定表》一并提交至实训基地实习报告审核小组处，经统一审核并按规定打印上交>>
-                    </p></a>
+                   
+                       
+                        
+                        <p class="details-titeles">
+                            @tzggLast.NewsTitle
+                        </p>
+    <p>
+        <a href="/Information/EnrolNews/@tzggLast.NewsID">
+            @finallText >>
+        </a>
+    </p>
+                   
+                    
                 </span>
                 <div class="clear"></div>
             </div>
+            }
             <div class="clauses">
-                <span class="left-clauses">
-                    <em><img src="images/recruit/big.png" alt="..." /></em>
-                    关于2015届结业学生申请毕业证书考试的
-                </span>
-                <span class="right-clauses">
-                    <em><img src="images/recruit/big.png" alt="..." /></em>
-                    西北大学2017届毕业生就业洽谈会邀请函
-                </span>
-                <span class="left-clauses">
-                    <em><img src="images/recruit/big.png" alt="..." /></em>
-                    2016年综合评价招生预录取名单公示
-                </span>
-                <span class="right-clauses">
-                    <em><img src="images/recruit/big.png" alt="..." /></em>
-                    关于2016届各专业毕业生提交实习报告的通知
-                </span>
-                <span class="left-clauses">
-                    <em><img src="images/recruit/big.png" alt="..." /></em>
-                    关于2016届各专业毕业生提交实习报告的通知
-                </span>
-                <span class="right-clauses">
-                    <em><img src="images/recruit/big.png" alt="..." /></em>
-                    关于2016届各专业毕业生提交实习报告的通知
-                </span>
+
+                @if (ViewBag.tzgg != null)
+                {
+                    var tzgg = ViewBag.tzgg as List<HC.Data.Models.News>;
+                    var k=1;
+                    var className="";
+                    foreach (var nes in tzgg)
+                    {
+                        if (k % 2 == 0)
+                        {
+                            className = "right-clauses";
+                        }
+                        else
+                        {
+                            className = "left-clauses";
+                        }
+                        
+                        <span class="@className">
+                            <em><img src="~/images/recruit/big.png" alt="..." /></em>
+                            @nes.NewsTitle
+                        </span>
+                        k++;
+                    }
+
+                }                               
                 <div class="clear"></div>
             </div>
             <div class="time-inform">
-                <img src="images/college/message.gif" alt="" />
+                <img src="~/images/college/message.gif" alt="" />
                 <div class="message-shower">
                     <ul class="message-list">
-                        <li>关于2016届结业学生申请毕业证书考试的通知1</li>
-                        <li>关于2016届结业学生申请毕业证书考试的通知2</li>
-                        <li>关于2016届结业学生申请毕业证书考试的通知3</li>
+
+                        @if (ViewBag.rollNews != null)
+                        {
+                            var rollNews = ViewBag.rollNews as List<HC.Data.Models.News>;
+                            foreach (var ne in rollNews)
+                            {
+                                <li>@ne.NewsTitle</li>
+                            }
+                        }
                     </ul>
                     <ul class="slide-list">
-                        <li><a href=""><img src="images/recruit/big.png" alt="" /></a></li>
-                        <li><a href=""><img src="images/recruit/big.png" alt="" /></a></li>
-                        <li><a href=""><img src="images/recruit/big.png" alt="" /></a></li>
+                        @*<li><a href=""><img src="~/images/recruit/big.png" alt="" /></a></li>
+                        <li><a href=""><img src="~/images/recruit/big.png" alt="" /></a></li>
+                        <li><a href=""><img src="~/images/recruit/big.png" alt="" /></a></li>*@
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -106,8 +123,8 @@
         <!--右侧-->
         <div class="right-notice">
             <a href="">
-                <img src="images/college/plan1.jpg" alt="" /> <a href="">
-                    <img src="images/college/plan2.jpg" alt="" />
+                <img src="~/images/college/plan1.jpg" alt="" /> <a href="">
+                    <img src="~/images/college/plan2.jpg" alt="" />
                 </a>
             </a>
         </div>
@@ -123,9 +140,14 @@
                     <div class="downsideTitle02">报考必读</div>
                     <div class="downsidePic02">
                         <div class="details-text">
-                            <p>填报志愿：远见与想象力</p>
-                            <p>报志愿要首选学校，次选专业</p>
-                            <p>校园开放日(政策发布)</p>
+                            @if (ViewBag.bkbd != null)
+                            {
+                                var bkbd = ViewBag.bkbd as List<HC.Data.Models.News>;
+                                foreach (var newss in bkbd)
+                                {
+                                    <p><a href="/Information/EnrolNews/@newss.NewsID" style="padding:0;">@newss.NewsTitle</a></p>
+                                }
+                            }                                                       
                         </div>
                     </div>
                 </li>

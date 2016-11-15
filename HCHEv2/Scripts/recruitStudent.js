@@ -85,8 +85,9 @@ $(function(){
 
 
 })
+
 $(function(){
-    /*焦点图*/
+    /*通知公告*/
     //代码初始化
     var size=$(".message-list li").size();
 
@@ -120,4 +121,32 @@ $(function(){
         t=setInterval(moveL,2000);
     })
 
+
+});
+$(function () {
+    /*左侧下拉菜单划过颜色*/
+    $('.collegeMenu>ul>li').each(function () {
+        $(this).click(function () {
+          if($(this).find('li').size()<1){
+              $(this).parent().find('li').removeClass('big-change');
+              $(this).addClass('big-change');
+          }
+        });
+    });
+    $('.stud-menu>ul>li').each(function () {
+        $(this).click(function () {
+            if($(this).find('li').size()<1){
+                $(this).parent().find('li').removeClass('active-changeRedColor');
+                $(this).addClass('active-changeRedColor');
+            }
+        });
+    });
+
+    $('.menuShow>li').each(function () {
+        $(this).click(function () {
+            $(this).parent().find('li').removeClass('small-change');
+            $(this).addClass('small-change');
+        });
+
+    });
 })
