@@ -75,70 +75,13 @@ namespace HCHEv2.Controllers
         }
 
 
-        #region 图书馆
+    
 
-        public ActionResult Library()
+
+        public ActionResult Enrol()
         {
-            var model = new libraryIndexModel();
-
-            model.bigPicNews = _InewsService.getRecNewsByClassID(2079, 3, true);
-            model.borrowGuide = _InewsService.getNewsByClassID(2081, 3, false, 0);
-            model.report = _InewsService.getNewsByClassID(2079, 5, true, 1);
-            model.reportRec = _InewsService.getRecNewsByClassID(2079, 1, true).FirstOrDefault();
-
-            model.introduce = _IsectionService.getNewsClassByID(2078).PageContent ?? "";
-            model.introduce = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(model.introduce, "<[^>]+>", ""), "&[^;]+;", "");
-
-            if (model.introduce.Length > 140)
-            {
-                model.introduce = model.introduce.Substring(0, 140) + "...";
-            }
-            return View(model);
+            return View();
         }
-        #endregion
-
-
-        #region 教育教学
-        public ActionResult Education()
-        {
-            var model = new EducationIndexModel();
-
-            model.bigPic = _InewsService.getRecNewsByClassID(1, 3, true);
-            model.operational = _InewsService.getNewsByClassID(3, 5, true, 1);
-            model.oprerationalRec = _InewsService.getRecNewsByClassID(3, 1, true).FirstOrDefault();
-
-            model.reformation = _InewsService.getNewsByClassID(5, 5, true, 1);
-            model.reformationRec = _InewsService.getRecNewsByClassID(5, 1, true).FirstOrDefault();
-
-            model.cooperation = _InewsService.getNewsByClassID(2072, 7, false, 0);
-
-            model.continewEducation = _InewsService.getNewsByClassID(2, 5, true, 1);
-            model.continewEducationRec = _InewsService.getRecNewsByClassID(2, 1, true).FirstOrDefault();
-
-            model.demonstration = _InewsService.getNewsByClassID(4, 5, true, 1);
-            model.demonstrationRec = _InewsService.getRecNewsByClassID(4, 1, true).FirstOrDefault();
-
-            model.assessment = _InewsService.getNewsByClassID(2070, 5, true, 1);
-            model.assessmentRec = _InewsService.getRecNewsByClassID(2070, 1, true).FirstOrDefault();
-
-            model.diagnose  = _InewsService.getNewsByClassID(2071, 5, true, 1);
-            model.diagnoseRec = _InewsService.getRecNewsByClassID(2071, 1, true).FirstOrDefault();
-
-            model.download = _InewsService.getNewsByClassID(2073, 7, false, 0);
-
-            model.introduce = _IsectionService.getNewsClassByID(2069).PageContent ?? "";
-            model.introduce = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(model.introduce, "<[^>]+>", ""), "&[^;]+;", "");
-
-            if (model.introduce.Length > 143)
-            {
-                model.introduce = model.introduce.Substring(0, 143) + "...";
-            }
-
-
-
-            return View(model);
-        }
-        #endregion
 
 
         public ActionResult deny()
@@ -179,6 +122,9 @@ namespace HCHEv2.Controllers
             var levelOne = NewsClass.SectionLists.Where(x => x.ParentID == 0&&x.IsShowInNav==1).OrderBy(x=>x.ClassOrder);
             return PartialView(levelOne.ToList());
         }
+
+
+        
 
 
         /// <summary>

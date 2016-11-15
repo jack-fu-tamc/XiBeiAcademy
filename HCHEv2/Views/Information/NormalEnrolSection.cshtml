@@ -1,13 +1,13 @@
 ﻿@using HC.Data.Models;
 @{
     
-    Layout = "~/Views/Shared/_LayoutEducation.cshtml";
+    Layout = "~/Views/Shared/_LayoutEnrol.cshtml";
 
     var curentPage = int.Parse(ViewBag.curentPage.ToString());
     var totalCount = int.Parse(ViewBag.TottalCount.ToString());
     var totalPage = int.Parse(Math.Ceiling((float)totalCount / 15).ToString());
     var curentNewsClass = ViewData["curentNewsClass"] as NewsClass;
-    ViewBag.Title = "教育教学-" + Html.Raw(curentNewsClass.ClassName);
+    ViewBag.Title = "学院招生-" + Html.Raw(curentNewsClass.ClassName);
     News hotNews = null;
     if (ViewData["hotNews"] != null)
     {

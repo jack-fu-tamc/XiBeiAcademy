@@ -1884,13 +1884,11 @@
     <Content Include="Views\Information\PicSection.cshtml" />
     <Content Include="Views\Home\Enrol.cshtml" />
     <Content Include="Views\Shared\_LayoutEnrol.cshtml" />
-    <Content Include="Views\Shared\cxHeaderEducation.cshtml" />
-    <Content Include="Views\Home\HeadNavEducation.cshtml" />
     <Content Include="Views\Home\Education.cshtml" />
-    <Content Include="Views\Information\NormalEducationSection.cshtml" />
-    <Content Include="Views\Information\PicEducationSection.cshtml" />
+    <Content Include="Views\Information\NormalEnrolSection.cshtml" />
+    <Content Include="Views\Information\PicEnrolSection.cshtml" />
     <Content Include="Views\Information\newsEducation.cshtml" />
-    <Content Include="Views\Information\singleEducationPage.cshtml" />
+    <Content Include="Views\Information\singleEnrol.cshtml" />
     <Content Include="SiteSet.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1903,6 +1901,12 @@
     <Content Include="Views\Information\PicShowSection.cshtml" />
     <Content Include="Views\Shared\cxHeaderEnrol.cshtml" />
     <Content Include="Views\Shared\cxFooterEnrol.cshtml" />
+    <Content Include="Views\Home\SearchContent.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Shared\HeadNavEnrol.cshtml" />
+    <Content Include="Views\Shared\EnrolLink.cshtml" />
+    <Content Include="Views\Information\LeftNavEnrol.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

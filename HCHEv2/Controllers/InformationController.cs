@@ -103,6 +103,28 @@ namespace HCHEv2.Controllers
         }
 
 
+        /// <summary>
+        /// 招生左侧菜单导航
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="viewName"></param>
+        /// <returns></returns>
+        public ActionResult LeftNavEnrol(int id, string viewName = "Enrol")
+        {
+            var curentClassId = int.Parse(ControllerContext.RouteData.Values["curenId"].ToString());
+            ViewBag.curentClassId = curentClassId;
+            ViewBag.toView = viewName;
+            if (id != 0)
+            {
+                var model = _isectionService.GetSiblingNewsClass(id).Where(x => x.IsShowInNav == 1).OrderBy(x => x.ClassOrder).ToList();
+                return View(model);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
 
         #endregion
 
@@ -245,12 +267,12 @@ namespace HCHEv2.Controllers
         
 
         /// <summary>
-        /// 教育教学新闻列表
+        /// 招生列表
         /// </summary>
         /// <param name="id"></param>
         /// <param name="page"></param>
         /// <returns></returns>
-        public ActionResult SectionEducation(int id, int page = 1)
+        public ActionResult SectionEnrol(int id, int page = 1)
         {
             var curenSection = _isectionService.getNewsClassByID(id);
             var CurentSectionNews = _isectionService.getNewsClassByID(id).News.Where(x=>x.isDelete==0).ToList();
@@ -268,13 +290,13 @@ namespace HCHEv2.Controllers
             {
                 ViewBag.navPic = curentSectionParent.NaviPIC;
                 ViewBag.paentclassName = curentSectionParent.ClassName;
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + curenSection.ClassName + "";
+                nav +=  curentSectionParent.ClassName + "-" + curenSection.ClassName + "";
             }
             else
             {
                 ViewBag.navPic = curenSection.NaviPIC;
                 ViewBag.paentclassName = curenSection.ClassName;
-                nav += "<span>></span>" + curenSection.ClassName + "";
+                nav +=  curenSection.ClassName + "";
             }
             ViewData["nav"] = nav;
 
@@ -289,7 +311,7 @@ namespace HCHEv2.Controllers
             var toView = "";
             switch (curenSection.ShowWay)
             {
-                case 0://普通文字
+                case 0://普通文字列表
                     #region 普通文字列表第一页热点图文新闻
                     if (page == 1)//第一页显示热点图文
                     {
@@ -298,14 +320,14 @@ namespace HCHEv2.Controllers
                     }
                     #endregion
                     model = GetNormalModel(page, CurentSectionNews, hotNews);
-                    toView = "NormalEducationSection";
+                    toView = "NormalEnrolSection";
                     break;
-                case 1://大图文(单行单条大)
-                    toView = "PicEducationSection";
+                case 1://普通图文列表
+                    toView = "PicEnrolSection";
                     model = GetModel(page, CurentSectionNews,5);
                     break;
-                case 3://单行多图无连接 带特效
-                    toView = "EffectsPicEducationSection";
+                case 5://院系新闻列表
+                    toView = "AcademySection";
                     model = GetModel(page, CurentSectionNews,15);
                     break;
             }
@@ -569,11 +591,11 @@ namespace HCHEv2.Controllers
 
 
         /// <summary>
-        /// 图书馆单页
+        /// 招生专题单页
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult singleLibraryPage(int id)
+        public ActionResult singleEnrol(int id)
         {
             var singlePageClass = _isectionService.getNewsClassByID(id);
 
@@ -590,12 +612,12 @@ namespace HCHEv2.Controllers
             ViewBag.parentName = "";
             if (curentSectionParent != null)
             {
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + singlePageClass.ClassName + "";
+                nav +=  curentSectionParent.ClassName + "-" + singlePageClass.ClassName + "";
                 ViewBag.parentName = curentSectionParent.ClassName;
             }
             else
             {
-                nav += "<span>></span>" + singlePageClass.ClassName + "";
+                nav += singlePageClass.ClassName + "";
                 ViewBag.parentName = singlePageClass.ClassName;
             }
             ViewData["nav"] = nav;
@@ -605,41 +627,7 @@ namespace HCHEv2.Controllers
         }
 
 
-        /// <summary>
-        /// 教育教学单页
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public ActionResult singleEducationPage(int id)
-        {
-            var singlePageClass = _isectionService.getNewsClassByID(id);
-
-            var parentClass = _isectionService.getNewsClassByID(singlePageClass.ParentID);
-
-
-            #region 位置导航
-            NewsClass curentSectionParent = null;
-            if (singlePageClass.ParentID != 0)
-            {
-                curentSectionParent = _isectionService.getNewsClassByID(singlePageClass.ParentID);
-            }
-            var nav = "";
-            ViewBag.parentName = "";
-            if (curentSectionParent != null)
-            {
-                nav += "<span>></span>" + curentSectionParent.ClassName + "<span>></span>" + singlePageClass.ClassName + "";
-                ViewBag.parentName = curentSectionParent.ClassName;
-            }
-            else
-            {
-                nav += "<span>></span>" + singlePageClass.ClassName + "";
-                ViewBag.parentName = singlePageClass.ClassName;
-            }
-            ViewData["nav"] = nav;
-            #endregion
-
-            return View(singlePageClass);
-        }
+       
 
         #endregion
 

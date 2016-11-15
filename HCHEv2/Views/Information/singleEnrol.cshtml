@@ -1,0 +1,122 @@
+﻿@using HC.Data.Models
+@model NewsClass
+@{
+    ViewBag.Title = "学院招生-" + Html.Raw(Model.ClassName);
+    Layout = "~/Views/Shared/_LayoutEnrol.cshtml";
+
+}
+@section headCSS{
+<link href="~/Content/student_home.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/subsidiesPlan.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/ad-gallery/jquery.ad-gallery.css" type="text/css" rel="stylesheet">
+}
+
+@section headScript{
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/recruitStudent.js"></script>
+}
+
+
+
+
+
+<div class="home-bg">
+    <img src="~/images/college/recruit-bg.jpg" alt="" />
+
+<!--招生信息start-->
+           
+<div class="content-college">
+    <div class="container-fluid">
+        <!--左侧-->
+        <div class="college-left  college-downLine">
+            <div class="college-title">
+                @ViewBag.parentName
+            </div>
+            <div class="collegeMenu">
+                @{Html.RenderAction("LeftNavEnrol", "Information", new { id = Model.ParentID, curenId = Model.ClassID });}
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="college-right">
+            <div class="college-title college-downLine">@Model.ClassName<span><a href="/Enrol">首页-</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>
+            <div class="plan-inform">
+
+
+
+                <!--相册显示-->
+                @if (Model.Attachments.Where(x => x.AttaType == 1).Count() > 0)
+                {
+                    <div style="min-height:450px;">
+                        <div class="">
+                            <!--start-->
+
+                            <div id="container">
+                                <div class="ad-gallery" id="gallery">
+                                    <div id="descriptions"></div>
+                                    <div class="ad-image-wrapper"></div>
+                                    <div class="ad-controls"></div>
+                                    <div class="ad-nav">
+                                        <div class="ad-thumbs">
+                                            <ul class="ad-thumb-list">
+                                                @foreach (var item in Model.Attachments.Where(x => x.AttaType == 1).ToList())
+                                                {
+                                                    <li>
+                                                        <a href="@item.AttaUrl">
+                                                            <img src="@item.AttaUrl" alt="@item.AttaDescribe">
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end -->
+                            <div class="c_both"></div>
+                        </div>
+                    </div>
+                }
+                <div class="left-plan">
+                    @Html.Raw(HttpUtility.HtmlDecode(Model.PageContent))
+
+                </div>
+                <div class="right-plan">
+                    @Html.Partial("EnrolLink")
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        </div>
+    </div>
+    <!--导航菜单-->
+    @Html.Partial("HeadNavEnrol")
+</div>
+        
+
+
+
+
+
+@section footScript{
+
+    <script src="~/Scripts/ad-gallery/jquery.ad-gallery.js" type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            var galleries = $('.ad-gallery').adGallery();
+            $('#switch-effect').change(
+        function () {
+            galleries[0].settings.effect = $(this).val();
+            return false;
+        }
+      );
+            $('#toggle-slideshow').click(
+        function () {
+            galleries[0].slideshow.toggle();
+            return false;
+        }
+      );
+        });
+    </script>
+
+}

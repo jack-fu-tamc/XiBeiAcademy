@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+@using HC.Service.Section
+@using HC.Core.Infrastructure
+
+
+@model List<HC.Data.Models.NewsClass>
+
+<ul>
+    @foreach (var nClass in Model)
+    {
+
+        var className = "";
+        if (ViewBag.curentClassId == nClass.ClassID)
+        {
+            className = "active";
+        }
+
+
+        if (nClass.IsSingle == 1)//单页
+        {
+            <li class="@className">
+                <div><a href="@Url.Action("singleEnrol", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+            </li>
+        }
+        else if (nClass.IsSingle == 0)//列表
+        {
+            <li class="@className">
+                <div><a href="@Url.Action("SectionEnrol", "Information", new { id = nClass.ClassID })">@Html.Raw(nClass.ClassName)</a></div>
+            </li>
+        }
+        else if (nClass.IsSingle == 2)//外链
+        {
+            <li class="@className">
+                <div><a @nClass.linkAddress>@Html.Raw(nClass.ClassName)</a></div>
+            </li>
+        }
+        else
+        {
+
+        }
+
+    }
+</ul>

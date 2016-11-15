@@ -30,6 +30,17 @@ namespace HCHEv2
       new[] { "HCHEv2.Controllers" }
         );
 
+
+
+
+            routes.MapRoute(
+                "EnrolIndex",//路由名称
+                "Enrol",//地址
+                new { controller = "Home", action = "Enrol" },//地址默认控制器和action
+                new[] { "HCHEv2.Controllers" }//命名空间
+                );
+
+
             routes.MapRoute(
                 "Default",
            "{controller}/{action}/{id}/{*catchall}",

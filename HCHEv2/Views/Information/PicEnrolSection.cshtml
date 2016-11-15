@@ -1,0 +1,149 @@
+﻿@using HC.Data.Models;
+@{
+    
+    Layout = "~/Views/Shared/_LayoutEnrol.cshtml";
+
+    var curentPage = int.Parse(ViewBag.curentPage.ToString());
+    var totalCount = int.Parse(ViewBag.TottalCount.ToString());
+    var totalPage = int.Parse(Math.Ceiling((float)totalCount / 5).ToString());
+    var curentNewsClass = ViewData["curentNewsClass"] as NewsClass;
+    ViewBag.Title = "学院招生-" + Html.Raw(curentNewsClass.ClassName);
+}
+@model List<HC.Data.Models.News>
+
+
+@section headCSS{
+    <link href="~/Content/student_home.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/subsidiesPlan.css" rel="stylesheet" type="text/css" />
+  }
+@section headScript{
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/recruitStudent.js"></script>
+}
+
+
+
+     <!--正文-->
+<div class="subsid-bg">
+    <img src="~/images/college/gg.jpg" alt="" />
+
+
+           
+<div class="content-college">
+    <div class="container-fluid">
+        <!--左侧-->
+        <div class="college-left  college-downLine">
+            <div class="college-title">
+                @Html.Raw(ViewBag.paentclassName)
+            </div>
+            <div class="collegeMenu">
+                @{Html.RenderAction("LeftNavEnrol", "Information", new { id = curentNewsClass.ParentID, curenId = curentNewsClass.ClassID });}
+            </div>
+        </div>
+        <!--右侧-->
+        <div class="college-right">
+            <div class="college-title college-downLine">@Html.Raw(curentNewsClass.ClassName)<span><a href="">首页-</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>
+            <div class="plan-inform">
+                <div class="left-plan">
+
+
+                    @foreach (var nes in Model)
+                    {
+
+
+
+
+                        var finallText = System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Replace(HttpUtility.HtmlDecode(nes.NewsContent), "<[^>]+>", ""), "&[^;]+;", "");
+
+                        if (finallText.Length > 201)
+                        {
+                            finallText = finallText.Substring(0, 200);
+                        }
+
+                        
+
+
+    <div class="image-text college-downLine">
+        <span class="imageShow">
+            <a href="@Url.Action("EnrolNews", "Information", new { id=nes.NewsID})"><img src="@nes.PicURL" alt=""></a>
+        </span>
+        <span class="text-description">
+            <p class="category"><a href="@Url.Action("news", "Information", new { id=nes.NewsID})"> @nes.NewsTitle</a></p>
+            <p class="">@nes.CreatTime.ToString("yyyy-MM-dd") </p>
+            <p class="category-details">
+                @Html.Raw(finallText)
+            </p>
+        </span>
+        <div class="clear"></div>
+    </div>
+
+
+                    }
+
+
+                   
+                   
+                    <!--分页-->
+                    <div class="page-contnet">
+                        @if (totalPage > 1)
+                        {
+                            int prePage = 1;
+                            int nextPage = totalPage;
+                            if (curentPage > 1)
+                            {
+                                prePage = curentPage - 1;
+                            }
+
+                            if (curentPage < totalPage)
+                            {
+                                nextPage = curentPage + 1;
+                            }
+
+
+                            <div class="count-page">
+                                <span>总共<em class="count">@totalPage</em>页</span>
+                                <span>
+                                    当前显示
+                                    <em class="count">
+                                        <i class="num_prev">@curentPage</i>/<i class="num_last">@totalPage</i>
+                                    </em>
+                                    页
+                                </span>
+                                <span><a href="/Information/SectionEnrol/@curentNewsClass.ClassID"> 首页</a></span>
+                                <span><a href="/Information/SectionEnrol/@curentNewsClass.ClassID/@prePage">上一页</a></span>
+
+                                <span> <a href="/Information/SectionEnrol/@curentNewsClass.ClassID/@nextPage">下一页</a></span>
+                                <span><a href="/Information/SectionEnrol/@curentNewsClass.ClassID/@totalPage">尾页</a></span>
+                                <span>
+                                    <select name="" id="">
+                                        <option>跳转至</option>
+                                    </select>
+                                </span>
+                            </div>
+
+
+
+                        }
+                    </div>
+                    <!--fenye over-->
+
+
+
+                   
+
+
+                </div>
+                <div class="right-plan">                   
+                    @Html.Partial("EnrolLink")
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        </div>
+    </div>
+    <!--导航菜单-->
+    @Html.Partial("HeadNavEnrol")
+</div>
+       
+
