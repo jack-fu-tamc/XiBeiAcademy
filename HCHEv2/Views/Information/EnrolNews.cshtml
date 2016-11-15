@@ -30,7 +30,7 @@
         <!--左侧-->
         <div class="college-left  college-downLine">
             <div class="college-title">
-                @ViewBag.parentName
+                @ViewBag.parentClassName
             </div>
             <div class="collegeMenu">
                 @{Html.RenderAction("LeftNavEnrol", "Information", new { id = Model.NewsClass.ParentID, curenId = Model.ClassID });}
@@ -38,7 +38,10 @@
         </div>
         <!--右侧-->
         <div class="college-right">
-            <div class="college-title college-downLine"><span><a href="/Enrol">首页-</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>
+            @*<div class="college-title college-downLine"><span><a href="/Enrol">首页-</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>*@
+
+            <div class="college-title college-downLine">@Html.Raw(Model.NewsClass.ClassName)<span><a href="/">首页</a>@Html.Raw(ViewData["nav"].ToString())  </span></div>
+
             <p class="first-title title-align">@Model.NewsTitle</p>
             <p class="small-title title-align">日期：@Model.CreatTime.ToString("yyyy-MM-dd HH-mm")  本站原创   来源：@Model.Author  人气：@Model.ClickNum</p>
             <div class="plan-inform">

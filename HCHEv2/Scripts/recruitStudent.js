@@ -129,7 +129,7 @@ $(function () {
         $(this).click(function () {
           if($(this).find('li').size()<1){
               $(this).parent().find('li').removeClass('big-change');
-              $(this).addClass('big-change');
+             // $(this).addClass('big-change');
           }
         });
     });
@@ -137,7 +137,7 @@ $(function () {
         $(this).click(function () {
             if($(this).find('li').size()<1){
                 $(this).parent().find('li').removeClass('active-changeRedColor');
-                $(this).addClass('active-changeRedColor');
+                //$(this).addClass('active-changeRedColor');
             }
         });
     });
@@ -145,7 +145,7 @@ $(function () {
     $('.menuShow>li').each(function () {
         $(this).click(function () {
             $(this).parent().find('li').removeClass('small-change');
-            $(this).addClass('small-change');
+            //$(this).addClass('small-change');
         });
 
     });
